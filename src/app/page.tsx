@@ -919,7 +919,7 @@ export default function SmashTournamentELO() {
                             >
                               <div className="flex flex-col space-y-4">
                                 {/* Match Header */}
-                                <div className="flex justify-between items-center">
+                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                                   <div className="text-gray-400 text-sm">
                                     {new Date(
                                       match.created_at
@@ -936,20 +936,20 @@ export default function SmashTournamentELO() {
                                 </div>
 
                                 {/* All Participants */}
-                                <div className="flex flex-wrap gap-4 justify-between">
+                                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:justify-between">
                                   {participants.map((participant) => (
                                     <div
                                       key={participant.id}
-                                      className={`flex flex-col space-y-3 px-4 py-3 rounded-lg border transition-all ${
+                                      className={`flex flex-col space-y-3 px-4 py-3 rounded-lg border transition-all w-full ${
                                         participants.length === 1
-                                          ? "w-80"
+                                          ? "sm:w-80"
                                           : participants.length === 2
-                                          ? "flex-1 max-w-md"
+                                          ? "sm:flex-1 sm:max-w-md"
                                           : participants.length === 3
-                                          ? "w-72"
+                                          ? "sm:w-72"
                                           : participants.length === 4
-                                          ? "w-52"
-                                          : "w-44"
+                                          ? "sm:w-52"
+                                          : "sm:w-44"
                                       } ${
                                         participant.has_won
                                           ? "bg-green-900 bg-opacity-30 border-green-500 shadow-green-500/20 shadow-lg"
