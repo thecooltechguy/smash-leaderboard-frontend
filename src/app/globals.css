@@ -24,3 +24,72 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Windows-specific scrollbar styles - hide until scroll/hover */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  /* Hide scrollbars by default on IE/Edge */
+  * {
+    -ms-overflow-style: none;
+  }
+}
+
+/* Modern browsers - hide scrollbars by default, show on hover/scroll */
+* {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Show scrollbars on hover or focus for better accessibility */
+*:hover {
+  scrollbar-width: thin; /* Firefox */
+  -ms-overflow-style: scrollbar; /* IE and Edge */
+}
+
+*:hover::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+  height: 6px;
+}
+
+*:hover::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+/* Fallback: Ultra-thin scrollbars that are barely visible */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.2) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.2);
+  border-radius: 2px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.4);
+}
