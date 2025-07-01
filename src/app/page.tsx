@@ -739,7 +739,7 @@ export default function SmashTournamentELO() {
                       }`}
                     >
                       {/* Tier List Table */}
-                      <div className="space-y-1">
+                      <div className="space-y-1 md:space-y-0">
                         {(["S", "A", "B", "C", "D", "E"] as Tier[]).map(
                           (tierName) => {
                             const tierPlayers = tierList[tierName];
@@ -747,16 +747,16 @@ export default function SmashTournamentELO() {
                             return (
                               <div
                                 key={tierName}
-                                className="flex bg-gray-800 rounded-lg border border-gray-700 relative"
+                                className="flex bg-gray-800 rounded-lg md:rounded-none border border-gray-700 md:border-b md:border-l-0 md:border-r-0 md:border-t-0 relative"
                               >
                                 {/* Tier Label */}
                                 <div
                                   className={`${getTierBadgeColor(
                                     tierName
-                                  )} w-20 flex items-center justify-center py-4`}
+                                  )} w-20 md:w-32 flex items-center justify-center py-4 md:py-8`}
                                 >
                                   <span
-                                    className="text-3xl font-bold text-white"
+                                    className="text-3xl md:text-5xl font-bold text-white"
                                     style={{
                                       textShadow:
                                         "2px 2px 4px rgba(0, 0, 0, 0.8)",
@@ -767,13 +767,13 @@ export default function SmashTournamentELO() {
                                 </div>
 
                                 {/* Players in Tier */}
-                                <div className="flex-1 p-4 relative">
+                                <div className="flex-1 p-4 md:p-8 relative">
                                   {tierPlayers.length === 0 ? (
-                                    <div className="flex items-center justify-center h-16 text-gray-500 italic">
+                                    <div className="flex items-center justify-center h-16 md:h-24 text-gray-500 italic md:text-xl">
                                       No players in this tier
                                     </div>
                                   ) : (
-                                    <div className="flex flex-wrap gap-4">
+                                    <div className="flex flex-wrap gap-4 md:gap-6">
                                       {tierPlayers.map((player) => (
                                         <div
                                           key={player.id}
@@ -785,7 +785,7 @@ export default function SmashTournamentELO() {
                                             handlePlayerClick(player.id)
                                           }
                                         >
-                                          <div className="w-16 h-16 rounded-lg overflow-hidden border-2 border-gray-600 group-hover:border-yellow-400 transition-all duration-200 bg-gray-700">
+                                          <div className="w-16 h-16 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 md:border-3 border-gray-600 group-hover:border-yellow-400 transition-all duration-200 bg-gray-700 md:shadow-lg">
                                             {getProfilePicture(player) ? (
                                               <img
                                                 src={getProfilePicture(player)!}
@@ -798,7 +798,7 @@ export default function SmashTournamentELO() {
                                             ) : (
                                               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-600 to-gray-700">
                                                 <span
-                                                  className="text-lg font-bold text-white"
+                                                  className="text-lg md:text-2xl font-bold text-white"
                                                   style={{
                                                     textShadow:
                                                       "1px 1px 2px rgba(0, 0, 0, 0.8)",
