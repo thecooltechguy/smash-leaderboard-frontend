@@ -79,6 +79,98 @@ const RefreshStatus = memo(
 
 RefreshStatus.displayName = "RefreshStatus";
 
+// ProfilePicture component with zoom and translate effects
+const ProfilePicture = memo(({
+  player,
+  size = "md",
+  borderColor = "border-gray-600",
+  borderWidth = "border-2",
+  additionalClasses = "",
+}: {
+  player: ExtendedPlayer | { name: string; display_name: string | null };
+  size?: "sm" | "md" | "lg" | "xl";
+  borderColor?: string;
+  borderWidth?: string;
+  additionalClasses?: string;
+}) => {
+  const sizeClasses = {
+    sm: "h-8 w-8 md:h-10 md:w-10",
+    md: "h-8 w-8 md:h-14 md:w-14", 
+    lg: "h-16 w-16 md:h-20 md:w-20",
+    xl: "h-20 w-20"
+  };
+
+  const textSizeClasses = {
+    sm: "text-xs",
+    md: "text-xs md:text-lg",
+    lg: "text-lg md:text-2xl", 
+    xl: "text-2xl"
+  };
+
+  const getProfilePicture = (player: ExtendedPlayer | { name: string; display_name: string | null }): string | null => {
+    const nameToUse = (player.display_name || player.name).toLowerCase();
+
+    if (nameToUse.includes("nish")) return "/images/anish.png";
+    if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
+      return "/images/habeas.png";
+    if (nameToUse.includes("subby")) return "/images/subby.png";
+    if (nameToUse.includes("pat")) return "/images/pat.png";
+    if (nameToUse.includes("will")) return "/images/will.png";
+    if (nameToUse.includes("ryy")) return "/images/ryy.png";
+    if (nameToUse.includes("jmoon")) return "/images/jmoon.png";
+    if (nameToUse.includes("keneru")) return "/images/keneru.png";
+    if (nameToUse.includes("rp")) return "/images/ryanp.png";
+    if (nameToUse.includes("samin")) return "/images/samin.png";
+    if (nameToUse.includes("stav")) return "/images/stav.png";
+    if (nameToUse.includes("ya")) return "/images/ya.png";
+    if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
+    if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
+    if (nameToUse.includes("david")) return "/images/david.png";
+    if (nameToUse.includes("bihan")) return "/images/bihan.png";
+
+    return null;
+  };
+
+
+  const getInitials = (player: ExtendedPlayer | { name: string; display_name: string | null }): string => {
+    const nameToUse = player.display_name || player.name;
+    return nameToUse
+      .split(" ")
+      .map((n: string) => n[0])
+      .join("")
+      .toUpperCase();
+  };
+
+  const profilePic = getProfilePicture(player);
+
+  const isRoundedLg = additionalClasses.includes('rounded-lg');
+  const roundedClass = isRoundedLg ? 'rounded-lg' : 'rounded-full';
+
+  if (profilePic) {
+    return (
+      <div className={`${sizeClasses[size]} ${roundedClass} overflow-hidden ${borderWidth} ${borderColor} ${additionalClasses}`}>
+        <img
+          src={profilePic}
+          alt={player.display_name || player.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    );
+  }
+
+  const bgColor = additionalClasses.includes('bg-') ? '' : 'bg-gray-700';
+
+  return (
+    <div className={`${sizeClasses[size]} ${roundedClass} ${bgColor} flex items-center justify-center ${borderWidth} ${borderColor} ${additionalClasses}`}>
+      <span className={`${textSizeClasses[size]} font-bold text-white`}>
+        {getInitials(player)}
+      </span>
+    </div>
+  );
+});
+
+ProfilePicture.displayName = "ProfilePicture";
+
 export default function SmashTournamentELO() {
   // State management
   const [players, setPlayers] = useState<ExtendedPlayer[]>([]);
@@ -274,41 +366,6 @@ export default function SmashTournamentELO() {
   // Calculate dynamic tier thresholds
   const tierThresholds = calculateTierThresholds(sortedPlayers);
 
-  // Get player initials from name or display_name
-  const getInitials = (player: ExtendedPlayer): string => {
-    const nameToUse = player.display_name || player.name;
-    return nameToUse
-      .split(" ")
-      .map((n: string) => n[0])
-      .join("")
-      .toUpperCase();
-  };
-
-  // Get profile picture for player based on name
-  const getProfilePicture = (player: ExtendedPlayer): string | null => {
-    const nameToUse = (player.display_name || player.name).toLowerCase();
-
-    // Map player names to their image files
-    if (nameToUse.includes("nish")) return "/images/anish.png";
-    if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
-      return "/images/habeas.png";
-    if (nameToUse.includes("subby")) return "/images/subby.png";
-    if (nameToUse.includes("pat")) return "/images/pat.png";
-    if (nameToUse.includes("will")) return "/images/will.png";
-    if (nameToUse.includes("ryy")) return "/images/ryy.png";
-    if (nameToUse.includes("jmoon")) return "/images/jmoon.png";
-    if (nameToUse.includes("keneru")) return "/images/keneru.png";
-    if (nameToUse.includes("rp")) return "/images/ryanp.png";
-    if (nameToUse.includes("samin")) return "/images/samin.png";
-    if (nameToUse.includes("stav")) return "/images/stav.png";
-    if (nameToUse.includes("ya")) return "/images/ya.png";
-    if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
-    if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
-    if (nameToUse.includes("david")) return "/images/david.png";
-    if (nameToUse.includes("bihan")) return "/images/bihan.png";
-
-    return null;
-  };
 
   // Get tier badge color
   const getTierBadgeColor = (tier: Tier): string => {
@@ -604,19 +661,7 @@ export default function SmashTournamentELO() {
                                     className="flex items-center space-x-2 md:space-x-4 cursor-pointer hover:opacity-80 transition-opacity"
                                     onClick={() => handlePlayerClick(player.id)}
                                   >
-                                    {getProfilePicture(player) ? (
-                                      <img
-                                        src={getProfilePicture(player)!}
-                                        alt={player.display_name || player.name}
-                                        className="h-8 w-8 md:h-14 md:w-14 rounded-full object-cover border-2 border-gray-600"
-                                      />
-                                    ) : (
-                                      <div className="h-8 w-8 md:h-14 md:w-14 rounded-full bg-gray-700 flex items-center justify-center border-2 border-gray-600">
-                                        <span className="text-xs md:text-lg font-bold text-gray-300">
-                                          {getInitials(player)}
-                                        </span>
-                                      </div>
-                                    )}
+                                    <ProfilePicture player={player} size="md" />
                                     <span>
                                       {player.display_name || player.name}
                                     </span>
@@ -785,30 +830,13 @@ export default function SmashTournamentELO() {
                                             handlePlayerClick(player.id)
                                           }
                                         >
-                                          <div className="w-16 h-16 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 md:border-3 border-gray-600 group-hover:border-yellow-400 transition-all duration-200 bg-gray-700 md:shadow-lg">
-                                            {getProfilePicture(player) ? (
-                                              <img
-                                                src={getProfilePicture(player)!}
-                                                alt={
-                                                  player.display_name ||
-                                                  player.name
-                                                }
-                                                className="w-full h-full object-cover"
-                                              />
-                                            ) : (
-                                              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-600 to-gray-700">
-                                                <span
-                                                  className="text-lg md:text-2xl font-bold text-white"
-                                                  style={{
-                                                    textShadow:
-                                                      "1px 1px 2px rgba(0, 0, 0, 0.8)",
-                                                  }}
-                                                >
-                                                  {getInitials(player)}
-                                                </span>
-                                              </div>
-                                            )}
-                                          </div>
+                                          <ProfilePicture 
+                                            player={player} 
+                                            size="lg" 
+                                            borderColor="border-gray-600 group-hover:border-yellow-400"
+                                            borderWidth="border-2 md:border-3"
+                                            additionalClasses="rounded-lg transition-all duration-200 bg-gray-700 md:shadow-lg"
+                                          />
 
                                           {/* Player name and ELO tooltip on hover */}
                                           <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black bg-opacity-95 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-[9999] shadow-xl border border-gray-600">
@@ -959,46 +987,15 @@ export default function SmashTournamentELO() {
                                       {/* Player Header */}
                                       <div className="flex items-center space-x-3">
                                         {/* Player Avatar */}
-                                        {getProfilePicture({
-                                          name: participant.player_name,
-                                          display_name:
-                                            participant.player_display_name,
-                                        } as ExtendedPlayer) ? (
-                                          <img
-                                            src={
-                                              getProfilePicture({
-                                                name: participant.player_name,
-                                                display_name:
-                                                  participant.player_display_name,
-                                              } as ExtendedPlayer)!
-                                            }
-                                            alt={
-                                              participant.player_display_name ||
-                                              participant.player_name
-                                            }
-                                            className={`h-10 w-10 rounded-full object-cover border-2 ${
-                                              participant.has_won
-                                                ? "border-green-400"
-                                                : "border-red-400"
-                                            }`}
-                                          />
-                                        ) : (
-                                          <div
-                                            className={`h-10 w-10 rounded-full flex items-center justify-center border-2 ${
-                                              participant.has_won
-                                                ? "bg-green-600 border-green-400"
-                                                : "bg-red-600 border-red-400"
-                                            }`}
-                                          >
-                                            <span className="text-xs font-bold text-white">
-                                              {getInitials({
-                                                name: participant.player_name,
-                                                display_name:
-                                                  participant.player_display_name,
-                                              } as ExtendedPlayer)}
-                                            </span>
-                                          </div>
-                                        )}
+                                        <ProfilePicture 
+                                          player={{
+                                            name: participant.player_name,
+                                            display_name: participant.player_display_name,
+                                          }}
+                                          size="sm"
+                                          borderColor={participant.has_won ? "border-green-400" : "border-red-400"}
+                                          additionalClasses={participant.has_won ? "bg-green-600" : "bg-red-600"}
+                                        />
 
                                         {/* Player Info */}
                                         <div className="flex-1 min-w-0">
@@ -1166,19 +1163,12 @@ export default function SmashTournamentELO() {
                               {/* Player Avatar and Info */}
                               <div className="flex flex-col items-center mb-6">
                                 <div className="relative mb-4">
-                                  {getProfilePicture(player) ? (
-                                    <img
-                                      src={getProfilePicture(player)!}
-                                      alt={player.display_name || player.name}
-                                      className="h-20 w-20 rounded-full object-cover border-4 border-gray-600 shadow-xl"
-                                    />
-                                  ) : (
-                                    <div className="h-20 w-20 rounded-full bg-gradient-to-br from-gray-600 to-gray-700 flex items-center justify-center border-4 border-gray-600 shadow-xl">
-                                      <span className="text-2xl font-bold text-white">
-                                        {getInitials(player)}
-                                      </span>
-                                    </div>
-                                  )}
+                                  <ProfilePicture 
+                                    player={player} 
+                                    size="xl" 
+                                    borderWidth="border-4"
+                                    additionalClasses="shadow-xl bg-gradient-to-br from-gray-600 to-gray-700"
+                                  />
                                   {/* Tier badge on avatar */}
                                   <div
                                     className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${getTierBadgeColor(
