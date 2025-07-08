@@ -1032,21 +1032,27 @@ export default function SmashTournamentELO() {
                                         </div>
 
                                         {/* Win/Loss Indicator */}
-                                        <div
-                                          className={`font-bold text-lg ${
-                                            participant.has_won
-                                              ? "text-green-400"
-                                              : "text-red-400"
-                                          }`}
-                                        >
-                                          {participant.has_won ? "W" : "L"}
+                                        <div className="w-10 h-10 flex items-center justify-center">
+                                          <img
+                                            src={
+                                              participant.has_won
+                                                ? "/images/no1.png"
+                                                : "/images/no2.png"
+                                            }
+                                            alt={
+                                              participant.has_won
+                                                ? "Winner"
+                                                : "Loser"
+                                            }
+                                            className="w-8 h-8 object-contain"
+                                          />
                                         </div>
                                       </div>
 
                                       {/* Individual Player Stats */}
                                       <div className="grid grid-cols-3 gap-2 text-center text-xs">
                                         <div className="bg-black bg-opacity-20 rounded px-2 py-1">
-                                          <div className="text-orange-400 font-bold">
+                                          <div className="text-orange-400 font-bold text-lg">
                                             {participant.total_kos || 0}
                                           </div>
                                           <div className="text-gray-400">
@@ -1054,7 +1060,7 @@ export default function SmashTournamentELO() {
                                           </div>
                                         </div>
                                         <div className="bg-black bg-opacity-20 rounded px-2 py-1">
-                                          <div className="text-purple-400 font-bold">
+                                          <div className="text-purple-400 font-bold text-lg">
                                             {participant.total_falls || 0}
                                           </div>
                                           <div className="text-gray-400">
@@ -1062,7 +1068,7 @@ export default function SmashTournamentELO() {
                                           </div>
                                         </div>
                                         <div className="bg-black bg-opacity-20 rounded px-2 py-1">
-                                          <div className="text-red-400 font-bold">
+                                          <div className="text-red-400 font-bold text-lg">
                                             {participant.total_sds || 0}
                                           </div>
                                           <div className="text-gray-400">
