@@ -80,94 +80,103 @@ const RefreshStatus = memo(
 RefreshStatus.displayName = "RefreshStatus";
 
 // ProfilePicture component with zoom and translate effects
-const ProfilePicture = memo(({
-  player,
-  size = "md",
-  borderColor = "border-gray-600",
-  borderWidth = "border-2",
-  additionalClasses = "",
-}: {
-  player: ExtendedPlayer | { name: string; display_name: string | null };
-  size?: "sm" | "md" | "lg" | "xl";
-  borderColor?: string;
-  borderWidth?: string;
-  additionalClasses?: string;
-}) => {
-  const sizeClasses = {
-    sm: "h-8 w-8 md:h-10 md:w-10",
-    md: "h-8 w-8 md:h-14 md:w-14", 
-    lg: "h-16 w-16 md:h-20 md:w-20",
-    xl: "h-20 w-20"
-  };
+const ProfilePicture = memo(
+  ({
+    player,
+    size = "md",
+    borderColor = "border-gray-600",
+    borderWidth = "border-2",
+    additionalClasses = "",
+  }: {
+    player: ExtendedPlayer | { name: string; display_name: string | null };
+    size?: "sm" | "md" | "lg" | "xl";
+    borderColor?: string;
+    borderWidth?: string;
+    additionalClasses?: string;
+  }) => {
+    const sizeClasses = {
+      sm: "h-10 w-10 md:h-10 md:w-10",
+      md: "h-12 w-12 md:h-20 md:w-20",
+      lg: "h-16 w-16 md:h-20 md:w-20",
+      xl: "h-24 w-24",
+    };
 
-  const textSizeClasses = {
-    sm: "text-xs",
-    md: "text-xs md:text-lg",
-    lg: "text-lg md:text-2xl", 
-    xl: "text-2xl"
-  };
+    const textSizeClasses = {
+      sm: "text-xs",
+      md: "text-xs md:text-lg",
+      lg: "text-lg md:text-2xl",
+      xl: "text-2xl",
+    };
 
-  const getProfilePicture = (player: ExtendedPlayer | { name: string; display_name: string | null }): string | null => {
-    const nameToUse = (player.display_name || player.name).toLowerCase();
+    const getProfilePicture = (
+      player: ExtendedPlayer | { name: string; display_name: string | null }
+    ): string | null => {
+      const nameToUse = (player.display_name || player.name).toLowerCase();
 
-    if (nameToUse.includes("nish")) return "/images/anish.png";
-    if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
-      return "/images/habeas.png";
-    if (nameToUse.includes("subby")) return "/images/subby.png";
-    if (nameToUse.includes("pat")) return "/images/pat.png";
-    if (nameToUse.includes("will")) return "/images/will.png";
-    if (nameToUse.includes("ryy")) return "/images/ryy.png";
-    if (nameToUse.includes("jmoon")) return "/images/jmoon.png";
-    if (nameToUse.includes("keneru")) return "/images/keneru.png";
-    if (nameToUse.includes("rp")) return "/images/ryanp.png";
-    if (nameToUse.includes("samin")) return "/images/samin.png";
-    if (nameToUse.includes("stav")) return "/images/stav.png";
-    if (nameToUse.includes("ya")) return "/images/ya.png";
-    if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
-    if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
-    if (nameToUse.includes("david")) return "/images/david.png";
-    if (nameToUse.includes("bihan")) return "/images/bihan.png";
+      if (nameToUse.includes("nish")) return "/images/anish.png";
+      if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
+        return "/images/habeas.png";
+      if (nameToUse.includes("subby")) return "/images/subby.png";
+      if (nameToUse.includes("pat")) return "/images/pat.png";
+      if (nameToUse.includes("will")) return "/images/will.png";
+      if (nameToUse.includes("ryy")) return "/images/ryy.png";
+      if (nameToUse.includes("jmoon")) return "/images/jmoon.png";
+      if (nameToUse.includes("keneru")) return "/images/keneru.png";
+      if (nameToUse.includes("rp")) return "/images/ryanp.png";
+      if (nameToUse.includes("samin")) return "/images/samin.png";
+      if (nameToUse.includes("stav")) return "/images/stav.png";
+      if (nameToUse.includes("ya")) return "/images/ya.png";
+      if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
+      if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
+      if (nameToUse.includes("david")) return "/images/david.png";
+      if (nameToUse.includes("bihan")) return "/images/bihan.png";
 
-    return null;
-  };
+      return null;
+    };
 
+    const getInitials = (
+      player: ExtendedPlayer | { name: string; display_name: string | null }
+    ): string => {
+      const nameToUse = player.display_name || player.name;
+      return nameToUse
+        .split(" ")
+        .map((n: string) => n[0])
+        .join("")
+        .toUpperCase();
+    };
 
-  const getInitials = (player: ExtendedPlayer | { name: string; display_name: string | null }): string => {
-    const nameToUse = player.display_name || player.name;
-    return nameToUse
-      .split(" ")
-      .map((n: string) => n[0])
-      .join("")
-      .toUpperCase();
-  };
+    const profilePic = getProfilePicture(player);
 
-  const profilePic = getProfilePicture(player);
+    const isRoundedLg = additionalClasses.includes("rounded-lg");
+    const roundedClass = isRoundedLg ? "rounded-lg" : "rounded-full";
 
-  const isRoundedLg = additionalClasses.includes('rounded-lg');
-  const roundedClass = isRoundedLg ? 'rounded-lg' : 'rounded-full';
+    if (profilePic) {
+      return (
+        <div
+          className={`${sizeClasses[size]} ${roundedClass} overflow-hidden ${borderWidth} ${borderColor} ${additionalClasses}`}
+        >
+          <img
+            src={profilePic}
+            alt={player.display_name || player.name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      );
+    }
 
-  if (profilePic) {
+    const bgColor = additionalClasses.includes("bg-") ? "" : "bg-gray-700";
+
     return (
-      <div className={`${sizeClasses[size]} ${roundedClass} overflow-hidden ${borderWidth} ${borderColor} ${additionalClasses}`}>
-        <img
-          src={profilePic}
-          alt={player.display_name || player.name}
-          className="w-full h-full object-cover"
-        />
+      <div
+        className={`${sizeClasses[size]} ${roundedClass} ${bgColor} flex items-center justify-center ${borderWidth} ${borderColor} ${additionalClasses}`}
+      >
+        <span className={`${textSizeClasses[size]} font-bold text-white`}>
+          {getInitials(player)}
+        </span>
       </div>
     );
   }
-
-  const bgColor = additionalClasses.includes('bg-') ? '' : 'bg-gray-700';
-
-  return (
-    <div className={`${sizeClasses[size]} ${roundedClass} ${bgColor} flex items-center justify-center ${borderWidth} ${borderColor} ${additionalClasses}`}>
-      <span className={`${textSizeClasses[size]} font-bold text-white`}>
-        {getInitials(player)}
-      </span>
-    </div>
-  );
-});
+);
 
 ProfilePicture.displayName = "ProfilePicture";
 
@@ -365,7 +374,6 @@ export default function SmashTournamentELO() {
 
   // Calculate dynamic tier thresholds
   const tierThresholds = calculateTierThresholds(sortedPlayers);
-
 
   // Get tier badge color
   const getTierBadgeColor = (tier: Tier): string => {
@@ -830,9 +838,9 @@ export default function SmashTournamentELO() {
                                             handlePlayerClick(player.id)
                                           }
                                         >
-                                          <ProfilePicture 
-                                            player={player} 
-                                            size="lg" 
+                                          <ProfilePicture
+                                            player={player}
+                                            size="lg"
                                             borderColor="border-gray-600 group-hover:border-yellow-400"
                                             borderWidth="border-2 md:border-3"
                                             additionalClasses="rounded-lg transition-all duration-200 bg-gray-700 md:shadow-lg"
@@ -987,14 +995,23 @@ export default function SmashTournamentELO() {
                                       {/* Player Header */}
                                       <div className="flex items-center space-x-3">
                                         {/* Player Avatar */}
-                                        <ProfilePicture 
+                                        <ProfilePicture
                                           player={{
                                             name: participant.player_name,
-                                            display_name: participant.player_display_name,
+                                            display_name:
+                                              participant.player_display_name,
                                           }}
                                           size="sm"
-                                          borderColor={participant.has_won ? "border-green-400" : "border-red-400"}
-                                          additionalClasses={participant.has_won ? "bg-green-600" : "bg-red-600"}
+                                          borderColor={
+                                            participant.has_won
+                                              ? "border-green-400"
+                                              : "border-red-400"
+                                          }
+                                          additionalClasses={
+                                            participant.has_won
+                                              ? "bg-green-600"
+                                              : "bg-red-600"
+                                          }
                                         />
 
                                         {/* Player Info */}
@@ -1163,9 +1180,9 @@ export default function SmashTournamentELO() {
                               {/* Player Avatar and Info */}
                               <div className="flex flex-col items-center mb-6">
                                 <div className="relative mb-4">
-                                  <ProfilePicture 
-                                    player={player} 
-                                    size="xl" 
+                                  <ProfilePicture
+                                    player={player}
+                                    size="xl"
                                     borderWidth="border-4"
                                     additionalClasses="shadow-xl bg-gradient-to-br from-gray-600 to-gray-700"
                                   />
