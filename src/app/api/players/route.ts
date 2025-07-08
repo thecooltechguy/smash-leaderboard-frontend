@@ -55,6 +55,7 @@ export async function GET() {
                 total_kos: 0,
                 total_falls: 0,
                 total_sds: 0,
+                current_win_streak: 0,
               };
 
         return {
@@ -65,6 +66,7 @@ export async function GET() {
           total_kos: Number(playerStats.total_kos) || 0,
           total_falls: Number(playerStats.total_falls) || 0,
           total_sds: Number(playerStats.total_sds) || 0,
+          current_win_streak: Number(playerStats.current_win_streak) || 0,
         };
       })
     );

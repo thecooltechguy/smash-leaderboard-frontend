@@ -13,6 +13,7 @@ interface ExtendedPlayer extends Player {
   total_kos?: number;
   total_falls?: number;
   total_sds?: number;
+  current_win_streak?: number;
 }
 
 // Match participant interface
@@ -179,6 +180,50 @@ const ProfilePicture = memo(
 );
 
 ProfilePicture.displayName = "ProfilePicture";
+
+// Fire streak component for win streaks
+const FireStreak = memo(({ streak }: { streak: number }) => {
+  if (streak < 3) return null;
+
+  const getBadgeStyles = (streak: number) => {
+    if (streak >= 10) {
+      return {
+        bg: "bg-purple-500/20",
+        border: "border-purple-500/50",
+        text: "text-purple-300",
+        glow: "shadow-[0_0_10px_rgba(168,85,247,0.3)]",
+      };
+    }
+    if (streak >= 5) {
+      return {
+        bg: "bg-blue-500/20",
+        border: "border-blue-500/50",
+        text: "text-blue-300",
+        glow: "shadow-[0_0_10px_rgba(59,130,246,0.3)]",
+      };
+    }
+    return {
+      bg: "bg-orange-500/20",
+      border: "border-orange-500/50",
+      text: "text-orange-300",
+      glow: "shadow-[0_0_10px_rgba(251,146,60,0.3)]",
+    };
+  };
+
+  const styles = getBadgeStyles(streak);
+
+  return (
+    <div
+      className={`inline-flex items-center gap-1 px-1.5 py-0.5 ml-1 md:px-2 md:py-1 md:ml-2 rounded-full border text-xs md:text-xs font-semibold animate-pulse ${styles.bg} ${styles.border} ${styles.text} ${styles.glow}`}
+    >
+      <span className="text-xs md:text-sm">🔥</span>
+      <span className="hidden sm:inline">{streak}-Game Win Streak</span>
+      <span className="sm:hidden">{streak}</span>
+    </div>
+  );
+});
+
+FireStreak.displayName = "FireStreak";
 
 export default function SmashTournamentELO() {
   // State management
@@ -353,11 +398,11 @@ export default function SmashTournamentELO() {
         throw new Error("Failed to fetch matches");
       }
       const data = await response.json();
-      
+
       // Handle both old format (direct array) and new format (object with matches and pagination)
       let matches: Match[];
       let hasMore = false;
-      
+
       if (Array.isArray(data)) {
         // Old format compatibility
         matches = data;
@@ -367,13 +412,13 @@ export default function SmashTournamentELO() {
         matches = data.matches || [];
         hasMore = data.pagination?.hasMore || false;
       }
-      
+
       if (append) {
-        setMatches(prev => [...prev, ...matches]);
+        setMatches((prev) => [...prev, ...matches]);
       } else {
         setMatches(matches);
       }
-      
+
       setHasMoreMatches(hasMore);
     } catch (err) {
       console.error("Error fetching matches:", err);
@@ -383,7 +428,7 @@ export default function SmashTournamentELO() {
 
   const loadMoreMatches = async () => {
     if (loadingMoreMatches || !hasMoreMatches) return;
-    
+
     setLoadingMoreMatches(true);
     const nextPage = matchesPage + 1;
     await fetchMatches(nextPage, true);
@@ -705,9 +750,14 @@ export default function SmashTournamentELO() {
                                     onClick={() => handlePlayerClick(player.id)}
                                   >
                                     <ProfilePicture player={player} size="md" />
-                                    <span>
-                                      {player.display_name || player.name}
-                                    </span>
+                                    <div className="flex items-center">
+                                      <span>
+                                        {player.display_name || player.name}
+                                      </span>
+                                      <FireStreak
+                                        streak={player.current_win_streak || 0}
+                                      />
+                                    </div>
                                   </div>
                                 </td>
                                 {/* <td className="px-4 py-5 whitespace-nowrap text-sm text-gray-400">
@@ -883,9 +933,14 @@ export default function SmashTournamentELO() {
 
                                           {/* Player name and ELO tooltip on hover */}
                                           <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black bg-opacity-95 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-[9999] shadow-xl border border-gray-600">
-                                            <div className="font-semibold">
+                                            <div className="font-semibold flex items-center">
                                               {player.display_name ||
                                                 player.name}
+                                              <FireStreak
+                                                streak={
+                                                  player.current_win_streak || 0
+                                                }
+                                              />
                                             </div>
                                             <div className="text-yellow-400 font-bold">
                                               ELO: {player.elo}
@@ -1119,7 +1174,7 @@ export default function SmashTournamentELO() {
                           );
                         })}
                       </div>
-                      
+
                       {/* Load More Button */}
                       {hasMoreMatches && (
                         <div className="flex justify-center mt-6">
@@ -1260,9 +1315,14 @@ export default function SmashTournamentELO() {
                                   </div>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-1 text-center">
-                                  {player.display_name || player.name}
-                                </h3>
+                                <div className="flex items-center justify-center mb-1">
+                                  <h3 className="text-xl font-bold text-white text-center">
+                                    {player.display_name || player.name}
+                                  </h3>
+                                  <FireStreak
+                                    streak={player.current_win_streak || 0}
+                                  />
+                                </div>
 
                                 {/* ELO Display */}
                                 <div className="bg-gray-700 px-4 py-2 rounded-full mb-2">

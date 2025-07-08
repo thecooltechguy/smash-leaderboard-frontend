@@ -21,4 +21,5 @@ export interface Player {
   main_character?: string | null;
   total_wins?: number;
   total_losses?: number;
+  current_win_streak?: number;
 }
