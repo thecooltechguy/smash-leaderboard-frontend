@@ -11,23 +11,27 @@ export async function GET(request: Request) {
     const characterFilter = searchParams.getAll("character");
     const only1v1 = searchParams.get("only1v1") === "true";
 
-    console.log("API filters received:", { playerFilter, characterFilter, only1v1 });
+    console.log("API filters received:", {
+      playerFilter,
+      characterFilter,
+      only1v1,
+    });
 
     // First, get match IDs that match our filters if any filters are provided
     let matchIds: number[] = [];
 
     if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
       // For AND filtering, we need to find matches that contain ALL specified players AND ALL specified characters
-      
+
       // Step 1: Find all matches
-      const { data: allMatches, error: allMatchesError } = await supabase
-        .from("matches")
-        .select(`
+      const { data: allMatches, error: allMatchesError } = await supabase.from(
+        "matches"
+      ).select(`
           id,
           match_participants (
             match_id,
             smash_character,
-            players!inner (
+            players (
               name
             )
           )
@@ -41,32 +45,34 @@ export async function GET(request: Request) {
       // Step 2: Filter matches using AND logic
       const filteredMatches = allMatches?.filter((match) => {
         const participants = match.match_participants;
-        
+
         // Check if ALL specified players are in this match
         if (playerFilter.length > 0) {
           const playersInMatch = participants
-            .map((p: { players: { name: string } }) => p.players?.name)
+            .map((p) => (p.players as unknown as { name: string })?.name)
             .filter((name): name is string => Boolean(name));
           const hasAllPlayers = playerFilter.every((playerName) =>
             playersInMatch.includes(playerName)
           );
           if (!hasAllPlayers) return false;
         }
-        
+
         // Check if ALL specified characters are used in this match
         if (characterFilter.length > 0) {
-          const charactersInMatch = participants.map((p: { smash_character: string }) => p.smash_character);
+          const charactersInMatch = participants.map(
+            (p: { smash_character: string }) => p.smash_character
+          );
           const hasAllCharacters = characterFilter.every((character) =>
             charactersInMatch.includes(character)
           );
           if (!hasAllCharacters) return false;
         }
-        
+
         // Check if it's a 1v1 match (exactly 2 players)
         if (only1v1) {
           if (participants.length !== 2) return false;
         }
-        
+
         return true;
       });
 
