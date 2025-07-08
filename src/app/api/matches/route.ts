@@ -7,12 +7,87 @@ export async function GET(request: Request) {
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "20");
     const offset = (page - 1) * limit;
+    const playerFilter = searchParams.getAll("player");
+    const characterFilter = searchParams.getAll("character");
+    const only1v1 = searchParams.get("only1v1") === "true";
 
-    // First get all matches with their participants
-    const { data: matches, error: matchesError } = await supabase
-      .from("matches")
-      .select(
-        `
+    console.log("API filters received:", { playerFilter, characterFilter, only1v1 });
+
+    // First, get match IDs that match our filters if any filters are provided
+    let matchIds: number[] = [];
+
+    if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
+      // For AND filtering, we need to find matches that contain ALL specified players AND ALL specified characters
+      
+      // Step 1: Find all matches
+      const { data: allMatches, error: allMatchesError } = await supabase
+        .from("matches")
+        .select(`
+          id,
+          match_participants (
+            match_id,
+            smash_character,
+            players!inner (
+              name
+            )
+          )
+        `);
+
+      if (allMatchesError) {
+        console.error("Error fetching all matches:", allMatchesError);
+        throw allMatchesError;
+      }
+
+      // Step 2: Filter matches using AND logic
+      const filteredMatches = allMatches?.filter((match) => {
+        const participants = match.match_participants;
+        
+        // Check if ALL specified players are in this match
+        if (playerFilter.length > 0) {
+          const playersInMatch = participants
+            .map((p: { players: { name: string } }) => p.players?.name)
+            .filter((name): name is string => Boolean(name));
+          const hasAllPlayers = playerFilter.every((playerName) =>
+            playersInMatch.includes(playerName)
+          );
+          if (!hasAllPlayers) return false;
+        }
+        
+        // Check if ALL specified characters are used in this match
+        if (characterFilter.length > 0) {
+          const charactersInMatch = participants.map((p: { smash_character: string }) => p.smash_character);
+          const hasAllCharacters = characterFilter.every((character) =>
+            charactersInMatch.includes(character)
+          );
+          if (!hasAllCharacters) return false;
+        }
+        
+        // Check if it's a 1v1 match (exactly 2 players)
+        if (only1v1) {
+          if (participants.length !== 2) return false;
+        }
+        
+        return true;
+      });
+
+      matchIds = filteredMatches?.map((match) => match.id) || [];
+      console.log("Found match IDs with filtering:", matchIds);
+
+      if (matchIds.length === 0) {
+        return NextResponse.json({
+          matches: [],
+          pagination: {
+            page,
+            limit,
+            hasMore: false,
+          },
+        });
+      }
+    }
+
+    // Build the main query
+    let query = supabase.from("matches").select(
+      `
         id,
         created_at,
         match_participants (
@@ -30,7 +105,14 @@ export async function GET(request: Request) {
           )
         )
       `
-      )
+    );
+
+    // Filter by match IDs if we have filters
+    if (matchIds.length > 0) {
+      query = query.in("id", matchIds);
+    }
+
+    const { data: matches, error: matchesError } = await query
       .order("created_at", { ascending: false })
       .range(offset, offset + limit - 1);
 
@@ -44,8 +126,8 @@ export async function GET(request: Request) {
         pagination: {
           page,
           limit,
-          hasMore: false
-        }
+          hasMore: false,
+        },
       });
     }
 
@@ -69,14 +151,18 @@ export async function GET(request: Request) {
       })),
     }));
 
+    console.log(
+      `Returning ${transformedMatches.length} matches for page ${page}`
+    );
+
     // Return matches with pagination info
     return NextResponse.json({
       matches: transformedMatches,
       pagination: {
         page,
         limit,
-        hasMore: transformedMatches.length === limit
-      }
+        hasMore: transformedMatches.length === limit,
+      },
     });
   } catch (error) {
     console.error("Error fetching matches:", error);

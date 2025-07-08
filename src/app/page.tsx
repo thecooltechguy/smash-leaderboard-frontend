@@ -1,8 +1,8 @@
 "use client";
 
 import { Player } from "@/lib/supabase";
-import { ArrowUpDown, List, Swords, Trophy, Users } from "lucide-react";
-import React, { memo, useEffect, useState } from "react";
+import { ArrowUpDown, Filter, List, Swords, Trophy, Users } from "lucide-react";
+import React, { memo, useEffect, useRef, useState } from "react";
 
 // Extended player interface for frontend with real stats
 interface ExtendedPlayer extends Player {
@@ -55,7 +55,7 @@ const RefreshStatus = memo(
     if (!lastUpdated) return null;
 
     return (
-      <p
+      <div
         className={`text-sm text-gray-200 mt-1 flex items-center ${
           centered ? "justify-center" : ""
         }`}
@@ -73,7 +73,7 @@ const RefreshStatus = memo(
             <span>Refreshing in {countdown}s</span>
           </>
         )}
-      </p>
+      </div>
     );
   }
 );
@@ -239,6 +239,37 @@ export default function SmashTournamentELO() {
   const [matchesPage, setMatchesPage] = useState<number>(1);
   const [loadingMoreMatches, setLoadingMoreMatches] = useState<boolean>(false);
   const [hasMoreMatches, setHasMoreMatches] = useState<boolean>(true);
+  const [selectedPlayerFilter, setSelectedPlayerFilter] = useState<string[]>(
+    []
+  );
+  const [selectedCharacterFilter, setSelectedCharacterFilter] = useState<
+    string[]
+  >([]);
+  const [only1v1, setOnly1v1] = useState<boolean>(false);
+  const [showFilters, setShowFilters] = useState<boolean>(false);
+
+  // Refs to store current filter values for use in intervals
+  const currentPlayerFilter = useRef<string[]>([]);
+  const currentCharacterFilter = useRef<string[]>([]);
+  const current1v1Filter = useRef<boolean>(false);
+  const currentActiveTab = useRef<string>("rankings");
+
+  // Update refs when state changes
+  useEffect(() => {
+    currentPlayerFilter.current = selectedPlayerFilter;
+  }, [selectedPlayerFilter]);
+
+  useEffect(() => {
+    currentCharacterFilter.current = selectedCharacterFilter;
+  }, [selectedCharacterFilter]);
+
+  useEffect(() => {
+    current1v1Filter.current = only1v1;
+  }, [only1v1]);
+
+  useEffect(() => {
+    currentActiveTab.current = activeTab;
+  }, [activeTab]);
 
   // Function to handle player click and scroll
   const handlePlayerClick = (playerId: number) => {
@@ -306,13 +337,22 @@ export default function SmashTournamentELO() {
   // Fetch players from database
   useEffect(() => {
     fetchPlayers();
-    fetchMatches();
+    fetchMatches(1, false, [], [], false);
 
     // Set up automatic refresh every 30 seconds
     const refreshInterval = setInterval(() => {
       fetchPlayers(true); // Pass true to indicate this is a background refresh
-      fetchMatches(1, false); // Reset to first page
-      setMatchesPage(1); // Reset pagination
+      // Only refresh matches if we're on the matches tab, and preserve current filters
+      if (currentActiveTab.current === "matches") {
+        fetchMatches(
+          1,
+          false,
+          currentPlayerFilter.current,
+          currentCharacterFilter.current,
+          current1v1Filter.current
+        );
+        setMatchesPage(1); // Reset pagination
+      }
       setCountdown(30); // Reset countdown after refresh
     }, 30000);
 
@@ -390,13 +430,38 @@ export default function SmashTournamentELO() {
     }
   };
 
-  const fetchMatches = async (page: number = 1, append: boolean = false) => {
+  const fetchMatches = async (
+    page: number = 1,
+    append: boolean = false,
+    playerFilter?: string[],
+    characterFilter?: string[],
+    only1v1Filter?: boolean
+  ) => {
     try {
-      const response = await fetch(`/api/matches?page=${page}&limit=20`);
+      const params = new URLSearchParams();
+      params.append("page", page.toString());
+      params.append("limit", "20");
+
+      if (playerFilter && playerFilter.length > 0) {
+        playerFilter.forEach((player) => params.append("player", player));
+      }
+      if (characterFilter && characterFilter.length > 0) {
+        characterFilter.forEach((character) =>
+          params.append("character", character)
+        );
+      }
+      if (only1v1Filter) {
+        params.append("only1v1", "true");
+      }
+
+      const url = `/api/matches?${params.toString()}`;
+      console.log("Fetching matches from:", url);
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Failed to fetch matches");
       }
       const data = await response.json();
+      console.log("Received data:", data);
 
       // Handle both old format (direct array) and new format (object with matches and pagination)
       let matches: Match[];
@@ -413,12 +478,20 @@ export default function SmashTournamentELO() {
       }
 
       if (append) {
+        console.log(
+          "Appending matches:",
+          matches.length,
+          "to existing:",
+          matches.length
+        );
         setMatches((prev) => [...prev, ...matches]);
       } else {
+        console.log("Setting matches:", matches.length, "matches");
         setMatches(matches);
       }
 
       setHasMoreMatches(hasMore);
+      console.log("Updated matches state, hasMore:", hasMore);
     } catch (err) {
       console.error("Error fetching matches:", err);
       // Don't set error state for matches as it's secondary to players
@@ -430,9 +503,26 @@ export default function SmashTournamentELO() {
 
     setLoadingMoreMatches(true);
     const nextPage = matchesPage + 1;
-    await fetchMatches(nextPage, true);
+    await fetchMatches(
+      nextPage,
+      true,
+      selectedPlayerFilter,
+      selectedCharacterFilter,
+      only1v1
+    );
     setMatchesPage(nextPage);
     setLoadingMoreMatches(false);
+  };
+
+  // Search function to manually trigger filtering
+  const handleSearch = async () => {
+    console.log("handleSearch called with filters:", {
+      player: selectedPlayerFilter,
+      character: selectedCharacterFilter,
+      only1v1: only1v1,
+    });
+    setMatchesPage(1);
+    await fetchMatches(1, false, selectedPlayerFilter, selectedCharacterFilter, only1v1);
   };
 
   // Determine tier based on ELO using percentile-based thresholds
@@ -1012,6 +1102,17 @@ export default function SmashTournamentELO() {
                               Match History
                             </h2>
                           </div>
+                          <button
+                            onClick={() => setShowFilters(!showFilters)}
+                            className={`ml-4 p-2 rounded-lg transition-colors duration-200 ${
+                              showFilters
+                                ? "bg-blue-600 text-white"
+                                : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"
+                            }`}
+                            title="Toggle Filters"
+                          >
+                            <Filter size={20} />
+                          </button>
                         </div>
                         <RefreshStatus
                           refreshing={refreshing}
@@ -1027,6 +1128,146 @@ export default function SmashTournamentELO() {
                         refreshing ? "opacity-75" : "opacity-100"
                       }`}
                     >
+                      {/* Filter Section */}
+                      {showFilters && (
+                        <>
+                          <div className="mb-6 bg-gray-800 rounded-lg p-4 border border-gray-700">
+                            <h3 className="text-lg font-semibold text-white mb-4">
+                              Filter Matches
+                            </h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-4">
+                              {/* Player Filter */}
+                              <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-3">
+                                  Players ({selectedPlayerFilter.length} selected)
+                                </label>
+                                <div className="max-h-40 overflow-y-auto bg-gray-700 border border-gray-600 rounded-lg p-2">
+                                  {players.map((player) => (
+                                    <label
+                                      key={player.id}
+                                      className="flex items-center space-x-2 p-2 hover:bg-gray-600 rounded cursor-pointer"
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        checked={selectedPlayerFilter.includes(
+                                          player.name
+                                        )}
+                                        onChange={(e) => {
+                                          if (e.target.checked) {
+                                            setSelectedPlayerFilter((prev) => [
+                                              ...prev,
+                                              player.name,
+                                            ]);
+                                          } else {
+                                            setSelectedPlayerFilter((prev) =>
+                                              prev.filter(
+                                                (p) => p !== player.name
+                                              )
+                                            );
+                                          }
+                                        }}
+                                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                                      />
+                                      <span className="text-white text-sm">
+                                        {player.display_name || player.name}
+                                      </span>
+                                    </label>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Character Filter */}
+                              <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-3">
+                                  Characters ({selectedCharacterFilter.length}{" "}
+                                  selected)
+                                </label>
+                                <div className="max-h-40 overflow-y-auto bg-gray-700 border border-gray-600 rounded-lg p-2">
+                                  {Array.from(
+                                    new Set(
+                                      matches.flatMap((match) =>
+                                        match.participants.map(
+                                          (p) => p.smash_character
+                                        )
+                                      )
+                                    )
+                                  )
+                                    .sort()
+                                    .map((character) => (
+                                      <label
+                                        key={character}
+                                        className="flex items-center space-x-2 p-2 hover:bg-gray-600 rounded cursor-pointer"
+                                      >
+                                        <input
+                                          type="checkbox"
+                                          checked={selectedCharacterFilter.includes(
+                                            character
+                                          )}
+                                          onChange={(e) => {
+                                            if (e.target.checked) {
+                                              setSelectedCharacterFilter(
+                                                (prev) => [...prev, character]
+                                              );
+                                            } else {
+                                              setSelectedCharacterFilter((prev) =>
+                                                prev.filter(
+                                                  (c) => c !== character
+                                                )
+                                              );
+                                            }
+                                          }}
+                                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                                        />
+                                        <span className="text-white text-sm">
+                                          {character}
+                                        </span>
+                                      </label>
+                                    ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* 1v1 Filter */}
+                            <div className="lg:col-span-2">
+                              <label className="flex items-center space-x-2 p-3 bg-gray-700 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600">
+                                <input
+                                  type="checkbox"
+                                  checked={only1v1}
+                                  onChange={(e) => setOnly1v1(e.target.checked)}
+                                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                                />
+                                <span className="text-white font-medium">
+                                  Show only 1v1 matches (2 players)
+                                </span>
+                              </label>
+                            </div>
+
+                            {/* Search and Clear Buttons */}
+                            <div className="flex justify-center gap-4 mt-6">
+                              <button
+                                onClick={handleSearch}
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                              >
+                                <Swords size={16} />
+                                Search
+                              </button>
+                              <button
+                                onClick={async () => {
+                                  setSelectedPlayerFilter([]);
+                                  setSelectedCharacterFilter([]);
+                                  setOnly1v1(false);
+                                  setMatchesPage(1);
+                                  await fetchMatches(1, false, [], [], false);
+                                }}
+                                className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200"
+                              >
+                                Clear All
+                              </button>
+                            </div>
+                          </div>
+                        </>
+                      )}
+
                       <div className="space-y-4">
                         {matches.map((match) => {
                           const participants = match.participants.sort(
@@ -1054,9 +1295,38 @@ export default function SmashTournamentELO() {
                                       match.created_at
                                     ).toLocaleTimeString()}
                                   </div>
-                                  <div className="text-gray-500 font-medium">
-                                    {participants.length} Player
-                                    {participants.length > 1 ? "s" : ""}
+                                  <div className="flex items-center gap-3">
+                                    <div className="text-gray-500 font-medium">
+                                      {participants.length} Player
+                                      {participants.length > 1 ? "s" : ""}
+                                    </div>
+{(() => {
+                                      const playerNames = participants.map(p => p.player_name);
+                                      const isExactMatch = selectedPlayerFilter.length === playerNames.length &&
+                                        playerNames.every(name => selectedPlayerFilter.includes(name)) &&
+                                        selectedPlayerFilter.every(name => playerNames.includes(name));
+                                      
+                                      if (isExactMatch) return null;
+                                      
+                                      return (
+                                        <button
+                                          onClick={() => {
+                                            const is1v1 = playerNames.length === 2;
+                                            setSelectedPlayerFilter(playerNames);
+                                            setSelectedCharacterFilter([]);
+                                            setOnly1v1(is1v1);
+                                            setShowFilters(true);
+                                            setTimeout(async () => {
+                                              setMatchesPage(1);
+                                              await fetchMatches(1, false, playerNames, [], is1v1);
+                                            }, 100);
+                                          }}
+                                          className="text-xs bg-gray-600 hover:bg-gray-500 text-white font-medium py-1 px-2 rounded transition-colors duration-200"
+                                        >
+                                          Filter for this matchup
+                                        </button>
+                                      );
+                                    })()}
                                   </div>
                                 </div>
 
@@ -1270,7 +1540,7 @@ export default function SmashTournamentELO() {
                       {/* Player Cards Grid */}
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {sortedPlayers.map((player, index) => {
-                          const tier = getTier(player.elo, tierThresholds);
+                          // const tier = getTier(player.elo, tierThresholds);
                           const winRate =
                             player.total_wins &&
                             player.total_wins + (player.total_losses || 0) > 0
@@ -1305,13 +1575,13 @@ export default function SmashTournamentELO() {
                                     additionalClasses="shadow-xl bg-gradient-to-br from-gray-600 to-gray-700"
                                   />
                                   {/* Tier badge on avatar */}
-                                  <div
+                                  {/* <div
                                     className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${getTierBadgeColor(
                                       tier
                                     )} shadow-lg border-2 border-gray-800`}
                                   >
                                     {tier}
-                                  </div>
+                                  </div> */}
                                 </div>
 
                                 <div className="flex items-center justify-center mb-1">
@@ -1440,6 +1710,32 @@ export default function SmashTournamentELO() {
                                     </div>
                                   </div>
                                 </div>
+                              </div>
+
+                              {/* View Match History Button */}
+                              <div className="mt-4 pt-4 border-t border-gray-600">
+                                <button
+                                  onClick={async () => {
+                                    setSelectedPlayerFilter([player.name]);
+                                    setSelectedCharacterFilter([]);
+                                    setShowFilters(true);
+                                    setActiveTab("matches");
+                                    // Small delay to ensure state is updated before API call
+                                    setTimeout(async () => {
+                                      setMatchesPage(1);
+                                      await fetchMatches(
+                                        1,
+                                        false,
+                                        [player.name],
+                                        [],
+                                        false
+                                      );
+                                    }, 100);
+                                  }}
+                                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                                >
+                                  View Match History
+                                </button>
                               </div>
 
                               {/* Decorative elements */}
