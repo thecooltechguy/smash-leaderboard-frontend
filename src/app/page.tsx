@@ -217,8 +217,7 @@ const FireStreak = memo(({ streak }: { streak: number }) => {
       className={`inline-flex items-center gap-1 px-1.5 py-0.5 ml-1 md:px-2 md:py-1 md:ml-2 rounded-full border text-xs md:text-xs font-semibold animate-pulse ${styles.bg} ${styles.border} ${styles.text} ${styles.glow}`}
     >
       <span className="text-xs md:text-sm">🔥</span>
-      <span className="hidden sm:inline">{streak}-Game Win Streak</span>
-      <span className="sm:hidden">{streak}</span>
+      <span>{streak}</span>
     </div>
   );
 });
