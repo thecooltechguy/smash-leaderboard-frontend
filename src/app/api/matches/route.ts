@@ -1,8 +1,13 @@
 import { supabase } from "@/lib/supabase";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const page = parseInt(searchParams.get("page") || "1");
+    const limit = parseInt(searchParams.get("limit") || "20");
+    const offset = (page - 1) * limit;
+
     // First get all matches with their participants
     const { data: matches, error: matchesError } = await supabase
       .from("matches")
@@ -26,14 +31,22 @@ export async function GET() {
         )
       `
       )
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: false })
+      .range(offset, offset + limit - 1);
 
     if (matchesError) {
       throw matchesError;
     }
 
     if (!matches || matches.length === 0) {
-      return NextResponse.json([]);
+      return NextResponse.json({
+        matches: [],
+        pagination: {
+          page,
+          limit,
+          hasMore: false
+        }
+      });
     }
 
     // Transform the data to match our frontend interface
@@ -56,7 +69,15 @@ export async function GET() {
       })),
     }));
 
-    return NextResponse.json(transformedMatches);
+    // Return matches with pagination info
+    return NextResponse.json({
+      matches: transformedMatches,
+      pagination: {
+        page,
+        limit,
+        hasMore: transformedMatches.length === limit
+      }
+    });
   } catch (error) {
     console.error("Error fetching matches:", error);
     return NextResponse.json(

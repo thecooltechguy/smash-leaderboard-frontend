@@ -192,6 +192,9 @@ export default function SmashTournamentELO() {
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [refreshing, setRefreshing] = useState<boolean>(false);
   const [countdown, setCountdown] = useState<number>(30);
+  const [matchesPage, setMatchesPage] = useState<number>(1);
+  const [loadingMoreMatches, setLoadingMoreMatches] = useState<boolean>(false);
+  const [hasMoreMatches, setHasMoreMatches] = useState<boolean>(true);
 
   // Function to handle player click and scroll
   const handlePlayerClick = (playerId: number) => {
@@ -264,7 +267,8 @@ export default function SmashTournamentELO() {
     // Set up automatic refresh every 30 seconds
     const refreshInterval = setInterval(() => {
       fetchPlayers(true); // Pass true to indicate this is a background refresh
-      fetchMatches();
+      fetchMatches(1, false); // Reset to first page
+      setMatchesPage(1); // Reset pagination
       setCountdown(30); // Reset countdown after refresh
     }, 30000);
 
@@ -342,18 +346,49 @@ export default function SmashTournamentELO() {
     }
   };
 
-  const fetchMatches = async () => {
+  const fetchMatches = async (page: number = 1, append: boolean = false) => {
     try {
-      const response = await fetch("/api/matches");
+      const response = await fetch(`/api/matches?page=${page}&limit=20`);
       if (!response.ok) {
         throw new Error("Failed to fetch matches");
       }
-      const data: Match[] = await response.json();
-      setMatches(data);
+      const data = await response.json();
+      
+      // Handle both old format (direct array) and new format (object with matches and pagination)
+      let matches: Match[];
+      let hasMore = false;
+      
+      if (Array.isArray(data)) {
+        // Old format compatibility
+        matches = data;
+        hasMore = data.length === 20;
+      } else {
+        // New format
+        matches = data.matches || [];
+        hasMore = data.pagination?.hasMore || false;
+      }
+      
+      if (append) {
+        setMatches(prev => [...prev, ...matches]);
+      } else {
+        setMatches(matches);
+      }
+      
+      setHasMoreMatches(hasMore);
     } catch (err) {
       console.error("Error fetching matches:", err);
       // Don't set error state for matches as it's secondary to players
     }
+  };
+
+  const loadMoreMatches = async () => {
+    if (loadingMoreMatches || !hasMoreMatches) return;
+    
+    setLoadingMoreMatches(true);
+    const nextPage = matchesPage + 1;
+    await fetchMatches(nextPage, true);
+    setMatchesPage(nextPage);
+    setLoadingMoreMatches(false);
   };
 
   // Determine tier based on ELO using percentile-based thresholds
@@ -939,7 +974,7 @@ export default function SmashTournamentELO() {
                       }`}
                     >
                       <div className="space-y-4">
-                        {matches.slice(0, 20).map((match) => {
+                        {matches.map((match) => {
                           const participants = match.participants.sort(
                             (a, b) => {
                               if (a.has_won && !b.has_won) return -1;
@@ -1084,6 +1119,29 @@ export default function SmashTournamentELO() {
                           );
                         })}
                       </div>
+                      
+                      {/* Load More Button */}
+                      {hasMoreMatches && (
+                        <div className="flex justify-center mt-6">
+                          <button
+                            onClick={loadMoreMatches}
+                            disabled={loadingMoreMatches}
+                            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center space-x-2 shadow-lg"
+                          >
+                            {loadingMoreMatches ? (
+                              <>
+                                <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+                                <span>Loading more matches...</span>
+                              </>
+                            ) : (
+                              <>
+                                <Swords size={20} />
+                                <span>Load More Matches</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
