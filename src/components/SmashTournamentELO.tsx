@@ -464,6 +464,20 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
     router.push(`/players#player-${playerId}`);
   };
 
+  // Function to add highlight effect to player profile after scrolling
+  const highlightPlayerProfile = (playerId: number) => {
+    const element = document.getElementById(`player-${playerId}`);
+    if (element) {
+      // Add highlight class
+      element.classList.add('player-highlight');
+      
+      // Remove highlight after 3 seconds
+      setTimeout(() => {
+        element.classList.remove('player-highlight');
+      }, 3000);
+    }
+  };
+
   // Load Google Font
   useEffect(() => {
     const link = document.createElement("link");
@@ -577,6 +591,20 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
         if (!playersCache) {
           setPlayersCache(cacheToUse);
         }
+        
+        // Check for hash scroll when using cached data
+        const hash = window.location.hash;
+        if (hash.startsWith("#player-")) {
+          const playerId = parseInt(hash.replace("#player-", ""));
+          setTimeout(() => {
+            const element = document.getElementById(`player-${playerId}`);
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth", block: "center" });
+              // Highlight the profile after scrolling
+              setTimeout(() => highlightPlayerProfile(playerId), 500);
+            }
+          }, 200); // Increased timeout for cached data
+        }
       } else {
         // Fallback to fetch if cache is corrupted
         fetchPlayers();
@@ -686,8 +714,10 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
           const element = document.getElementById(`player-${playerId}`);
           if (element) {
             element.scrollIntoView({ behavior: "smooth", block: "center" });
+            // Highlight the profile after scrolling
+            setTimeout(() => highlightPlayerProfile(playerId), 500);
           }
-        }, 100);
+        }, 200);
       }
     } catch (err) {
       console.error("Error fetching players:", err);
@@ -868,15 +898,40 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
   });
 
   return (
-    <div
-      className="flex flex-col items-center p-6 md:p-0 min-h-screen bg-black text-white antialiased"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle at 50% 50%, rgba(30, 30, 30, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%)",
-        backgroundAttachment: "fixed",
-        fontFamily: "'Roboto Mono', monospace",
-      }}
-    >
+    <>
+      {/* CSS for player highlight effect */}
+      <style jsx>{`
+        .player-highlight {
+          animation: highlight 3s ease-in-out;
+          box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+          border: 2px solid rgba(255, 215, 0, 0.6) !important;
+        }
+        
+        @keyframes highlight {
+          0% {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+            border-color: rgba(255, 215, 0, 0.6);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.6);
+            border-color: rgba(255, 215, 0, 0.8);
+          }
+          100% {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+            border-color: rgba(255, 215, 0, 0.6);
+          }
+        }
+      `}</style>
+      
+      <div
+        className="flex flex-col items-center p-6 md:p-0 min-h-screen bg-black text-white antialiased"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 50% 50%, rgba(30, 30, 30, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%)",
+          backgroundAttachment: "fixed",
+          fontFamily: "'Roboto Mono', monospace",
+        }}
+      >
       {/* Smash-style header */}
       <header className="max-w-5xl w-full bg-gradient-to-r from-red-600 to-red-700 border-b-4 border-yellow-500 shadow-lg relative overflow-hidden rounded-3xl md:mt-8">
         {/* Glare effect */}
@@ -1684,7 +1739,10 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
 
                                             {/* Player Info */}
                                             <div className="flex-1 min-w-0">
-                                              <div className="text-white font-semibold truncate">
+                                              <div 
+                                                className="text-white font-semibold truncate cursor-pointer hover:text-yellow-400 transition-colors"
+                                                onClick={() => handlePlayerClick(participant.player)}
+                                              >
                                                 {participant.player_display_name ||
                                                   participant.player_name}
                                               </div>
@@ -2301,5 +2359,6 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
         </div>
       </footer>
     </div>
+    </>
   );
 }
