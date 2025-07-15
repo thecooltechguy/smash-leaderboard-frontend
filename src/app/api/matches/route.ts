@@ -18,7 +18,7 @@ export async function GET(request: Request) {
     });
 
     // Build the base query conditions
-    const whereConditions: { id?: { in: number[] } } = {};
+    const whereConditions: { id?: { in: bigint[] } } = {};
 
     // Apply filters
     if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
@@ -123,11 +123,11 @@ export async function GET(request: Request) {
 
     // Transform the data to match the frontend interface
     const transformedMatches = matches.map((match) => ({
-      id: match.id,
+      id: Number(match.id),
       created_at: match.created_at.toISOString(),
       participants: match.match_participants.map((participant) => ({
-        id: participant.id,
-        player: participant.player,
+        id: Number(participant.id),
+        player: Number(participant.player),
         player_name: participant.players.name,
         player_display_name: participant.players.display_name,
         smash_character: participant.smash_character,

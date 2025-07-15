@@ -11,11 +11,11 @@ datasource db {
 }
 
 model players {
-  id           Int      @id @default(autoincrement())
+  id           BigInt   @id @default(autoincrement())
   created_at   DateTime @default(now())
   name         String   @unique
   display_name String?
-  elo          Int      @default(1000)
+  elo          BigInt   @default(1200)
   
   // Relations
   match_participants match_participants[]
@@ -24,7 +24,7 @@ model players {
 }
 
 model matches {
-  id         Int      @id @default(autoincrement())
+  id         BigInt   @id @default(autoincrement())
   created_at DateTime @default(now())
   
   // Relations
@@ -34,15 +34,16 @@ model matches {
 }
 
 model match_participants {
-  id              Int     @id @default(autoincrement())
-  match_id        Int
-  player          Int
+  id              BigInt   @id @default(autoincrement())
+  created_at      DateTime @default(now())
+  match_id        BigInt
+  player          BigInt
   smash_character String
-  is_cpu          Boolean @default(false)
-  total_kos       Int     @default(0)
-  total_falls     Int     @default(0)
-  total_sds       Int     @default(0)
-  has_won         Boolean @default(false)
+  is_cpu          Boolean  @default(false)
+  total_kos       Int      @default(0)
+  total_falls     Int      @default(0)
+  total_sds       Int      @default(0)
+  has_won         Boolean  @default(false)
   
   // Relations
   match   matches @relation(fields: [match_id], references: [id], onDelete: Cascade)

@@ -22,7 +22,9 @@ import {
 import React, { memo, useEffect, useRef, useState } from "react";
 
 // Extended player interface for frontend with real stats
-interface ExtendedPlayer extends Player {
+interface ExtendedPlayer extends Omit<Player, 'id' | 'elo'> {
+  id: number;
+  elo: number;
   matches: number;
   main_character?: string;
   total_wins?: number;

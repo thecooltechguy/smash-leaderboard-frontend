@@ -10,11 +10,11 @@ if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
 // Type definitions
 export interface Player {
-  id: number;
+  id: bigint;
   created_at: string;
   name: string;
   display_name: string | null;
-  elo: number;
+  elo: bigint;
   main_character?: string | null;
   total_wins?: number;
   total_losses?: number;
@@ -34,7 +34,7 @@ export interface PlayerStats {
 }
 
 // Helper function to get most common character for a player
-export async function getMostCommonCharacter(playerId: number): Promise<string | null> {
+export async function getMostCommonCharacter(playerId: bigint): Promise<string | null> {
   try {
     const participants = await prisma.match_participants.findMany({
       where: {
@@ -67,7 +67,7 @@ export async function getMostCommonCharacter(playerId: number): Promise<string |
 }
 
 // Helper function to get player stats
-export async function getPlayerStats(playerId: number): Promise<PlayerStats> {
+export async function getPlayerStats(playerId: bigint): Promise<PlayerStats> {
   // Get all 1v1 matches for this player (matches with exactly 2 human participants)
   const oneVOneMatches = await prisma.matches.findMany({
     where: {
