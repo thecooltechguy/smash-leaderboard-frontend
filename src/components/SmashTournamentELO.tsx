@@ -27,6 +27,8 @@ interface ExtendedPlayer extends Omit<Player, 'id' | 'elo'> {
   id: number;
   elo: number;
   matches: number;
+  is_ranked: boolean;
+  top_10_players_played: number;
   main_character?: string;
   total_wins?: number;
   total_losses?: number;
@@ -42,6 +44,7 @@ interface MatchParticipant {
   player: number;
   player_name: string;
   player_display_name: string | null;
+  player_is_ranked: boolean;
   smash_character: string;
   is_cpu: boolean;
   total_kos: number;
@@ -365,6 +368,10 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [refreshing, setRefreshing] = useState<boolean>(false);
   const [countdown, setCountdown] = useState<number>(30);
+  
+  // Cache management
+  const [playersCache, setPlayersCache] = useState<{data: ExtendedPlayer[], timestamp: number} | null>(null);
+  const CACHE_DURATION = 30000; // 30 seconds
   const [matchesPage, setMatchesPage] = useState<number>(1);
   const [loadingMoreMatches, setLoadingMoreMatches] = useState<boolean>(false);
   const [hasMoreMatches, setHasMoreMatches] = useState<boolean>(true);
@@ -375,7 +382,9 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
     string[]
   >([]);
   const [only1v1, setOnly1v1] = useState<boolean>(false);
+  const [rankedFilter, setRankedFilter] = useState<string>("all"); // "all", "ranked", "unranked"
   const [showFilters, setShowFilters] = useState<boolean>(false);
+  const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked">("ranked");
 
   // Initialize filters from URL params on matches page
   useEffect(() => {
@@ -383,6 +392,7 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
       const players = searchParams.getAll("player");
       const characters = searchParams.getAll("character");
       const only1v1Param = searchParams.get("only1v1") === "true";
+      const rankedParam = searchParams.get("ranked");
       
       if (players.length > 0) {
         setSelectedPlayerFilter(players);
@@ -396,6 +406,10 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
         setOnly1v1(true);
         setShowFilters(true);
       }
+      if (rankedParam && ["ranked", "unranked"].includes(rankedParam)) {
+        setRankedFilter(rankedParam);
+        setShowFilters(true);
+      }
     }
   }, [defaultTab, searchParams]);
 
@@ -403,6 +417,7 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
   const currentPlayerFilter = useRef<string[]>([]);
   const currentCharacterFilter = useRef<string[]>([]);
   const current1v1Filter = useRef<boolean>(false);
+  const currentRankedFilter = useRef<string>("all");
   const currentActiveTab = useRef<string>("rankings");
 
   // Update refs when state changes
@@ -417,6 +432,10 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
   useEffect(() => {
     current1v1Filter.current = only1v1;
   }, [only1v1]);
+
+  useEffect(() => {
+    currentRankedFilter.current = rankedFilter;
+  }, [rankedFilter]);
 
   useEffect(() => {
     currentActiveTab.current = activeTab;
@@ -517,41 +536,85 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
     }
   };
 
-  // Fetch players from database
+
+  // Fetch players from database with caching
   useEffect(() => {
-    fetchPlayers();
+    // Check if we need fresh data
+    const checkFreshData = () => {
+      // Check memory cache first
+      if (playersCache && Date.now() - playersCache.timestamp <= CACHE_DURATION) {
+        return false;
+      }
+      
+      // Check localStorage cache
+      try {
+        const cached = localStorage.getItem('playersCache');
+        if (cached) {
+          const parsedCache = JSON.parse(cached);
+          if (Date.now() - parsedCache.timestamp <= CACHE_DURATION) {
+            // Update memory cache from localStorage
+            setPlayersCache(parsedCache);
+            return false;
+          }
+        }
+      } catch {
+        // If localStorage fails, continue with fresh fetch
+      }
+      
+      return true;
+    };
+
+    // Only fetch if we don't have cached data or it's stale
+    if (checkFreshData()) {
+      fetchPlayers();
+    } else {
+      // Use cached data (from memory or localStorage)
+      const cacheToUse = playersCache || JSON.parse(localStorage.getItem('playersCache') || '{}');
+      if (cacheToUse.data) {
+        setPlayers(cacheToUse.data);
+        setLoading(false);
+        setLastUpdated(new Date(cacheToUse.timestamp));
+        if (!playersCache) {
+          setPlayersCache(cacheToUse);
+        }
+      } else {
+        // Fallback to fetch if cache is corrupted
+        fetchPlayers();
+      }
+    }
+
+    // Only fetch matches for matches tab
     if (defaultTab === "matches") {
-      // Use URL params for initial load
       const players = searchParams.getAll("player");
       const characters = searchParams.getAll("character");
       const only1v1Param = searchParams.get("only1v1") === "true";
       fetchMatches(1, false, players, characters, only1v1Param);
-    } else {
-      fetchMatches(1, false, [], [], false);
     }
 
-    // Set up automatic refresh every 30 seconds
+    // Set up automatic refresh every 30 seconds - but only run for current active tab
     const refreshInterval = setInterval(() => {
-      fetchPlayers(true); // Pass true to indicate this is a background refresh
-      // Only refresh matches if we're on the matches tab, and preserve current filters
-      if (currentActiveTab.current === "matches") {
-        fetchMatches(
-          1,
-          false,
-          currentPlayerFilter.current,
-          currentCharacterFilter.current,
-          current1v1Filter.current
-        );
-        setMatchesPage(1); // Reset pagination
+      // Only refresh if this component is for the current active tab
+      if (currentActiveTab.current === defaultTab) {
+        fetchPlayers(true);
+        if (defaultTab === "matches") {
+          fetchMatches(
+            1,
+            false,
+            currentPlayerFilter.current,
+            currentCharacterFilter.current,
+            current1v1Filter.current
+          );
+          setMatchesPage(1);
+        }
       }
-      setCountdown(30); // Reset countdown after refresh
+      setCountdown(30);
     }, 30000);
 
     // Set up countdown timer every second
     const countdownInterval = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
-          return 30; // Reset to 30 when it reaches 0
+          return 30;
         }
         return prev - 1;
       });
@@ -562,6 +625,7 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
       clearInterval(refreshInterval);
       clearInterval(countdownInterval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [defaultTab, searchParams]);
 
   const fetchPlayers = async (isBackgroundRefresh = false) => {
@@ -582,6 +646,8 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
         name: string;
         display_name: string | null;
         elo: number;
+        is_ranked: boolean;
+        top_10_players_played: number;
         created_at: string;
         main_character?: string;
         total_wins?: number;
@@ -595,7 +661,22 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
       }));
 
       setPlayers(playersWithMatches);
-      setLastUpdated(new Date());
+      const now = new Date();
+      setLastUpdated(now);
+      
+      // Update cache
+      const cacheData = {
+        data: playersWithMatches,
+        timestamp: now.getTime()
+      };
+      setPlayersCache(cacheData);
+      
+      // Also cache in localStorage
+      try {
+        localStorage.setItem('playersCache', JSON.stringify(cacheData));
+      } catch {
+        // If localStorage fails, continue without caching
+      }
 
       // Check for hash after players are loaded
       const hash = window.location.hash;
@@ -740,9 +821,16 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
 
   // Sort players by ELO
   const sortedPlayers = [...players].sort((a, b) => b.elo - a.elo);
+  
+  // Separate ranked and unranked players
+  const rankedPlayers = sortedPlayers.filter(player => player.is_ranked);
+  const unrankedPlayers = sortedPlayers.filter(player => !player.is_ranked);
+  
+  // Sort unranked players by how close they are to becoming ranked (descending: 2/3, 1/3, 0/3)
+  const sortedUnrankedPlayers = unrankedPlayers.sort((a, b) => b.top_10_players_played - a.top_10_players_played);
 
-  // Calculate dynamic tier thresholds
-  const tierThresholds = calculateTierThresholds(sortedPlayers);
+  // Calculate dynamic tier thresholds ONLY for ranked players
+  const tierThresholds = calculateTierThresholds(rankedPlayers);
 
   // Get tier badge color
   const getTierBadgeColor = (tier: Tier): string => {
@@ -764,7 +852,7 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
     }
   };
 
-  // Group players by tier for tier list
+  // Group players by tier for tier list (only ranked players)
   const tierList: Record<Tier, ExtendedPlayer[]> = {
     S: [],
     A: [],
@@ -774,7 +862,7 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
     E: [],
   };
 
-  sortedPlayers.forEach((player) => {
+  rankedPlayers.forEach((player) => {
     const tier = getTier(player.elo, tierThresholds);
     tierList[tier].push(player);
   });
@@ -955,6 +1043,39 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                   </div>
                 </div>
 
+                {/* Leaderboard Sub-tabs */}
+                <div className="px-6 py-4 bg-gray-800 border-b border-gray-700">
+                  <div className="flex space-x-1">
+                    {[
+                      { id: "ranked", label: "Ranked Players" },
+                      { id: "unranked", label: "Unranked Players" },
+                    ].map((tab) => (
+                      <button
+                        key={tab.id}
+                        onClick={() => setLeaderboardTab(tab.id as "ranked" | "unranked")}
+                        className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                          leaderboardTab === tab.id
+                            ? "bg-red-600 text-white"
+                            : "text-gray-400 hover:text-white hover:bg-gray-700"
+                        }`}
+                      >
+                        {tab.label}
+                        <span className="ml-2 text-xs bg-gray-600 px-2 py-1 rounded-full">
+                          {tab.id === "ranked" 
+                            ? rankedPlayers.length
+                            : unrankedPlayers.length
+                          }
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                  {leaderboardTab === "unranked" && (
+                    <div className="mt-2 text-sm text-gray-400">
+                      Sorted by progress toward ranking (need to play 3+ top 10 players)
+                    </div>
+                  )}
+                </div>
+
                 {sortedPlayers.length === 0 ? (
                   <div className="text-gray-400 text-center py-16 px-6">
                     <p className="text-2xl font-bold">
@@ -975,28 +1096,31 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                         <thead>
                           <tr className="bg-gradient-to-r from-gray-800 to-gray-700">
                             <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tl-xl w-24">
-                              Rank
+                              {leaderboardTab === "ranked" ? "Rank" : "Progress"}
                             </th>
                             <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider">
                               Player
                             </th>
-                            <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-32">
-                              <div className="flex items-center">
-                                <span>ELO</span>
-                                <ArrowUpDown
-                                  size={12}
-                                  className="ml-1 md:ml-2 text-gray-500 md:w-5 md:h-5"
-                                />
-                              </div>
-                            </th>
+                            {leaderboardTab === "ranked" && (
+                              <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-32">
+                                <div className="flex items-center">
+                                  <span>ELO</span>
+                                  <ArrowUpDown
+                                    size={12}
+                                    className="ml-1 md:ml-2 text-gray-500 md:w-5 md:h-5"
+                                  />
+                                </div>
+                              </th>
+                            )}
                             <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-24">
-                              Tier
+                              {leaderboardTab === "ranked" ? "Tier" : "To Rank"}
                             </th>
                           </tr>
                         </thead>
                         <tbody className="bg-gray-900 divide-y divide-gray-800">
-                          {sortedPlayers.map((player, index) => {
-                            const isLast = index === sortedPlayers.length - 1;
+                          {(leaderboardTab === "ranked" ? rankedPlayers : sortedUnrankedPlayers)
+                            .map((player, index, currentPlayers) => {
+                            const isLast = index === currentPlayers.length - 1;
                             return (
                               <tr
                                 key={player.id}
@@ -1008,18 +1132,32 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                                   }`}
                                 >
                                   <div className="flex items-center">
-                                    <span className="text-sm md:text-3xl font-bold text-white">
-                                      #{index + 1}
-                                    </span>
-                                    {index === 0 && (
-                                      <Trophy
-                                        size={14}
-                                        className="ml-1 md:ml-3 md:w-6 md:h-6 text-yellow-500"
-                                        style={{
-                                          filter:
-                                            "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5))",
-                                        }}
-                                      />
+                                    {leaderboardTab === "ranked" ? (
+                                      <>
+                                        <span className="text-sm md:text-3xl font-bold text-white">
+                                          #{index + 1}
+                                        </span>
+                                        {index === 0 && (
+                                          <Trophy
+                                            size={14}
+                                            className="ml-1 md:ml-3 md:w-6 md:h-6 text-yellow-500"
+                                            style={{
+                                              filter:
+                                                "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5))",
+                                            }}
+                                          />
+                                        )}
+                                      </>
+                                    ) : (
+                                      <div className="flex items-center">
+                                        <div className={`w-4 h-4 md:w-6 md:h-6 rounded-full mr-2 ${
+                                          player.top_10_players_played >= 2 ? 'bg-green-500' :
+                                          player.top_10_players_played >= 1 ? 'bg-yellow-500' : 'bg-red-500'
+                                        }`}></div>
+                                        <span className="text-sm md:text-lg font-bold text-gray-300">
+                                          {player.top_10_players_played}/3
+                                        </span>
+                                      </div>
                                     )}
                                   </div>
                                 </td>
@@ -1039,29 +1177,42 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                                     </div>
                                   </div>
                                 </td>
-                                <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap">
-                                  <span
-                                    className="text-sm md:text-2xl font-bold text-yellow-500 bg-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-full"
-                                    style={{
-                                      textShadow:
-                                        "0 0 10px rgba(255, 215, 0, 0.6)",
-                                    }}
-                                  >
-                                    {player.elo}
-                                  </span>
-                                </td>
+                                {leaderboardTab === "ranked" && (
+                                  <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap">
+                                    <span
+                                      className="text-sm md:text-2xl font-bold text-yellow-500 bg-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-full"
+                                      style={{
+                                        textShadow:
+                                          "0 0 10px rgba(255, 215, 0, 0.6)",
+                                      }}
+                                    >
+                                      {player.elo}
+                                    </span>
+                                  </td>
+                                )}
                                 <td
                                   className={`px-2 py-3 md:px-6 md:py-8 whitespace-nowrap ${
                                     isLast ? "rounded-br-xl" : ""
                                   }`}
                                 >
-                                  <span
-                                    className={`px-2 py-1 md:px-4 md:py-2 inline-flex text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
-                                      getTier(player.elo, tierThresholds)
-                                    )} shadow-lg`}
-                                  >
-                                    {getTier(player.elo, tierThresholds)}
-                                  </span>
+                                  {leaderboardTab === "ranked" ? (
+                                    <span
+                                      className={`px-2 py-1 md:px-4 md:py-2 inline-flex text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
+                                        getTier(player.elo, tierThresholds)
+                                      )} shadow-lg`}
+                                    >
+                                      {getTier(player.elo, tierThresholds)}
+                                    </span>
+                                  ) : (
+                                    <div className="text-center">
+                                      <span className="text-sm md:text-lg font-bold text-gray-300">
+                                        {3 - player.top_10_players_played}
+                                      </span>
+                                      <div className="text-xs text-gray-500">
+                                        more needed
+                                      </div>
+                                    </div>
+                                  )}
                                 </td>
                               </tr>
                             );
@@ -1337,8 +1488,25 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                               </div>
                             </div>
 
-                            {/* 1v1 Filter */}
-                            <div className="lg:col-span-2">
+                            {/* Additional Filters */}
+                            <div className="lg:col-span-2 space-y-4">
+                              {/* Ranked Filter */}
+                              <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-3">
+                                  Player Ranking Status
+                                </label>
+                                <select
+                                  value={rankedFilter}
+                                  onChange={(e) => setRankedFilter(e.target.value)}
+                                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                  <option value="all">All Players</option>
+                                  <option value="ranked">Ranked Players Only</option>
+                                  <option value="unranked">Unranked Players Only</option>
+                                </select>
+                              </div>
+
+                              {/* 1v1 Filter */}
                               <label className="flex items-center space-x-2 p-3 bg-gray-700 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600">
                                 <input
                                   type="checkbox"
@@ -1366,6 +1534,7 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                                   setSelectedPlayerFilter([]);
                                   setSelectedCharacterFilter([]);
                                   setOnly1v1(false);
+                                  setRankedFilter("all");
                                   setMatchesPage(1);
                                   updateMatchesURL([], [], false);
                                   await fetchMatches(1, false, [], [], false);
@@ -1679,32 +1848,37 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                         refreshing ? "opacity-75" : "opacity-100"
                       }`}
                     >
-                      {/* Player Cards Grid */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {sortedPlayers.map((player, index) => {
-                          const winRate =
-                            player.total_wins &&
-                            player.total_wins + (player.total_losses || 0) > 0
-                              ? (
-                                  (player.total_wins /
-                                    (player.total_wins +
-                                      (player.total_losses || 0))) *
-                                  100
-                                ).toFixed(1)
-                              : "0.0";
+                      {/* Ranked Players Section */}
+                      {rankedPlayers.length > 0 && (
+                        <div className="mb-8">
+                          <h3 className="text-xl font-bold text-white mb-4 px-2">
+                            Ranked Players ({rankedPlayers.length})
+                          </h3>
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {rankedPlayers.map((player, index) => {
+                              const winRate =
+                                player.total_wins &&
+                                player.total_wins + (player.total_losses || 0) > 0
+                                  ? (
+                                      (player.total_wins /
+                                        (player.total_wins +
+                                          (player.total_losses || 0))) *
+                                      100
+                                    ).toFixed(1)
+                                  : "0.0";
 
-                          return (
-                            <div
-                              key={player.id}
-                              id={`player-${player.id}`}
-                              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 shadow-lg relative overflow-hidden"
-                            >
-                              {/* Rank badge */}
-                              <div className="absolute top-4 right-4">
-                                <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                                  #{index + 1}
-                                </div>
-                              </div>
+                              return (
+                                <div
+                                  key={player.id}
+                                  id={`player-${player.id}`}
+                                  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 shadow-lg relative overflow-hidden"
+                                >
+                                  {/* Rank badge */}
+                                  <div className="absolute top-4 right-4">
+                                    <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                                      #{index + 1}
+                                    </div>
+                                  </div>
 
                               {/* Player Avatar and Info */}
                               <div className="flex flex-col items-center mb-6">
@@ -1726,12 +1900,14 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                                   />
                                 </div>
 
-                                {/* ELO Display */}
-                                <div className="bg-gray-700 px-4 py-2 rounded-full mb-2">
-                                  <span className="text-yellow-500 font-bold text-lg">
-                                    {player.elo} ELO
-                                  </span>
-                                </div>
+                                {/* ELO Display - only for ranked players */}
+                                {player.is_ranked && (
+                                  <div className="bg-gray-700 px-4 py-2 rounded-full mb-2">
+                                    <span className="text-yellow-500 font-bold text-lg">
+                                      {player.elo} ELO
+                                    </span>
+                                  </div>
+                                )}
 
                                 {/* Main Character */}
                                 {player.main_character && (
@@ -1741,6 +1917,22 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                                     </span>
                                   </div>
                                 )}
+
+                                {/* Ranking Status */}
+                                <div className={`px-3 py-1 rounded-full border mt-2 ${
+                                  player.is_ranked 
+                                    ? "bg-green-900 bg-opacity-50 border-green-500"
+                                    : "bg-orange-900 bg-opacity-50 border-orange-500"
+                                }`}>
+                                  <span className={`text-sm font-medium ${
+                                    player.is_ranked ? "text-green-300" : "text-orange-300"
+                                  }`}>
+                                    {player.is_ranked 
+                                      ? "Ranked Player" 
+                                      : `${player.top_10_players_played}/3 vs Top 10`
+                                    }
+                                  </span>
+                                </div>
                               </div>
 
                               {/* Stats Section */}
@@ -1862,12 +2054,208 @@ export default function SmashTournamentELO({ defaultTab = "rankings" }: SmashTou
                                 </button>
                               </div>
 
-                              {/* Decorative elements */}
-                              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
-                            </div>
-                          );
-                        })}
-                      </div>
+                                  {/* Decorative elements */}
+                                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Unranked Players Section */}
+                      {sortedUnrankedPlayers.length > 0 && (
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-4 px-2">
+                            Unranked Players ({sortedUnrankedPlayers.length})
+                          </h3>
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {sortedUnrankedPlayers.map((player) => {
+                              const winRate =
+                                player.total_wins &&
+                                player.total_wins + (player.total_losses || 0) > 0
+                                  ? (
+                                      (player.total_wins /
+                                        (player.total_wins +
+                                          (player.total_losses || 0))) *
+                                      100
+                                    ).toFixed(1)
+                                  : "0.0";
+
+                              return (
+                                <div
+                                  key={player.id}
+                                  id={`player-${player.id}`}
+                                  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 shadow-lg relative overflow-hidden"
+                                >
+                                  {/* No rank badge for unranked players */}
+
+                                  {/* Player Avatar and Info */}
+                                  <div className="flex flex-col items-center mb-6">
+                                    <div className="relative mb-4">
+                                      <ProfilePicture
+                                        player={player}
+                                        size="xl"
+                                        borderWidth="border-4"
+                                        additionalClasses="shadow-xl bg-gradient-to-br from-gray-600 to-gray-700"
+                                      />
+                                    </div>
+
+                                    <div className="flex items-center justify-center mb-1">
+                                      <h3 className="text-xl font-bold text-white text-center">
+                                        {player.display_name || player.name}
+                                      </h3>
+                                      <FireStreak
+                                        streak={player.current_win_streak || 0}
+                                      />
+                                    </div>
+
+                                    {/* No ELO for unranked players */}
+
+                                    {/* Main Character */}
+                                    {player.main_character && (
+                                      <div className="bg-blue-900 bg-opacity-50 px-3 py-1 rounded-full border border-blue-500">
+                                        <span className="text-blue-300 text-sm font-medium">
+                                          Main: {player.main_character}
+                                        </span>
+                                      </div>
+                                    )}
+
+                                    {/* Ranking Status */}
+                                    <div className="bg-orange-900 bg-opacity-50 px-3 py-1 rounded-full border border-orange-500 mt-2">
+                                      <span className="text-orange-300 text-sm font-medium">
+                                        {player.top_10_players_played}/3 vs Top 10
+                                      </span>
+                                    </div>
+                                  </div>
+
+                                  {/* Stats Section */}
+                                  <div className="space-y-4">
+                                    {/* Win/Loss Record */}
+                                    <div className="bg-gray-700 bg-opacity-50 rounded-lg p-4">
+                                      <h4 className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
+                                        Match Record
+                                      </h4>
+                                      <div className="flex justify-between items-center mb-2">
+                                        <div className="flex items-center space-x-2">
+                                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                          <span className="text-green-400 font-bold">
+                                            Wins
+                                          </span>
+                                        </div>
+                                        <span className="text-white font-bold text-lg">
+                                          {player.total_wins || 0}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between items-center mb-3">
+                                        <div className="flex items-center space-x-2">
+                                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                                          <span className="text-red-400 font-bold">
+                                            Losses
+                                          </span>
+                                        </div>
+                                        <span className="text-white font-bold text-lg">
+                                          {player.total_losses || 0}
+                                        </span>
+                                      </div>
+                                      <div className="flex justify-between items-center">
+                                        <span className="text-gray-400 font-medium">
+                                          Win Rate
+                                        </span>
+                                        <span className="text-yellow-400 font-bold">
+                                          {winRate}%
+                                        </span>
+                                      </div>
+                                    </div>
+
+                                    {/* Combat Stats */}
+                                    <div className="bg-gray-700 bg-opacity-50 rounded-lg p-4">
+                                      <h4 className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
+                                        Combat Stats
+                                      </h4>
+                                      <div className="grid grid-cols-3 gap-4 text-center">
+                                        <div>
+                                          <div className="text-orange-400 font-bold text-lg">
+                                            {player.total_kos || 0}
+                                          </div>
+                                          <div className="text-gray-400 text-xs uppercase">
+                                            KOs
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <div className="text-purple-400 font-bold text-lg">
+                                            {player.total_falls || 0}
+                                          </div>
+                                          <div className="text-gray-400 text-xs uppercase">
+                                            Falls
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <div className="text-red-400 font-bold text-lg">
+                                            {player.total_sds || 0}
+                                          </div>
+                                          <div className="text-gray-400 text-xs uppercase">
+                                            SDs
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    {/* Additional Stats */}
+                                    <div className="grid grid-cols-2 gap-2 text-center">
+                                      <div className="bg-gray-700 bg-opacity-30 rounded-lg p-2">
+                                        <div className="text-blue-400 font-bold">
+                                          {player.matches}
+                                        </div>
+                                        <div className="text-gray-400 text-xs">
+                                          Matches
+                                        </div>
+                                      </div>
+                                      <div className="bg-gray-700 bg-opacity-30 rounded-lg p-2">
+                                        <div className="text-cyan-400 font-bold">
+                                          {(player.total_kos || 0) > 0 &&
+                                          (player.total_falls || 0) +
+                                            (player.total_sds || 0) >
+                                            0
+                                            ? (
+                                                (player.total_kos || 0) /
+                                                ((player.total_falls || 0) +
+                                                  (player.total_sds || 0))
+                                              ).toFixed(2)
+                                            : "0.00"}
+                                        </div>
+                                        <div className="text-gray-400 text-xs">
+                                          K/D Ratio
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  {/* View Match History Button */}
+                                  <div className="mt-4 pt-4 border-t border-gray-600">
+                                    <button
+                                      onClick={() => {
+                                        setSelectedPlayerFilter([player.name]);
+                                        setSelectedCharacterFilter([]);
+                                        setShowFilters(true);
+                                        const params = new URLSearchParams();
+                                        params.append("player", player.name);
+                                        router.push(`/matches?${params.toString()}`);
+                                      }}
+                                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+                                    >
+                                      View Match History
+                                    </button>
+                                  </div>
+
+                                  {/* Decorative elements */}
+                                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-50"></div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}

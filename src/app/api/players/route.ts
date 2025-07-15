@@ -29,7 +29,13 @@ export async function GET() {
       },
     });
 
-    // Transform the data to include calculated stats
+    // Get top 10 RANKED players by ELO for ranking calculations
+    const top10PlayerIds = playersWithData
+      .filter(player => player.is_ranked)
+      .slice(0, 10)
+      .map(player => player.id);
+
+    // Transform the data to include calculated stats (remove async operations to speed up)
     const transformedPlayers = playersWithData.map((player) => {
       // Get main character
       let mainCharacter: string | null = null;
@@ -67,12 +73,36 @@ export async function GET() {
         })(),
       };
 
+      // Calculate how many unique top 10 players this player has played against (excluding themselves)
+      const uniqueTop10Opponents = new Set<bigint>();
+      for (const participant of player.match_participants) {
+        if (participant.match && participant.match.match_participants.length === 2) {
+          // Find the opponent in this match
+          const opponent = participant.match.match_participants.find(
+            mp => mp.player !== player.id && !mp.is_cpu
+          );
+          if (opponent && 
+              top10PlayerIds.some(id => id === opponent.player) && 
+              opponent.player !== player.id) {
+            uniqueTop10Opponents.add(opponent.player);
+          }
+        }
+      }
+
+      const top10PlayersPlayed = uniqueTop10Opponents.size;
+      const isRanked = top10PlayersPlayed >= 3;
+
+      // Note: We'll update the database separately to avoid connection issues
+      // For now, just return the calculated values
+
       return {
         id: Number(player.id),
         created_at: player.created_at.toISOString(),
         name: player.name,
         display_name: player.display_name,
         elo: Number(player.elo),
+        is_ranked: isRanked,
+        top_10_players_played: top10PlayersPlayed,
         main_character: mainCharacter,
         total_wins: stats.total_wins,
         total_losses: stats.total_losses,

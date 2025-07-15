@@ -11,11 +11,13 @@ datasource db {
 }
 
 model players {
-  id           BigInt   @id @default(autoincrement())
-  created_at   DateTime @default(now())
-  name         String   @unique
-  display_name String?
-  elo          BigInt   @default(1200)
+  id                    BigInt   @id @default(autoincrement())
+  created_at            DateTime @default(now())
+  name                  String   @unique
+  display_name          String?
+  elo                   BigInt   @default(1200)
+  is_ranked             Boolean  @default(false)
+  top_10_players_played Int      @default(0)
   
   // Relations
   match_participants match_participants[]
