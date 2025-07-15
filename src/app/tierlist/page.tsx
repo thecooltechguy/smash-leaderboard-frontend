@@ -1,5 +1,10 @@
 import SmashTournamentELO from "@/components/SmashTournamentELO";
+import { Suspense } from "react";
 
 export default function TierlistPage() {
-  return <SmashTournamentELO defaultTab="tiers" />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SmashTournamentELO defaultTab="tiers" />
+    </Suspense>
+  );
 }
