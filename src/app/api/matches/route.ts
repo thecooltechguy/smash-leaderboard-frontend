@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
@@ -17,39 +17,34 @@ export async function GET(request: Request) {
       only1v1,
     });
 
-    // First, get match IDs that match our filters if any filters are provided
-    let matchIds: number[] = [];
+    // Build the base query conditions
+    const whereConditions: { id?: { in: number[] } } = {};
 
+    // Apply filters
     if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
-      // For AND filtering, we need to find matches that contain ALL specified players AND ALL specified characters
+      // First, get all matches with their participants
+      const allMatches = await prisma.matches.findMany({
+        include: {
+          match_participants: {
+            include: {
+              players: {
+                select: {
+                  name: true,
+                },
+              },
+            },
+          },
+        },
+      });
 
-      // Step 1: Find all matches
-      const { data: allMatches, error: allMatchesError } = await supabase.from(
-        "matches"
-      ).select(`
-          id,
-          match_participants (
-            match_id,
-            smash_character,
-            players (
-              name
-            )
-          )
-        `);
-
-      if (allMatchesError) {
-        console.error("Error fetching all matches:", allMatchesError);
-        throw allMatchesError;
-      }
-
-      // Step 2: Filter matches using AND logic
-      const filteredMatches = allMatches?.filter((match) => {
+      // Filter matches using AND logic
+      const filteredMatches = allMatches.filter((match) => {
         const participants = match.match_participants;
 
         // Check if ALL specified players are in this match
         if (playerFilter.length > 0) {
           const playersInMatch = participants
-            .map((p) => (p.players as unknown as { name: string })?.name)
+            .map((p) => p.players.name)
             .filter((name): name is string => Boolean(name));
           const hasAllPlayers = playerFilter.every((playerName) =>
             playersInMatch.includes(playerName)
@@ -59,9 +54,7 @@ export async function GET(request: Request) {
 
         // Check if ALL specified characters are used in this match
         if (characterFilter.length > 0) {
-          const charactersInMatch = participants.map(
-            (p: { smash_character: string }) => p.smash_character
-          );
+          const charactersInMatch = participants.map((p) => p.smash_character);
           const hasAllCharacters = characterFilter.every((character) =>
             charactersInMatch.includes(character)
           );
@@ -76,7 +69,7 @@ export async function GET(request: Request) {
         return true;
       });
 
-      matchIds = filteredMatches?.map((match) => match.id) || [];
+      const matchIds = filteredMatches.map((match) => match.id);
       console.log("Found match IDs with filtering:", matchIds);
 
       if (matchIds.length === 0) {
@@ -89,42 +82,33 @@ export async function GET(request: Request) {
           },
         });
       }
+
+      whereConditions.id = {
+        in: matchIds,
+      };
     }
 
-    // Build the main query
-    let query = supabase.from("matches").select(
-      `
-        id,
-        created_at,
-        match_participants (
-          id,
-          player,
-          smash_character,
-          is_cpu,
-          total_kos,
-          total_falls,
-          total_sds,
-          has_won,
-          players (
-            name,
-            display_name
-          )
-        )
-      `
-    );
-
-    // Filter by match IDs if we have filters
-    if (matchIds.length > 0) {
-      query = query.in("id", matchIds);
-    }
-
-    const { data: matches, error: matchesError } = await query
-      .order("created_at", { ascending: false })
-      .range(offset, offset + limit - 1);
-
-    if (matchesError) {
-      throw matchesError;
-    }
+    // Get matches with pagination
+    const matches = await prisma.matches.findMany({
+      where: whereConditions,
+      include: {
+        match_participants: {
+          include: {
+            players: {
+              select: {
+                name: true,
+                display_name: true,
+              },
+            },
+          },
+        },
+      },
+      orderBy: {
+        created_at: 'desc',
+      },
+      skip: offset,
+      take: limit,
+    });
 
     if (!matches || matches.length === 0) {
       return NextResponse.json({
@@ -137,17 +121,15 @@ export async function GET(request: Request) {
       });
     }
 
-    // Transform the data to match our frontend interface
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const transformedMatches = matches.map((match: any) => ({
+    // Transform the data to match the frontend interface
+    const transformedMatches = matches.map((match) => ({
       id: match.id,
-      created_at: match.created_at,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      participants: match.match_participants.map((participant: any) => ({
+      created_at: match.created_at.toISOString(),
+      participants: match.match_participants.map((participant) => ({
         id: participant.id,
         player: participant.player,
-        player_name: participant.players?.name || "",
-        player_display_name: participant.players?.display_name || null,
+        player_name: participant.players.name,
+        player_display_name: participant.players.display_name,
         smash_character: participant.smash_character,
         is_cpu: participant.is_cpu,
         total_kos: participant.total_kos,

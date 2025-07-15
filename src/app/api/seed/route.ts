@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function POST() {
@@ -21,19 +21,20 @@ export async function POST() {
 
     // Insert players using upsert
     for (const player of samplePlayers) {
-      const { error } = await supabase.from("players").upsert(
-        {
-          name: player.name,
-          display_name: player.display_name,
-          elo: player.elo,
-        },
-        {
-          onConflict: "name",
-          ignoreDuplicates: false,
-        }
-      );
-
-      if (error) {
+      try {
+        await prisma.players.upsert({
+          where: { name: player.name },
+          update: {
+            display_name: player.display_name,
+            elo: player.elo,
+          },
+          create: {
+            name: player.name,
+            display_name: player.display_name,
+            elo: player.elo,
+          },
+        });
+      } catch (error) {
         console.error(`Error upserting player ${player.name}:`, error);
       }
     }

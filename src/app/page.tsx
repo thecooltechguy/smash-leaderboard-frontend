@@ -1,6 +1,6 @@
 "use client";
 
-import { Player } from "@/lib/supabase";
+import { Player } from "@/lib/prisma";
 import {
   Listbox,
   ListboxButton,
@@ -131,7 +131,6 @@ const ProfilePicture = memo(
     ): string | null => {
       const nameToUse = (player.display_name || player.name).toLowerCase();
 
-      if (nameToUse.includes("nish")) return "/images/anish.png";
       if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
         return "/images/habeas.png";
       if (nameToUse.includes("subby")) return "/images/subby.png";
@@ -144,7 +143,6 @@ const ProfilePicture = memo(
       if (nameToUse.includes("samin")) return "/images/samin.png";
       if (nameToUse.includes("stav")) return "/images/stav.png";
       if (nameToUse.includes("ya")) return "/images/ya.png";
-      if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
       if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
       if (nameToUse.includes("david")) return "/images/david.png";
       if (nameToUse.includes("bihan")) return "/images/bihan.png";
@@ -1852,21 +1850,21 @@ export default function SmashTournamentELO() {
             Made with{" "}
             <span className="text-red-500 animate-pulse text-lg">❤️</span> by{" "}
             <a
-              href="https://twitter.com/subby_tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-200 hover:underline"
-            >
-              subby
-            </a>
-            ,{" "}
-            <a
               href="https://twitter.com/haseab_"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-200 hover:underline"
             >
               haseab
+            </a>
+            ,{" "}
+            <a
+              href="https://twitter.com/subby_tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-200 hover:underline"
+            >
+              subby
             </a>
             , and{" "}
             <a
