@@ -69,11 +69,13 @@ const RefreshStatus = memo(
     countdown,
     lastUpdated,
     centered = false,
+    autoRefreshDisabled = false,
   }: {
     refreshing: boolean;
     countdown: number;
     lastUpdated: Date | null;
     centered?: boolean;
+    autoRefreshDisabled?: boolean;
   }) => {
     if (!lastUpdated) return null;
 
@@ -87,6 +89,11 @@ const RefreshStatus = memo(
           <>
             <div className="animate-spin h-3 w-3 border border-white border-t-transparent rounded-full mr-2"></div>
             Refreshing...
+          </>
+        ) : autoRefreshDisabled ? (
+          <>
+            <span className="mr-2 text-yellow-300">●</span>
+            <span>Reload page to start auto refreshing</span>
           </>
         ) : (
           <>
@@ -387,6 +394,7 @@ export default function SmashTournamentELO({
     string[]
   >([]);
   const [only1v1, setOnly1v1] = useState<boolean>(false);
+  const [autoRefreshDisabled, setAutoRefreshDisabled] = useState<boolean>(false);
   const [rankedFilter, setRankedFilter] = useState<string>("all"); // "all", "ranked", "unranked"
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked">(
@@ -638,7 +646,7 @@ export default function SmashTournamentELO({
       // Only refresh if this component is for the current active tab
       if (currentActiveTab.current === defaultTab) {
         fetchPlayers(true);
-        if (defaultTab === "matches") {
+        if (defaultTab === "matches" && !autoRefreshDisabled) {
           fetchMatches(
             1,
             false,
@@ -816,6 +824,7 @@ export default function SmashTournamentELO({
   const loadMoreMatches = async () => {
     if (loadingMoreMatches || !hasMoreMatches) return;
 
+    setAutoRefreshDisabled(true);
     setLoadingMoreMatches(true);
     const nextPage = matchesPage + 1;
     await fetchMatches(
@@ -1550,6 +1559,7 @@ export default function SmashTournamentELO({
                             countdown={countdown}
                             lastUpdated={lastUpdated}
                             centered={false}
+                            autoRefreshDisabled={autoRefreshDisabled}
                           />
                         </div>
                       </div>
