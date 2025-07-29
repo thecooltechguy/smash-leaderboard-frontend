@@ -401,6 +401,7 @@ export default function SmashTournamentELO({
     "ranked"
   );
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
+  const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(new Set());
 
   // Initialize filters from URL params on matches page
   useEffect(() => {
@@ -856,6 +857,37 @@ export default function SmashTournamentELO({
     );
     setMatchesPage(nextPage);
     setLoadingMoreMatches(false);
+  };
+
+  // Function to refresh a single match
+  const refreshSingleMatch = async (matchId: number) => {
+    try {
+      // Add match ID to refreshing set
+      setRefreshingMatches(prev => new Set(prev).add(matchId));
+
+      const response = await fetch(`/api/matches/${matchId}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch match");
+      }
+      
+      const updatedMatch = await response.json();
+      
+      // Update only this match in the matches array
+      setMatches(prev => 
+        prev.map(match => 
+          match.id === matchId ? updatedMatch : match
+        )
+      );
+    } catch (error) {
+      console.error("Error refreshing match:", error);
+    } finally {
+      // Remove match ID from refreshing set
+      setRefreshingMatches(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(matchId);
+        return newSet;
+      });
+    }
   };
 
   // Search function to manually trigger filtering
@@ -1798,6 +1830,22 @@ export default function SmashTournamentELO({
                                               </button>
                                             );
                                           })()}
+                                          
+                                          {/* Refresh Button */}
+                                          <button
+                                            onClick={() => refreshSingleMatch(match.id)}
+                                            disabled={refreshingMatches.has(match.id)}
+                                            className="flex items-center gap-1 text-xs bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-medium py-1 px-2 rounded transition-colors duration-200"
+                                            title="Refresh this match"
+                                          >
+                                            {refreshingMatches.has(match.id) ? (
+                                              <div className="animate-spin h-3 w-3 border border-white border-t-transparent rounded-full"></div>
+                                            ) : (
+                                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                              </svg>
+                                            )}
+                                          </button>
                                         </div>
                                       </div>
 
