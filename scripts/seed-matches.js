@@ -1,5 +1,23 @@
 const { PrismaClient } = require('@prisma/client');
 
+// Safety check: Only run in development environment
+if (process.env.NODE_ENV === 'production') {
+  console.error('❌ SAFETY CHECK: Seed script cannot run in production environment!');
+  console.error('This script is for development/testing purposes only.');
+  process.exit(1);
+}
+
+// Safety check: Verify we're using a local/test database
+const databaseUrl = process.env.DATABASE_URL || '';
+if (!databaseUrl.includes('localhost') && !databaseUrl.includes('test')) {
+  console.error('❌ SAFETY CHECK: Database URL does not appear to be local or test database!');
+  console.error('Current DATABASE_URL:', databaseUrl.replace(/\/\/.*@/, '//***:***@')); // Hide credentials
+  console.error('This script should only run against local development databases.');
+  process.exit(1);
+}
+
+console.log('✅ Safety checks passed - running against local development database');
+
 const prisma = new PrismaClient();
 
 // Smash characters list for variety
