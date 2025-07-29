@@ -1735,6 +1735,8 @@ export default function SmashTournamentELO({
                                       {/* Match Header */}
                                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                                         <div className="text-gray-400 text-sm">
+                                          <span className="font-medium text-gray-300">Match #{match.id}</span>
+                                          {" • "}
                                           {showUtcTime
                                             ? new Date(match.created_at).toLocaleDateString('en-US', { timeZone: 'UTC' })
                                             : new Date(match.created_at).toLocaleDateString()}{" "}
