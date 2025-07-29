@@ -435,6 +435,7 @@ export default function SmashTournamentELO({
   const current1v1Filter = useRef<boolean>(false);
   const currentRankedFilter = useRef<string>("all");
   const currentActiveTab = useRef<string>("rankings");
+  const currentAutoRefreshDisabled = useRef<boolean>(false);
 
   // Update refs when state changes
   useEffect(() => {
@@ -456,6 +457,10 @@ export default function SmashTournamentELO({
   useEffect(() => {
     currentActiveTab.current = activeTab;
   }, [activeTab]);
+
+  useEffect(() => {
+    currentAutoRefreshDisabled.current = autoRefreshDisabled;
+  }, [autoRefreshDisabled]);
 
   // Function to handle tab navigation
   const handleTabClick = (tabId: string) => {
@@ -646,7 +651,7 @@ export default function SmashTournamentELO({
       // Only refresh if this component is for the current active tab
       if (currentActiveTab.current === defaultTab) {
         // For matches tab, only refresh if auto-refresh is not disabled
-        if (defaultTab === "matches" && autoRefreshDisabled) {
+        if (defaultTab === "matches" && currentAutoRefreshDisabled.current) {
           // Skip all refresh activity when auto-refresh is disabled for matches
           return;
         }
@@ -665,7 +670,7 @@ export default function SmashTournamentELO({
       }
       
       // Only update countdown if not in disabled state for matches tab
-      if (!(defaultTab === "matches" && autoRefreshDisabled)) {
+      if (!(defaultTab === "matches" && currentAutoRefreshDisabled.current)) {
         setCountdown(30);
       }
     }, 30000);
@@ -673,7 +678,7 @@ export default function SmashTournamentELO({
     // Set up countdown timer every second
     const countdownInterval = setInterval(() => {
       // Don't update countdown if auto-refresh is disabled for matches tab
-      if (defaultTab === "matches" && autoRefreshDisabled) {
+      if (defaultTab === "matches" && currentAutoRefreshDisabled.current) {
         return;
       }
       
