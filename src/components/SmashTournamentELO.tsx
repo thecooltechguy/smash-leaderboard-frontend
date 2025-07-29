@@ -392,6 +392,7 @@ export default function SmashTournamentELO({
   const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked">(
     "ranked"
   );
+  const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
 
   // Initialize filters from URL params on matches page
   useEffect(() => {
@@ -1517,17 +1518,32 @@ export default function SmashTournamentELO({
                                 Match History
                               </h2>
                             </div>
-                            <button
-                              onClick={() => setShowFilters(!showFilters)}
-                              className={`ml-4 p-2 rounded-lg transition-colors duration-200 ${
-                                showFilters
-                                  ? "bg-blue-600 text-white"
-                                  : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"
-                              }`}
-                              title="Toggle Filters"
-                            >
-                              <Filter size={20} />
-                            </button>
+                            <div className="flex items-center gap-3">
+                              <label className="flex items-center space-x-2 text-sm">
+                                <input
+                                  type="checkbox"
+                                  checked={showUtcTime}
+                                  onChange={(e) =>
+                                    setShowUtcTime(e.target.checked)
+                                  }
+                                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                                />
+                                <span className="text-gray-300 font-medium">
+                                  UTC
+                                </span>
+                              </label>
+                              <button
+                                onClick={() => setShowFilters(!showFilters)}
+                                className={`p-2 rounded-lg transition-colors duration-200 ${
+                                  showFilters
+                                    ? "bg-blue-600 text-white"
+                                    : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"
+                                }`}
+                                title="Toggle Filters"
+                              >
+                                <Filter size={20} />
+                              </button>
+                            </div>
                           </div>
                           <RefreshStatus
                             refreshing={refreshing}
@@ -1689,13 +1705,13 @@ export default function SmashTournamentELO({
                                       {/* Match Header */}
                                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                                         <div className="text-gray-400 text-sm">
-                                          {new Date(
-                                            match.created_at
-                                          ).toLocaleDateString()}{" "}
+                                          {showUtcTime
+                                            ? new Date(match.created_at).toLocaleDateString('en-US', { timeZone: 'UTC' })
+                                            : new Date(match.created_at).toLocaleDateString()}{" "}
                                           •{" "}
-                                          {new Date(
-                                            match.created_at
-                                          ).toLocaleTimeString()}
+                                          {showUtcTime
+                                            ? new Date(match.created_at).toLocaleTimeString('en-US', { timeZone: 'UTC' }) + ' UTC'
+                                            : new Date(match.created_at).toLocaleTimeString()}
                                         </div>
                                         <div className="flex items-center gap-3">
                                           <div className="text-gray-500 font-medium">
