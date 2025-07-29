@@ -645,8 +645,14 @@ export default function SmashTournamentELO({
     const refreshInterval = setInterval(() => {
       // Only refresh if this component is for the current active tab
       if (currentActiveTab.current === defaultTab) {
+        // For matches tab, only refresh if auto-refresh is not disabled
+        if (defaultTab === "matches" && autoRefreshDisabled) {
+          // Skip all refresh activity when auto-refresh is disabled for matches
+          return;
+        }
+        
         fetchPlayers(true);
-        if (defaultTab === "matches" && !autoRefreshDisabled) {
+        if (defaultTab === "matches") {
           fetchMatches(
             1,
             false,
@@ -657,11 +663,20 @@ export default function SmashTournamentELO({
           setMatchesPage(1);
         }
       }
-      setCountdown(30);
+      
+      // Only update countdown if not in disabled state for matches tab
+      if (!(defaultTab === "matches" && autoRefreshDisabled)) {
+        setCountdown(30);
+      }
     }, 30000);
 
     // Set up countdown timer every second
     const countdownInterval = setInterval(() => {
+      // Don't update countdown if auto-refresh is disabled for matches tab
+      if (defaultTab === "matches" && autoRefreshDisabled) {
+        return;
+      }
+      
       setCountdown((prev) => {
         if (prev <= 1) {
           return 30;
