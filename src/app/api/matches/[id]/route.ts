@@ -3,10 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const matchId = parseInt(params.id);
+    const { id } = await params;
+    const matchId = parseInt(id);
     
     if (isNaN(matchId)) {
       return NextResponse.json(
