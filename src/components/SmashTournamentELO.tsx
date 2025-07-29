@@ -1548,19 +1548,6 @@ export default function SmashTournamentELO({
                               </h2>
                             </div>
                             <div className="flex items-center gap-3">
-                              <label className="flex items-center space-x-2 text-sm">
-                                <input
-                                  type="checkbox"
-                                  checked={showUtcTime}
-                                  onChange={(e) =>
-                                    setShowUtcTime(e.target.checked)
-                                  }
-                                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-                                />
-                                <span className="text-gray-300 font-medium">
-                                  UTC
-                                </span>
-                              </label>
                               <button
                                 onClick={() => setShowFilters(!showFilters)}
                                 className={`p-2 rounded-lg transition-colors duration-200 ${
@@ -1737,13 +1724,19 @@ export default function SmashTournamentELO({
                                         <div className="text-gray-400 text-sm">
                                           <span className="font-medium text-gray-300">Match #{match.id}</span>
                                           {" • "}
-                                          {showUtcTime
-                                            ? new Date(match.created_at).toLocaleDateString('en-US', { timeZone: 'UTC' })
-                                            : new Date(match.created_at).toLocaleDateString()}{" "}
-                                          •{" "}
-                                          {showUtcTime
-                                            ? new Date(match.created_at).toLocaleTimeString('en-US', { timeZone: 'UTC' }) + ' UTC'
-                                            : new Date(match.created_at).toLocaleTimeString()}
+                                          <button
+                                            onClick={() => setShowUtcTime(!showUtcTime)}
+                                            className="hover:text-gray-200 transition-colors duration-200 underline-offset-2 hover:underline"
+                                            title={showUtcTime ? "Click to show local time" : "Click to show UTC time"}
+                                          >
+                                            {showUtcTime
+                                              ? new Date(match.created_at).toLocaleDateString('en-US', { timeZone: 'UTC' })
+                                              : new Date(match.created_at).toLocaleDateString()}{" "}
+                                            •{" "}
+                                            {showUtcTime
+                                              ? new Date(match.created_at).toLocaleTimeString('en-US', { timeZone: 'UTC' }) + ' UTC'
+                                              : new Date(match.created_at).toLocaleTimeString()}
+                                          </button>
                                         </div>
                                         <div className="flex items-center gap-3">
                                           <div className="text-gray-500 font-medium">
