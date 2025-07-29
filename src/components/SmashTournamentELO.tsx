@@ -1835,7 +1835,7 @@ export default function SmashTournamentELO({
                                           <button
                                             onClick={() => refreshSingleMatch(match.id)}
                                             disabled={refreshingMatches.has(match.id)}
-                                            className="flex items-center gap-1 text-xs bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-medium py-1 px-2 rounded transition-colors duration-200"
+                                            className="flex items-center gap-1 text-xs bg-gray-600 hover:bg-gray-500 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-medium py-1 px-2 rounded transition-colors duration-200"
                                             title="Refresh this match"
                                           >
                                             {refreshingMatches.has(match.id) ? (
