@@ -103,6 +103,7 @@ export async function GET() {
         elo: Number(player.elo),
         is_ranked: isRanked,
         top_10_players_played: top10PlayersPlayed,
+        country: player.country,
         main_character: mainCharacter,
         total_wins: stats.total_wins,
         total_losses: stats.total_losses,

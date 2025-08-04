@@ -17,6 +17,7 @@ export interface Player {
   elo: bigint;
   is_ranked: boolean;
   top_10_players_played: number;
+  country?: string | null;
   main_character?: string | null;
   total_wins?: number;
   total_losses?: number;

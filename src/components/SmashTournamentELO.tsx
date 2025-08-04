@@ -175,6 +175,7 @@ const ProfilePicture = memo(
         .toUpperCase();
     };
 
+
     const profilePic = getProfilePicture(player);
 
     const isRoundedLg = additionalClasses.includes("rounded-lg");
@@ -403,6 +404,22 @@ export default function SmashTournamentELO({
   );
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
   const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(new Set());
+
+  // Helper function to get country flag emoji
+  const getCountryFlag = (countryCode: string | null): string | null => {
+    if (!countryCode) return null;
+    
+    const flagEmojis: Record<string, string> = {
+      'US': '🇺🇸', 'CA': '🇨🇦', 'GB': '🇬🇧', 'DE': '🇩🇪', 'FR': '🇫🇷',
+      'JP': '🇯🇵', 'KR': '🇰🇷', 'CN': '🇨🇳', 'AU': '🇦🇺', 'BR': '🇧🇷',
+      'MX': '🇲🇽', 'IT': '🇮🇹', 'ES': '🇪🇸', 'NL': '🇳🇱', 'SE': '🇸🇪',
+      'NO': '🇳🇴', 'DK': '🇩🇰', 'FI': '🇫🇮', 'RU': '🇷🇺', 'IN': '🇮🇳',
+      'PH': '🇵🇭', 'TH': '🇹🇭', 'MY': '🇲🇾', 'SG': '🇸🇬', 'ID': '🇮🇩',
+      'VN': '🇻🇳', 'PK': '🇵🇰', 'BD': '🇧🇩', 'LK': '🇱🇰', 'NP': '🇳🇵'
+    };
+    
+    return flagEmojis[countryCode.toUpperCase()] || null;
+  };
 
   // Initialize filters from URL params on matches page
   useEffect(() => {
@@ -1244,6 +1261,9 @@ export default function SmashTournamentELO({
                                   ? "Rank"
                                   : "Progress"}
                               </th>
+                              <th className="px-1 py-3 md:px-2 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-12">
+                                Flag
+                              </th>
                               <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider">
                                 Player
                               </th>
@@ -1317,6 +1337,15 @@ export default function SmashTournamentELO({
                                         </div>
                                       )}
                                     </div>
+                                  </td>
+                                  <td className="px-1 py-3 md:px-2 md:py-8 whitespace-nowrap text-center">
+                                    {player.country && getCountryFlag(player.country) ? (
+                                      <span className="text-xl md:text-4xl">
+                                        {getCountryFlag(player.country)}
+                                      </span>
+                                    ) : (
+                                      <span className="text-gray-500 text-xs">-</span>
+                                    )}
                                   </td>
                                   <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap text-sm md:text-2xl font-bold text-white">
                                     <div
@@ -1502,6 +1531,11 @@ export default function SmashTournamentELO({
                                               <div className="font-semibold flex items-center">
                                                 {player.display_name ||
                                                   player.name}
+                                                {player.country && getCountryFlag(player.country) && (
+                                                  <span className="ml-2 text-sm">
+                                                    {getCountryFlag(player.country)}
+                                                  </span>
+                                                )}
                                                 <FireStreak
                                                   streak={
                                                     player.current_win_streak ||
@@ -2115,6 +2149,11 @@ export default function SmashTournamentELO({
                                         <h3 className="text-xl font-bold text-white text-center">
                                           {player.display_name || player.name}
                                         </h3>
+                                        {player.country && getCountryFlag(player.country) && (
+                                          <span className="ml-2 text-lg">
+                                            {getCountryFlag(player.country)}
+                                          </span>
+                                        )}
                                         <FireStreak
                                           streak={
                                             player.current_win_streak || 0
@@ -2338,6 +2377,11 @@ export default function SmashTournamentELO({
                                         <h3 className="text-xl font-bold text-white text-center">
                                           {player.display_name || player.name}
                                         </h3>
+                                        {player.country && getCountryFlag(player.country) && (
+                                          <span className="ml-2 text-lg">
+                                            {getCountryFlag(player.country)}
+                                          </span>
+                                        )}
                                         <FireStreak
                                           streak={
                                             player.current_win_streak || 0
