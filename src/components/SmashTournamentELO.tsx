@@ -159,6 +159,7 @@ const ProfilePicture = memo(
       if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
       if (nameToUse.includes("david")) return "/images/david.png";
       if (nameToUse.includes("bihan")) return "/images/bihan.png";
+      if (nameToUse.includes("kento")) return "/images/kento.png";
 
       return null;
     };
