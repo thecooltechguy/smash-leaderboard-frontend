@@ -1335,10 +1335,10 @@ export default function SmashTournamentELO({
                                         countryCode={player.country.toUpperCase()}
                                         svg
                                         style={{
-                                          width: '1.5rem',
-                                          height: '1rem',
+                                          width: '3rem',
+                                          height: '2rem',
                                         }}
-                                        className="md:w-8 md:h-6 inline-block"
+                                        className="inline-block"
                                       />
                                     ) : (
                                       <span className="text-gray-500 text-xs">-</span>
@@ -2157,8 +2157,8 @@ export default function SmashTournamentELO({
                                             countryCode={player.country.toUpperCase()}
                                             svg
                                             style={{
-                                              width: '1.25rem',
-                                              height: '1rem',
+                                              width: '2rem',
+                                              height: '1.5rem',
                                               marginLeft: '0.5rem'
                                             }}
                                           />
@@ -2391,8 +2391,8 @@ export default function SmashTournamentELO({
                                             countryCode={player.country.toUpperCase()}
                                             svg
                                             style={{
-                                              width: '1.25rem',
-                                              height: '1rem',
+                                              width: '2rem',
+                                              height: '1.5rem',
                                               marginLeft: '0.5rem'
                                             }}
                                           />
