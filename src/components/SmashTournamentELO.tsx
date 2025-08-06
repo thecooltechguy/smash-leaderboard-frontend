@@ -405,7 +405,7 @@ export default function SmashTournamentELO({
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
   const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(new Set());
 
-  // Helper function to get country flag emoji
+  // Helper function to get country flag emoji with fallback
   const getCountryFlag = (countryCode: string | null): string | null => {
     if (!countryCode) return null;
     
@@ -419,6 +419,24 @@ export default function SmashTournamentELO({
     };
     
     return flagEmojis[countryCode.toUpperCase()] || null;
+  };
+
+  // Helper function to get country flag with image fallback for Windows
+  const getCountryDisplay = (countryCode: string | null): { type: 'emoji' | 'image' | 'text', content: string } | null => {
+    if (!countryCode) return null;
+    
+    const code = countryCode.toUpperCase();
+    const emoji = getCountryFlag(code);
+    
+    if (emoji) {
+      return { type: 'emoji', content: emoji };
+    }
+    
+    // Fallback to flag images from flagcdn.com
+    return { 
+      type: 'image', 
+      content: `https://flagcdn.com/24x18/${code.toLowerCase()}.png`
+    };
   };
 
   // Initialize filters from URL params on matches page
@@ -1339,13 +1357,27 @@ export default function SmashTournamentELO({
                                     </div>
                                   </td>
                                   <td className="px-1 py-3 md:px-2 md:py-8 whitespace-nowrap text-center">
-                                    {player.country && getCountryFlag(player.country) ? (
-                                      <span className="text-xl md:text-4xl">
-                                        {getCountryFlag(player.country)}
-                                      </span>
-                                    ) : (
-                                      <span className="text-gray-500 text-xs">-</span>
-                                    )}
+                                    {(() => {
+                                      const display = getCountryDisplay(player.country);
+                                      if (!display) return <span className="text-gray-500 text-xs">-</span>;
+                                      
+                                      if (display.type === 'emoji') {
+                                        return (
+                                          <span className="text-xl md:text-4xl">
+                                            {display.content}
+                                          </span>
+                                        );
+                                      } else if (display.type === 'image') {
+                                        return (
+                                          <img 
+                                            src={display.content} 
+                                            alt={player.country || ''} 
+                                            className="inline-block w-6 h-4 md:w-8 md:h-6 object-cover rounded-sm"
+                                          />
+                                        );
+                                      }
+                                      return <span className="text-gray-500 text-xs">-</span>;
+                                    })()}
                                   </td>
                                   <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap text-sm md:text-2xl font-bold text-white">
                                     <div
