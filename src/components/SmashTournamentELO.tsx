@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { memo, useEffect, useRef, useState } from "react";
+import ReactCountryFlag from "react-country-flag";
 
 // Extended player interface for frontend with real stats
 interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
@@ -405,38 +406,10 @@ export default function SmashTournamentELO({
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
   const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(new Set());
 
-  // Helper function to get country flag emoji with fallback
-  const getCountryFlag = (countryCode: string | null): string | null => {
-    if (!countryCode) return null;
-    
-    const flagEmojis: Record<string, string> = {
-      'US': '🇺🇸', 'CA': '🇨🇦', 'GB': '🇬🇧', 'DE': '🇩🇪', 'FR': '🇫🇷',
-      'JP': '🇯🇵', 'KR': '🇰🇷', 'CN': '🇨🇳', 'AU': '🇦🇺', 'BR': '🇧🇷',
-      'MX': '🇲🇽', 'IT': '🇮🇹', 'ES': '🇪🇸', 'NL': '🇳🇱', 'SE': '🇸🇪',
-      'NO': '🇳🇴', 'DK': '🇩🇰', 'FI': '🇫🇮', 'RU': '🇷🇺', 'IN': '🇮🇳',
-      'PH': '🇵🇭', 'TH': '🇹🇭', 'MY': '🇲🇾', 'SG': '🇸🇬', 'ID': '🇮🇩',
-      'VN': '🇻🇳', 'PK': '🇵🇰', 'BD': '🇧🇩', 'LK': '🇱🇰', 'NP': '🇳🇵'
-    };
-    
-    return flagEmojis[countryCode.toUpperCase()] || null;
-  };
-
-  // Helper function to get country flag with image fallback for Windows
-  const getCountryDisplay = (countryCode: string | null): { type: 'emoji' | 'image' | 'text', content: string } | null => {
-    if (!countryCode) return null;
-    
-    const code = countryCode.toUpperCase();
-    const emoji = getCountryFlag(code);
-    
-    if (emoji) {
-      return { type: 'emoji', content: emoji };
-    }
-    
-    // Fallback to flag images from flagcdn.com
-    return { 
-      type: 'image', 
-      content: `https://flagcdn.com/24x18/${code.toLowerCase()}.png`
-    };
+  // Helper function to validate country code
+  const isValidCountryCode = (countryCode: string | null): boolean => {
+    if (!countryCode) return false;
+    return /^[A-Z]{2}$/.test(countryCode.toUpperCase());
   };
 
   // Initialize filters from URL params on matches page
@@ -1357,27 +1330,19 @@ export default function SmashTournamentELO({
                                     </div>
                                   </td>
                                   <td className="px-1 py-3 md:px-2 md:py-8 whitespace-nowrap text-center">
-                                    {(() => {
-                                      const display = getCountryDisplay(player.country);
-                                      if (!display) return <span className="text-gray-500 text-xs">-</span>;
-                                      
-                                      if (display.type === 'emoji') {
-                                        return (
-                                          <span className="text-xl md:text-4xl">
-                                            {display.content}
-                                          </span>
-                                        );
-                                      } else if (display.type === 'image') {
-                                        return (
-                                          <img 
-                                            src={display.content} 
-                                            alt={player.country || ''} 
-                                            className="inline-block w-6 h-4 md:w-8 md:h-6 object-cover rounded-sm"
-                                          />
-                                        );
-                                      }
-                                      return <span className="text-gray-500 text-xs">-</span>;
-                                    })()}
+                                    {player.country && isValidCountryCode(player.country) ? (
+                                      <ReactCountryFlag
+                                        countryCode={player.country.toUpperCase()}
+                                        svg
+                                        style={{
+                                          width: '1.5rem',
+                                          height: '1rem',
+                                        }}
+                                        className="md:w-8 md:h-6 inline-block"
+                                      />
+                                    ) : (
+                                      <span className="text-gray-500 text-xs">-</span>
+                                    )}
                                   </td>
                                   <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap text-sm md:text-2xl font-bold text-white">
                                     <div
@@ -1563,10 +1528,16 @@ export default function SmashTournamentELO({
                                               <div className="font-semibold flex items-center">
                                                 {player.display_name ||
                                                   player.name}
-                                                {player.country && getCountryFlag(player.country) && (
-                                                  <span className="ml-2 text-sm">
-                                                    {getCountryFlag(player.country)}
-                                                  </span>
+                                                {player.country && isValidCountryCode(player.country) && (
+                                                  <ReactCountryFlag
+                                                    countryCode={player.country.toUpperCase()}
+                                                    svg
+                                                    style={{
+                                                      width: '1rem',
+                                                      height: '0.75rem',
+                                                      marginLeft: '0.5rem'
+                                                    }}
+                                                  />
                                                 )}
                                                 <FireStreak
                                                   streak={
@@ -2181,10 +2152,16 @@ export default function SmashTournamentELO({
                                         <h3 className="text-xl font-bold text-white text-center">
                                           {player.display_name || player.name}
                                         </h3>
-                                        {player.country && getCountryFlag(player.country) && (
-                                          <span className="ml-2 text-lg">
-                                            {getCountryFlag(player.country)}
-                                          </span>
+                                        {player.country && isValidCountryCode(player.country) && (
+                                          <ReactCountryFlag
+                                            countryCode={player.country.toUpperCase()}
+                                            svg
+                                            style={{
+                                              width: '1.25rem',
+                                              height: '1rem',
+                                              marginLeft: '0.5rem'
+                                            }}
+                                          />
                                         )}
                                         <FireStreak
                                           streak={
@@ -2409,10 +2386,16 @@ export default function SmashTournamentELO({
                                         <h3 className="text-xl font-bold text-white text-center">
                                           {player.display_name || player.name}
                                         </h3>
-                                        {player.country && getCountryFlag(player.country) && (
-                                          <span className="ml-2 text-lg">
-                                            {getCountryFlag(player.country)}
-                                          </span>
+                                        {player.country && isValidCountryCode(player.country) && (
+                                          <ReactCountryFlag
+                                            countryCode={player.country.toUpperCase()}
+                                            svg
+                                            style={{
+                                              width: '1.25rem',
+                                              height: '1rem',
+                                              marginLeft: '0.5rem'
+                                            }}
+                                          />
                                         )}
                                         <FireStreak
                                           streak={
