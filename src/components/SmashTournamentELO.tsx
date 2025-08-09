@@ -161,6 +161,8 @@ const ProfilePicture = memo(
       if (nameToUse.includes("david")) return "/images/david.png";
       if (nameToUse.includes("bihan")) return "/images/bihan.png";
       if (nameToUse.includes("kento")) return "/images/kento.png";
+      if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
+      if (nameToUse.includes("nish")) return "/images/nish.png";
 
       return null;
     };
@@ -175,7 +177,6 @@ const ProfilePicture = memo(
         .join("")
         .toUpperCase();
     };
-
 
     const profilePic = getProfilePicture(player);
 
@@ -397,14 +398,17 @@ export default function SmashTournamentELO({
     string[]
   >([]);
   const [only1v1, setOnly1v1] = useState<boolean>(false);
-  const [autoRefreshDisabled, setAutoRefreshDisabled] = useState<boolean>(false);
+  const [autoRefreshDisabled, setAutoRefreshDisabled] =
+    useState<boolean>(false);
   const [rankedFilter, setRankedFilter] = useState<string>("all"); // "all", "ranked", "unranked"
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked">(
     "ranked"
   );
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
-  const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(new Set());
+  const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(
+    new Set()
+  );
 
   // Helper function to validate country code
   const isValidCountryCode = (countryCode: string | null): boolean => {
@@ -665,7 +669,7 @@ export default function SmashTournamentELO({
           // Skip all refresh activity when auto-refresh is disabled for matches
           return;
         }
-        
+
         fetchPlayers(true);
         if (defaultTab === "matches") {
           fetchMatches(
@@ -678,7 +682,7 @@ export default function SmashTournamentELO({
           setMatchesPage(1);
         }
       }
-      
+
       // Only update countdown if not in disabled state for matches tab
       if (!(defaultTab === "matches" && currentAutoRefreshDisabled.current)) {
         setCountdown(30);
@@ -691,7 +695,7 @@ export default function SmashTournamentELO({
       if (defaultTab === "matches" && currentAutoRefreshDisabled.current) {
         return;
       }
-      
+
       setCountdown((prev) => {
         if (prev <= 1) {
           return 30;
@@ -872,26 +876,24 @@ export default function SmashTournamentELO({
   const refreshSingleMatch = async (matchId: number) => {
     try {
       // Add match ID to refreshing set
-      setRefreshingMatches(prev => new Set(prev).add(matchId));
+      setRefreshingMatches((prev) => new Set(prev).add(matchId));
 
       const response = await fetch(`/api/matches/${matchId}`);
       if (!response.ok) {
         throw new Error("Failed to fetch match");
       }
-      
+
       const updatedMatch = await response.json();
-      
+
       // Update only this match in the matches array
-      setMatches(prev => 
-        prev.map(match => 
-          match.id === matchId ? updatedMatch : match
-        )
+      setMatches((prev) =>
+        prev.map((match) => (match.id === matchId ? updatedMatch : match))
       );
     } catch (error) {
       console.error("Error refreshing match:", error);
     } finally {
       // Remove match ID from refreshing set
-      setRefreshingMatches(prev => {
+      setRefreshingMatches((prev) => {
         const newSet = new Set(prev);
         newSet.delete(matchId);
         return newSet;
@@ -1330,18 +1332,21 @@ export default function SmashTournamentELO({
                                     </div>
                                   </td>
                                   <td className="px-1 py-3 md:px-2 md:py-8 whitespace-nowrap text-center">
-                                    {player.country && isValidCountryCode(player.country) ? (
+                                    {player.country &&
+                                    isValidCountryCode(player.country) ? (
                                       <ReactCountryFlag
                                         countryCode={player.country.toUpperCase()}
                                         svg
                                         style={{
-                                          width: '3rem',
-                                          height: '2rem',
+                                          width: "3rem",
+                                          height: "2rem",
                                         }}
                                         className="inline-block"
                                       />
                                     ) : (
-                                      <span className="text-gray-500 text-xs">-</span>
+                                      <span className="text-gray-500 text-xs">
+                                        -
+                                      </span>
                                     )}
                                   </td>
                                   <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap text-sm md:text-2xl font-bold text-white">
@@ -1528,17 +1533,20 @@ export default function SmashTournamentELO({
                                               <div className="font-semibold flex items-center">
                                                 {player.display_name ||
                                                   player.name}
-                                                {player.country && isValidCountryCode(player.country) && (
-                                                  <ReactCountryFlag
-                                                    countryCode={player.country.toUpperCase()}
-                                                    svg
-                                                    style={{
-                                                      width: '1rem',
-                                                      height: '0.75rem',
-                                                      marginLeft: '0.5rem'
-                                                    }}
-                                                  />
-                                                )}
+                                                {player.country &&
+                                                  isValidCountryCode(
+                                                    player.country
+                                                  ) && (
+                                                    <ReactCountryFlag
+                                                      countryCode={player.country.toUpperCase()}
+                                                      svg
+                                                      style={{
+                                                        width: "1rem",
+                                                        height: "0.75rem",
+                                                        marginLeft: "0.5rem",
+                                                      }}
+                                                    />
+                                                  )}
                                                 <FireStreak
                                                   streak={
                                                     player.current_win_streak ||
@@ -1792,20 +1800,40 @@ export default function SmashTournamentELO({
                                       {/* Match Header */}
                                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                                         <div className="text-gray-400 text-sm">
-                                          <span className="font-medium text-gray-300">Match #{match.id}</span>
+                                          <span className="font-medium text-gray-300">
+                                            Match #{match.id}
+                                          </span>
                                           {" • "}
                                           <button
-                                            onClick={() => setShowUtcTime(!showUtcTime)}
+                                            onClick={() =>
+                                              setShowUtcTime(!showUtcTime)
+                                            }
                                             className="hover:text-gray-200 transition-colors duration-200 underline-offset-2 hover:underline"
-                                            title={showUtcTime ? "Click to show local time" : "Click to show UTC time"}
+                                            title={
+                                              showUtcTime
+                                                ? "Click to show local time"
+                                                : "Click to show UTC time"
+                                            }
                                           >
                                             {showUtcTime
-                                              ? new Date(match.created_at).toLocaleDateString('en-US', { timeZone: 'UTC' })
-                                              : new Date(match.created_at).toLocaleDateString()}{" "}
+                                              ? new Date(
+                                                  match.created_at
+                                                ).toLocaleDateString("en-US", {
+                                                  timeZone: "UTC",
+                                                })
+                                              : new Date(
+                                                  match.created_at
+                                                ).toLocaleDateString()}{" "}
                                             •{" "}
                                             {showUtcTime
-                                              ? new Date(match.created_at).toLocaleTimeString('en-US', { timeZone: 'UTC' }) + ' UTC'
-                                              : new Date(match.created_at).toLocaleTimeString()}
+                                              ? new Date(
+                                                  match.created_at
+                                                ).toLocaleTimeString("en-US", {
+                                                  timeZone: "UTC",
+                                                }) + " UTC"
+                                              : new Date(
+                                                  match.created_at
+                                                ).toLocaleTimeString()}
                                           </button>
                                         </div>
                                         <div className="flex items-center gap-3">
@@ -1868,19 +1896,33 @@ export default function SmashTournamentELO({
                                               </button>
                                             );
                                           })()}
-                                          
+
                                           {/* Refresh Button */}
                                           <button
-                                            onClick={() => refreshSingleMatch(match.id)}
-                                            disabled={refreshingMatches.has(match.id)}
+                                            onClick={() =>
+                                              refreshSingleMatch(match.id)
+                                            }
+                                            disabled={refreshingMatches.has(
+                                              match.id
+                                            )}
                                             className="flex items-center gap-1 text-xs bg-gray-600 hover:bg-gray-500 disabled:bg-gray-500 disabled:cursor-not-allowed text-white font-medium py-1 px-2 rounded transition-colors duration-200"
                                             title="Refresh this match"
                                           >
                                             {refreshingMatches.has(match.id) ? (
                                               <div className="animate-spin h-3 w-3 border border-white border-t-transparent rounded-full"></div>
                                             ) : (
-                                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                              <svg
+                                                className="w-3 h-3"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <path
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  strokeWidth={2}
+                                                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                                />
                                               </svg>
                                             )}
                                           </button>
@@ -2152,17 +2194,20 @@ export default function SmashTournamentELO({
                                         <h3 className="text-xl font-bold text-white text-center">
                                           {player.display_name || player.name}
                                         </h3>
-                                        {player.country && isValidCountryCode(player.country) && (
-                                          <ReactCountryFlag
-                                            countryCode={player.country.toUpperCase()}
-                                            svg
-                                            style={{
-                                              width: '2rem',
-                                              height: '1.5rem',
-                                              marginLeft: '0.5rem'
-                                            }}
-                                          />
-                                        )}
+                                        {player.country &&
+                                          isValidCountryCode(
+                                            player.country
+                                          ) && (
+                                            <ReactCountryFlag
+                                              countryCode={player.country.toUpperCase()}
+                                              svg
+                                              style={{
+                                                width: "2rem",
+                                                height: "1.5rem",
+                                                marginLeft: "0.5rem",
+                                              }}
+                                            />
+                                          )}
                                         <FireStreak
                                           streak={
                                             player.current_win_streak || 0
@@ -2386,17 +2431,20 @@ export default function SmashTournamentELO({
                                         <h3 className="text-xl font-bold text-white text-center">
                                           {player.display_name || player.name}
                                         </h3>
-                                        {player.country && isValidCountryCode(player.country) && (
-                                          <ReactCountryFlag
-                                            countryCode={player.country.toUpperCase()}
-                                            svg
-                                            style={{
-                                              width: '2rem',
-                                              height: '1.5rem',
-                                              marginLeft: '0.5rem'
-                                            }}
-                                          />
-                                        )}
+                                        {player.country &&
+                                          isValidCountryCode(
+                                            player.country
+                                          ) && (
+                                            <ReactCountryFlag
+                                              countryCode={player.country.toUpperCase()}
+                                              svg
+                                              style={{
+                                                width: "2rem",
+                                                height: "1.5rem",
+                                                marginLeft: "0.5rem",
+                                              }}
+                                            />
+                                          )}
                                         <FireStreak
                                           streak={
                                             player.current_win_streak || 0
