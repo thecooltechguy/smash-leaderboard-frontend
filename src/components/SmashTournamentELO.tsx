@@ -163,6 +163,7 @@ const ProfilePicture = memo(
       if (nameToUse.includes("kento")) return "/images/kento.png";
       if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
       if (nameToUse.includes("nish")) return "/images/nish.png";
+      if (nameToUse.includes("mmmmm")) return "/images/mmmmm.png";
 
       return null;
     };
