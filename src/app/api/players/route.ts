@@ -1,118 +1,166 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
+interface PlayerQueryResult {
+  id: bigint;
+  created_at: Date;
+  name: string;
+  display_name: string | null;
+  elo: bigint;
+  country: string | null;
+  main_character: string | null;
+  total_wins: bigint;
+  total_losses: bigint;
+  total_kos: bigint;
+  total_falls: bigint;
+  total_sds: bigint;
+  current_win_streak: bigint;
+  top_10_players_played: bigint;
+  is_ranked: boolean;
+}
+
 export async function GET() {
   try {
-    // Get all players with their stats in a single optimized query
-    const playersWithData = await prisma.players.findMany({
-      orderBy: {
-        elo: 'desc',
-      },
-      include: {
-        match_participants: {
-          where: {
-            is_cpu: false,
-          },
-          include: {
-            match: {
-              include: {
-                match_participants: {
-                  where: { is_cpu: false },
-                },
-              },
-            },
-          },
-          orderBy: {
-            match_id: 'desc',
-          },
-        },
-      },
-    });
+    // Optimized single query that does all calculations in PostgreSQL
+    const query = `
+    WITH 
+    -- First get top 10 ranked players by ELO for ranking calculations
+    top_10_players AS (
+      SELECT id FROM players 
+      WHERE is_ranked = true 
+      ORDER BY elo DESC 
+      LIMIT 10
+    ),
+    
+    -- Get 1v1 matches only (exactly 2 non-CPU participants)
+    one_v_one_matches AS (
+      SELECT DISTINCT m.id as match_id
+      FROM matches m
+      JOIN match_participants mp ON m.id = mp.match_id
+      WHERE mp.is_cpu = false
+      GROUP BY m.id
+      HAVING COUNT(*) = 2
+    ),
+    
+    -- Main character calculation (mode of smash_character)
+    main_chars AS (
+      SELECT 
+        mp.player,
+        mp.smash_character,
+        COUNT(*) as char_count,
+        ROW_NUMBER() OVER (PARTITION BY mp.player ORDER BY COUNT(*) DESC, mp.smash_character) as rn
+      FROM match_participants mp
+      JOIN one_v_one_matches ovm ON mp.match_id = ovm.match_id
+      WHERE mp.is_cpu = false
+      GROUP BY mp.player, mp.smash_character
+    ),
+    
+    -- Player stats from 1v1 matches only
+    player_stats AS (
+      SELECT 
+        mp.player,
+        COUNT(*) FILTER (WHERE mp.has_won = true) as total_wins,
+        COUNT(*) FILTER (WHERE mp.has_won = false) as total_losses,
+        COALESCE(SUM(mp.total_kos), 0) as total_kos,
+        COALESCE(SUM(mp.total_falls), 0) as total_falls,
+        COALESCE(SUM(mp.total_sds), 0) as total_sds
+      FROM match_participants mp
+      JOIN one_v_one_matches ovm ON mp.match_id = ovm.match_id
+      WHERE mp.is_cpu = false
+      GROUP BY mp.player
+    ),
+    
+    -- Current win streak (consecutive wins from most recent matches)
+    win_streaks AS (
+      SELECT 
+        ordered_matches.player,
+        COUNT(*) as current_win_streak
+      FROM (
+        SELECT 
+          mp.player,
+          mp.match_id,
+          mp.has_won,
+          ROW_NUMBER() OVER (PARTITION BY mp.player ORDER BY mp.match_id DESC) as match_order
+        FROM match_participants mp
+        JOIN one_v_one_matches ovm ON mp.match_id = ovm.match_id
+        WHERE mp.is_cpu = false
+      ) ordered_matches
+      WHERE ordered_matches.has_won = true 
+        AND ordered_matches.match_order <= (
+          SELECT COALESCE(MIN(sub.match_order), 999999)
+          FROM (
+            SELECT 
+              ROW_NUMBER() OVER (PARTITION BY mp2.player ORDER BY mp2.match_id DESC) as match_order
+            FROM match_participants mp2
+            JOIN one_v_one_matches ovm2 ON mp2.match_id = ovm2.match_id
+            WHERE mp2.player = ordered_matches.player 
+              AND mp2.is_cpu = false 
+              AND mp2.has_won = false
+          ) sub
+        )
+      GROUP BY ordered_matches.player
+    ),
+    
+    -- Top 10 players played against count
+    top_10_opponents AS (
+      SELECT 
+        mp1.player,
+        COUNT(DISTINCT mp2.player) as top_10_players_played
+      FROM match_participants mp1
+      JOIN one_v_one_matches ovm ON mp1.match_id = ovm.match_id
+      JOIN match_participants mp2 ON mp1.match_id = mp2.match_id
+      JOIN top_10_players t10 ON mp2.player = t10.id
+      WHERE mp1.is_cpu = false 
+        AND mp2.is_cpu = false 
+        AND mp1.player != mp2.player
+      GROUP BY mp1.player
+    )
+    
+    -- Final query combining all CTEs
+    SELECT 
+      p.id,
+      p.created_at,
+      p.name,
+      p.display_name,
+      p.elo,
+      p.country,
+      COALESCE(mc.smash_character, NULL) as main_character,
+      COALESCE(ps.total_wins, 0) as total_wins,
+      COALESCE(ps.total_losses, 0) as total_losses,
+      COALESCE(ps.total_kos, 0) as total_kos,
+      COALESCE(ps.total_falls, 0) as total_falls,
+      COALESCE(ps.total_sds, 0) as total_sds,
+      COALESCE(ws.current_win_streak, 0) as current_win_streak,
+      COALESCE(t10o.top_10_players_played, 0) as top_10_players_played,
+      CASE WHEN COALESCE(t10o.top_10_players_played, 0) >= 3 THEN true ELSE false END as is_ranked
+    FROM players p
+    LEFT JOIN main_chars mc ON p.id = mc.player AND mc.rn = 1
+    LEFT JOIN player_stats ps ON p.id = ps.player
+    LEFT JOIN win_streaks ws ON p.id = ws.player
+    LEFT JOIN top_10_opponents t10o ON p.id = t10o.player
+    ORDER BY p.elo DESC;
+    `;
 
-    // Get top 10 RANKED players by ELO for ranking calculations
-    const top10PlayerIds = playersWithData
-      .filter(player => player.is_ranked)
-      .slice(0, 10)
-      .map(player => player.id);
-
-    // Transform the data to include calculated stats (remove async operations to speed up)
-    const transformedPlayers = playersWithData.map((player) => {
-      // Get main character
-      let mainCharacter: string | null = null;
-      if (player.match_participants.length > 0) {
-        const characterCounts: Record<string, number> = {};
-        player.match_participants.forEach(p => {
-          characterCounts[p.smash_character] = (characterCounts[p.smash_character] || 0) + 1;
-        });
-        const mostCommon = Object.entries(characterCounts)
-          .sort(([,a], [,b]) => b - a)[0];
-        mainCharacter = mostCommon ? mostCommon[0] : null;
-      }
-
-      // Get stats (only from 1v1 matches)
-      const oneVOneParticipants = player.match_participants.filter(p => 
-        p.match && p.match.match_participants.length === 2
-      );
-
-      const stats = {
-        total_wins: oneVOneParticipants.filter(p => p.has_won).length,
-        total_losses: oneVOneParticipants.filter(p => !p.has_won).length,
-        total_kos: oneVOneParticipants.reduce((sum, p) => sum + p.total_kos, 0),
-        total_falls: oneVOneParticipants.reduce((sum, p) => sum + p.total_falls, 0),
-        total_sds: oneVOneParticipants.reduce((sum, p) => sum + p.total_sds, 0),
-        current_win_streak: (() => {
-          let streak = 0;
-          for (const participant of oneVOneParticipants) {
-            if (participant.has_won) {
-              streak++;
-            } else {
-              break;
-            }
-          }
-          return streak;
-        })(),
-      };
-
-      // Calculate how many unique top 10 players this player has played against (excluding themselves)
-      const uniqueTop10Opponents = new Set<bigint>();
-      for (const participant of player.match_participants) {
-        if (participant.match && participant.match.match_participants.length === 2) {
-          // Find the opponent in this match
-          const opponent = participant.match.match_participants.find(
-            mp => mp.player !== player.id && !mp.is_cpu
-          );
-          if (opponent && 
-              top10PlayerIds.some(id => id === opponent.player) && 
-              opponent.player !== player.id) {
-            uniqueTop10Opponents.add(opponent.player);
-          }
-        }
-      }
-
-      const top10PlayersPlayed = uniqueTop10Opponents.size;
-      const isRanked = top10PlayersPlayed >= 3;
-
-      // Note: We'll update the database separately to avoid connection issues
-      // For now, just return the calculated values
-
-      return {
-        id: Number(player.id),
-        created_at: player.created_at.toISOString(),
-        name: player.name,
-        display_name: player.display_name,
-        elo: Number(player.elo),
-        is_ranked: isRanked,
-        top_10_players_played: top10PlayersPlayed,
-        country: player.country,
-        main_character: mainCharacter,
-        total_wins: stats.total_wins,
-        total_losses: stats.total_losses,
-        total_kos: stats.total_kos,
-        total_falls: stats.total_falls,
-        total_sds: stats.total_sds,
-        current_win_streak: stats.current_win_streak,
-      };
-    });
+    const result = await prisma.$queryRawUnsafe(query) as PlayerQueryResult[];
+    
+    // Transform BigInt values to numbers for JSON serialization
+    const transformedPlayers = result.map((player) => ({
+      id: Number(player.id),
+      created_at: player.created_at.toISOString(),
+      name: player.name,
+      display_name: player.display_name,
+      elo: Number(player.elo),
+      is_ranked: player.is_ranked,
+      top_10_players_played: Number(player.top_10_players_played),
+      country: player.country,
+      main_character: player.main_character,
+      total_wins: Number(player.total_wins),
+      total_losses: Number(player.total_losses),
+      total_kos: Number(player.total_kos),
+      total_falls: Number(player.total_falls),
+      total_sds: Number(player.total_sds),
+      current_win_streak: Number(player.current_win_streak),
+    }));
 
     return NextResponse.json(transformedPlayers);
   } catch (error) {

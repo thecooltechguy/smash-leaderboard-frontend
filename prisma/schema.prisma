@@ -23,6 +23,7 @@ model players {
   // Relations
   match_participants match_participants[]
   
+  @@index([is_ranked, elo(sort: Desc)], name: "idx_players_ranked_elo")
   @@map("players")
 }
 
@@ -52,5 +53,9 @@ model match_participants {
   match   matches @relation(fields: [match_id], references: [id], onDelete: Cascade)
   players players @relation(fields: [player], references: [id], onDelete: Cascade)
   
+  @@index([is_cpu, match_id])
+  @@index([player, match_id(sort: Desc), has_won, is_cpu])
+  @@index([player, smash_character])
+  @@index([match_id, player, is_cpu])
   @@map("match_participants")
 }
