@@ -47,7 +47,7 @@ export const characterToFileMapping: Record<string, string> = {
   "KING DEDEDE": "king_dedede",
   OLIMAR: "olimar",
   LUCARIO: "lucario",
-  "R.O.B.": "rob",
+  "R.O.B.": "r_o_b",
   "TOON LINK": "toon_link",
   WOLF: "wolf",
   VILLAGER: "villager",
@@ -89,11 +89,11 @@ export const characterToFileMapping: Record<string, string> = {
   "BANJO & KAZOOIE": "banjo_and_kazooie",
   TERRY: "Terry", // Note: capital T in filename
   BYLETH: "byleth",
-  "MIN MIN": "minmin",
+  "MIN MIN": "min_min",
   SEPHIROTH: "sephiroth",
   PYRA: "homura", // Pyra's Japanese name in filename
   MYTHRA: "homura", // Both Pyra and Mythra use same file
-  KAZUYA: "kazuya",
+  KAZUYA: "kazuya_mishima",
   SORA: "sora",
 };
 
