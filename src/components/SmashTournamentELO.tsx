@@ -1236,7 +1236,7 @@ export default function SmashTournamentELO({
                         refreshing ? "opacity-75" : "opacity-100"
                       }`}
                     >
-                      <div className="overflow-hidden rounded-xl">
+                      <div className="overflow-x-auto rounded-xl">
                         <table className="w-full divide-y divide-gray-800">
                           <thead>
                             <tr className="bg-gradient-to-r from-gray-800 to-gray-700">
@@ -1262,10 +1262,13 @@ export default function SmashTournamentELO({
                                   </div>
                                 </th>
                               )}
-                              <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-24">
+                              <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-24">
                                 {leaderboardTab === "ranked"
                                   ? "Tier"
                                   : "To Rank"}
+                              </th>
+                              <th className="px-2 py-3 md:px-4 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-20 md:w-24">
+                                Main
                               </th>
                             </tr>
                           </thead>
@@ -1286,7 +1289,7 @@ export default function SmashTournamentELO({
                                       isLast ? "rounded-bl-xl" : ""
                                     }`}
                                   >
-                                    <div className="flex items-center">
+                                    <div className="justify-center flex items-center">
                                       {leaderboardTab === "ranked" ? (
                                         <>
                                           <span className="text-sm md:text-3xl font-bold text-white">
@@ -1329,10 +1332,10 @@ export default function SmashTournamentELO({
                                         countryCode={player.country.toUpperCase()}
                                         svg
                                         style={{
-                                          width: "3rem",
-                                          height: "2rem",
+                                          width: "2rem",
+                                          height: "1.25rem",
                                         }}
-                                        className="inline-block"
+                                        className="inline-block md:!w-12 md:!h-8"
                                       />
                                     ) : (
                                       <span className="text-gray-500 text-xs">
@@ -1376,14 +1379,10 @@ export default function SmashTournamentELO({
                                       </span>
                                     </td>
                                   )}
-                                  <td
-                                    className={`px-2 py-3 md:px-6 md:py-8 whitespace-nowrap ${
-                                      isLast ? "rounded-br-xl" : ""
-                                    }`}
-                                  >
+                                  <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap">
                                     {leaderboardTab === "ranked" ? (
                                       <span
-                                        className={`px-2 py-1 md:px-4 md:py-2 inline-flex text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
+                                        className={`w-8 h-8 md:w-12 md:h-12 inline-flex items-center justify-center text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
                                           getTier(player.elo, tierThresholds)
                                         )} shadow-lg`}
                                       >
@@ -1398,6 +1397,23 @@ export default function SmashTournamentELO({
                                           more needed
                                         </div>
                                       </div>
+                                    )}
+                                  </td>
+                                  <td
+                                    className={`px-1 py-3 md:px-2 md:py-8 text-center ${
+                                      isLast ? "rounded-br-xl" : ""
+                                    }`}
+                                  >
+                                    {player.main_character ? (
+                                      <CharacterProfilePicture
+                                        characterName={player.main_character}
+                                        size="sm"
+                                        className="md:ml-4 border-2 border-gray-300 w-8 h-8 md:w-12 md:h-12"
+                                      />
+                                    ) : (
+                                      <span className="text-gray-500 text-xs">
+                                        -
+                                      </span>
                                     )}
                                   </td>
                                 </tr>
