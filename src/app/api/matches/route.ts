@@ -10,20 +10,18 @@ export async function GET(request: Request) {
     const playerFilter = searchParams.getAll("player");
     const characterFilter = searchParams.getAll("character");
     const only1v1 = searchParams.get("only1v1") === "true";
-    const rankedFilter = searchParams.get("ranked"); // "ranked", "unranked", or null for all
 
     console.log("API filters received:", {
       playerFilter,
       characterFilter,
       only1v1,
-      rankedFilter,
     });
 
     // Build the base query conditions
     const whereConditions: { id?: { in: bigint[] } } = {};
 
     // Apply filters
-    if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1 || rankedFilter) {
+    if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
       // First, get all matches with their participants
       const allMatches = await prisma.matches.findMany({
         include: {
@@ -32,7 +30,6 @@ export async function GET(request: Request) {
               players: {
                 select: {
                   name: true,
-                  is_ranked: true,
                 },
               },
             },
@@ -69,15 +66,6 @@ export async function GET(request: Request) {
           if (participants.length !== 2) return false;
         }
 
-        // Check ranking filter
-        if (rankedFilter) {
-          const isRankedMatch = rankedFilter === "ranked";
-          const hasMatchingPlayers = participants.some(p => 
-            p.players.is_ranked === isRankedMatch
-          );
-          if (!hasMatchingPlayers) return false;
-        }
-
         return true;
       });
 
@@ -110,14 +98,13 @@ export async function GET(request: Request) {
               select: {
                 name: true,
                 display_name: true,
-                is_ranked: true,
               },
             },
           },
         },
       },
       orderBy: {
-        created_at: 'desc',
+        created_at: "desc",
       },
       skip: offset,
       take: limit,
@@ -143,7 +130,6 @@ export async function GET(request: Request) {
         player: Number(participant.player),
         player_name: participant.players.name,
         player_display_name: participant.players.display_name,
-        player_is_ranked: participant.players.is_ranked,
         smash_character: participant.smash_character,
         is_cpu: participant.is_cpu,
         total_kos: participant.total_kos,

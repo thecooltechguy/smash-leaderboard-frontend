@@ -45,7 +45,6 @@ interface MatchParticipant {
   player: number;
   player_name: string;
   player_display_name: string | null;
-  player_is_ranked: boolean;
   smash_character: string;
   is_cpu: boolean;
   total_kos: number;
@@ -401,7 +400,6 @@ export default function SmashTournamentELO({
   const [only1v1, setOnly1v1] = useState<boolean>(false);
   const [autoRefreshDisabled, setAutoRefreshDisabled] =
     useState<boolean>(false);
-  const [rankedFilter, setRankedFilter] = useState<string>("all"); // "all", "ranked", "unranked"
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked">(
     "ranked"
@@ -423,7 +421,6 @@ export default function SmashTournamentELO({
       const players = searchParams.getAll("player");
       const characters = searchParams.getAll("character");
       const only1v1Param = searchParams.get("only1v1") === "true";
-      const rankedParam = searchParams.get("ranked");
 
       if (players.length > 0) {
         setSelectedPlayerFilter(players);
@@ -437,10 +434,6 @@ export default function SmashTournamentELO({
         setOnly1v1(true);
         setShowFilters(true);
       }
-      if (rankedParam && ["ranked", "unranked"].includes(rankedParam)) {
-        setRankedFilter(rankedParam);
-        setShowFilters(true);
-      }
     }
   }, [defaultTab, searchParams]);
 
@@ -448,7 +441,6 @@ export default function SmashTournamentELO({
   const currentPlayerFilter = useRef<string[]>([]);
   const currentCharacterFilter = useRef<string[]>([]);
   const current1v1Filter = useRef<boolean>(false);
-  const currentRankedFilter = useRef<string>("all");
   const currentActiveTab = useRef<string>("rankings");
   const currentAutoRefreshDisabled = useRef<boolean>(false);
 
@@ -464,10 +456,6 @@ export default function SmashTournamentELO({
   useEffect(() => {
     current1v1Filter.current = only1v1;
   }, [only1v1]);
-
-  useEffect(() => {
-    currentRankedFilter.current = rankedFilter;
-  }, [rankedFilter]);
 
   useEffect(() => {
     currentActiveTab.current = activeTab;
@@ -1704,28 +1692,6 @@ export default function SmashTournamentELO({
 
                               {/* Additional Filters */}
                               <div className="lg:col-span-2 space-y-4">
-                                {/* Ranked Filter */}
-                                <div>
-                                  <label className="block text-sm font-medium text-gray-300 mb-3">
-                                    Player Ranking Status
-                                  </label>
-                                  <select
-                                    value={rankedFilter}
-                                    onChange={(e) =>
-                                      setRankedFilter(e.target.value)
-                                    }
-                                    className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                  >
-                                    <option value="all">All Players</option>
-                                    <option value="ranked">
-                                      Ranked Players Only
-                                    </option>
-                                    <option value="unranked">
-                                      Unranked Players Only
-                                    </option>
-                                  </select>
-                                </div>
-
                                 {/* 1v1 Filter */}
                                 <label className="flex items-center space-x-2 p-3 bg-gray-700 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-600">
                                   <input
@@ -1756,7 +1722,6 @@ export default function SmashTournamentELO({
                                     setSelectedPlayerFilter([]);
                                     setSelectedCharacterFilter([]);
                                     setOnly1v1(false);
-                                    setRankedFilter("all");
                                     setMatchesPage(1);
                                     updateMatchesURL([], [], false);
                                     await fetchMatches(1, false, [], [], false);
