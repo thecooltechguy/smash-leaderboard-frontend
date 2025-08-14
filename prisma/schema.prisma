@@ -21,7 +21,7 @@ model players {
   // Relations
   match_participants match_participants[]
   
-  @@index([is_ranked, elo(sort: Desc)], name: "idx_players_ranked_elo")
+  @@index([elo(sort: Desc)], name: "idx_players_elo")
   @@map("players")
 }
 
