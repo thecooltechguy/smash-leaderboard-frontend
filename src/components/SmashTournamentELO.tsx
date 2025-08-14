@@ -22,6 +22,7 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { memo, useEffect, useRef, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
+import CharacterIcon from "./CharacterIcon";
 
 // Extended player interface for frontend with real stats
 interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
@@ -1952,7 +1953,7 @@ export default function SmashTournamentELO({
                                                     participant.player_name}
                                                 </div>
                                                 <div
-                                                  className={`text-sm font-medium ${
+                                                  className={`text-sm font-medium flex items-center gap-2 ${
                                                     participant.has_won
                                                       ? "text-green-400"
                                                       : "text-red-400"
@@ -2192,10 +2193,17 @@ export default function SmashTournamentELO({
 
                                       {/* Main Character */}
                                       {player.main_character && (
-                                        <div className="bg-blue-900 bg-opacity-50 px-3 py-1 rounded-full border border-blue-500">
+                                        <div className="bg-blue-900 bg-opacity-50 px-3 py-1 rounded-full border border-blue-500 flex items-center gap-2">
                                           <span className="text-blue-300 text-sm font-medium">
                                             Main: {player.main_character}
                                           </span>
+                                          <CharacterIcon
+                                            characterName={
+                                              player.main_character
+                                            }
+                                            size="sm"
+                                            className="flex-shrink-0"
+                                          />
                                         </div>
                                       )}
 
@@ -2422,10 +2430,17 @@ export default function SmashTournamentELO({
 
                                       {/* Main Character */}
                                       {player.main_character && (
-                                        <div className="bg-blue-900 bg-opacity-50 px-3 py-1 rounded-full border border-blue-500">
+                                        <div className="bg-blue-900 bg-opacity-50 px-3 py-1 rounded-full border border-blue-500 flex items-center gap-2">
                                           <span className="text-blue-300 text-sm font-medium">
                                             Main: {player.main_character}
                                           </span>
+                                          <CharacterIcon
+                                            characterName={
+                                              player.main_character
+                                            }
+                                            size="sm"
+                                            className="flex-shrink-0"
+                                          />
                                         </div>
                                       )}
 
