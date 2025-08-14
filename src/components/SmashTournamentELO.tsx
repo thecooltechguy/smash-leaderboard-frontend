@@ -9,7 +9,6 @@ import {
   Transition,
 } from "@headlessui/react";
 import {
-  ArrowUpDown,
   Check,
   ChevronDown,
   Filter,
@@ -1248,26 +1247,26 @@ export default function SmashTournamentELO({
                               <th className="px-1 py-3 md:px-2 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-12">
                                 Flag
                               </th>
-                              <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider">
+                              <th className="px-2 py-3 md:px-4 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider">
                                 Player
                               </th>
                               {leaderboardTab === "ranked" && (
-                                <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-32">
-                                  <div className="flex items-center">
+                                <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
+                                  <div className="flex items-center justify-center">
                                     <span>ELO</span>
-                                    <ArrowUpDown
+                                    {/* <ArrowUpDown
                                       size={12}
                                       className="ml-1 md:ml-2 text-gray-500 md:w-5 md:h-5"
-                                    />
+                                    /> */}
                                   </div>
                                 </th>
                               )}
-                              <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-24">
+                              <th className="px-1 py-3 md:px-4 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
                                 {leaderboardTab === "ranked"
                                   ? "Tier"
                                   : "To Rank"}
                               </th>
-                              <th className="px-2 py-3 md:px-4 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-20 md:w-24">
+                              <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-16">
                                 Main
                               </th>
                             </tr>
@@ -1367,7 +1366,7 @@ export default function SmashTournamentELO({
                                     </div>
                                   </td>
                                   {leaderboardTab === "ranked" && (
-                                    <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap">
+                                    <td className="px-1 py-3 md:px-3 md:py-8 text-center whitespace-nowrap">
                                       <span
                                         className="text-sm md:text-2xl font-bold text-yellow-500 bg-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-full"
                                         style={{
@@ -1379,7 +1378,7 @@ export default function SmashTournamentELO({
                                       </span>
                                     </td>
                                   )}
-                                  <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap">
+                                  <td className="px-1 py-3 md:px-2 md:py-8 text-center whitespace-nowrap">
                                     {leaderboardTab === "ranked" ? (
                                       <span
                                         className={`w-8 h-8 md:w-12 md:h-12 inline-flex items-center justify-center text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
@@ -1408,7 +1407,7 @@ export default function SmashTournamentELO({
                                       <CharacterProfilePicture
                                         characterName={player.main_character}
                                         size="sm"
-                                        className="md:ml-4 border-2 border-gray-300 w-8 h-8 md:w-12 md:h-12"
+                                        className="border-2 border-gray-300 w-8 h-8 md:w-12 md:h-12"
                                       />
                                     ) : (
                                       <span className="text-gray-500 text-xs">
