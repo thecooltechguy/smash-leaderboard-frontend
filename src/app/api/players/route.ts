@@ -24,11 +24,33 @@ export async function GET() {
     // Optimized single query that does all calculations in PostgreSQL
     const query = `
     WITH 
-    -- First get top 10 ranked players by ELO for ranking calculations
+    -- First get potential top players, then filter to those who played 3+ top opponents
+    potential_top_players AS (
+      SELECT p.id, p.elo,
+        COUNT(DISTINCT opponent.player) as opponents_in_potential_top
+      FROM players p
+      LEFT JOIN match_participants mp1 ON p.id = mp1.player AND mp1.is_cpu = false
+      LEFT JOIN match_participants opponent ON mp1.match_id = opponent.match_id 
+        AND opponent.player != p.id AND opponent.is_cpu = false
+      LEFT JOIN matches m ON mp1.match_id = m.id
+      LEFT JOIN (
+        SELECT mp_inner.match_id 
+        FROM match_participants mp_inner 
+        WHERE mp_inner.is_cpu = false 
+        GROUP BY mp_inner.match_id 
+        HAVING COUNT(*) = 2
+      ) one_v_one ON m.id = one_v_one.match_id
+      LEFT JOIN players opponent_player ON opponent.player = opponent_player.id
+      WHERE one_v_one.match_id IS NOT NULL
+        AND opponent_player.id IN (
+          SELECT inner_p.id FROM players inner_p ORDER BY inner_p.elo DESC LIMIT 15
+        )
+      GROUP BY p.id, p.elo
+    ),
     top_10_players AS (
-      SELECT id FROM players 
-      WHERE is_ranked = true 
-      ORDER BY elo DESC 
+      SELECT id FROM potential_top_players
+      WHERE opponents_in_potential_top >= 3
+      ORDER BY elo DESC
       LIMIT 10
     ),
     
