@@ -79,13 +79,13 @@ export const characterToFileMapping: Record<string, string> = {
   RICHTER: "richter",
   "KING K. ROOL": "king_k_rool",
   ISABELLE: "isabelle",
-  INCINEROAR: "gaogaen", // Updated to match filename
+  INCINEROAR: "incineroar",
   "PIRANHA PLANT": "packun_flower", // Updated to match filename
 
   // DLC characters now available in local SVG folder
   STEVE: "steve",
   JOKER: "joker",
-  HERO: "dq_hero",
+  HERO: "hero",
   "BANJO & KAZOOIE": "banjo_and_kazooie",
   TERRY: "Terry", // Note: capital T in filename
   BYLETH: "byleth",
@@ -119,7 +119,7 @@ export function getCharacterIconUrl(characterName: string): string {
 }
 
 // Helper function to normalize character names (handle ALL CAPS, etc.)
-function normalizeCharacterName(characterName: string): string {
+export function normalizeCharacterName(characterName: string): string {
   if (!characterName) return "";
 
   // Convert to uppercase for lookup
@@ -146,6 +146,7 @@ function normalizeCharacterName(characterName: string): string {
     ENDERMAN: "STEVE",
     STEVE: "STEVE",
     ALEX: "STEVE",
+    ZOMBIE: "STEVE",
     "R.O.B.": "R.O.B.",
     "MR. GAME & WATCH": "MR. GAME & WATCH",
     // Characters that might be stored differently in the database

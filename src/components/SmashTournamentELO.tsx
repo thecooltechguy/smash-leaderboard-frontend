@@ -23,6 +23,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import React, { memo, useEffect, useRef, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 import CharacterIcon from "./CharacterIcon";
+import CharacterProfilePicture from "./CharacterProfilePicture";
 
 // Extended player interface for frontend with real stats
 interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
@@ -146,24 +147,24 @@ const ProfilePicture = memo(
       const nameToUse = (player.display_name || player.name).toLowerCase();
 
       if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
-        return "/images/habeas.png";
-      if (nameToUse.includes("subby")) return "/images/subby.png";
-      if (nameToUse.includes("pat")) return "/images/pat.png";
-      if (nameToUse.includes("will")) return "/images/will.png";
-      if (nameToUse.includes("ryy")) return "/images/ryy.png";
-      if (nameToUse.includes("jmoon")) return "/images/jmoon.png";
-      if (nameToUse.includes("keneru")) return "/images/keneru.png";
-      if (nameToUse.includes("rp")) return "/images/ryanp.png";
-      if (nameToUse.includes("samin")) return "/images/samin.png";
-      if (nameToUse.includes("stav")) return "/images/stav.png";
-      if (nameToUse.includes("ya")) return "/images/ya.png";
-      if (nameToUse.includes("shafaq")) return "/images/shafaq.png";
-      if (nameToUse.includes("david")) return "/images/david.png";
-      if (nameToUse.includes("bihan")) return "/images/bihan.png";
-      if (nameToUse.includes("kento")) return "/images/kento.png";
-      if (nameToUse.includes("jackedson")) return "/images/jackedson.png";
-      if (nameToUse.includes("nish")) return "/images/nish.png";
-      if (nameToUse.includes("mmmmm")) return "/images/mmmmm.png";
+        return "/images/dps/habeas.png";
+      if (nameToUse.includes("subby")) return "/images/dps/subby.png";
+      if (nameToUse.includes("pat")) return "/images/dps/pat.png";
+      if (nameToUse.includes("will")) return "/images/dps/will.png";
+      if (nameToUse.includes("ryy")) return "/images/dps/ryy.png";
+      if (nameToUse.includes("jmoon")) return "/images/dps/jmoon.png";
+      if (nameToUse.includes("keneru")) return "/images/dps/keneru.png";
+      if (nameToUse.includes("rp")) return "/images/dps/ryanp.png";
+      if (nameToUse.includes("samin")) return "/images/dps/samin.png";
+      if (nameToUse.includes("stav")) return "/images/dps/stav.png";
+      if (nameToUse.includes("ya")) return "/images/dps/ya.png";
+      if (nameToUse.includes("shafaq")) return "/images/dps/shafaq.png";
+      if (nameToUse.includes("david")) return "/images/dps/david.png";
+      if (nameToUse.includes("bihan")) return "/images/dps/bihan.png";
+      if (nameToUse.includes("kento")) return "/images/dps/kento.png";
+      if (nameToUse.includes("jackedson")) return "/images/dps/jackedson.png";
+      if (nameToUse.includes("nish")) return "/images/dps/nish.png";
+      if (nameToUse.includes("mmmmm")) return "/images/dps/mmmmm.png";
 
       return null;
     };
@@ -1918,27 +1919,44 @@ export default function SmashTournamentELO({
                                             }`}
                                           >
                                             {/* Player Header */}
-                                            <div className="flex items-center space-x-3">
-                                              {/* Player Avatar */}
-                                              <ProfilePicture
-                                                player={{
-                                                  name: participant.player_name,
-                                                  display_name:
-                                                    participant.player_display_name,
-                                                }}
-                                                size="sm"
-                                                borderColor={
-                                                  participant.has_won
-                                                    ? "border-green-400"
-                                                    : "border-red-400"
-                                                }
-                                                additionalClasses={
-                                                  participant.has_won
-                                                    ? "bg-green-600"
-                                                    : "bg-red-600"
-                                                }
-                                              />
-
+                                            <div className="flex justify-between items-center space-x-9">
+                                              <div className="flex items-center">
+                                                {/* Player Avatar with Character Overlay */}
+                                                <div className="relative">
+                                                  <ProfilePicture
+                                                    player={{
+                                                      name: participant.player_name,
+                                                      display_name:
+                                                        participant.player_display_name,
+                                                    }}
+                                                    size="sm"
+                                                    borderColor={
+                                                      participant.has_won
+                                                        ? "border-green-400"
+                                                        : "border-red-400"
+                                                    }
+                                                    additionalClasses={
+                                                      participant.has_won
+                                                        ? "bg-green-600"
+                                                        : "bg-red-600"
+                                                    }
+                                                  />
+                                                  {/* Character Avatar Overlay */}
+                                                  <div className="absolute bottom-0 -right-6">
+                                                    <CharacterProfilePicture
+                                                      characterName={
+                                                        participant.smash_character
+                                                      }
+                                                      size="sm"
+                                                      className={`border-2 ${
+                                                        participant.has_won
+                                                          ? "border-green-400"
+                                                          : "border-red-400"
+                                                      } w-6 h-6`}
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
                                               {/* Player Info */}
                                               <div className="flex-1 min-w-0">
                                                 <div
@@ -1979,8 +1997,7 @@ export default function SmashTournamentELO({
                                                   className="w-8 h-8 object-contain"
                                                 />
                                               </div>
-                                            </div>
-
+                                            </div>{" "}
                                             {/* Individual Player Stats */}
                                             <div className="grid grid-cols-3 gap-2 text-center text-xs">
                                               <div className="bg-black bg-opacity-20 rounded px-2 py-1">
