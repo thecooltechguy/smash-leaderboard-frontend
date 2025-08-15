@@ -517,41 +517,30 @@ export default function SmashTournamentELO({
     };
   }, []);
 
-  // Calculate percentile-based tier thresholds
+  // Calculate ELO range percentile-based tier thresholds
   const calculateTierThresholds = (sortedPlayers: ExtendedPlayer[]) => {
     if (sortedPlayers.length === 0) {
       return { S: 2000, A: 1800, B: 1600, C: 1400, D: 1200, E: 1000 };
     }
 
-    // Get all ELO scores in ascending order for percentile calculation
-    const ascendingElos = [...sortedPlayers]
-      .sort((a, b) => a.elo - b.elo)
-      .map((p) => p.elo);
+    // Get min and max ELO for range calculation
+    const eloScores = sortedPlayers.map((p) => p.elo);
+    const minElo = Math.min(...eloScores);
+    const maxElo = Math.max(...eloScores);
+    const eloRange = maxElo - minElo;
 
-    // Function to calculate percentile value from ELO scores
-    const getPercentile = (percentile: number): number => {
-      const index = (percentile / 100) * (ascendingElos.length - 1);
-      const lower = Math.floor(index);
-      const upper = Math.ceil(index);
-
-      if (lower === upper) {
-        return ascendingElos[lower];
-      }
-
-      // Linear interpolation between the two closest values
-      const weight = index - lower;
-      return (
-        ascendingElos[lower] * (1 - weight) + ascendingElos[upper] * weight
-      );
+    // Calculate percentiles of the ELO range
+    const getEloRangePercentile = (percentile: number): number => {
+      return minElo + (eloRange * percentile / 100);
     };
 
     return {
-      S: getPercentile(90), // 90th percentile and above = S tier (top 10%)
-      A: getPercentile(75), // 75th percentile and above = A tier or higher
-      B: getPercentile(50), // 50th percentile and above = B tier or higher
-      C: getPercentile(25), // 25th percentile and above = C tier or higher
-      D: getPercentile(10), // 10th percentile and above = D tier or higher
-      E: Math.min(...ascendingElos), // Everyone else is E tier
+      S: getEloRangePercentile(90), // 90th percentile of ELO range
+      A: getEloRangePercentile(75), // 75th percentile of ELO range
+      B: getEloRangePercentile(50), // 50th percentile of ELO range
+      C: getEloRangePercentile(25), // 25th percentile of ELO range
+      D: getEloRangePercentile(10), // 10th percentile of ELO range
+      E: minElo, // Minimum ELO
     };
   };
 
