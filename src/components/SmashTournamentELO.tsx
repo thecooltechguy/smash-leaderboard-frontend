@@ -1873,7 +1873,7 @@ export default function SmashTournamentELO({
                                                     );
                                                   }, 100);
                                                 }}
-                                                className="text-xs bg-gray-600 hover:bg-gray-500 text-white font-medium py-1 px-2 rounded transition-colors duration-200"
+                                                className="text-xs bg-gray-600 hover:bg-gray-500 text-white font-medium py-1 px-2 rounded transition-colors duration-200 hidden sm:block"
                                               >
                                                 Filter for this matchup
                                               </button>
@@ -1913,21 +1913,11 @@ export default function SmashTournamentELO({
                                       </div>
 
                                       {/* All Participants */}
-                                      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:justify-between">
+                                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                                         {participants.map((participant) => (
                                           <div
                                             key={participant.id}
                                             className={`flex flex-col space-y-3 px-4 py-3 rounded-lg border transition-all w-full ${
-                                              participants.length === 1
-                                                ? "sm:w-80"
-                                                : participants.length === 2
-                                                ? "sm:flex-1 sm:max-w-md"
-                                                : participants.length === 3
-                                                ? "sm:w-72"
-                                                : participants.length === 4
-                                                ? "sm:w-52"
-                                                : "sm:w-44"
-                                            } ${
                                               participant.has_won
                                                 ? "bg-green-900 bg-opacity-30 border-green-500 shadow-green-500/20 shadow-lg"
                                                 : "bg-red-900 bg-opacity-20 border-red-600"
