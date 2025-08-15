@@ -30,6 +30,7 @@ interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
   elo: number;
   matches: number;
   is_ranked: boolean;
+  inactive: boolean;
   top_10_players_played: number;
   main_character?: string;
   total_wins?: number;
@@ -402,7 +403,7 @@ export default function SmashTournamentELO({
   const [autoRefreshDisabled, setAutoRefreshDisabled] =
     useState<boolean>(false);
   const [showFilters, setShowFilters] = useState<boolean>(false);
-  const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked">(
+  const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked" | "inactive">(
     "ranked"
   );
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
@@ -928,9 +929,13 @@ export default function SmashTournamentELO({
   // Sort players by ELO
   const sortedPlayers = [...players].sort((a, b) => b.elo - a.elo);
 
-  // Separate ranked and unranked players
-  const rankedPlayers = sortedPlayers.filter((player) => player.is_ranked);
-  const unrankedPlayers = sortedPlayers.filter((player) => !player.is_ranked);
+  // Separate active and inactive players
+  const activePlayers = sortedPlayers.filter((player) => !player.inactive);
+  const inactivePlayers = sortedPlayers.filter((player) => player.inactive);
+
+  // Separate ranked and unranked players (only among active players)
+  const rankedPlayers = activePlayers.filter((player) => player.is_ranked);
+  const unrankedPlayers = activePlayers.filter((player) => !player.is_ranked);
 
   // Sort unranked players by how close they are to becoming ranked (descending: 2/3, 1/3, 0/3)
   const sortedUnrankedPlayers = unrankedPlayers.sort(
@@ -1191,11 +1196,12 @@ export default function SmashTournamentELO({
                       {[
                         { id: "ranked", label: "Ranked Players" },
                         { id: "unranked", label: "Unranked Players" },
+                        { id: "inactive", label: "Inactive Players" },
                       ].map((tab) => (
                         <button
                           key={tab.id}
                           onClick={() =>
-                            setLeaderboardTab(tab.id as "ranked" | "unranked")
+                            setLeaderboardTab(tab.id as "ranked" | "unranked" | "inactive")
                           }
                           className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                             leaderboardTab === tab.id
@@ -1207,7 +1213,9 @@ export default function SmashTournamentELO({
                           <span className="ml-2 text-xs bg-gray-600 px-2 py-1 rounded-full">
                             {tab.id === "ranked"
                               ? rankedPlayers.length
-                              : unrankedPlayers.length}
+                              : tab.id === "unranked"
+                              ? unrankedPlayers.length
+                              : inactivePlayers.length}
                           </span>
                         </button>
                       ))}
@@ -1216,6 +1224,11 @@ export default function SmashTournamentELO({
                       <div className="mt-2 text-sm text-gray-400">
                         Sorted by progress toward ranking (need to play 3+ top
                         10 players)
+                      </div>
+                    )}
+                    {leaderboardTab === "inactive" && (
+                      <div className="mt-2 text-sm text-gray-400">
+                        Players who have been marked as inactive
                       </div>
                     )}
                   </div>
@@ -1242,7 +1255,9 @@ export default function SmashTournamentELO({
                               <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tl-xl w-24">
                                 {leaderboardTab === "ranked"
                                   ? "Rank"
-                                  : "Progress"}
+                                  : leaderboardTab === "unranked"
+                                  ? "Progress"
+                                  : "Rank"}
                               </th>
                               <th className="px-1 py-3 md:px-2 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-12">
                                 Flag
@@ -1250,7 +1265,7 @@ export default function SmashTournamentELO({
                               <th className="px-2 py-3 md:px-4 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider">
                                 Player
                               </th>
-                              {leaderboardTab === "ranked" && (
+                              {leaderboardTab !== "unranked" && (
                                 <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
                                   <div className="flex items-center justify-center">
                                     <span>ELO</span>
@@ -1262,9 +1277,9 @@ export default function SmashTournamentELO({
                                 </th>
                               )}
                               <th className="px-1 py-3 md:px-4 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
-                                {leaderboardTab === "ranked"
-                                  ? "Tier"
-                                  : "To Rank"}
+                                {leaderboardTab === "unranked"
+                                  ? "To Rank"
+                                  : "Tier"}
                               </th>
                               <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-16">
                                 Main
@@ -1274,7 +1289,9 @@ export default function SmashTournamentELO({
                           <tbody className="bg-gray-900 divide-y divide-gray-800">
                             {(leaderboardTab === "ranked"
                               ? rankedPlayers
-                              : sortedUnrankedPlayers
+                              : leaderboardTab === "unranked"
+                              ? sortedUnrankedPlayers
+                              : inactivePlayers
                             ).map((player, index, currentPlayers) => {
                               const isLast =
                                 index === currentPlayers.length - 1;
@@ -1289,23 +1306,7 @@ export default function SmashTournamentELO({
                                     }`}
                                   >
                                     <div className="justify-center flex items-center">
-                                      {leaderboardTab === "ranked" ? (
-                                        <>
-                                          <span className="text-sm md:text-3xl font-bold text-white">
-                                            #{index + 1}
-                                          </span>
-                                          {index === 0 && (
-                                            <Trophy
-                                              size={14}
-                                              className="ml-1 md:ml-3 md:w-6 md:h-6 text-yellow-500"
-                                              style={{
-                                                filter:
-                                                  "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5))",
-                                              }}
-                                            />
-                                          )}
-                                        </>
-                                      ) : (
+                                      {leaderboardTab === "unranked" ? (
                                         <div className="flex items-center">
                                           <div
                                             className={`w-4 h-4 md:w-6 md:h-6 rounded-full mr-2 ${
@@ -1321,6 +1322,22 @@ export default function SmashTournamentELO({
                                             {player.top_10_players_played}/3
                                           </span>
                                         </div>
+                                      ) : (
+                                        <>
+                                          <span className="text-sm md:text-3xl font-bold text-white">
+                                            #{index + 1}
+                                          </span>
+                                          {index === 0 && leaderboardTab === "ranked" && (
+                                            <Trophy
+                                              size={14}
+                                              className="ml-1 md:ml-3 md:w-6 md:h-6 text-yellow-500"
+                                              style={{
+                                                filter:
+                                                  "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5))",
+                                              }}
+                                            />
+                                          )}
+                                        </>
                                       )}
                                     </div>
                                   </td>
@@ -1365,7 +1382,7 @@ export default function SmashTournamentELO({
                                       </div>
                                     </div>
                                   </td>
-                                  {leaderboardTab === "ranked" && (
+                                  {leaderboardTab !== "unranked" && (
                                     <td className="px-1 py-3 md:px-3 md:py-8 text-center whitespace-nowrap">
                                       <span
                                         className="text-sm md:text-2xl font-bold text-yellow-500 bg-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-full"
@@ -1379,15 +1396,7 @@ export default function SmashTournamentELO({
                                     </td>
                                   )}
                                   <td className="px-1 py-3 md:px-2 md:py-8 text-center whitespace-nowrap">
-                                    {leaderboardTab === "ranked" ? (
-                                      <span
-                                        className={`w-8 h-8 md:w-12 md:h-12 inline-flex items-center justify-center text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
-                                          getTier(player.elo, tierThresholds)
-                                        )} shadow-lg`}
-                                      >
-                                        {getTier(player.elo, tierThresholds)}
-                                      </span>
-                                    ) : (
+                                    {leaderboardTab === "unranked" ? (
                                       <div className="text-center">
                                         <span className="text-sm md:text-lg font-bold text-gray-300">
                                           {3 - player.top_10_players_played}
@@ -1396,6 +1405,16 @@ export default function SmashTournamentELO({
                                           more needed
                                         </div>
                                       </div>
+                                    ) : (
+                                      <span
+                                        className={`w-8 h-8 md:w-12 md:h-12 inline-flex items-center justify-center text-xs md:text-lg font-bold rounded-full ${
+                                          leaderboardTab === "inactive" 
+                                            ? "bg-gray-600 text-gray-300" 
+                                            : getTierBadgeColor(getTier(player.elo, tierThresholds))
+                                        } shadow-lg`}
+                                      >
+                                        {getTier(player.elo, tierThresholds)}
+                                      </span>
                                     )}
                                   </td>
                                   <td

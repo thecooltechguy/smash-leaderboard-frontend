@@ -8,6 +8,7 @@ interface PlayerQueryResult {
   display_name: string | null;
   elo: bigint;
   country: string | null;
+  inactive: boolean;
   main_character: string | null;
   total_wins: bigint;
   total_losses: bigint;
@@ -146,6 +147,7 @@ export async function GET() {
       p.display_name,
       p.elo,
       p.country,
+      p.inactive,
       COALESCE(mc.smash_character, NULL) as main_character,
       COALESCE(ps.total_wins, 0) as total_wins,
       COALESCE(ps.total_losses, 0) as total_losses,
@@ -160,7 +162,6 @@ export async function GET() {
     LEFT JOIN player_stats ps ON p.id = ps.player
     LEFT JOIN win_streaks ws ON p.id = ws.player
     LEFT JOIN top_10_opponents t10o ON p.id = t10o.player
-    WHERE p.inactive = false
     ORDER BY p.elo DESC;
     `;
 
@@ -173,6 +174,7 @@ export async function GET() {
       name: player.name,
       display_name: player.display_name,
       elo: Number(player.elo),
+      inactive: player.inactive,
       is_ranked: player.is_ranked,
       top_10_players_played: Number(player.top_10_players_played),
       country: player.country,
