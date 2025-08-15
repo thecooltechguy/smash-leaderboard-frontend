@@ -18,6 +18,7 @@ model players {
   elo                   BigInt   @default(1200)
   country               String?
   inactive              Boolean  @default(false)
+  top_ten_played        Int      @default(0)
   
   // Relations
   match_participants match_participants[]
