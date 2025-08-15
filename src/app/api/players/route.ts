@@ -160,6 +160,7 @@ export async function GET() {
     LEFT JOIN player_stats ps ON p.id = ps.player
     LEFT JOIN win_streaks ws ON p.id = ws.player
     LEFT JOIN top_10_opponents t10o ON p.id = t10o.player
+    WHERE p.inactive = false
     ORDER BY p.elo DESC;
     `;
 
