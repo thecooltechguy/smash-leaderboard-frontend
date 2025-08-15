@@ -43,7 +43,7 @@ export async function GET() {
       LEFT JOIN players opponent_player ON opponent.player = opponent_player.id
       WHERE one_v_one.match_id IS NOT NULL
         AND opponent_player.id IN (
-          SELECT inner_p.id FROM players inner_p ORDER BY inner_p.elo DESC LIMIT 15
+          SELECT inner_p.id FROM players inner_p ORDER BY inner_p.elo DESC LIMIT 10
         )
       GROUP BY p.id, p.elo
     ),
@@ -163,8 +163,8 @@ export async function GET() {
     ORDER BY p.elo DESC;
     `;
 
-    const result = await prisma.$queryRawUnsafe(query) as PlayerQueryResult[];
-    
+    const result = (await prisma.$queryRawUnsafe(query)) as PlayerQueryResult[];
+
     // Transform BigInt values to numbers for JSON serialization
     const transformedPlayers = result.map((player) => ({
       id: Number(player.id),
