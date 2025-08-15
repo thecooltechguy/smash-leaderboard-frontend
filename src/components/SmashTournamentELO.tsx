@@ -1913,7 +1913,7 @@ export default function SmashTournamentELO({
                                       </div>
 
                                       {/* All Participants */}
-                                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                      <div className="grid sm:grid-cols-2 gap-3">
                                         {participants.map((participant) => (
                                           <div
                                             key={participant.id}
