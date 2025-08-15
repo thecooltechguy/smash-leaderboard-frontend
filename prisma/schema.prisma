@@ -13,8 +13,8 @@ datasource db {
 model players {
   id                    BigInt   @id @default(autoincrement())
   created_at            DateTime @default(now())
-  name                  String   @unique
-  display_name          String?
+  name                  String
+  display_name          String?  @unique
   elo                   BigInt   @default(1200)
   country               String?
   inactive              Boolean  @default(false)
