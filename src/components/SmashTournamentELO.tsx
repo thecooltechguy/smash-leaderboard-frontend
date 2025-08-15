@@ -31,7 +31,7 @@ interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
   matches: number;
   is_ranked: boolean;
   inactive: boolean;
-  top_10_players_played: number;
+  top_ten_played: number;
   main_character?: string;
   total_wins?: number;
   total_losses?: number;
@@ -721,12 +721,18 @@ export default function SmashTournamentELO({
         name: string;
         display_name: string | null;
         elo: number;
+        inactive: boolean;
         is_ranked: boolean;
-        top_10_players_played: number;
+        top_ten_played: number;
         created_at: string;
+        country?: string | null;
         main_character?: string;
         total_wins?: number;
         total_losses?: number;
+        total_kos?: number;
+        total_falls?: number;
+        total_sds?: number;
+        current_win_streak?: number;
       }> = await response.json();
 
       // Process players with real stats from database
@@ -939,7 +945,7 @@ export default function SmashTournamentELO({
 
   // Sort unranked players by how close they are to becoming ranked (descending: 2/3, 1/3, 0/3)
   const sortedUnrankedPlayers = unrankedPlayers.sort(
-    (a, b) => b.top_10_players_played - a.top_10_players_played
+    (a, b) => b.top_ten_played - a.top_ten_played
   );
 
   // Calculate dynamic tier thresholds ONLY for ranked players
@@ -1310,16 +1316,16 @@ export default function SmashTournamentELO({
                                         <div className="flex items-center">
                                           <div
                                             className={`w-4 h-4 md:w-6 md:h-6 rounded-full mr-2 ${
-                                              player.top_10_players_played >= 2
+                                              player.top_ten_played >= 2
                                                 ? "bg-green-500"
-                                                : player.top_10_players_played >=
+                                                : player.top_ten_played >=
                                                   1
                                                 ? "bg-yellow-500"
                                                 : "bg-red-500"
                                             }`}
                                           ></div>
                                           <span className="text-sm md:text-lg font-bold text-gray-300">
-                                            {player.top_10_players_played}/3
+                                            {player.top_ten_played}/3
                                           </span>
                                         </div>
                                       ) : (
@@ -1399,7 +1405,7 @@ export default function SmashTournamentELO({
                                     {leaderboardTab === "unranked" ? (
                                       <div className="text-center">
                                         <span className="text-sm md:text-lg font-bold text-gray-300">
-                                          {3 - player.top_10_players_played}
+                                          {3 - player.top_ten_played}
                                         </span>
                                         <div className="text-xs text-gray-500">
                                           more needed
@@ -2265,7 +2271,7 @@ export default function SmashTournamentELO({
                                         >
                                           {player.is_ranked
                                             ? "Ranked Player"
-                                            : `${player.top_10_players_played}/3 vs Top 10`}
+                                            : `${player.top_ten_played}/3 vs Top 10`}
                                         </span>
                                       </div>
                                     </div>
@@ -2488,7 +2494,7 @@ export default function SmashTournamentELO({
                                       {/* Ranking Status */}
                                       <div className="bg-orange-900 bg-opacity-50 px-3 py-1 rounded-full border border-orange-500 mt-2">
                                         <span className="text-orange-300 text-sm font-medium">
-                                          {player.top_10_players_played}/3 vs
+                                          {player.top_ten_played}/3 vs
                                           Top 10
                                         </span>
                                       </div>
