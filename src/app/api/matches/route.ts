@@ -22,8 +22,11 @@ export async function GET(request: Request) {
 
     // Apply filters
     if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
-      // First, get all matches with their participants
+      // First, get all matches with their participants (exclude archived)
       const allMatches = await prisma.matches.findMany({
+        where: {
+          archived: false,
+        },
         include: {
           match_participants: {
             include: {
@@ -88,9 +91,12 @@ export async function GET(request: Request) {
       };
     }
 
-    // Get matches with pagination
+    // Get matches with pagination (exclude archived)
     const matches = await prisma.matches.findMany({
-      where: whereConditions,
+      where: {
+        ...whereConditions,
+        archived: false,
+      },
       include: {
         match_participants: {
           include: {

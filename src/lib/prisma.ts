@@ -44,6 +44,9 @@ export async function getMostCommonCharacter(
     const participants = await prisma.match_participants.findMany({
       where: {
         player: playerId,
+        match: {
+          archived: false,
+        },
       },
       select: {
         smash_character: true,
@@ -75,9 +78,10 @@ export async function getMostCommonCharacter(
 
 // Helper function to get player stats
 export async function getPlayerStats(playerId: bigint): Promise<PlayerStats> {
-  // Get all 1v1 matches for this player (matches with exactly 2 human participants)
+  // Get all 1v1 matches for this player (matches with exactly 2 human participants, exclude archived)
   const oneVOneMatches = await prisma.matches.findMany({
     where: {
+      archived: false,
       match_participants: {
         some: {
           player: playerId,

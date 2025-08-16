@@ -232,6 +232,7 @@ async function seedData() {
       const match = await prisma.matches.create({
         data: {
           created_at: getRandomDate(thirtyDaysAgo, now),
+          archived: false,
         },
       });
 

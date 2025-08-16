@@ -25,12 +25,12 @@ export async function GET() {
     // Simplified query using the top_ten_played column
     const query = `
     WITH 
-    -- Get 1v1 matches only (exactly 2 non-CPU participants)
+    -- Get 1v1 matches only (exactly 2 non-CPU participants) and exclude archived matches
     one_v_one_matches AS (
       SELECT DISTINCT m.id as match_id
       FROM matches m
       JOIN match_participants mp ON m.id = mp.match_id
-      WHERE mp.is_cpu = false
+      WHERE mp.is_cpu = false AND m.archived = false
       GROUP BY m.id
       HAVING COUNT(*) = 2
     ),

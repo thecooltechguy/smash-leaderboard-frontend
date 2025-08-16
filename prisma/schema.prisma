@@ -30,6 +30,7 @@ model players {
 model matches {
   id         BigInt   @id @default(autoincrement())
   created_at DateTime @default(now())
+  archived   Boolean  @default(false)
   
   // Relations
   match_participants match_participants[]

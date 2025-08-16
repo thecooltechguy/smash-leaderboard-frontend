@@ -13,10 +13,11 @@ export async function GET(
       return NextResponse.json({ error: "Invalid match ID" }, { status: 400 });
     }
 
-    // Get the specific match with participants
-    const match = await prisma.matches.findUnique({
+    // Get the specific match with participants (exclude archived)
+    const match = await prisma.matches.findFirst({
       where: {
         id: BigInt(matchId),
+        archived: false,
       },
       include: {
         match_participants: {
