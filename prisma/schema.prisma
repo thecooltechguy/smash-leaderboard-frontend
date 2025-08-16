@@ -59,3 +59,13 @@ model match_participants {
   @@index([match_id, player, is_cpu])
   @@map("match_participants")
 }
+
+  model elo_snapshots {
+    id           Int      @id @default(autoincrement())
+    snapshot_date DateTime @unique @map("snapshot_date") @db.Date
+    elo_data      Json     @map("elo_data")
+    created_at    DateTime @default(now()) @map("created_at")
+
+    @@map("elo_snapshots")
+    @@index([snapshot_date])
+  }
