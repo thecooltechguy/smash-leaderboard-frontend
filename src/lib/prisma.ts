@@ -18,6 +18,7 @@ export interface Player {
   top_ten_played: number;
   inactive: boolean;
   country?: string | null;
+  picture?: string | null;
   main_character?: string | null;
   total_wins?: number;
   total_losses?: number;

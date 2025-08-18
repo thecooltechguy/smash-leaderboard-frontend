@@ -17,6 +17,7 @@ model players {
   display_name          String  @unique
   elo                   BigInt   @default(1200)
   country               String?
+  picture               String?
   inactive              Boolean  @default(false)
   top_ten_played        Int      @default(0)
   

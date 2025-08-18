@@ -142,29 +142,12 @@ const ProfilePicture = memo(
     };
 
     const getProfilePicture = (
-      player: ExtendedPlayer | { name: string; display_name: string | null }
+      player: ExtendedPlayer | { name: string; display_name: string | null; picture?: string | null }
     ): string | null => {
-      const nameToUse = (player.display_name || player.name).toLowerCase();
-
-      if (nameToUse.includes("habeas") || nameToUse.includes("haseab"))
-        return "/images/dps/habeas.png";
-      if (nameToUse.includes("subby")) return "/images/dps/subby.png";
-      if (nameToUse.includes("pat")) return "/images/dps/pat.png";
-      if (nameToUse.includes("will")) return "/images/dps/will.png";
-      if (nameToUse.includes("ryy")) return "/images/dps/ryy.png";
-      if (nameToUse.includes("jmoon")) return "/images/dps/jmoon.png";
-      if (nameToUse.includes("keneru")) return "/images/dps/keneru.png";
-      if (nameToUse.includes("rp")) return "/images/dps/ryanp.png";
-      if (nameToUse.includes("samin")) return "/images/dps/samin.png";
-      if (nameToUse.includes("stav")) return "/images/dps/stav.png";
-      if (nameToUse.includes("ya")) return "/images/dps/ya.png";
-      if (nameToUse.includes("shafaq")) return "/images/dps/shafaq.png";
-      if (nameToUse.includes("david")) return "/images/dps/david.png";
-      if (nameToUse.includes("bihan")) return "/images/dps/bihan.png";
-      if (nameToUse.includes("kento")) return "/images/dps/kento.png";
-      if (nameToUse.includes("jackedson")) return "/images/dps/jackedson.png";
-      if (nameToUse.includes("nish")) return "/images/dps/nish.png";
-      if (nameToUse.includes("mmmmm")) return "/images/dps/mmmmm.png";
+      // Check if player has a custom picture URL
+      if ('picture' in player && player.picture) {
+        return player.picture;
+      }
 
       return null;
     };
