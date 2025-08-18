@@ -8,6 +8,7 @@ interface PlayerQueryResult {
   display_name: string | null;
   elo: bigint;
   country: string | null;
+  picture: string | null;
   inactive: boolean;
   top_ten_played: number;
   main_character: string | null;
@@ -102,6 +103,7 @@ export async function GET() {
       p.display_name,
       p.elo,
       p.country,
+      p.picture,
       p.inactive,
       p.top_ten_played,
       COALESCE(mc.smash_character, NULL) as main_character,
@@ -132,6 +134,7 @@ export async function GET() {
       is_ranked: player.is_ranked,
       top_ten_played: player.top_ten_played,
       country: player.country,
+      picture: player.picture,
       main_character: player.main_character,
       total_wins: Number(player.total_wins),
       total_losses: Number(player.total_losses),

@@ -698,6 +698,7 @@ export default function SmashTournamentELO({
         top_ten_played: number;
         created_at: string;
         country?: string | null;
+        picture?: string | null;
         main_character?: string;
         total_wins?: number;
         total_losses?: number;
