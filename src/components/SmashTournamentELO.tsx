@@ -1931,6 +1931,7 @@ export default function SmashTournamentELO({
                                                       name: participant.player_name,
                                                       display_name:
                                                         participant.player_display_name,
+                                                      picture: players.find(p => p.name === participant.player_name)?.picture || null,
                                                     }}
                                                     size="sm"
                                                     borderColor={
