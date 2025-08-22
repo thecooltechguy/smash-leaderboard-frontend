@@ -156,7 +156,7 @@ const ProfilePicture = memo(
       player: ExtendedPlayer | { name: string; display_name: string | null }
     ): string => {
       const nameToUse = player.display_name || player.name;
-      return nameToUse
+      return (nameToUse || "")
         .split(" ")
         .map((n: string) => n[0])
         .join("")
