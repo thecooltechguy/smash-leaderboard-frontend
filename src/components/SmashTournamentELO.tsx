@@ -1670,8 +1670,8 @@ export default function SmashTournamentELO({
                                 <div>
                                   <MultiSelect
                                     options={players.map((player) => ({
-                                      value: player.name,
-                                      label: player.display_name || player.name,
+                                      value: player.id.toString(),
+                                      label: player.display_name || player.name || `Player ${player.id}`,
                                     }))}
                                     selected={selectedPlayerFilter}
                                     onChange={setSelectedPlayerFilter}
@@ -1823,21 +1823,21 @@ export default function SmashTournamentELO({
                                             {participants.length > 1 ? "s" : ""}
                                           </div>
                                           {(() => {
-                                            const playerNames =
+                                            const playerIds =
                                               participants.map(
-                                                (p) => p.player_name
+                                                (p) => p.player.toString()
                                               );
                                             const isExactMatch =
                                               selectedPlayerFilter.length ===
-                                                playerNames.length &&
-                                              playerNames.every((name) =>
+                                                playerIds.length &&
+                                              playerIds.every((id) =>
                                                 selectedPlayerFilter.includes(
-                                                  name
+                                                  id
                                                 )
                                               ) &&
                                               selectedPlayerFilter.every(
-                                                (name) =>
-                                                  playerNames.includes(name)
+                                                (id) =>
+                                                  playerIds.includes(id)
                                               );
 
                                             if (isExactMatch) return null;
@@ -1846,9 +1846,9 @@ export default function SmashTournamentELO({
                                               <button
                                                 onClick={() => {
                                                   const is1v1 =
-                                                    playerNames.length === 2;
+                                                    playerIds.length === 2;
                                                   setSelectedPlayerFilter(
-                                                    playerNames
+                                                    playerIds
                                                   );
                                                   setSelectedCharacterFilter(
                                                     []
@@ -1858,14 +1858,14 @@ export default function SmashTournamentELO({
                                                   setTimeout(async () => {
                                                     setMatchesPage(1);
                                                     updateMatchesURL(
-                                                      playerNames,
+                                                      playerIds,
                                                       [],
                                                       is1v1
                                                     );
                                                     await fetchMatches(
                                                       1,
                                                       false,
-                                                      playerNames,
+                                                      playerIds,
                                                       [],
                                                       is1v1
                                                     );
@@ -2357,12 +2357,12 @@ export default function SmashTournamentELO({
                                       <button
                                         onClick={() => {
                                           setSelectedPlayerFilter([
-                                            player.name,
+                                            player.id.toString(),
                                           ]);
                                           setSelectedCharacterFilter([]);
                                           setShowFilters(true);
                                           const params = new URLSearchParams();
-                                          params.append("player", player.name);
+                                          params.append("player", player.id.toString());
                                           router.push(
                                             `/matches?${params.toString()}`
                                           );
@@ -2581,12 +2581,12 @@ export default function SmashTournamentELO({
                                       <button
                                         onClick={() => {
                                           setSelectedPlayerFilter([
-                                            player.name,
+                                            player.id.toString(),
                                           ]);
                                           setSelectedCharacterFilter([]);
                                           setShowFilters(true);
                                           const params = new URLSearchParams();
-                                          params.append("player", player.name);
+                                          params.append("player", player.id.toString());
                                           router.push(
                                             `/matches?${params.toString()}`
                                           );

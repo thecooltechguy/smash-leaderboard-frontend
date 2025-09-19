@@ -46,11 +46,11 @@ export async function GET(request: Request) {
 
         // Check if ALL specified players are in this match
         if (playerFilter.length > 0) {
-          const playersInMatch = participants
-            .map((p) => p.players.name)
-            .filter((name): name is string => Boolean(name));
-          const hasAllPlayers = playerFilter.every((playerName) =>
-            playersInMatch.includes(playerName)
+          const playerIdsInMatch = participants
+            .map((p) => p.player?.toString())
+            .filter((id): id is string => Boolean(id));
+          const hasAllPlayers = playerFilter.every((playerId) =>
+            playerIdsInMatch.includes(playerId)
           );
           if (!hasAllPlayers) return false;
         }
