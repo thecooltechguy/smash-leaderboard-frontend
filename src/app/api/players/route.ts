@@ -19,6 +19,7 @@ interface PlayerQueryResult {
   total_sds: bigint;
   current_win_streak: bigint;
   is_ranked: boolean;
+  last_match_date: Date | null;
 }
 
 export async function GET() {
@@ -93,6 +94,17 @@ export async function GET() {
           ) sub
         )
       GROUP BY ordered_matches.player
+    ),
+    
+    -- Last match date for each player (from all matches, not just 1v1)
+    last_match_dates AS (
+      SELECT 
+        mp.player,
+        MAX(m.created_at) as last_match_date
+      FROM match_participants mp
+      JOIN matches m ON mp.match_id = m.id
+      WHERE mp.is_cpu = false AND m.archived = false
+      GROUP BY mp.player
     )
     
     -- Final query combining all CTEs
@@ -113,11 +125,13 @@ export async function GET() {
       COALESCE(ps.total_falls, 0) as total_falls,
       COALESCE(ps.total_sds, 0) as total_sds,
       COALESCE(ws.current_win_streak, 0) as current_win_streak,
-      CASE WHEN p.top_ten_played >= 3 THEN true ELSE false END as is_ranked
+      CASE WHEN p.top_ten_played >= 3 THEN true ELSE false END as is_ranked,
+      lmd.last_match_date
     FROM players p
     LEFT JOIN main_chars mc ON p.id = mc.player AND mc.rn = 1
     LEFT JOIN player_stats ps ON p.id = ps.player
     LEFT JOIN win_streaks ws ON p.id = ws.player
+    LEFT JOIN last_match_dates lmd ON p.id = lmd.player
     ORDER BY p.elo DESC;
     `;
 
@@ -142,6 +156,7 @@ export async function GET() {
       total_falls: Number(player.total_falls),
       total_sds: Number(player.total_sds),
       current_win_streak: Number(player.current_win_streak),
+      last_match_date: player.last_match_date ? player.last_match_date.toISOString() : null,
     }));
 
     return NextResponse.json(transformedPlayers);

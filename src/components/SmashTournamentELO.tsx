@@ -39,6 +39,7 @@ interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
   total_falls?: number;
   total_sds?: number;
   current_win_streak?: number;
+  last_match_date?: string | null;
 }
 
 // Match participant interface
@@ -142,10 +143,12 @@ const ProfilePicture = memo(
     };
 
     const getProfilePicture = (
-      player: ExtendedPlayer | { name: string; display_name: string | null; picture?: string | null }
+      player:
+        | ExtendedPlayer
+        | { name: string; display_name: string | null; picture?: string | null }
     ): string | null => {
       // Check if player has a custom picture URL
-      if ('picture' in player && player.picture) {
+      if ("picture" in player && player.picture) {
         return player.picture;
       }
 
@@ -386,9 +389,9 @@ export default function SmashTournamentELO({
   const [autoRefreshDisabled, setAutoRefreshDisabled] =
     useState<boolean>(false);
   const [showFilters, setShowFilters] = useState<boolean>(false);
-  const [leaderboardTab, setLeaderboardTab] = useState<"ranked" | "unranked" | "inactive">(
-    "ranked"
-  );
+  const [leaderboardTab, setLeaderboardTab] = useState<
+    "ranked" | "unranked" | "inactive"
+  >("ranked");
   const [showUtcTime, setShowUtcTime] = useState<boolean>(false);
   const [refreshingMatches, setRefreshingMatches] = useState<Set<number>>(
     new Set()
@@ -514,7 +517,7 @@ export default function SmashTournamentELO({
 
     // Calculate percentiles of the ELO range
     const getEloRangePercentile = (percentile: number): number => {
-      return minElo + (eloRange * percentile / 100);
+      return minElo + (eloRange * percentile) / 100;
     };
 
     return {
@@ -905,16 +908,48 @@ export default function SmashTournamentELO({
     return "E";
   };
 
+  // Helper function to calculate days ago from last match date
+  const getDaysAgo = (
+    lastMatchDate: string | null | undefined
+  ): number | null => {
+    if (!lastMatchDate) return null;
+    const lastMatch = new Date(lastMatchDate);
+    const now = new Date();
+    const diffTime = now.getTime() - lastMatch.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+  };
+
   // Sort players by ELO
   const sortedPlayers = [...players].sort((a, b) => b.elo - a.elo);
 
   // Separate active and inactive players
   const activePlayers = sortedPlayers.filter((player) => !player.inactive);
-  const inactivePlayers = sortedPlayers.filter((player) => player.inactive);
+  // Only include ranked players (top_ten_played >= 3) in inactive list
+  const inactivePlayers = sortedPlayers.filter(
+    (player) => player.inactive && player.is_ranked
+  );
 
-  // Separate ranked and unranked players (only among active players)
+  // Sort inactive players by last match date (most recent first, least inactive first)
+  const sortedInactivePlayers = [...inactivePlayers].sort((a, b) => {
+    const aDays = getDaysAgo(a.last_match_date);
+    const bDays = getDaysAgo(b.last_match_date);
+    // If both have dates, sort by most recent first (lower days = less inactive)
+    if (aDays !== null && bDays !== null) {
+      return aDays - bDays;
+    }
+    // If only one has a date, prioritize it (put it first)
+    if (aDays !== null && bDays === null) return -1;
+    if (aDays === null && bDays !== null) return 1;
+    // If neither has a date, sort by ELO (fallback)
+    return b.elo - a.elo;
+  });
+
+  // Separate ranked and unranked players
+  // Ranked players: only active ranked players
   const rankedPlayers = activePlayers.filter((player) => player.is_ranked);
-  const unrankedPlayers = activePlayers.filter((player) => !player.is_ranked);
+  // Unranked players: includes both active and inactive unranked players
+  const unrankedPlayers = sortedPlayers.filter((player) => !player.is_ranked);
 
   // Sort unranked players by how close they are to becoming ranked (descending: 2/3, 1/3, 0/3)
   const sortedUnrankedPlayers = unrankedPlayers.sort(
@@ -944,7 +979,7 @@ export default function SmashTournamentELO({
     }
   };
 
-  // Group players by tier for tier list (only ranked players)
+  // Group players by tier for tier list (includes both active and inactive ranked players)
   const tierList: Record<Tier, ExtendedPlayer[]> = {
     S: [],
     A: [],
@@ -954,7 +989,9 @@ export default function SmashTournamentELO({
     E: [],
   };
 
-  rankedPlayers.forEach((player) => {
+  // Include all ranked players (both active and inactive) in tier list
+  const allRankedPlayers = sortedPlayers.filter((player) => player.is_ranked);
+  allRankedPlayers.forEach((player) => {
     const tier = getTier(player.elo, tierThresholds);
     tierList[tier].push(player);
   });
@@ -1180,7 +1217,9 @@ export default function SmashTournamentELO({
                         <button
                           key={tab.id}
                           onClick={() =>
-                            setLeaderboardTab(tab.id as "ranked" | "unranked" | "inactive")
+                            setLeaderboardTab(
+                              tab.id as "ranked" | "unranked" | "inactive"
+                            )
                           }
                           className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                             leaderboardTab === tab.id
@@ -1207,7 +1246,7 @@ export default function SmashTournamentELO({
                     )}
                     {leaderboardTab === "inactive" && (
                       <div className="mt-2 text-sm text-gray-400">
-                        Players who have been marked as inactive
+                        Players who have not played in the last 4 weeks
                       </div>
                     )}
                   </div>
@@ -1236,7 +1275,7 @@ export default function SmashTournamentELO({
                                   ? "Rank"
                                   : leaderboardTab === "unranked"
                                   ? "Progress"
-                                  : "Rank"}
+                                  : "Last Played"}
                               </th>
                               <th className="px-1 py-3 md:px-2 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-12">
                                 Flag
@@ -1255,11 +1294,13 @@ export default function SmashTournamentELO({
                                   </div>
                                 </th>
                               )}
-                              <th className="px-1 py-3 md:px-4 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
-                                {leaderboardTab === "unranked"
-                                  ? "To Rank"
-                                  : "Tier"}
-                              </th>
+                              {leaderboardTab !== "inactive" && (
+                                <th className="px-1 py-3 md:px-4 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
+                                  {leaderboardTab === "unranked"
+                                    ? "To Rank"
+                                    : "Tier"}
+                                </th>
+                              )}
                               <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-16">
                                 Main
                               </th>
@@ -1270,7 +1311,7 @@ export default function SmashTournamentELO({
                               ? rankedPlayers
                               : leaderboardTab === "unranked"
                               ? sortedUnrankedPlayers
-                              : inactivePlayers
+                              : sortedInactivePlayers
                             ).map((player, index, currentPlayers) => {
                               const isLast =
                                 index === currentPlayers.length - 1;
@@ -1291,8 +1332,7 @@ export default function SmashTournamentELO({
                                             className={`w-4 h-4 md:w-6 md:h-6 rounded-full mr-2 ${
                                               player.top_ten_played >= 2
                                                 ? "bg-green-500"
-                                                : player.top_ten_played >=
-                                                  1
+                                                : player.top_ten_played >= 1
                                                 ? "bg-yellow-500"
                                                 : "bg-red-500"
                                             }`}
@@ -1301,21 +1341,36 @@ export default function SmashTournamentELO({
                                             {player.top_ten_played}/3
                                           </span>
                                         </div>
+                                      ) : leaderboardTab === "inactive" ? (
+                                        <div className="text-center">
+                                          <span className="text-sm md:text-lg font-bold text-gray-300">
+                                            {(() => {
+                                              const daysAgo = getDaysAgo(
+                                                player.last_match_date
+                                              );
+                                              if (daysAgo === null) {
+                                                return "Never";
+                                              }
+                                              return `${daysAgo} days ago`;
+                                            })()}
+                                          </span>
+                                        </div>
                                       ) : (
                                         <>
                                           <span className="text-sm md:text-3xl font-bold text-white">
                                             #{index + 1}
                                           </span>
-                                          {index === 0 && leaderboardTab === "ranked" && (
-                                            <Trophy
-                                              size={14}
-                                              className="ml-1 md:ml-3 md:w-6 md:h-6 text-yellow-500"
-                                              style={{
-                                                filter:
-                                                  "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5))",
-                                              }}
-                                            />
-                                          )}
+                                          {index === 0 &&
+                                            leaderboardTab === "ranked" && (
+                                              <Trophy
+                                                size={14}
+                                                className="ml-1 md:ml-3 md:w-6 md:h-6 text-yellow-500"
+                                                style={{
+                                                  filter:
+                                                    "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5))",
+                                                }}
+                                              />
+                                            )}
                                         </>
                                       )}
                                     </div>
@@ -1374,28 +1429,28 @@ export default function SmashTournamentELO({
                                       </span>
                                     </td>
                                   )}
-                                  <td className="px-1 py-3 md:px-2 md:py-8 text-center whitespace-nowrap">
-                                    {leaderboardTab === "unranked" ? (
-                                      <div className="text-center">
-                                        <span className="text-sm md:text-lg font-bold text-gray-300">
-                                          {3 - player.top_ten_played}
-                                        </span>
-                                        <div className="text-xs text-gray-500">
-                                          more needed
+                                  {leaderboardTab !== "inactive" && (
+                                    <td className="px-1 py-3 md:px-2 md:py-8 text-center whitespace-nowrap">
+                                      {leaderboardTab === "unranked" ? (
+                                        <div className="text-center">
+                                          <span className="text-sm md:text-lg font-bold text-gray-300">
+                                            {3 - player.top_ten_played}
+                                          </span>
+                                          <div className="text-xs text-gray-500">
+                                            more needed
+                                          </div>
                                         </div>
-                                      </div>
-                                    ) : (
-                                      <span
-                                        className={`w-8 h-8 md:w-12 md:h-12 inline-flex items-center justify-center text-xs md:text-lg font-bold rounded-full ${
-                                          leaderboardTab === "inactive" 
-                                            ? "bg-gray-600 text-gray-300" 
-                                            : getTierBadgeColor(getTier(player.elo, tierThresholds))
-                                        } shadow-lg`}
-                                      >
-                                        {getTier(player.elo, tierThresholds)}
-                                      </span>
-                                    )}
-                                  </td>
+                                      ) : (
+                                        <span
+                                          className={`w-8 h-8 md:w-12 md:h-12 inline-flex items-center justify-center text-xs md:text-lg font-bold rounded-full ${getTierBadgeColor(
+                                            getTier(player.elo, tierThresholds)
+                                          )} shadow-lg`}
+                                        >
+                                          {getTier(player.elo, tierThresholds)}
+                                        </span>
+                                      )}
+                                    </td>
+                                  )}
                                   <td
                                     className={`px-1 py-3 md:px-2 md:py-8 text-center ${
                                       isLast ? "rounded-br-xl" : ""
@@ -1421,6 +1476,152 @@ export default function SmashTournamentELO({
                       </div>
                     </div>
                   )}
+
+                  {/* Inactive Players Table (shown below ranked players) */}
+                  {leaderboardTab === "ranked" &&
+                    sortedInactivePlayers.length > 0 && (
+                      <div className="mt-8">
+                        <div className="mb-4">
+                          <h3 className="text-xl font-bold text-white px-2">
+                            Inactive Players ({sortedInactivePlayers.length})
+                          </h3>
+                          <div className="mt-2 text-sm text-gray-400 px-2">
+                            Players who have not played in the last 4 weeks
+                          </div>
+                        </div>
+                        <div className="overflow-x-auto rounded-xl">
+                          <table className="w-full divide-y divide-gray-800">
+                            <thead>
+                              <tr className="bg-gradient-to-r from-gray-800 to-gray-700">
+                                <th className="px-2 py-3 md:px-6 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tl-xl w-24">
+                                  Last Played
+                                </th>
+                                <th className="px-1 py-3 md:px-2 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-12">
+                                  Flag
+                                </th>
+                                <th className="px-2 py-3 md:px-4 md:py-6 text-left text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider">
+                                  Player
+                                </th>
+                                <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider w-16">
+                                  <div className="flex items-center justify-center">
+                                    <span>ELO</span>
+                                  </div>
+                                </th>
+                                <th className="px-1 py-3 md:px-3 md:py-6 text-center text-xs md:text-lg font-bold text-gray-300 uppercase tracking-wider rounded-tr-xl w-16">
+                                  Main
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody className="bg-gray-900 divide-y divide-gray-800">
+                              {sortedInactivePlayers.map(
+                                (player, index, currentPlayers) => {
+                                  const isLast =
+                                    index === currentPlayers.length - 1;
+                                  return (
+                                    <tr
+                                      key={player.id}
+                                      className="hover:bg-gray-800 transition-colors duration-150"
+                                    >
+                                      <td
+                                        className={`px-2 py-3 md:px-6 md:py-8 whitespace-nowrap ${
+                                          isLast ? "rounded-bl-xl" : ""
+                                        }`}
+                                      >
+                                        <div className="text-center">
+                                          <span className="text-sm md:text-lg font-bold text-gray-300">
+                                            {(() => {
+                                              const daysAgo = getDaysAgo(
+                                                player.last_match_date
+                                              );
+                                              if (daysAgo === null) {
+                                                return "Never";
+                                              }
+                                              return `${daysAgo} days ago`;
+                                            })()}
+                                          </span>
+                                        </div>
+                                      </td>
+                                      <td className="px-1 py-3 md:px-2 md:py-8 whitespace-nowrap text-center">
+                                        {player.country &&
+                                        isValidCountryCode(player.country) ? (
+                                          <ReactCountryFlag
+                                            countryCode={player.country.toUpperCase()}
+                                            svg
+                                            style={{
+                                              width: "2rem",
+                                              height: "1.25rem",
+                                            }}
+                                            className="inline-block md:!w-12 md:!h-8"
+                                          />
+                                        ) : (
+                                          <span className="text-gray-500 text-xs">
+                                            -
+                                          </span>
+                                        )}
+                                      </td>
+                                      <td className="px-2 py-3 md:px-6 md:py-8 whitespace-nowrap text-sm md:text-2xl font-bold text-white">
+                                        <div
+                                          className="flex items-center space-x-2 md:space-x-4 cursor-pointer hover:opacity-80 transition-opacity"
+                                          onClick={() =>
+                                            handlePlayerClick(player.id)
+                                          }
+                                        >
+                                          <ProfilePicture
+                                            player={player}
+                                            size="md"
+                                          />
+                                          <div className="flex items-center">
+                                            <span>
+                                              {player.display_name ||
+                                                player.name}
+                                            </span>
+                                            <FireStreak
+                                              streak={
+                                                player.current_win_streak || 0
+                                              }
+                                            />
+                                          </div>
+                                        </div>
+                                      </td>
+                                      <td className="px-1 py-3 md:px-3 md:py-8 text-center whitespace-nowrap">
+                                        <span
+                                          className="text-sm md:text-2xl font-bold text-yellow-500 bg-gray-800 px-2 py-1 md:px-4 md:py-2 rounded-full"
+                                          style={{
+                                            textShadow:
+                                              "0 0 10px rgba(255, 215, 0, 0.6)",
+                                          }}
+                                        >
+                                          {player.elo}
+                                        </span>
+                                      </td>
+                                      <td
+                                        className={`px-1 py-3 md:px-2 md:py-8 text-center ${
+                                          isLast ? "rounded-br-xl" : ""
+                                        }`}
+                                      >
+                                        {player.main_character ? (
+                                          <CharacterProfilePicture
+                                            characterName={
+                                              player.main_character
+                                            }
+                                            size="sm"
+                                            className="border-2 border-gray-300 w-8 h-8 md:w-12 md:h-12"
+                                          />
+                                        ) : (
+                                          <span className="text-gray-500 text-xs">
+                                            -
+                                          </span>
+                                        )}
+                                      </td>
+                                    </tr>
+                                  );
+                                }
+                              )}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    )}
                 </div>
               )}
 
@@ -1519,18 +1720,52 @@ export default function SmashTournamentELO({
                                             className="relative group cursor-pointer"
                                             title={`${
                                               player.display_name || player.name
-                                            } - ELO: ${player.elo}`}
+                                            } - ELO: ${player.elo}${
+                                              player.inactive
+                                                ? " (Inactive)"
+                                                : ""
+                                            }`}
                                             onClick={() =>
                                               handlePlayerClick(player.id)
                                             }
                                           >
-                                            <ProfilePicture
-                                              player={player}
-                                              size="lg"
-                                              borderColor="border-gray-600 group-hover:border-yellow-400"
-                                              borderWidth="border-2 md:border-3"
-                                              additionalClasses="rounded-lg transition-all duration-200 bg-gray-700 md:shadow-lg"
-                                            />
+                                            <div className="relative">
+                                              <ProfilePicture
+                                                player={player}
+                                                size="lg"
+                                                borderColor={
+                                                  player.inactive
+                                                    ? "border-gray-500 group-hover:border-gray-400"
+                                                    : "border-gray-600 group-hover:border-yellow-400"
+                                                }
+                                                borderWidth="border-2 md:border-3"
+                                                additionalClasses={`rounded-lg transition-all duration-200 bg-gray-700 md:shadow-lg ${
+                                                  player.inactive
+                                                    ? "opacity-60 grayscale"
+                                                    : ""
+                                                }`}
+                                              />
+
+                                              {/* Inactive player overlay with speech bubble */}
+                                              {player.inactive && (
+                                                <>
+                                                  {/* Semi-transparent dark overlay */}
+                                                  <div className="absolute inset-0 bg-black/40 rounded-lg z-10 pointer-events-none"></div>
+
+                                                  {/* Circular thought bubble with sleep emoji */}
+                                                  <div className="absolute top-0 right-0 z-20 pointer-events-none transform translate-x-1/2 -translate-y-1/2">
+                                                    <div className="relative bg-white/95 w-6 h-6 md:w-8 md:h-8 rounded-full shadow-lg border border-gray-300 flex items-center justify-center">
+                                                      <span className="text-xs md:text-sm">
+                                                        💤
+                                                      </span>
+                                                      {/* Thought bubble circles */}
+                                                      <div className="absolute -bottom-0.5 -left-0.5 w-1.5 h-1.5 md:w-2 md:h-2 bg-white/95 rounded-full border border-gray-300"></div>
+                                                      <div className="absolute -bottom-1.5 -left-2 w-1 h-1 md:w-1.5 md:h-1.5 bg-white/95 rounded-full border border-gray-300"></div>
+                                                    </div>
+                                                  </div>
+                                                </>
+                                              )}
+                                            </div>
 
                                             {/* Player name and ELO tooltip on hover */}
                                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black bg-opacity-95 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-[9999] shadow-xl border border-gray-600">
@@ -1671,7 +1906,10 @@ export default function SmashTournamentELO({
                                   <MultiSelect
                                     options={players.map((player) => ({
                                       value: player.id.toString(),
-                                      label: player.display_name || player.name || `Player ${player.id}`,
+                                      label:
+                                        player.display_name ||
+                                        player.name ||
+                                        `Player ${player.id}`,
                                     }))}
                                     selected={selectedPlayerFilter}
                                     onChange={setSelectedPlayerFilter}
@@ -1823,10 +2061,9 @@ export default function SmashTournamentELO({
                                             {participants.length > 1 ? "s" : ""}
                                           </div>
                                           {(() => {
-                                            const playerIds =
-                                              participants.map(
-                                                (p) => p.player.toString()
-                                              );
+                                            const playerIds = participants.map(
+                                              (p) => p.player.toString()
+                                            );
                                             const isExactMatch =
                                               selectedPlayerFilter.length ===
                                                 playerIds.length &&
@@ -1835,9 +2072,8 @@ export default function SmashTournamentELO({
                                                   id
                                                 )
                                               ) &&
-                                              selectedPlayerFilter.every(
-                                                (id) =>
-                                                  playerIds.includes(id)
+                                              selectedPlayerFilter.every((id) =>
+                                                playerIds.includes(id)
                                               );
 
                                             if (isExactMatch) return null;
@@ -1931,7 +2167,12 @@ export default function SmashTournamentELO({
                                                       name: participant.player_name,
                                                       display_name:
                                                         participant.player_display_name,
-                                                      picture: players.find(p => p.id === participant.player)?.picture || null,
+                                                      picture:
+                                                        players.find(
+                                                          (p) =>
+                                                            p.id ===
+                                                            participant.player
+                                                        )?.picture || null,
                                                     }}
                                                     size="sm"
                                                     borderColor={
@@ -2362,7 +2603,10 @@ export default function SmashTournamentELO({
                                           setSelectedCharacterFilter([]);
                                           setShowFilters(true);
                                           const params = new URLSearchParams();
-                                          params.append("player", player.id.toString());
+                                          params.append(
+                                            "player",
+                                            player.id.toString()
+                                          );
                                           router.push(
                                             `/matches?${params.toString()}`
                                           );
@@ -2468,8 +2712,7 @@ export default function SmashTournamentELO({
                                       {/* Ranking Status */}
                                       <div className="bg-orange-900 bg-opacity-50 px-3 py-1 rounded-full border border-orange-500 mt-2">
                                         <span className="text-orange-300 text-sm font-medium">
-                                          {player.top_ten_played}/3 vs
-                                          Top 10
+                                          {player.top_ten_played}/3 vs Top 10
                                         </span>
                                       </div>
                                     </div>
@@ -2586,7 +2829,10 @@ export default function SmashTournamentELO({
                                           setSelectedCharacterFilter([]);
                                           setShowFilters(true);
                                           const params = new URLSearchParams();
-                                          params.append("player", player.id.toString());
+                                          params.append(
+                                            "player",
+                                            player.id.toString()
+                                          );
                                           router.push(
                                             `/matches?${params.toString()}`
                                           );
