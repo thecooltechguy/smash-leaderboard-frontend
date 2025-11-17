@@ -15,12 +15,14 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@prisma/client": "^6.11.1",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.513.0",
     "next": "15.3.3",
     "prisma": "^6.11.1",
     "react": "^19.0.0",
     "react-country-flag": "^3.1.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

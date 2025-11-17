@@ -23,6 +23,7 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 import CharacterIcon from "./CharacterIcon";
 import CharacterProfilePicture from "./CharacterProfilePicture";
+import PingDot from "./PingDot";
 
 // Extended player interface for frontend with real stats
 interface ExtendedPlayer extends Omit<Player, "id" | "elo"> {
@@ -102,7 +103,7 @@ const RefreshStatus = memo(
           <>
             {/* <span>Last updated: {lastUpdated.toLocaleTimeString()}</span> */}
             {/* <span className="mx-2 text-gray-400">•</span> */}
-            <span className="mr-2 text-green-300">●</span>
+            <PingDot color="green" className="mr-2" />
             <span>Refreshing in {countdown}s</span>
           </>
         )}
@@ -1174,18 +1175,6 @@ export default function SmashTournamentELO({
               {/* Rankings Tab */}
               {activeTab === "rankings" && (
                 <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-lg relative">
-                  {/* Loading overlay when refreshing */}
-                  {refreshing && (
-                    <div className="absolute inset-0 bg-black bg-opacity-20 z-10 flex items-center justify-center backdrop-blur-sm">
-                      <div className="bg-gray-800 bg-opacity-90 px-6 py-3 rounded-full flex items-center space-x-3 border border-gray-600">
-                        <div className="animate-spin h-5 w-5 border-2 border-yellow-500 border-t-transparent rounded-full"></div>
-                        <span className="text-white font-medium">
-                          Updating rankings...
-                        </span>
-                      </div>
-                    </div>
-                  )}
-
                   <div className="px-6 py-5 bg-gradient-to-r from-red-600 to-red-700 flex items-center justify-between relative overflow-hidden rounded-t-2xl">
                     {/* Glare effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-10 skew-x-12 transform -translate-x-full"></div>
@@ -1653,18 +1642,6 @@ export default function SmashTournamentELO({
                     </div>
                   ) : (
                     <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl border border-gray-700 shadow-lg relative">
-                      {/* Loading overlay when refreshing */}
-                      {refreshing && (
-                        <div className="absolute inset-0 bg-black bg-opacity-20 z-10 flex items-center justify-center backdrop-blur-sm rounded-2xl">
-                          <div className="bg-gray-800 bg-opacity-90 px-6 py-3 rounded-full flex items-center space-x-3 border border-gray-600">
-                            <div className="animate-spin h-5 w-5 border-2 border-yellow-500 border-t-transparent rounded-full"></div>
-                            <span className="text-white font-medium">
-                              Updating tier list...
-                            </span>
-                          </div>
-                        </div>
-                      )}
-
                       <div className="px-6 py-5 bg-gradient-to-r from-red-600 to-red-700 flex items-center justify-center relative overflow-hidden rounded-t-2xl">
                         {/* Glare effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-10 skew-x-12 transform -translate-x-full"></div>
