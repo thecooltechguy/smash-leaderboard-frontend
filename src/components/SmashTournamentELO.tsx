@@ -990,7 +990,21 @@ export default function SmashTournamentELO({
   };
 
   // Include all ranked players (both active and inactive) in tier list
-  const allRankedPlayers = sortedPlayers.filter((player) => player.is_ranked);
+  // Exclude players who haven't played in 3+ months (90+ days)
+  const allRankedPlayers = sortedPlayers.filter((player) => {
+    if (!player.is_ranked) return false;
+
+    // Check if player has played in the last 3 months
+    const daysAgo = getDaysAgo(player.last_match_date);
+    if (daysAgo === null) {
+      // Player has no matches - exclude them
+      return false;
+    }
+
+    // Exclude if they haven't played in 90+ days (3 months)
+    return daysAgo < 90;
+  });
+
   allRankedPlayers.forEach((player) => {
     const tier = getTier(player.elo, tierThresholds);
     tierList[tier].push(player);
