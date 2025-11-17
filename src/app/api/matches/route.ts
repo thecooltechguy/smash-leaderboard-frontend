@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { Prisma } from "@prisma/client";
 
 export async function GET(request: Request) {
   try {
@@ -18,7 +19,7 @@ export async function GET(request: Request) {
     });
 
     // Build Prisma where conditions - all filtering at database level
-    const whereConditions: any[] = [
+    const whereConditions: Prisma.matchesWhereInput[] = [
       { archived: false }, // Always exclude archived matches
     ];
 
