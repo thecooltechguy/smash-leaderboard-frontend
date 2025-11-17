@@ -17,85 +17,115 @@ export async function GET(request: Request) {
       only1v1,
     });
 
-    // Build the base query conditions
-    const whereConditions: { id?: { in: bigint[] } } = {};
+    // Build Prisma where conditions - all filtering at database level
+    const whereConditions: any[] = [
+      { archived: false }, // Always exclude archived matches
+    ];
 
-    // Apply filters
-    if (playerFilter.length > 0 || characterFilter.length > 0 || only1v1) {
-      // First, get all matches with their participants (exclude archived)
-      const allMatches = await prisma.matches.findMany({
-        where: {
-          archived: false,
-        },
-        include: {
-          match_participants: {
-            include: {
-              players: {
-                select: {
-                  name: true,
-                },
-              },
-            },
-          },
-        },
-      });
+    // Handle 1v1 filter: exactly 2 non-CPU participants
+    // Prisma doesn't support HAVING COUNT in where clauses, so we use raw SQL
+    // This is still efficient - we only get match IDs, not full match data
+    if (only1v1) {
+      const playerIds = playerFilter.length > 0 
+        ? playerFilter.map((id) => BigInt(id))
+        : [];
 
-      // Filter matches using AND logic
-      const filteredMatches = allMatches.filter((match) => {
-        const participants = match.match_participants;
+      if (playerIds.length > 0) {
+        // 1v1 + player filter: Use raw SQL to combine both conditions efficiently
+        // Build EXISTS conditions for each player (AND logic)
+        const existsConditions = playerIds
+          .map((_, idx) => {
+            const alias = `mp${idx}`;
+            return `EXISTS (
+              SELECT 1 FROM match_participants ${alias}
+              WHERE ${alias}.match_id = m.id 
+              AND ${alias}.player = $${idx + 1}::bigint
+              AND ${alias}.is_cpu = false
+            )`;
+          })
+          .join(" AND ");
 
-        // Check if ALL specified players are in this match
-        if (playerFilter.length > 0) {
-          const playerIdsInMatch = participants
-            .map((p) => p.player?.toString())
-            .filter((id): id is string => Boolean(id));
-          const hasAllPlayers = playerFilter.every((playerId) =>
-            playerIdsInMatch.includes(playerId)
-          );
-          if (!hasAllPlayers) return false;
+        const query = `
+          SELECT m.id
+          FROM matches m
+          WHERE m.archived = false
+          AND ${existsConditions}
+          AND (
+            SELECT COUNT(*) FROM match_participants mp_count
+            WHERE mp_count.match_id = m.id AND mp_count.is_cpu = false
+          ) = 2
+        `;
+
+        const oneVOneMatchIds = await prisma.$queryRawUnsafe<Array<{ id: bigint }>>(
+          query,
+          ...playerIds
+        );
+        
+        if (oneVOneMatchIds.length === 0) {
+          return NextResponse.json({
+            matches: [],
+            pagination: { page, limit, hasMore: false },
+          });
         }
-
-        // Check if ALL specified characters are used in this match
-        if (characterFilter.length > 0) {
-          const charactersInMatch = participants.map((p) => p.smash_character);
-          const hasAllCharacters = characterFilter.every((character) =>
-            charactersInMatch.includes(character)
-          );
-          if (!hasAllCharacters) return false;
+        
+        whereConditions.push({ id: { in: oneVOneMatchIds.map((m) => m.id) } });
+      } else {
+        // Simple 1v1 filter without player filter
+        const oneVOneQuery = `
+          SELECT m.id
+          FROM matches m
+          WHERE m.archived = false
+          AND (
+            SELECT COUNT(*) FROM match_participants mp_count
+            WHERE mp_count.match_id = m.id AND mp_count.is_cpu = false
+          ) = 2
+        `;
+        
+        const oneVOneMatchIds = await prisma.$queryRawUnsafe<Array<{ id: bigint }>>(oneVOneQuery);
+        
+        if (oneVOneMatchIds.length === 0) {
+          return NextResponse.json({
+            matches: [],
+            pagination: { page, limit, hasMore: false },
+          });
         }
-
-        // Check if it's a 1v1 match (exactly 2 players)
-        if (only1v1) {
-          if (participants.length !== 2) return false;
-        }
-
-        return true;
-      });
-
-      const matchIds = filteredMatches.map((match) => match.id);
-      console.log("Found match IDs with filtering:", matchIds);
-
-      if (matchIds.length === 0) {
-        return NextResponse.json({
-          matches: [],
-          pagination: {
-            page,
-            limit,
-            hasMore: false,
-          },
-        });
+        
+        whereConditions.push({ id: { in: oneVOneMatchIds.map((m) => m.id) } });
       }
-
-      whereConditions.id = {
-        in: matchIds,
-      };
     }
 
-    // Get matches with pagination (exclude archived)
+    // Player filter: ALL specified players must be in the match (AND logic)
+    // Only apply if not already handled by 1v1 filter above
+    if (playerFilter.length > 0 && !only1v1) {
+      const playerIds = playerFilter.map((id) => BigInt(id));
+      // For each player, ensure they have a participant record in the match
+      const playerConditions = playerIds.map((playerId) => ({
+        match_participants: {
+          some: {
+            player: playerId,
+            is_cpu: false,
+          },
+        },
+      }));
+      whereConditions.push(...playerConditions);
+    }
+
+    // Character filter: ALL specified characters must be used in the match (AND logic)
+    if (characterFilter.length > 0) {
+      const characterConditions = characterFilter.map((character) => ({
+        match_participants: {
+          some: {
+            smash_character: character,
+          },
+        },
+      }));
+      whereConditions.push(...characterConditions);
+    }
+
+    // Get matches with pagination - all filtering done at database level
     const matches = await prisma.matches.findMany({
       where: {
-        ...whereConditions,
-        archived: false,
+        AND: whereConditions,
       },
       include: {
         match_participants: {
