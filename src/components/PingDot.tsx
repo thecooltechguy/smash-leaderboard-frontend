@@ -15,7 +15,7 @@ export default function PingDot({
           color === "green" && "bg-green-400",
           color === "red" && "bg-red-400",
           color === "blue" && "bg-blue-400",
-          color === "purple" && "bg-purple-400",
+          color === "purple" && "bg-purple-400"
         )}
       ></span>
       <span
@@ -24,10 +24,9 @@ export default function PingDot({
           color === "green" && "bg-green-500",
           color === "red" && "bg-red-500",
           color === "blue" && "bg-blue-500",
-          color === "purple" && "bg-[#5048e4]",
+          color === "purple" && "bg-[#5048e4]"
         )}
       ></span>
     </span>
   );
 }
-

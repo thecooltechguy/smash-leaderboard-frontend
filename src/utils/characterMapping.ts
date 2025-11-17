@@ -32,6 +32,7 @@ export const characterToFileMapping: Record<string, string> = {
   MEWTWO: "mewtwo",
   ROY: "roy",
   CHROM: "chrom",
+  ROB: "r_o_b",
   "MR. GAME & WATCH": "mr_game_and_watch",
   "META KNIGHT": "meta_knight",
   PIT: "pit",
@@ -80,7 +81,7 @@ export const characterToFileMapping: Record<string, string> = {
   "KING K. ROOL": "king_k_rool",
   ISABELLE: "isabelle",
   INCINEROAR: "incineroar",
-  "PIRANHA PLANT": "packun_flower", // Updated to match filename
+  "PIRANHA PLANT": "piranha-plant", // Updated to match filename
 
   // DLC characters now available in local SVG folder
   STEVE: "steve",
@@ -93,7 +94,7 @@ export const characterToFileMapping: Record<string, string> = {
   SEPHIROTH: "sephiroth",
   PYRA: "homura", // Pyra's Japanese name in filename
   MYTHRA: "homura", // Both Pyra and Mythra use same file
-  KAZUYA: "kazuya_mishima",
+  KAZUYA: "kazuya",
   SORA: "sora",
 };
 
