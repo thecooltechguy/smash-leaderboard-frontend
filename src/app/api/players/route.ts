@@ -309,13 +309,19 @@ export async function GET() {
     return NextResponse.json(transformedPlayers);
   } catch (error) {
     console.error("[GET /api/players] Error fetching players:", error);
-    console.error("[GET /api/players] Error details:", {
+    const errorWithMeta = error as Error & { meta?: unknown; code?: string };
+    const errorDetails: Record<string, unknown> = {
       name: error instanceof Error ? error.name : "Unknown",
       message: error instanceof Error ? error.message : String(error),
       stack: error instanceof Error ? error.stack : undefined,
-      ...(error as any).meta && { meta: (error as any).meta },
-      ...(error as any).code && { code: (error as any).code },
-    });
+    };
+    if (errorWithMeta.meta) {
+      errorDetails.meta = errorWithMeta.meta;
+    }
+    if (errorWithMeta.code) {
+      errorDetails.code = errorWithMeta.code;
+    }
+    console.error("[GET /api/players] Error details:", errorDetails);
     return NextResponse.json(
       { 
         error: "Failed to fetch players",
