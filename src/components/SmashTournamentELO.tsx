@@ -681,12 +681,9 @@ export default function SmashTournamentELO({
   }, [defaultTab, searchParams]);
 
   const fetchPlayers = async (isBackgroundRefresh = false) => {
-    console.log("[fetchPlayers] Called with isBackgroundRefresh:", isBackgroundRefresh);
     if (!isBackgroundRefresh) {
-      console.log("[fetchPlayers] Setting loading=true");
       setLoading(true);
     } else {
-      console.log("[fetchPlayers] Setting refreshing=true");
       setRefreshing(true);
     }
     setError(null);
@@ -758,10 +755,8 @@ export default function SmashTournamentELO({
       setError("Failed to load players. Please try again later.");
     } finally {
       if (!isBackgroundRefresh) {
-        console.log("[fetchPlayers] Setting loading=false");
         setLoading(false);
       } else {
-        console.log("[fetchPlayers] Setting refreshing=false");
         setRefreshing(false);
       }
     }
@@ -775,19 +770,9 @@ export default function SmashTournamentELO({
     only1v1Filter?: boolean,
     isBackgroundRefresh: boolean = false
   ) => {
-    console.log("[fetchMatches] Called with:", {
-      page,
-      append,
-      isBackgroundRefresh,
-      willSetLoading: !append && !isBackgroundRefresh,
-    });
-
     // Only set loading state for initial page load (not for appending or background refresh)
     if (!append && !isBackgroundRefresh) {
-      console.log("[fetchMatches] Setting loading=true");
       setLoading(true);
-    } else {
-      console.log("[fetchMatches] Skipping loading state");
     }
 
     try {
@@ -808,13 +793,11 @@ export default function SmashTournamentELO({
       }
 
       const url = `/api/matches?${params.toString()}`;
-      console.log("Fetching matches from:", url);
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Failed to fetch matches");
       }
       const data = await response.json();
-      console.log("Received data:", data);
 
       // Handle both old format (direct array) and new format (object with matches and pagination)
       let matches: Match[];
@@ -831,36 +814,19 @@ export default function SmashTournamentELO({
       }
 
       if (append) {
-        console.log(
-          "Appending matches:",
-          matches.length,
-          "to existing:",
-          matches.length
-        );
-        setMatches((prev) => {
-          console.log("[fetchMatches] Appending to prev:", prev.length, "new total:", prev.length + matches.length);
-          return [...prev, ...matches];
-        });
+        setMatches((prev) => [...prev, ...matches]);
       } else {
-        console.log("[fetchMatches] Setting matches:", matches.length, "matches, isBackgroundRefresh:", isBackgroundRefresh);
-        setMatches((prev) => {
-          console.log("[fetchMatches] Replacing prev:", prev.length, "with new:", matches.length);
-          return matches;
-        });
+        setMatches(matches);
       }
 
       setHasMoreMatches(hasMore);
-      console.log("Updated matches state, hasMore:", hasMore);
     } catch (err) {
       console.error("Error fetching matches:", err);
       // Don't set error state for matches as it's secondary to players
     } finally {
       // Clear loading state after initial load
       if (!append && !isBackgroundRefresh) {
-        console.log("[fetchMatches] Setting loading=false");
         setLoading(false);
-      } else {
-        console.log("[fetchMatches] Skipping loading=false");
       }
     }
   };
@@ -1199,7 +1165,6 @@ export default function SmashTournamentELO({
 
           {loading ? (
             <div className="flex justify-center items-center h-64">
-              {console.log("[RENDER] Showing loading spinner because loading=true")}
               <div
                 className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-yellow-500"
                 style={{
@@ -1209,7 +1174,6 @@ export default function SmashTournamentELO({
             </div>
           ) : (
             <>
-              {console.log("[RENDER] Not loading, showing content. loading=", loading, "refreshing=", refreshing, "activeTab=", activeTab)}
               {/* Rankings Tab */}
               {activeTab === "rankings" && (
                 <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-700 shadow-lg relative">
@@ -2007,10 +1971,8 @@ export default function SmashTournamentELO({
                           </>
                         )}
 
-                        {console.log("[RENDER MATCHES] matches.length:", matches.length, "showFilters:", showFilters)}
                         {matches.length === 0 ? (
                           <div className="text-gray-400 text-center py-16">
-                            {console.log("[RENDER] Showing 'No matches found' message")}
                             <p className="text-xl font-bold">
                               No matches found with current filters
                             </p>
@@ -2021,7 +1983,6 @@ export default function SmashTournamentELO({
                           </div>
                         ) : (
                           <>
-                            {console.log("[RENDER] Rendering", matches.length, "matches")}
                             <div className="space-y-4">
                               {matches.map((match) => {
                                 const participants = match.participants.sort(
