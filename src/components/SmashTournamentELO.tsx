@@ -10,6 +10,7 @@ import {
 } from "@headlessui/react";
 import {
   ArrowUpDown,
+  BarChart,
   Check,
   ChevronDown,
   Filter,
@@ -490,6 +491,9 @@ export default function SmashTournamentELO({
         break;
       case "players":
         router.push("/players");
+        break;
+      case "analytics":
+        router.push("/analytics");
         break;
     }
   };
@@ -1078,6 +1082,7 @@ export default function SmashTournamentELO({
                 { id: "tiers", icon: <List size={20} />, label: "Tier List" },
                 { id: "matches", icon: <Swords size={20} />, label: "Matches" },
                 { id: "players", icon: <Users size={20} />, label: "Players" },
+                { id: "analytics", icon: <BarChart size={20} />, label: "Analytics" },
               ].map((tab, index) => (
                 <li key={tab.id} className="">
                   <button
@@ -1095,7 +1100,7 @@ export default function SmashTournamentELO({
                       borderRadius:
                         index === 0
                           ? "0.75rem 0 0 0.75rem"
-                          : index === 3
+                          : index === 4
                           ? "0 0.75rem 0.75rem 0"
                           : "0",
                     }}

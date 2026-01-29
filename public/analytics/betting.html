@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash Betting Odds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --smash-red: #e60012;
+            --smash-orange: #ff6b00;
+            --smash-yellow: #ffd700;
+            --smash-blue: #0066cc;
+            --smash-dark: #1a1a2e;
+            --smash-darker: #0f0f1a;
+            --smash-black: #050508;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+            --text-dim: #606080;
+            --success: #00ff88;
+            --danger: #ff4757;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Russo One', sans-serif;
+            background: var(--smash-black);
+            color: var(--text-white);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+
+        .hero {
+            position: relative;
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(ellipse at 30% 20%, rgba(0, 102, 204, 0.3) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(0, 255, 136, 0.2) 0%, transparent 50%),
+                        var(--smash-black);
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 10vw, 5rem);
+            text-shadow: 4px 4px 0 var(--smash-blue), 8px 8px 0 var(--success);
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .nav-back {
+            display: inline-block;
+            color: var(--smash-yellow);
+            text-decoration: none;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6rem;
+            padding: 10px 20px;
+            border: 2px solid var(--smash-yellow);
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .nav-back:hover { background: var(--smash-yellow); color: var(--smash-black); }
+
+        section { padding: 40px 0; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-tag {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            color: var(--smash-orange);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-shadow: 2px 2px 0 var(--smash-blue);
+        }
+
+        .betting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .betting-card {
+            background: var(--smash-dark);
+            border: 2px solid var(--smash-blue);
+            padding: 20px;
+            position: relative;
+        }
+
+        .betting-card.high-conf { border-color: var(--success); }
+        .betting-card.medium-conf { border-color: var(--smash-yellow); }
+        .betting-card.low-conf { border-color: var(--smash-orange); }
+
+        .confidence-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.4rem;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .confidence-badge.high { background: var(--success); color: var(--smash-black); }
+        .confidence-badge.medium { background: var(--smash-yellow); color: var(--smash-black); }
+        .confidence-badge.low { background: var(--smash-orange); color: var(--smash-black); }
+
+        .matchup-header {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .vs { color: var(--text-gray); font-size: 1rem; }
+
+        .odds-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--smash-darker);
+        }
+
+        .player-odds {
+            flex: 1;
+            text-align: center;
+        }
+
+        .player-name {
+            font-size: 1rem;
+            color: var(--smash-yellow);
+            margin-bottom: 5px;
+        }
+
+        .odds-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .odds-value.favorite { color: var(--success); }
+        .odds-value.underdog { color: var(--danger); }
+
+        .probability {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        .record {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            margin-top: 5px;
+        }
+
+        .divider {
+            width: 2px;
+            height: 60px;
+            background: var(--smash-darker);
+            margin: 0 15px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid var(--smash-darker);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: var(--smash-yellow);
+        }
+
+        .stat-label {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .power-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .power-table th {
+            background: var(--smash-dark);
+            padding: 15px 10px;
+            text-align: left;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            color: var(--smash-orange);
+            border-bottom: 2px solid var(--smash-blue);
+        }
+
+        .power-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--smash-darker);
+        }
+
+        .power-table tr:hover { background: rgba(0, 102, 204, 0.1); }
+
+        .rank-1 { color: var(--smash-yellow); }
+        .rank-2 { color: #c0c0c0; }
+        .rank-3 { color: #cd7f32; }
+
+        .filter-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            padding: 10px 20px;
+            border: 2px solid var(--smash-blue);
+            background: transparent;
+            color: var(--text-white);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--smash-blue);
+            color: var(--smash-black);
+        }
+
+        footer {
+            background: var(--smash-black);
+            border-top: 3px solid var(--smash-blue);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .betting-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1 class="hero-title">BETTING ODDS</h1>
+        <p class="hero-subtitle">HEAD-TO-HEAD MATCHUP ANALYSIS</p>
+        <div class="nav-links" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="index.html" class="nav-back">ANALYTICS</a>
+            <a href="daily.html" class="nav-back">DAILY REPORT</a>
+            <a href="teams.html" class="nav-back">TEAMS</a>
+        </div>
+    </section>
+
+    <section style="background: var(--smash-darker);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Power Rankings</span>
+                <h2 class="section-title">H2H Performance Leaders</h2>
+            </div>
+
+            <table class="power-table" id="power-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>H2H Record</th>
+                        <th>Win Rate</th>
+                        <th>Opponents</th>
+                    </tr>
+                </thead>
+                <tbody id="power-tbody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section style="background: var(--smash-black);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Matchup Odds</span>
+                <h2 class="section-title">Head-to-Head Betting Lines</h2>
+            </div>
+
+            <div class="filter-row">
+                <button class="filter-btn active" onclick="filterMatchups('all')">All Matchups</button>
+                <button class="filter-btn" onclick="filterMatchups('high')">High Confidence</button>
+                <button class="filter-btn" onclick="filterMatchups('safest')">Safest Bets</button>
+                <button class="filter-btn" onclick="filterMatchups('upset')">Upset Potential</button>
+            </div>
+
+            <div class="betting-grid" id="betting-grid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="color: var(--text-dim); font-size: 0.75rem;">For entertainment purposes only. Odds based on historical performance.</p>
+        <div class="nav-links" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="index.html" class="nav-back">ANALYTICS</a>
+            <a href="daily.html" class="nav-back">DAILY REPORT</a>
+            <a href="teams.html" class="nav-back">TEAMS</a>
+        </div>
+    </footer>
+
+    <script>
+        const bettingData = {"matchups": [{"player1": "habeas","player2": "jmoon","p1_wins": 117,"p2_wins": 466,"total": 583,"p1_prob": 20.1,"p2_prob": 79.9,"p1_american": "+398","p2_american": "-398","p1_decimal": 4.98,"p2_decimal": 1.25,"confidence": "high"},{"player1": "habeas","player2": "subby","p1_wins": 214,"p2_wins": 109,"total": 323,"p1_prob": 66.3,"p2_prob": 33.7,"p1_american": "-196","p2_american": "+196","p1_decimal": 1.51,"p2_decimal": 2.96,"confidence": "high"},{"player1": "habeas","player2": "shafaq","p1_wins": 145,"p2_wins": 108,"total": 253,"p1_prob": 57.3,"p2_prob": 42.7,"p1_american": "-134","p2_american": "+134","p1_decimal": 1.74,"p2_decimal": 2.34,"confidence": "high"},{"player1": "habeas","player2": "keneru","p1_wins": 129,"p2_wins": 74,"total": 203,"p1_prob": 63.5,"p2_prob": 36.5,"p1_american": "-174","p2_american": "+174","p1_decimal": 1.57,"p2_decimal": 2.74,"confidence": "high"},{"player1": "habeas","player2": "own","p1_wins": 69,"p2_wins": 31,"total": 100,"p1_prob": 69.0,"p2_prob": 31.0,"p1_american": "-222","p2_american": "+222","p1_decimal": 1.45,"p2_decimal": 3.23,"confidence": "high"},{"player1": "keneru","player2": "shafaq","p1_wins": 26,"p2_wins": 62,"total": 88,"p1_prob": 29.5,"p2_prob": 70.5,"p1_american": "+238","p2_american": "-238","p1_decimal": 3.38,"p2_decimal": 1.42,"confidence": "high"},{"player1": "habeas","player2": "will","p1_wins": 48,"p2_wins": 37,"total": 85,"p1_prob": 56.5,"p2_prob": 43.5,"p1_american": "-129","p2_american": "+129","p1_decimal": 1.77,"p2_decimal": 2.3,"confidence": "high"},{"player1": "amar","player2": "habeas","p1_wins": 42,"p2_wins": 26,"total": 68,"p1_prob": 61.8,"p2_prob": 38.2,"p1_american": "-161","p2_american": "+161","p1_decimal": 1.62,"p2_decimal": 2.62,"confidence": "high"},{"player1": "habeas","player2": "samin","p1_wins": 37,"p2_wins": 14,"total": 51,"p1_prob": 72.5,"p2_prob": 27.5,"p1_american": "-264","p2_american": "+264","p1_decimal": 1.38,"p2_decimal": 3.64,"confidence": "high"},{"player1": "jmoon","player2": "shafaq","p1_wins": 40,"p2_wins": 10,"total": 50,"p1_prob": 80.0,"p2_prob": 20.0,"p1_american": "-400","p2_american": "+400","p1_decimal": 1.25,"p2_decimal": 5.0,"confidence": "high"},{"player1": "fateen","player2": "subby","p1_wins": 13,"p2_wins": 34,"total": 47,"p1_prob": 27.7,"p2_prob": 72.3,"p1_american": "+261","p2_american": "-261","p1_decimal": 3.62,"p2_decimal": 1.38,"confidence": "high"},{"player1": "jmoon","player2": "keneru","p1_wins": 38,"p2_wins": 5,"total": 43,"p1_prob": 88.4,"p2_prob": 11.6,"p1_american": "-760","p2_american": "+760","p1_decimal": 1.13,"p2_decimal": 8.6,"confidence": "high"},{"player1": "nish","player2": "ya","p1_wins": 32,"p2_wins": 10,"total": 42,"p1_prob": 76.2,"p2_prob": 23.8,"p1_american": "-319","p2_american": "+320","p1_decimal": 1.31,"p2_decimal": 4.2,"confidence": "high"},{"player1": "nish","player2": "subby","p1_wins": 8,"p2_wins": 33,"total": 41,"p1_prob": 19.5,"p2_prob": 80.5,"p1_american": "+412","p2_american": "-412","p1_decimal": 5.12,"p2_decimal": 1.24,"confidence": "high"},{"player1": "own","player2": "will","p1_wins": 14,"p2_wins": 25,"total": 39,"p1_prob": 35.9,"p2_prob": 64.1,"p1_american": "+178","p2_american": "-178","p1_decimal": 2.79,"p2_decimal": 1.56,"confidence": "high"},{"player1": "habeas","player2": "kento","p1_wins": 9,"p2_wins": 29,"total": 38,"p1_prob": 23.7,"p2_prob": 76.3,"p1_american": "+322","p2_american": "-322","p1_decimal": 4.22,"p2_decimal": 1.31,"confidence": "high"},{"player1": "keneru","player2": "ya","p1_wins": 35,"p2_wins": 3,"total": 38,"p1_prob": 92.1,"p2_prob": 7.9,"p1_american": "-1166","p2_american": "+1166","p1_decimal": 1.09,"p2_decimal": 12.67,"confidence": "high"},{"player1": "subby","player2": "ya","p1_wins": 36,"p2_wins": 0,"total": 36,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "high"},{"player1": "heidy","player2": "jmoon","p1_wins": 0,"p2_wins": 34,"total": 34,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "high"},{"player1": "keneru","player2": "subby","p1_wins": 25,"p2_wins": 7,"total": 32,"p1_prob": 78.1,"p2_prob": 21.9,"p1_american": "-357","p2_american": "+357","p1_decimal": 1.28,"p2_decimal": 4.57,"confidence": "high"},{"player1": "keneru","player2": "nish","p1_wins": 25,"p2_wins": 6,"total": 31,"p1_prob": 80.6,"p2_prob": 19.4,"p1_american": "-416","p2_american": "+416","p1_decimal": 1.24,"p2_decimal": 5.17,"confidence": "high"},{"player1": "habeas","player2": "ya","p1_wins": 29,"p2_wins": 1,"total": 30,"p1_prob": 96.7,"p2_prob": 3.3,"p1_american": "-2900","p2_american": "+2900","p1_decimal": 1.03,"p2_decimal": 30.0,"confidence": "high"},{"player1": "shafaq","player2": "will","p1_wins": 21,"p2_wins": 9,"total": 30,"p1_prob": 70.0,"p2_prob": 30.0,"p1_american": "-233","p2_american": "+233","p1_decimal": 1.43,"p2_decimal": 3.33,"confidence": "high"},{"player1": "own","player2": "subby","p1_wins": 12,"p2_wins": 15,"total": 27,"p1_prob": 44.4,"p2_prob": 55.6,"p1_american": "+125","p2_american": "-125","p1_decimal": 2.25,"p2_decimal": 1.8,"confidence": "medium"},{"player1": "habeas","player2": "nish","p1_wins": 20,"p2_wins": 6,"total": 26,"p1_prob": 76.9,"p2_prob": 23.1,"p1_american": "-333","p2_american": "+333","p1_decimal": 1.3,"p2_decimal": 4.33,"confidence": "medium"},{"player1": "habeas","player2": "pat","p1_wins": 24,"p2_wins": 2,"total": 26,"p1_prob": 92.3,"p2_prob": 7.7,"p1_american": "-1200","p2_american": "+1200","p1_decimal": 1.08,"p2_decimal": 13.0,"confidence": "medium"},{"player1": "pat","player2": "subby","p1_wins": 15,"p2_wins": 11,"total": 26,"p1_prob": 57.7,"p2_prob": 42.3,"p1_american": "-136","p2_american": "+136","p1_decimal": 1.73,"p2_decimal": 2.36,"confidence": "medium"},{"player1": "habeas","player2": "lag","p1_wins": 23,"p2_wins": 2,"total": 25,"p1_prob": 92.0,"p2_prob": 8.0,"p1_american": "-1150","p2_american": "+1150","p1_decimal": 1.09,"p2_decimal": 12.5,"confidence": "medium"},{"player1": "amar","player2": "jmoon","p1_wins": 13,"p2_wins": 11,"total": 24,"p1_prob": 54.2,"p2_prob": 45.8,"p1_american": "-118","p2_american": "+118","p1_decimal": 1.85,"p2_decimal": 2.18,"confidence": "medium"},{"player1": "aadil","player2": "subby","p1_wins": 6,"p2_wins": 14,"total": 20,"p1_prob": 30.0,"p2_prob": 70.0,"p1_american": "+233","p2_american": "-233","p1_decimal": 3.33,"p2_decimal": 1.43,"confidence": "medium"},{"player1": "keneru","player2": "mizan","p1_wins": 18,"p2_wins": 2,"total": 20,"p1_prob": 90.0,"p2_prob": 10.0,"p1_american": "-900","p2_american": "+900","p1_decimal": 1.11,"p2_decimal": 10.0,"confidence": "medium"},{"player1": "samin","player2": "shafaq","p1_wins": 4,"p2_wins": 15,"total": 19,"p1_prob": 21.1,"p2_prob": 78.9,"p1_american": "+375","p2_american": "-375","p1_decimal": 4.75,"p2_decimal": 1.27,"confidence": "medium"},{"player1": "mmmmm","player2": "subby","p1_wins": 3,"p2_wins": 13,"total": 16,"p1_prob": 18.8,"p2_prob": 81.2,"p1_american": "+433","p2_american": "-433","p1_decimal": 5.33,"p2_decimal": 1.23,"confidence": "medium"},{"player1": "heidy","player2": "joguo","p1_wins": 7,"p2_wins": 9,"total": 16,"p1_prob": 43.8,"p2_prob": 56.2,"p1_american": "+128","p2_american": "-128","p1_decimal": 2.29,"p2_decimal": 1.78,"confidence": "medium"},{"player1": "jmoon","player2": "will","p1_wins": 12,"p2_wins": 3,"total": 15,"p1_prob": 80.0,"p2_prob": 20.0,"p1_american": "-400","p2_american": "+400","p1_decimal": 1.25,"p2_decimal": 5.0,"confidence": "medium"},{"player1": "jmoon","player2": "lando","p1_wins": 15,"p2_wins": 0,"total": 15,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "medium"},{"player1": "jmoon","player2": "kento","p1_wins": 11,"p2_wins": 3,"total": 14,"p1_prob": 78.6,"p2_prob": 21.4,"p1_american": "-366","p2_american": "+366","p1_decimal": 1.27,"p2_decimal": 4.67,"confidence": "low"},{"player1": "lag","player2": "mmmmm","p1_wins": 7,"p2_wins": 7,"total": 14,"p1_prob": 50.0,"p2_prob": 50.0,"p1_american": "-100","p2_american": "-100","p1_decimal": 2.0,"p2_decimal": 2.0,"confidence": "low"},{"player1": "habeas","player2": "mizan","p1_wins": 14,"p2_wins": 0,"total": 14,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "gatmo","player2": "habeas","p1_wins": 0,"p2_wins": 13,"total": 13,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "niki <3","player2": "shafaq","p1_wins": 4,"p2_wins": 9,"total": 13,"p1_prob": 30.8,"p2_prob": 69.2,"p1_american": "+225","p2_american": "-225","p1_decimal": 3.25,"p2_decimal": 1.44,"confidence": "low"},{"player1": "strike","player2": "subby","p1_wins": 5,"p2_wins": 7,"total": 12,"p1_prob": 41.7,"p2_prob": 58.3,"p1_american": "+139","p2_american": "-140","p1_decimal": 2.4,"p2_decimal": 1.71,"confidence": "low"},{"player1": "kento","player2": "shafaq","p1_wins": 6,"p2_wins": 5,"total": 11,"p1_prob": 54.5,"p2_prob": 45.5,"p1_american": "-119","p2_american": "+120","p1_decimal": 1.83,"p2_decimal": 2.2,"confidence": "low"},{"player1": "jmoon","player2": "ya","p1_wins": 11,"p2_wins": 0,"total": 11,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "keneru","player2": "will","p1_wins": 2,"p2_wins": 9,"total": 11,"p1_prob": 18.2,"p2_prob": 81.8,"p1_american": "+449","p2_american": "-450","p1_decimal": 5.5,"p2_decimal": 1.22,"confidence": "low"},{"player1": "mmmmm","player2": "ya","p1_wins": 10,"p2_wins": 1,"total": 11,"p1_prob": 90.9,"p2_prob": 9.1,"p1_american": "-999","p2_american": "+1000","p1_decimal": 1.1,"p2_decimal": 11.0,"confidence": "low"},{"player1": "keneru","player2": "samin","p1_wins": 6,"p2_wins": 5,"total": 11,"p1_prob": 54.5,"p2_prob": 45.5,"p1_american": "-119","p2_american": "+120","p1_decimal": 1.83,"p2_decimal": 2.2,"confidence": "low"},{"player1": "heidy","player2": "nish","p1_wins": 2,"p2_wins": 9,"total": 11,"p1_prob": 18.2,"p2_prob": 81.8,"p1_american": "+449","p2_american": "-450","p1_decimal": 5.5,"p2_decimal": 1.22,"confidence": "low"},{"player1": "lag","player2": "nish","p1_wins": 6,"p2_wins": 5,"total": 11,"p1_prob": 54.5,"p2_prob": 45.5,"p1_american": "-119","p2_american": "+120","p1_decimal": 1.83,"p2_decimal": 2.2,"confidence": "low"},{"player1": "jmoon","player2": "subby","p1_wins": 9,"p2_wins": 0,"total": 9,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "keneru","player2": "kento","p1_wins": 3,"p2_wins": 6,"total": 9,"p1_prob": 33.3,"p2_prob": 66.7,"p1_american": "+200","p2_american": "-199","p1_decimal": 3.0,"p2_decimal": 1.5,"confidence": "low"},{"player1": "mizan","player2": "ya","p1_wins": 3,"p2_wins": 6,"total": 9,"p1_prob": 33.3,"p2_prob": 66.7,"p1_american": "+200","p2_american": "-199","p1_decimal": 3.0,"p2_decimal": 1.5,"confidence": "low"},{"player1": "kento","player2": "subby","p1_wins": 8,"p2_wins": 1,"total": 9,"p1_prob": 88.9,"p2_prob": 11.1,"p1_american": "-799","p2_american": "+800","p1_decimal": 1.12,"p2_decimal": 9.0,"confidence": "low"},{"player1": "mmmmm","player2": "nish","p1_wins": 7,"p2_wins": 2,"total": 9,"p1_prob": 77.8,"p2_prob": 22.2,"p1_american": "-350","p2_american": "+350","p1_decimal": 1.29,"p2_decimal": 4.5,"confidence": "low"},{"player1": "joguo","player2": "messi","p1_wins": 5,"p2_wins": 4,"total": 9,"p1_prob": 55.6,"p2_prob": 44.4,"p1_american": "-125","p2_american": "+125","p1_decimal": 1.8,"p2_decimal": 2.25,"confidence": "low"},{"player1": "subby","player2": "will","p1_wins": 1,"p2_wins": 7,"total": 8,"p1_prob": 12.5,"p2_prob": 87.5,"p1_american": "+700","p2_american": "-700","p1_decimal": 8.0,"p2_decimal": 1.14,"confidence": "low"},{"player1": "pat","player2": "will","p1_wins": 1,"p2_wins": 7,"total": 8,"p1_prob": 12.5,"p2_prob": 87.5,"p1_american": "+700","p2_american": "-700","p1_decimal": 8.0,"p2_decimal": 1.14,"confidence": "low"},{"player1": "habeas","player2": "safi","p1_wins": 5,"p2_wins": 3,"total": 8,"p1_prob": 62.5,"p2_prob": 37.5,"p1_american": "-166","p2_american": "+166","p1_decimal": 1.6,"p2_decimal": 2.67,"confidence": "low"},{"player1": "gapam","player2": "samin","p1_wins": 0,"p2_wins": 8,"total": 8,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "joguo","player2": "nish","p1_wins": 0,"p2_wins": 8,"total": 8,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "lag","player2": "shafaq","p1_wins": 1,"p2_wins": 7,"total": 8,"p1_prob": 12.5,"p2_prob": 87.5,"p1_american": "+700","p2_american": "-700","p1_decimal": 8.0,"p2_decimal": 1.14,"confidence": "low"},{"player1": "shafaq","player2": "subby","p1_wins": 6,"p2_wins": 1,"total": 7,"p1_prob": 85.7,"p2_prob": 14.3,"p1_american": "-599","p2_american": "+600","p1_decimal": 1.17,"p2_decimal": 7.0,"confidence": "low"},{"player1": "fateen","player2": "nish","p1_wins": 3,"p2_wins": 4,"total": 7,"p1_prob": 42.9,"p2_prob": 57.1,"p1_american": "+133","p2_american": "-133","p1_decimal": 2.33,"p2_decimal": 1.75,"confidence": "low"},{"player1": "Raulito","player2": "subby","p1_wins": 3,"p2_wins": 4,"total": 7,"p1_prob": 42.9,"p2_prob": 57.1,"p1_american": "+133","p2_american": "-133","p1_decimal": 2.33,"p2_decimal": 1.75,"confidence": "low"},{"player1": "ryy","player2": "samin","p1_wins": 3,"p2_wins": 4,"total": 7,"p1_prob": 42.9,"p2_prob": 57.1,"p1_american": "+133","p2_american": "-133","p1_decimal": 2.33,"p2_decimal": 1.75,"confidence": "low"},{"player1": "caleb","player2": "habeas","p1_wins": 0,"p2_wins": 7,"total": 7,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "jmoon","player2": "lag","p1_wins": 7,"p2_wins": 0,"total": 7,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "jmoon","player2": "own","p1_wins": 7,"p2_wins": 0,"total": 7,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "nish","player2": "shafaq","p1_wins": 0,"p2_wins": 7,"total": 7,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "fateen","player2": "ya","p1_wins": 6,"p2_wins": 0,"total": 6,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "habeas","player2": "ryy","p1_wins": 4,"p2_wins": 2,"total": 6,"p1_prob": 66.7,"p2_prob": 33.3,"p1_american": "-199","p2_american": "+200","p1_decimal": 1.5,"p2_decimal": 3.0,"confidence": "low"},{"player1": "messi","player2": "ya","p1_wins": 0,"p2_wins": 6,"total": 6,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "lando","player2": "own","p1_wins": 2,"p2_wins": 4,"total": 6,"p1_prob": 33.3,"p2_prob": 66.7,"p1_american": "+200","p2_american": "-199","p1_decimal": 3.0,"p2_decimal": 1.5,"confidence": "low"},{"player1": "habeas","player2": "heidy","p1_wins": 5,"p2_wins": 1,"total": 6,"p1_prob": 83.3,"p2_prob": 16.7,"p1_american": "-500","p2_american": "+500","p1_decimal": 1.2,"p2_decimal": 6.0,"confidence": "low"},{"player1": "audrey","player2": "jeni","p1_wins": 2,"p2_wins": 3,"total": 5,"p1_prob": 40.0,"p2_prob": 60.0,"p1_american": "+149","p2_american": "-149","p1_decimal": 2.5,"p2_decimal": 1.67,"confidence": "low"},{"player1": "farza","player2": "habeas","p1_wins": 1,"p2_wins": 4,"total": 5,"p1_prob": 20.0,"p2_prob": 80.0,"p1_american": "+400","p2_american": "-400","p1_decimal": 5.0,"p2_decimal": 1.25,"confidence": "low"},{"player1": "pat","player2": "shafaq","p1_wins": 0,"p2_wins": 5,"total": 5,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "fateen","player2": "will","p1_wins": 2,"p2_wins": 3,"total": 5,"p1_prob": 40.0,"p2_prob": 60.0,"p1_american": "+149","p2_american": "-149","p1_decimal": 2.5,"p2_decimal": 1.67,"confidence": "low"},{"player1": "fela","player2": "habeas","p1_wins": 0,"p2_wins": 5,"total": 5,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "messi","player2": "subby","p1_wins": 0,"p2_wins": 5,"total": 5,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "dhruvus","player2": "messi","p1_wins": 0,"p2_wins": 5,"total": 5,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "low"},{"player1": "will","player2": "ya","p1_wins": 5,"p2_wins": 0,"total": 5,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "caleb","player2": "keneru","p1_wins": 1,"p2_wins": 4,"total": 5,"p1_prob": 20.0,"p2_prob": 80.0,"p1_american": "+400","p2_american": "-400","p1_decimal": 5.0,"p2_decimal": 1.25,"confidence": "low"},{"player1": "own","player2": "ya","p1_wins": 5,"p2_wins": 0,"total": 5,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"},{"player1": "daniel l","player2": "heidy","p1_wins": 3,"p2_wins": 2,"total": 5,"p1_prob": 60.0,"p2_prob": 40.0,"p1_american": "-149","p2_american": "+149","p1_decimal": 1.67,"p2_decimal": 2.5,"confidence": "low"},{"player1": "jmoon","player2": "unknown","p1_wins": 5,"p2_wins": 0,"total": 5,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "low"}],"total_matchups": 86,"upset_alerts": [{"player1": "habeas","player2": "shafaq","p1_wins": 145,"p2_wins": 108,"total": 253,"p1_prob": 57.3,"p2_prob": 42.7,"p1_american": "-134","p2_american": "+134","p1_decimal": 1.74,"p2_decimal": 2.34,"confidence": "high"},{"player1": "habeas","player2": "keneru","p1_wins": 129,"p2_wins": 74,"total": 203,"p1_prob": 63.5,"p2_prob": 36.5,"p1_american": "-174","p2_american": "+174","p1_decimal": 1.57,"p2_decimal": 2.74,"confidence": "high"},{"player1": "habeas","player2": "will","p1_wins": 48,"p2_wins": 37,"total": 85,"p1_prob": 56.5,"p2_prob": 43.5,"p1_american": "-129","p2_american": "+129","p1_decimal": 1.77,"p2_decimal": 2.3,"confidence": "high"},{"player1": "amar","player2": "habeas","p1_wins": 42,"p2_wins": 26,"total": 68,"p1_prob": 61.8,"p2_prob": 38.2,"p1_american": "-161","p2_american": "+161","p1_decimal": 1.62,"p2_decimal": 2.62,"confidence": "high"},{"player1": "own","player2": "will","p1_wins": 14,"p2_wins": 25,"total": 39,"p1_prob": 35.9,"p2_prob": 64.1,"p1_american": "+178","p2_american": "-178","p1_decimal": 2.79,"p2_decimal": 1.56,"confidence": "high"},{"player1": "own","player2": "subby","p1_wins": 12,"p2_wins": 15,"total": 27,"p1_prob": 44.4,"p2_prob": 55.6,"p1_american": "+125","p2_american": "-125","p1_decimal": 2.25,"p2_decimal": 1.8,"confidence": "medium"},{"player1": "pat","player2": "subby","p1_wins": 15,"p2_wins": 11,"total": 26,"p1_prob": 57.7,"p2_prob": 42.3,"p1_american": "-136","p2_american": "+136","p1_decimal": 1.73,"p2_decimal": 2.36,"confidence": "medium"},{"player1": "amar","player2": "jmoon","p1_wins": 13,"p2_wins": 11,"total": 24,"p1_prob": 54.2,"p2_prob": 45.8,"p1_american": "-118","p2_american": "+118","p1_decimal": 1.85,"p2_decimal": 2.18,"confidence": "medium"},{"player1": "heidy","player2": "joguo","p1_wins": 7,"p2_wins": 9,"total": 16,"p1_prob": 43.8,"p2_prob": 56.2,"p1_american": "+128","p2_american": "-128","p1_decimal": 2.29,"p2_decimal": 1.78,"confidence": "medium"}],"safest_bets": [{"player1": "subby","player2": "ya","p1_wins": 36,"p2_wins": 0,"total": 36,"p1_prob": 100.0,"p2_prob": 0.0,"p1_american": "-999","p2_american": "+999","p1_decimal": 1.0,"p2_decimal": 99.0,"confidence": "high"},{"player1": "heidy","player2": "jmoon","p1_wins": 0,"p2_wins": 34,"total": 34,"p1_prob": 0.0,"p2_prob": 100.0,"p1_american": "+999","p2_american": "-999","p1_decimal": 99.0,"p2_decimal": 1.0,"confidence": "high"},{"player1": "habeas","player2": "ya","p1_wins": 29,"p2_wins": 1,"total": 30,"p1_prob": 96.7,"p2_prob": 3.3,"p1_american": "-2900","p2_american": "+2900","p1_decimal": 1.03,"p2_decimal": 30.0,"confidence": "high"},{"player1": "habeas","player2": "pat","p1_wins": 24,"p2_wins": 2,"total": 26,"p1_prob": 92.3,"p2_prob": 7.7,"p1_american": "-1200","p2_american": "+1200","p1_decimal": 1.08,"p2_decimal": 13.0,"confidence": "medium"},{"player1": "keneru","player2": "ya","p1_wins": 35,"p2_wins": 3,"total": 38,"p1_prob": 92.1,"p2_prob": 7.9,"p1_american": "-1166","p2_american": "+1166","p1_decimal": 1.09,"p2_decimal": 12.67,"confidence": "high"},{"player1": "habeas","player2": "lag","p1_wins": 23,"p2_wins": 2,"total": 25,"p1_prob": 92.0,"p2_prob": 8.0,"p1_american": "-1150","p2_american": "+1150","p1_decimal": 1.09,"p2_decimal": 12.5,"confidence": "medium"},{"player1": "keneru","player2": "mizan","p1_wins": 18,"p2_wins": 2,"total": 20,"p1_prob": 90.0,"p2_prob": 10.0,"p1_american": "-900","p2_american": "+900","p1_decimal": 1.11,"p2_decimal": 10.0,"confidence": "medium"},{"player1": "jmoon","player2": "keneru","p1_wins": 38,"p2_wins": 5,"total": 43,"p1_prob": 88.4,"p2_prob": 11.6,"p1_american": "-760","p2_american": "+760","p1_decimal": 1.13,"p2_decimal": 8.6,"confidence": "high"},{"player1": "keneru","player2": "nish","p1_wins": 25,"p2_wins": 6,"total": 31,"p1_prob": 80.6,"p2_prob": 19.4,"p1_american": "-416","p2_american": "+416","p1_decimal": 1.24,"p2_decimal": 5.17,"confidence": "high"},{"player1": "nish","player2": "subby","p1_wins": 8,"p2_wins": 33,"total": 41,"p1_prob": 19.5,"p2_prob": 80.5,"p1_american": "+412","p2_american": "-412","p1_decimal": 5.12,"p2_decimal": 1.24,"confidence": "high"}],"power_rankings": [{"player": "jmoon","h2h_wins": 666,"h2h_losses": 151,"h2h_rate": 81.5,"opponents": 13},{"player": "kento","h2h_wins": 52,"h2h_losses": 29,"h2h_rate": 64.2,"opponents": 5},{"player": "mmmmm","h2h_wins": 27,"h2h_losses": 23,"h2h_rate": 54.0,"opponents": 4},{"player": "shafaq","h2h_wins": 255,"h2h_losses": 236,"h2h_rate": 51.9,"opponents": 11},{"player": "will","h2h_wins": 105,"h2h_losses": 101,"h2h_rate": 51.0,"opponents": 9},{"player": "habeas","h2h_wins": 947,"h2h_losses": 928,"h2h_rate": 50.5,"opponents": 21},{"player": "subby","h2h_wins": 291,"h2h_losses": 334,"h2h_rate": 46.6,"opponents": 16},{"player": "keneru","h2h_wins": 223,"h2h_losses": 268,"h2h_rate": 45.4,"opponents": 11},{"player": "joguo","h2h_wins": 14,"h2h_losses": 19,"h2h_rate": 42.4,"opponents": 3},{"player": "nish","h2h_wins": 80,"h2h_losses": 113,"h2h_rate": 41.5,"opponents": 10},{"player": "fateen","h2h_wins": 24,"h2h_losses": 41,"h2h_rate": 36.9,"opponents": 4},{"player": "samin","h2h_wins": 35,"h2h_losses": 61,"h2h_rate": 36.5,"opponents": 5},{"player": "own","h2h_wins": 66,"h2h_losses": 118,"h2h_rate": 35.9,"opponents": 6},{"player": "pat","h2h_wins": 18,"h2h_losses": 47,"h2h_rate": 27.7,"opponents": 4},{"player": "lag","h2h_wins": 16,"h2h_losses": 49,"h2h_rate": 24.6,"opponents": 5},{"player": "heidy","h2h_wins": 12,"h2h_losses": 60,"h2h_rate": 16.7,"opponents": 5},{"player": "ya","h2h_wins": 27,"h2h_losses": 172,"h2h_rate": 13.6,"opponents": 11},{"player": "mizan","h2h_wins": 5,"h2h_losses": 38,"h2h_rate": 11.6,"opponents": 3}]};
+
+        function init() {
+            renderPowerRankings();
+            renderMatchups('all');
+        }
+
+        function renderPowerRankings() {
+            const tbody = document.getElementById('power-tbody');
+            bettingData.power_rankings.forEach((p, i) => {
+                const rankClass = i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : '';
+                tbody.innerHTML += `
+                    <tr>
+                        <td class="${rankClass}"><strong>#${i + 1}</strong></td>
+                        <td><strong>${p.player}</strong></td>
+                        <td>${p.h2h_wins}W - ${p.h2h_losses}L</td>
+                        <td style="color: ${p.h2h_rate >= 60 ? 'var(--success)' : p.h2h_rate < 40 ? 'var(--danger)' : 'var(--smash-yellow)'}">
+                            <strong>${p.h2h_rate}%</strong>
+                        </td>
+                        <td>${p.opponents}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        function renderMatchups(filter) {
+            const grid = document.getElementById('betting-grid');
+            grid.innerHTML = '';
+
+            let matchups = bettingData.matchups;
+            if (filter === 'high') {
+                matchups = matchups.filter(m => m.confidence === 'high');
+            } else if (filter === 'safest') {
+                matchups = bettingData.safest_bets;
+            } else if (filter === 'upset') {
+                matchups = bettingData.upset_alerts;
+            }
+
+            matchups.forEach(m => {
+                const confClass = m.confidence === 'high' ? 'high-conf' : m.confidence === 'medium' ? 'medium-conf' : 'low-conf';
+                const p1IsFavorite = m.p1_prob > m.p2_prob;
+
+                grid.innerHTML += `
+                    <div class="betting-card ${confClass}">
+                        <span class="confidence-badge ${m.confidence}">${m.confidence.toUpperCase()}</span>
+                        <div class="matchup-header">${m.player1} <span class="vs">vs</span> ${m.player2}</div>
+                        <div class="odds-row">
+                            <div class="player-odds">
+                                <div class="player-name">${m.player1}</div>
+                                <div class="odds-value ${p1IsFavorite ? 'favorite' : 'underdog'}">${m.p1_american}</div>
+                                <div class="probability">${m.p1_prob}% chance</div>
+                                <div class="record">${m.p1_wins} wins</div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="player-odds">
+                                <div class="player-name">${m.player2}</div>
+                                <div class="odds-value ${!p1IsFavorite ? 'favorite' : 'underdog'}">${m.p2_american}</div>
+                                <div class="probability">${m.p2_prob}% chance</div>
+                                <div class="record">${m.p2_wins} wins</div>
+                            </div>
+                        </div>
+                        <div class="stats-row">
+                            <div class="stat">
+                                <div class="stat-value">${m.total}</div>
+                                <div class="stat-label">Total Games</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">${m.p1_decimal}x / ${m.p2_decimal}x</div>
+                                <div class="stat-label">Decimal Odds</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function filterMatchups(filter) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderMatchups(filter);
+        }
+
+        init();
+    </script>
+</body>
+</html>

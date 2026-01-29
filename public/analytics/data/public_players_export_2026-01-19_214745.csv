@@ -1,0 +1,74 @@
+id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
+9100,2026-01-14 00:32:19.706,,niki <3,1199,JP,false,3,"https://smash-leaderboard-frontend.vercel.app/images/dps/niki.png
+"
+21,2025-06-06 08:21:51.674,Haseab,habeas,1474,CA,false,9,https://smash-leaderboard-frontend.vercel.app/images/dps/habeas.png
+6238,2025-11-01 00:45:52.282,,bassem,1200,TN,true,0,
+6405,2025-11-04 07:58:52.066,,daniel l,1200,US,true,0,
+5793,2025-10-21 02:24:51.322,,heidy,1019,FR,true,3,
+61,2025-06-07 01:01:53.24,Ryan Bailey,ryy,1238,US,true,5,https://smash-leaderboard-frontend.vercel.app/images/dps/ryy.png
+9144,2026-01-15 03:09:56.255,,.niki <3,1200,,false,1,
+4484,2025-09-19 00:31:36.846,Owen,own,1194,FR,true,7,https://smash-leaderboard-frontend.vercel.app/images/dps/own.jpg
+3007,2025-08-29 23:59:27.908,Landon,lando,1146,US,true,5,https://pub-7712ec77fabb4a6d996c607b226d98f0.r2.dev/lando.png
+74,2025-06-08 01:06:31.396,Jackson Mowatt Gok,strike,1139,AU,true,3,https://smash-leaderboard-frontend.vercel.app/images/dps/jackedson.png
+8811,2025-12-14 06:46:33.061,,ghandi,1200,,true,0,
+8659,2025-12-11 05:31:17.631,,8n,1200,,false,2,
+8427,2025-12-10 03:50:38.003,,cowboy,1200,,true,0,
+9157,2026-01-15 05:14:18.33,,jean,1200,,false,0,
+8988,2026-01-08 23:47:36.897,,.nish,1200,,false,0,
+8727,2025-12-13 07:56:29.57,,.subby,1200,,true,0,
+2106,2025-08-14 20:28:12.107,unknown,unknown,1130,UN,false,3,
+1112,2025-07-31 03:22:32.8,Furqan Rydhan,lag,1150,US,false,6,https://pub-ccb175376fc94e64b1b2376fadf6c341.r2.dev/lag.png
+452,2025-07-16 02:52:05.91,Mizan Val,mizan,959,US,true,3,https://smash-leaderboard-frontend.vercel.app/images/dps/mizan.jpg
+3758,2025-09-06 05:03:02.078,Julien Alvarez,fckn noob,1200,US,true,0,
+3808,2025-09-06 07:33:50.109,,ridlay,1200,US,true,1,
+2821,2025-08-26 04:44:53.685,Raul,Raulito,1156,US,true,3,https://pub-7712ec77fabb4a6d996c607b226d98f0.r2.dev/raul.png
+104,2025-06-11 23:16:25.45,Shafaq Ahmed,shafaq,1376,US,false,7,https://smash-leaderboard-frontend.vercel.app/images/dps/shafaq.png
+6237,2025-11-01 00:45:52.101,,eddy,1200,UK,true,0,
+6239,2025-11-01 00:45:52.439,,donshelly,1200,,true,0,
+5853,2025-10-22 22:12:22.395,,alvaro,1200,,true,0,
+6235,2025-11-01 00:45:51.667,,asma,1200,TN,true,1,
+767,2025-07-27 06:36:11.28,Aadil Ali,aadil,1200,CA,true,0,
+717,2025-07-21 03:13:13.827,Aqsa Choudry,duck,1200,US,true,0,
+678,2025-07-20 05:03:56.423,Abe Ahmed,mmmmm,1200,US,true,2,https://smash-leaderboard-frontend.vercel.app/images/dps/mmmmm.png
+96,2025-06-11 01:38:28.959,Ryan Pantig,RP,1200,US,true,1,https://smash-leaderboard-frontend.vercel.app/images/dps/rp.png
+3657,2025-09-05 22:37:11.688,Hasan,gapam,1200,US,true,0,
+9154,2026-01-15 03:30:27.044,,niki <3.,1200,,false,1,
+8661,2025-12-11 10:09:29.715,,vora,1200,,true,0,
+4813,2025-09-20 19:43:12.476,,n8,1200,,true,0,
+6716,2025-11-13 03:20:11.292,,rani,1200,US,true,0,
+255,2025-07-05 01:08:00.419,Fateen Rafid,fateen,1060,BD,true,4,https://smash-leaderboard-frontend.vercel.app/images/dps/fateen.jpg
+2207,2025-08-15 06:42:32.079,Zach Eisenhauer,spd,1200,US,true,1,
+3005,2025-08-29 21:54:32.665,Anish Shinde,messi,950,US,true,3,https://smash-leaderboard-frontend.vercel.app/images/dps/messi.jpg
+187,2025-06-14 23:43:34.147,David Jungle,david,1200,US,true,1,https://smash-leaderboard-frontend.vercel.app/images/dps/david.png
+670,2025-07-20 04:46:50.543,waw,waw,1200,US,true,0,
+4827,2025-09-20 21:35:58.136,,maximilian,1200,,true,0,
+4053,2025-09-13 01:23:56.289,Caius,c,1200,US,true,2,
+23,2025-06-06 08:31:02.716,Anish Thite,nish,1067,US,false,6,https://smash-leaderboard-frontend.vercel.app/images/dps/nish.png
+88,2025-06-11 01:04:53.673,Sharif Shameem,samin,1168,US,true,7,https://smash-leaderboard-frontend.vercel.app/images/dps/samin.jpg
+2586,2025-08-23 00:44:14.138,Safi,safi,1200,US,true,2,https://smash-leaderboard-frontend.vercel.app/images/dps/safi.jpg
+35,2025-06-06 22:21:01.865,Bihan Mahadewa,bihan,1200,US,true,1,https://smash-leaderboard-frontend.vercel.app/images/dps/bihan.png
+4254,2025-09-14 05:15:35.101,Cathleen Turner,gatmo,1138,US,true,3,
+190,2025-07-01 15:26:56.697,Kento Uchiyama,kento,1339,JP,true,4,https://smash-leaderboard-frontend.vercel.app/images/dps/kento.png
+5176,2025-09-24 04:57:57.982,,pickle,1200,CA,true,0,
+39,2025-06-06 23:46:35.62,Kareem Dasilva,keneru,1255,US,false,7,https://smash-leaderboard-frontend.vercel.app/images/dps/keneru.png
+3849,2025-09-06 22:24:39.119,Caleb,caleb,1147,US,true,3,https://smash-leaderboard-frontend.vercel.app/images/dps/caleb.jpg
+1473,2025-08-07 01:18:08.142,sky,sky,1200,US,true,0,
+2660,2025-08-23 03:35:58.021,Zuri,zuri,1200,UK,true,1,
+1075,2025-07-30 23:55:18.528,Gino,gino,1200,US,true,1,
+77,2025-06-10 01:12:52.868,Yash Raj,ya,816,IN,false,6,https://smash-leaderboard-frontend.vercel.app/images/dps/ya.png
+54,2025-06-07 00:44:04.633,William Wang,will,1378,US,false,7,https://smash-leaderboard-frontend.vercel.app/images/dps/will.png
+38,2025-06-06 23:41:48.713,Jonathan Moon,jmoon,1711,US,false,9,https://smash-leaderboard-frontend.vercel.app/images/dps/jmoon.jpg
+3456,2025-09-02 00:21:03.685,Dhruv Sengupta,dhruvus,1200,UK,true,0,
+9155,2026-01-15 03:35:20.412,,_shafaq,1200,,false,0,
+9156,2026-01-15 03:35:20.533,,*niki <3,1200,,false,0,
+4639,2025-09-20 00:38:24.37,Amarjot Singh,amar,1605,US,true,5,https://smash-leaderboard-frontend.vercel.app/images/dps/amar.jpg
+2517,2025-08-20 02:14:11.348,Fela,fela,1200,NG,true,1,
+8686,2025-12-12 20:47:31.716,,tcvora,1200,,true,0,
+93,2025-06-11 01:18:34.798,Stavan Patel,stav,1200,US,true,1,https://smash-leaderboard-frontend.vercel.app/images/dps/stav.png
+22,2025-06-06 08:21:51.757,Subhash Ramesh,subby,1176,US,true,8,https://smash-leaderboard-frontend.vercel.app/images/dps/subby.png
+682,2025-07-20 20:02:23.014,Farzan Majeed,farza,1200,US,true,1,
+4831,2025-09-20 21:55:50.988,,aha,1200,,true,0,
+50,2025-06-07 00:27:31.251,Patrick Pascual,pat,1171,PH,true,7,https://smash-leaderboard-frontend.vercel.app/images/dps/pat.png
+4255,2025-09-14 05:15:35.376,Joseph Guo,joguo,1200,AU,true,1,
+375,2025-07-08 04:20:06.817,Jenny SAM,jeni,1200,US,true,0,
+376,2025-07-08 04:20:06.969,Audrey SAM,audrey,1200,US,true,0,

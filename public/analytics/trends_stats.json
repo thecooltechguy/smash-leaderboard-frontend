@@ -1,0 +1,144 @@
+{
+  "hourly_pattern": {
+    "insight": "Win rates vary by hour",
+    "best_hour": 3,
+    "best_hour_wr": 50.0,
+    "worst_hour": 20,
+    "worst_hour_wr": 44.0
+  },
+  "momentum": {
+    "insight": "Winning affects next game performance",
+    "avg_momentum_boost": 17.2,
+    "biggest_momentum_player": "lag",
+    "biggest_momentum_boost": 33.3,
+    "biggest_momentum_detail": "55.9% after win vs 22.5% after loss",
+    "reverse_momentum_player": "ryy",
+    "reverse_momentum": -0.3,
+    "reverse_detail": "Actually plays BETTER after losing"
+  },
+  "fatigue": {
+    "insight": "Performance changes during long sessions",
+    "first_3_games_wr": 48.0,
+    "after_8_games_wr": 49.7,
+    "fatigue_drop": -1.8
+  },
+  "lopsided_matchups": [
+    {
+      "char1": "ZELDA",
+      "char2": "ZELDA",
+      "char1_wr": 0.0,
+      "total": 59
+    },
+    {
+      "char1": "MR. GAME & WATCH",
+      "char2": "MR. GAME & WATCH",
+      "char1_wr": 0.0,
+      "total": 14
+    },
+    {
+      "char1": "JOKER",
+      "char2": "JOKER",
+      "char1_wr": 0.0,
+      "total": 17
+    },
+    {
+      "char1": "CLOUD",
+      "char2": "CLOUD",
+      "char1_wr": 0.0,
+      "total": 10
+    },
+    {
+      "char1": "LUCINA",
+      "char2": "LUCINA",
+      "char1_wr": 0.0,
+      "total": 10
+    }
+  ],
+  "revenge": {
+    "insight": "Some players are revenge specialists",
+    "best_revenge_player": "ryy",
+    "revenge_wr": 83.3,
+    "normal_wr": 45.0,
+    "revenge_boost": 38.3
+  },
+  "clutch": {
+    "most_clutch_player": "Raulito",
+    "most_clutch_close_wr": 52.9,
+    "most_clutch_blowout_wr": 20.0,
+    "clutch_boost": 32.9,
+    "least_clutch_player": "jmoon",
+    "choke_factor": 16.7
+  },
+  "day_activity": {
+    "busiest_day": "Thursday",
+    "busiest_games": 1841,
+    "quietest_day": "Tuesday",
+    "quietest_games": 891,
+    "friday_vs_monday": 1.3
+  },
+  "streakiness": {
+    "most_streaky_player": "habeas",
+    "five_plus_streaks": 61,
+    "games": 2224
+  },
+  "dominant_matchups": [
+    {
+      "winner": "subby",
+      "loser": "ya",
+      "wins": 22,
+      "total": 22,
+      "wr": 100.0
+    },
+    {
+      "winner": "jmoon",
+      "loser": "heidy",
+      "wins": 20,
+      "total": 20,
+      "wr": 100.0
+    },
+    {
+      "winner": "jmoon",
+      "loser": "keneru",
+      "wins": 38,
+      "total": 40,
+      "wr": 95.0
+    },
+    {
+      "winner": "habeas",
+      "loser": "ya",
+      "wins": 15,
+      "total": 16,
+      "wr": 93.8
+    },
+    {
+      "winner": "habeas",
+      "loser": "pat",
+      "wins": 14,
+      "total": 15,
+      "wr": 93.3
+    }
+  ],
+  "loyalty_correlation": {
+    "correlation": -0.203,
+    "insight": "Negative = diverse players win more"
+  },
+  "warmup": {
+    "needs_warmup_player": "pat",
+    "first_wr": 22.2,
+    "warmed_up_wr": 42.0,
+    "warmup_boost": 19.8,
+    "cold_starter_player": "heidy",
+    "cold_start_advantage": 30.3
+  },
+  "monthly": {
+    "peak_month": "2025-08",
+    "peak_games": 2182,
+    "trend": "Activity peaked mid-season"
+  },
+  "game_speed": {
+    "fastest_player": "lando",
+    "fastest_gap": 3.6,
+    "slowest_player": "safi",
+    "slowest_gap": 9.4
+  }
+}

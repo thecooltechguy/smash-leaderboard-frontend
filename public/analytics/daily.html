@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Smash Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --smash-red: #e60012;
+            --smash-orange: #ff6b00;
+            --smash-yellow: #ffd700;
+            --smash-blue: #0066cc;
+            --smash-purple: #9b59b6;
+            --smash-dark: #1a1a2e;
+            --smash-darker: #0f0f1a;
+            --smash-black: #050508;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+            --text-dim: #606080;
+            --success: #00ff88;
+            --danger: #ff4757;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Russo One', sans-serif;
+            background: var(--smash-black);
+            color: var(--text-white);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        .hero {
+            position: relative;
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(ellipse at 30% 20%, rgba(155, 89, 182, 0.3) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(255, 107, 0, 0.2) 0%, transparent 50%),
+                        var(--smash-black);
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            text-shadow: 4px 4px 0 var(--smash-purple), 8px 8px 0 var(--smash-orange);
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            color: var(--smash-yellow);
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid var(--smash-yellow);
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--smash-yellow);
+            color: var(--smash-black);
+        }
+
+        .report-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: var(--smash-orange);
+            margin-bottom: 10px;
+        }
+
+        .generated-at {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+        }
+
+        section { padding: 40px 0; }
+
+        /* Breaking News Banner */
+        .breaking-news {
+            background: linear-gradient(90deg, var(--smash-red), var(--smash-orange));
+            padding: 15px 20px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breaking-news::before {
+            content: 'BREAKING';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: var(--smash-black);
+            color: var(--smash-red);
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6rem;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .breaking-headline {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-left: 120px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+        }
+
+        /* Report Content */
+        .report-content {
+            background: var(--smash-dark);
+            border: 2px solid var(--smash-purple);
+            border-left: 5px solid var(--smash-orange);
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .report-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+
+        .report-text p {
+            margin-bottom: 1.2em;
+        }
+
+        /* Player of the Day */
+        .potd-section {
+            background: linear-gradient(135deg, var(--smash-darker) 0%, var(--smash-dark) 100%);
+            border: 3px solid var(--smash-yellow);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .potd-section::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid var(--smash-yellow);
+        }
+
+        .potd-label {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6rem;
+            color: var(--smash-yellow);
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .potd-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            text-shadow: 3px 3px 0 var(--smash-orange);
+            margin-bottom: 10px;
+        }
+
+        .potd-reason {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
+        }
+
+        /* Highlights */
+        .highlights-section {
+            margin: 30px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-tag {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            color: var(--smash-orange);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            text-shadow: 2px 2px 0 var(--smash-purple);
+        }
+
+        .highlights-list {
+            list-style: none;
+        }
+
+        .highlight-item {
+            background: var(--smash-dark);
+            border-left: 4px solid var(--smash-orange);
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            transition: transform 0.2s;
+        }
+
+        .highlight-item:hover {
+            transform: translateX(5px);
+        }
+
+        .highlight-item::before {
+            content: '';
+            margin-right: 10px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--smash-dark);
+            border: 2px solid var(--smash-purple);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--smash-yellow);
+            text-shadow: 2px 2px 0 var(--smash-red);
+        }
+
+        .stat-label {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Player Table */
+        .player-table-section {
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+
+        .player-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        .player-table th {
+            background: var(--smash-purple);
+            color: var(--text-white);
+            padding: 12px 15px;
+            text-align: left;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .player-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--smash-darker);
+            background: var(--smash-dark);
+        }
+
+        .player-table tr:hover td {
+            background: var(--smash-darker);
+        }
+
+        .win-rate-high { color: var(--success); }
+        .win-rate-mid { color: var(--smash-yellow); }
+        .win-rate-low { color: var(--danger); }
+
+        /* Rivalries */
+        .rivalry-card {
+            background: var(--smash-dark);
+            border: 2px solid var(--smash-red);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .rivalry-header {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .rivalry-vs {
+            color: var(--smash-red);
+            margin: 0 10px;
+        }
+
+        .rivalry-score {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .rivalry-player {
+            text-align: center;
+        }
+
+        .rivalry-wins {
+            font-size: 2rem;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        /* History Section */
+        .history-section {
+            margin: 40px 0;
+        }
+
+        .history-list {
+            list-style: none;
+        }
+
+        .history-item {
+            background: var(--smash-darker);
+            border: 1px solid var(--smash-dark);
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .history-item:hover {
+            border-color: var(--smash-purple);
+            transform: translateX(5px);
+        }
+
+        .history-date {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--smash-orange);
+        }
+
+        .history-headline {
+            font-family: 'Russo One', sans-serif;
+            flex: 1;
+            margin-left: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .history-matches {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        /* No Report State */
+        .no-report {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .no-report-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .no-report-text {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--smash-dark);
+            margin-top: 40px;
+        }
+
+        .footer-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1 class="hero-title">DAILY SMASH REPORT</h1>
+        <p class="hero-subtitle">YOUR OFFICE ARENA SPORTS DESK</p>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">ANALYTICS</a>
+            <a href="betting.html" class="nav-link">BETTING ODDS</a>
+            <a href="teams.html" class="nav-link">TEAMS</a>
+        </div>
+        <p class="report-date" id="report-date">Loading...</p>
+        <p class="generated-at" id="generated-at"></p>
+    </div>
+
+    <div class="container">
+        <div id="report-container">
+            <div class="loading">Loading today's report</div>
+        </div>
+
+        <!-- Previous Reports -->
+        <section class="history-section">
+            <div class="section-header">
+                <span class="section-tag">Archives</span>
+                <h2 class="section-title">PREVIOUS REPORTS</h2>
+            </div>
+            <ul class="history-list" id="history-list">
+                <li class="loading">Loading history</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-text">Daily reports generated at 8:00 AM PST | Powered by Claude AI</p>
+    </footer>
+
+    <script>
+        // Load and display the daily report
+        async function loadReport() {
+            const container = document.getElementById('report-container');
+            const dateEl = document.getElementById('report-date');
+            const generatedEl = document.getElementById('generated-at');
+
+            try {
+                const response = await fetch('daily_report.json');
+                if (!response.ok) throw new Error('No report found');
+                const report = await response.json();
+
+                dateEl.textContent = report.date;
+                if (report.generated_at) {
+                    const genDate = new Date(report.generated_at);
+                    generatedEl.textContent = `Generated: ${genDate.toLocaleString()}`;
+                }
+
+                container.innerHTML = renderReport(report);
+            } catch (error) {
+                console.error('Error loading report:', error);
+                container.innerHTML = `
+                    <div class="no-report">
+                        <div class="no-report-icon">&#127918;</div>
+                        <p class="no-report-text">No report available yet.<br>Check back after 8:00 AM PST!</p>
+                    </div>
+                `;
+                dateEl.textContent = 'No Report';
+            }
+        }
+
+        function renderReport(report) {
+            let html = '';
+
+            // Breaking News Banner
+            html += `
+                <div class="breaking-news">
+                    <div class="breaking-headline">${escapeHtml(report.headline)}</div>
+                </div>
+            `;
+
+            // Stats Summary
+            if (report.stats_summary) {
+                const stats = report.stats_summary;
+                html += `
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">${stats.total_matches || 0}</div>
+                            <div class="stat-label">Matches</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">${stats.total_kos || 0}</div>
+                            <div class="stat-label">Total KOs</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">${stats.player_stats?.length || 0}</div>
+                            <div class="stat-label">Competitors</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">${stats.perfect_games?.length || 0}</div>
+                            <div class="stat-label">Perfect Games</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Player of the Day
+            if (report.player_of_the_day) {
+                html += `
+                    <div class="potd-section">
+                        <div class="potd-label">PLAYER OF THE DAY</div>
+                        <div class="potd-name">${escapeHtml(report.player_of_the_day.name)}</div>
+                        <div class="potd-reason">${escapeHtml(report.player_of_the_day.reason)}</div>
+                    </div>
+                `;
+            }
+
+            // Main Report
+            html += `
+                <div class="report-content">
+                    <div class="report-text">${formatReportText(report.report)}</div>
+                </div>
+            `;
+
+            // Highlights
+            if (report.highlights && report.highlights.length > 0) {
+                html += `
+                    <div class="highlights-section">
+                        <div class="section-header">
+                            <span class="section-tag">Quick Hits</span>
+                            <h2 class="section-title">TODAY'S HIGHLIGHTS</h2>
+                        </div>
+                        <ul class="highlights-list">
+                            ${report.highlights.map(h => `
+                                <li class="highlight-item">${escapeHtml(h)}</li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            // Rivalries
+            if (report.stats_summary?.rivalries && report.stats_summary.rivalries.length > 0) {
+                html += `
+                    <div class="section-header">
+                        <span class="section-tag">Head to Head</span>
+                        <h2 class="section-title">TODAY'S MATCHUPS</h2>
+                    </div>
+                `;
+                report.stats_summary.rivalries.forEach(r => {
+                    html += `
+                        <div class="rivalry-card">
+                            <div class="rivalry-header">
+                                ${escapeHtml(r.player1)} <span class="rivalry-vs">VS</span> ${escapeHtml(r.player2)}
+                            </div>
+                            <div class="rivalry-score">
+                                <div class="rivalry-player">
+                                    <div class="rivalry-wins ${r.p1_wins > r.p2_wins ? 'win-rate-high' : ''}">${r.p1_wins}</div>
+                                    <div>${escapeHtml(r.player1)}</div>
+                                </div>
+                                <div class="rivalry-player">
+                                    <div class="rivalry-wins ${r.p2_wins > r.p1_wins ? 'win-rate-high' : ''}">${r.p2_wins}</div>
+                                    <div>${escapeHtml(r.player2)}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            // Player Stats Table
+            if (report.stats_summary?.player_stats && report.stats_summary.player_stats.length > 0) {
+                html += `
+                    <div class="player-table-section">
+                        <div class="section-header">
+                            <span class="section-tag">By The Numbers</span>
+                            <h2 class="section-title">PLAYER STATS</h2>
+                        </div>
+                        <table class="player-table">
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Games</th>
+                                    <th>W-L</th>
+                                    <th>Win%</th>
+                                    <th>K/D</th>
+                                    <th>Main</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${report.stats_summary.player_stats.map(p => `
+                                    <tr>
+                                        <td>${escapeHtml(p.name)}</td>
+                                        <td>${p.games}</td>
+                                        <td>${p.wins}-${p.losses}</td>
+                                        <td class="${getWinRateClass(p.win_rate)}">${p.win_rate}%</td>
+                                        <td>${p.kd_ratio}</td>
+                                        <td>${escapeHtml(p.main_character)}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+
+            return html;
+        }
+
+        function getWinRateClass(rate) {
+            if (rate >= 60) return 'win-rate-high';
+            if (rate >= 40) return 'win-rate-mid';
+            return 'win-rate-low';
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function formatReportText(text) {
+            if (!text) return '';
+            return escapeHtml(text)
+                .split('\n\n')
+                .map(p => `<p>${p}</p>`)
+                .join('');
+        }
+
+        // Load history
+        async function loadHistory() {
+            const historyList = document.getElementById('history-list');
+
+            try {
+                const response = await fetch('daily_reports_history.json');
+                if (!response.ok) throw new Error('No history found');
+                const history = await response.json();
+
+                if (!history.reports || history.reports.length === 0) {
+                    historyList.innerHTML = '<li class="history-item"><span class="history-headline">No previous reports yet</span></li>';
+                    return;
+                }
+
+                historyList.innerHTML = history.reports.slice(1, 8).map(r => `
+                    <li class="history-item" onclick="showHistoricalReport('${r.date}')">
+                        <span class="history-date">${r.date}</span>
+                        <span class="history-headline">${escapeHtml(r.headline)}</span>
+                        <span class="history-matches">${r.stats_summary?.total_matches || 0} matches</span>
+                    </li>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading history:', error);
+                historyList.innerHTML = '<li class="history-item"><span class="history-headline">No archives available</span></li>';
+            }
+        }
+
+        function showHistoricalReport(date) {
+            // For now, we'll just scroll to top and show a message
+            // In future could expand to show full historical report
+            alert(`Historical report for ${date} - Full archives coming soon!`);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadReport();
+            loadHistory();
+        });
+    </script>
+</body>
+</html>
