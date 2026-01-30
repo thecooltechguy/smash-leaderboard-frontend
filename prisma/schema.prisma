@@ -13,22 +13,25 @@ datasource db {
 model players {
   id                    BigInt   @id @default(autoincrement())
   created_at            DateTime @default(now())
-  name                  String   @unique
-  display_name          String?
+  name                  String?
+  display_name          String  @unique
   elo                   BigInt   @default(1200)
-  is_ranked             Boolean  @default(false)
-  top_10_players_played Int      @default(0)
   country               String?
+  picture               String?
+  inactive              Boolean  @default(false)
+  top_ten_played        Int      @default(0)
   
   // Relations
   match_participants match_participants[]
   
+  @@index([elo(sort: Desc)], name: "idx_players_elo")
   @@map("players")
 }
 
 model matches {
   id         BigInt   @id @default(autoincrement())
   created_at DateTime @default(now())
+  archived   Boolean  @default(false)
   
   // Relations
   match_participants match_participants[]
@@ -52,5 +55,9 @@ model match_participants {
   match   matches @relation(fields: [match_id], references: [id], onDelete: Cascade)
   players players @relation(fields: [player], references: [id], onDelete: Cascade)
   
+  @@index([is_cpu, match_id])
+  @@index([player, match_id(sort: Desc), has_won, is_cpu])
+  @@index([player, smash_character])
+  @@index([match_id, player, is_cpu])
   @@map("match_participants")
 }
