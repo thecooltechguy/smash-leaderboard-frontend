@@ -1,0 +1,128 @@
+# Daily data export, analysis, and report generation
+name: Daily Smash Report
+
+on:
+  # Run daily at 8am PST (16:00 UTC)
+  schedule:
+    - cron: '0 16 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "daily-update"
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy psycopg2-binary anthropic requests
+
+      - name: Export data from PostgreSQL
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          cd public/analytics
+          python export_data.py
+
+      - name: Run analysis scripts
+        run: |
+          cd public/analytics
+          python analyze.py
+          python generate_chart_data.py
+          python analyze_crazy.py
+          python analyze_trends.py
+          python analyze_outliers.py
+          python generate_betting_data.py
+          python generate_teams_data.py
+
+      - name: Generate daily report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd public/analytics
+          python generate_daily_report.py
+
+      - name: Backfill past week reports (if needed)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd public/analytics
+          python backfill_reports.py
+
+      - name: Update HTML files with new data
+        run: |
+          cd public/analytics
+          # Inline chart data into index.html (if needed)
+          python -c "
+          import json
+          import re
+
+          # Load chart data
+          with open('chart_data.json', 'r') as f:
+              chart_data = json.load(f)
+
+          # Read index.html
+          with open('index.html', 'r') as f:
+              html = f.read()
+
+          # Find and replace the chartData variable using a function to avoid escape issues
+          pattern = r'const chartData = \{[^;]*\};'
+          new_data = 'const chartData = ' + json.dumps(chart_data) + ';'
+
+          if re.search(pattern, html, re.DOTALL):
+              html = re.sub(pattern, lambda m: new_data, html, flags=re.DOTALL)
+              with open('index.html', 'w') as f:
+                  f.write(html)
+              print('Updated index.html with new chart data')
+          else:
+              print('chartData pattern not found in index.html')
+          "
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff --staged --quiet || git commit -m "Daily update: $(date +'%Y-%m-%d %H:%M') UTC
+
+          - Exported fresh data from database
+          - Regenerated all analysis files
+          - Generated daily sports report
+          - Sent newsletter via Beehiiv
+
+          [skip ci]"
+          git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,1276 @@
+{
+  "reports": [
+    {
+      "date": "January 23, 2026",
+      "generated_at": "2026-01-24T16:27:20.542191",
+      "headline": "ACTION-PACKED DAY: 13 MATCHES, 73 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 13 intense matches with a combined 73 knockouts.\n\ngapam was the workhorse of the day, grinding through 12 matches with 4 victories.\n\nThe hottest player was nish who maintained an impressive 72.7% win rate.\n\nWe even saw perfection today - nish delivered a flawless 3-0 with SAMUS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "gapam",
+        "reason": "Most active player with 12 games"
+      },
+      "highlights": [
+        "13 total matches played",
+        "gapam most active with 12 games",
+        "1 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 13,
+        "total_kos": 73,
+        "player_stats": [
+          {
+            "name": "gapam",
+            "games": 12,
+            "wins": 4,
+            "losses": 8,
+            "win_rate": 33.3,
+            "kos": 26,
+            "falls": 29,
+            "sds": 0,
+            "kd_ratio": 0.9,
+            "main_character": "SEPHIROTH",
+            "character_games": 7
+          },
+          {
+            "name": "nish",
+            "games": 11,
+            "wins": 8,
+            "losses": 3,
+            "win_rate": 72.7,
+            "kos": 34,
+            "falls": 16,
+            "sds": 0,
+            "kd_ratio": 2.12,
+            "main_character": "SAMUS",
+            "character_games": 11
+          },
+          {
+            "name": "lando",
+            "games": 6,
+            "wins": 0,
+            "losses": 6,
+            "win_rate": 0.0,
+            "kos": 8,
+            "falls": 15,
+            "sds": 1,
+            "kd_ratio": 0.53,
+            "main_character": "FOX",
+            "character_games": 2
+          },
+          {
+            "name": "jean",
+            "games": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": 33.3,
+            "kos": 5,
+            "falls": 5,
+            "sds": 0,
+            "kd_ratio": 1.0,
+            "main_character": "META KNIGHT",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "SAMUS",
+            "times_played": 11
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 7
+          },
+          {
+            "character": "BOWSER",
+            "times_played": 3
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 2
+          },
+          {
+            "character": "FOX",
+            "times_played": 2
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "nish",
+            "character": "SAMUS"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "nish",
+            "player2": "gapam",
+            "total_games": 4,
+            "p1_wins": 3,
+            "p2_wins": 1
+          },
+          {
+            "player1": "gapam",
+            "player2": "jean",
+            "total_games": 2,
+            "p1_wins": 1,
+            "p2_wins": 1
+          },
+          {
+            "player1": "nish",
+            "player2": "jean",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": []
+      }
+    },
+    {
+      "date": "January 22, 2026",
+      "generated_at": "2026-01-23T16:33:14.378566",
+      "headline": "ACTION-PACKED DAY: 41 MATCHES, 291 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 41 intense matches with a combined 291 knockouts.\n\nshafaq was the workhorse of the day, grinding through 30 matches with 22 victories.\n\nThe hottest player was shafaq who maintained an impressive 73.3% win rate.\n\nWe even saw perfection today - nish delivered a flawless 3-0 with SAMUS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "shafaq",
+        "reason": "Most active player with 30 games"
+      },
+      "highlights": [
+        "41 total matches played",
+        "shafaq most active with 30 games",
+        "2 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 41,
+        "total_kos": 291,
+        "player_stats": [
+          {
+            "name": "shafaq",
+            "games": 30,
+            "wins": 22,
+            "losses": 8,
+            "win_rate": 73.3,
+            "kos": 113,
+            "falls": 55,
+            "sds": 11,
+            "kd_ratio": 2.05,
+            "main_character": "ZELDA",
+            "character_games": 15
+          },
+          {
+            "name": "nish",
+            "games": 25,
+            "wins": 11,
+            "losses": 14,
+            "win_rate": 44.0,
+            "kos": 57,
+            "falls": 54,
+            "sds": 2,
+            "kd_ratio": 1.06,
+            "main_character": "SAMUS",
+            "character_games": 25
+          },
+          {
+            "name": "devmo",
+            "games": 24,
+            "wins": 14,
+            "losses": 10,
+            "win_rate": 58.3,
+            "kos": 56,
+            "falls": 49,
+            "sds": 1,
+            "kd_ratio": 1.14,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 19
+          },
+          {
+            "name": "jean",
+            "games": 22,
+            "wins": 4,
+            "losses": 18,
+            "win_rate": 18.2,
+            "kos": 20,
+            "falls": 52,
+            "sds": 5,
+            "kd_ratio": 0.38,
+            "main_character": "SEPHIROTH",
+            "character_games": 8
+          },
+          {
+            "name": "gapam",
+            "games": 11,
+            "wins": 1,
+            "losses": 10,
+            "win_rate": 9.1,
+            "kos": 8,
+            "falls": 28,
+            "sds": 5,
+            "kd_ratio": 0.29,
+            "main_character": "SEPHIROTH",
+            "character_games": 6
+          },
+          {
+            "name": "safi",
+            "games": 7,
+            "wins": 1,
+            "losses": 6,
+            "win_rate": 14.3,
+            "kos": 12,
+            "falls": 18,
+            "sds": 2,
+            "kd_ratio": 0.67,
+            "main_character": "SNAKE",
+            "character_games": 3
+          },
+          {
+            "name": "lando",
+            "games": 7,
+            "wins": 2,
+            "losses": 5,
+            "win_rate": 28.6,
+            "kos": 9,
+            "falls": 20,
+            "sds": 1,
+            "kd_ratio": 0.45,
+            "main_character": "FOX",
+            "character_games": 3
+          },
+          {
+            "name": "ya",
+            "games": 7,
+            "wins": 0,
+            "losses": 7,
+            "win_rate": 0.0,
+            "kos": 6,
+            "falls": 21,
+            "sds": 0,
+            "kd_ratio": 0.29,
+            "main_character": "JOKER",
+            "character_games": 3
+          },
+          {
+            "name": "keneru",
+            "games": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": 20.0,
+            "kos": 10,
+            "falls": 14,
+            "sds": 0,
+            "kd_ratio": 0.71,
+            "main_character": "DONKEY KONG",
+            "character_games": 4
+          },
+          {
+            "name": "unknown",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "SAMUS",
+            "times_played": 26
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 22
+          },
+          {
+            "character": "ZELDA",
+            "times_played": 15
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 15
+          },
+          {
+            "character": "KING DEDEDE",
+            "times_played": 13
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "nish",
+            "character": "SAMUS"
+          },
+          {
+            "player": "nish",
+            "character": "SAMUS"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "nish",
+            "player2": "ya",
+            "total_games": 7,
+            "p1_wins": 7,
+            "p2_wins": 0
+          },
+          {
+            "player1": "shafaq",
+            "player2": "devmo",
+            "total_games": 5,
+            "p1_wins": 2,
+            "p2_wins": 3
+          },
+          {
+            "player1": "lando",
+            "player2": "jean",
+            "total_games": 1,
+            "p1_wins": 0,
+            "p2_wins": 1
+          },
+          {
+            "player1": "lando",
+            "player2": "devmo",
+            "total_games": 1,
+            "p1_wins": 0,
+            "p2_wins": 1
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 13
+          },
+          {
+            "player": "devmo",
+            "streak": 9
+          },
+          {
+            "player": "nish",
+            "streak": 7
+          }
+        ]
+      }
+    },
+    {
+      "date": "January 21, 2026",
+      "generated_at": "2026-01-23T06:46:38.506564",
+      "headline": "ACTION-PACKED DAY: 14 MATCHES, 75 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 14 intense matches with a combined 75 knockouts.\n\njean was the workhorse of the day, grinding through 11 matches with 3 victories.\n\nThe hottest player was shafaq who maintained an impressive 80.0% win rate.\n\nWe even saw perfection today - ben delivered a flawless 3-0 with DONKEY KONG!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "jean",
+        "reason": "Most active player with 11 games"
+      },
+      "highlights": [
+        "14 total matches played",
+        "jean most active with 11 games",
+        "3 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 14,
+        "total_kos": 75,
+        "player_stats": [
+          {
+            "name": "jean",
+            "games": 11,
+            "wins": 3,
+            "losses": 8,
+            "win_rate": 27.3,
+            "kos": 19,
+            "falls": 31,
+            "sds": 1,
+            "kd_ratio": 0.61,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 5
+          },
+          {
+            "name": "shafaq",
+            "games": 10,
+            "wins": 8,
+            "losses": 2,
+            "win_rate": 80.0,
+            "kos": 34,
+            "falls": 16,
+            "sds": 3,
+            "kd_ratio": 2.12,
+            "main_character": "ZELDA",
+            "character_games": 4
+          },
+          {
+            "name": "keneru",
+            "games": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": 33.3,
+            "kos": 10,
+            "falls": 15,
+            "sds": 5,
+            "kd_ratio": 0.67,
+            "main_character": "DONKEY KONG",
+            "character_games": 5
+          },
+          {
+            "name": "nish",
+            "games": 6,
+            "wins": 4,
+            "losses": 2,
+            "win_rate": 66.7,
+            "kos": 3,
+            "falls": 12,
+            "sds": 1,
+            "kd_ratio": 0.25,
+            "main_character": "KIRBY",
+            "character_games": 5
+          },
+          {
+            "name": "ben",
+            "games": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 75.0,
+            "kos": 8,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 2.67,
+            "main_character": "DONKEY KONG",
+            "character_games": 3
+          },
+          {
+            "name": "oh",
+            "games": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": 0.0,
+            "kos": 1,
+            "falls": 6,
+            "sds": 0,
+            "kd_ratio": 0.17,
+            "main_character": "WARIO",
+            "character_games": 2
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "DONKEY KONG",
+            "times_played": 8
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 5
+          },
+          {
+            "character": "KIRBY",
+            "times_played": 5
+          },
+          {
+            "character": "ZELDA",
+            "times_played": 4
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 3
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "ben",
+            "character": "DONKEY KONG"
+          },
+          {
+            "player": "shafaq",
+            "character": "ZELDA"
+          },
+          {
+            "player": "ben",
+            "character": "DONKEY KONG"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "shafaq",
+            "player2": "jean",
+            "total_games": 4,
+            "p1_wins": 4,
+            "p2_wins": 0
+          },
+          {
+            "player1": "ben",
+            "player2": "oh",
+            "total_games": 3,
+            "p1_wins": 3,
+            "p2_wins": 0
+          },
+          {
+            "player1": "jean",
+            "player2": "ben",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 4
+          },
+          {
+            "player": "nish",
+            "streak": 3
+          },
+          {
+            "player": "ben",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
+      "date": "January 20, 2026",
+      "generated_at": "2026-01-21T16:52:19.516188",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on January 20, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
+      "date": "January 19, 2026",
+      "generated_at": "2026-01-21T05:54:42.762163",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on January 19, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
+      "date": "January 18, 2026",
+      "generated_at": "2026-01-21T05:56:13.184137",
+      "headline": "ACTION AT THE ARENA: 11 MATCHES!",
+      "report": "We saw 11 matches with 42 total KOs on January 18, 2026.",
+      "player_of_the_day": {
+        "name": "jmoon",
+        "reason": "Most active"
+      },
+      "highlights": [
+        "11 matches played"
+      ],
+      "stats_summary": {
+        "total_matches": 11,
+        "total_kos": 42,
+        "player_stats": [
+          {
+            "name": "jmoon",
+            "games": 11,
+            "wins": 11,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 24,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 1.33,
+            "main_character": "INCINEROAR",
+            "character_games": 6
+          },
+          {
+            "name": "amar",
+            "games": 11,
+            "wins": 0,
+            "losses": 11,
+            "win_rate": 0.0,
+            "kos": 18,
+            "falls": 24,
+            "sds": 0,
+            "kd_ratio": 0.75,
+            "main_character": "ENDERMAN",
+            "character_games": 11
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "ENDERMAN",
+            "times_played": 11
+          },
+          {
+            "character": "INCINEROAR",
+            "times_played": 6
+          },
+          {
+            "character": "JOKER",
+            "times_played": 3
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 1
+          },
+          {
+            "character": "PALUTENA",
+            "times_played": 1
+          }
+        ],
+        "perfect_games": [],
+        "rivalries": [
+          {
+            "player1": "jmoon",
+            "player2": "amar",
+            "total_games": 11,
+            "p1_wins": 11,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "jmoon",
+            "streak": 11
+          }
+        ]
+      }
+    },
+    {
+      "date": "January 16, 2026",
+      "generated_at": "2026-01-21T05:55:54.553412",
+      "headline": "ACTION AT THE ARENA: 28 MATCHES!",
+      "report": "We saw 28 matches with 105 total KOs on January 16, 2026.",
+      "player_of_the_day": {
+        "name": "jmoon",
+        "reason": "Most active"
+      },
+      "highlights": [
+        "28 matches played"
+      ],
+      "stats_summary": {
+        "total_matches": 28,
+        "total_kos": 105,
+        "player_stats": [
+          {
+            "name": "jmoon",
+            "games": 21,
+            "wins": 18,
+            "losses": 3,
+            "win_rate": 85.7,
+            "kos": 53,
+            "falls": 26,
+            "sds": 2,
+            "kd_ratio": 2.04,
+            "main_character": "GANONDORF",
+            "character_games": 11
+          },
+          {
+            "name": "will",
+            "games": 13,
+            "wins": 6,
+            "losses": 7,
+            "win_rate": 46.2,
+            "kos": 25,
+            "falls": 28,
+            "sds": 0,
+            "kd_ratio": 0.89,
+            "main_character": "STEVE",
+            "character_games": 7
+          },
+          {
+            "name": "habeas",
+            "games": 12,
+            "wins": 2,
+            "losses": 10,
+            "win_rate": 16.7,
+            "kos": 14,
+            "falls": 29,
+            "sds": 0,
+            "kd_ratio": 0.48,
+            "main_character": "GANONDORF",
+            "character_games": 8
+          },
+          {
+            "name": "8n",
+            "games": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": 25.0,
+            "kos": 5,
+            "falls": 11,
+            "sds": 0,
+            "kd_ratio": 0.45,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 3
+          },
+          {
+            "name": "ya",
+            "games": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": 0.0,
+            "kos": 1,
+            "falls": 6,
+            "sds": 0,
+            "kd_ratio": 0.17,
+            "main_character": "JOKER",
+            "character_games": 3
+          },
+          {
+            "name": "niki <3",
+            "games": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": 33.3,
+            "kos": 7,
+            "falls": 7,
+            "sds": 0,
+            "kd_ratio": 1.0,
+            "main_character": "KIRBY",
+            "character_games": 3
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "GANONDORF",
+            "times_played": 20
+          },
+          {
+            "character": "JOKER",
+            "times_played": 11
+          },
+          {
+            "character": "STEVE",
+            "times_played": 7
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 4
+          },
+          {
+            "character": "INCINEROAR",
+            "times_played": 4
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "jmoon",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "jmoon",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "jmoon",
+            "character": "INCINEROAR"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "jmoon",
+            "total_games": 10,
+            "p1_wins": 1,
+            "p2_wins": 9
+          },
+          {
+            "player1": "jmoon",
+            "player2": "will",
+            "total_games": 8,
+            "p1_wins": 6,
+            "p2_wins": 2
+          },
+          {
+            "player1": "jmoon",
+            "player2": "8n",
+            "total_games": 3,
+            "p1_wins": 3,
+            "p2_wins": 0
+          },
+          {
+            "player1": "will",
+            "player2": "niki <3",
+            "total_games": 3,
+            "p1_wins": 2,
+            "p2_wins": 1
+          },
+          {
+            "player1": "will",
+            "player2": "ya",
+            "total_games": 2,
+            "p1_wins": 2,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "jmoon",
+            "streak": 7
+          },
+          {
+            "player": "will",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
+      "date": "January 15, 2026",
+      "generated_at": "2026-01-21T05:55:35.798590",
+      "headline": "ACTION AT THE ARENA: 7 MATCHES!",
+      "report": "We saw 7 matches with 27 total KOs on January 15, 2026.",
+      "player_of_the_day": {
+        "name": "lag",
+        "reason": "Most active"
+      },
+      "highlights": [
+        "7 matches played"
+      ],
+      "stats_summary": {
+        "total_matches": 7,
+        "total_kos": 27,
+        "player_stats": [
+          {
+            "name": "lag",
+            "games": 7,
+            "wins": 5,
+            "losses": 2,
+            "win_rate": 71.4,
+            "kos": 16,
+            "falls": 14,
+            "sds": 0,
+            "kd_ratio": 1.14,
+            "main_character": "NESS",
+            "character_games": 7
+          },
+          {
+            "name": "nish",
+            "games": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": 33.3,
+            "kos": 11,
+            "falls": 15,
+            "sds": 0,
+            "kd_ratio": 0.73,
+            "main_character": "SAMUS",
+            "character_games": 6
+          },
+          {
+            "name": "unknown",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "NESS",
+            "times_played": 7
+          },
+          {
+            "character": "SAMUS",
+            "times_played": 6
+          },
+          {
+            "character": "UNKNOWN",
+            "times_played": 1
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "lag",
+            "character": "NESS"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "nish",
+            "player2": "lag",
+            "total_games": 6,
+            "p1_wins": 2,
+            "p2_wins": 4
+          },
+          {
+            "player1": "lag",
+            "player2": "unknown",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "lag",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
+      "date": "January 14, 2026",
+      "generated_at": "2026-01-21T05:55:18.256186",
+      "headline": "ACTION AT THE ARENA: 10 MATCHES!",
+      "report": "We saw 10 matches with 37 total KOs on January 14, 2026.",
+      "player_of_the_day": {
+        "name": "shafaq",
+        "reason": "Most active"
+      },
+      "highlights": [
+        "10 matches played"
+      ],
+      "stats_summary": {
+        "total_matches": 10,
+        "total_kos": 37,
+        "player_stats": [
+          {
+            "name": "shafaq",
+            "games": 8,
+            "wins": 6,
+            "losses": 2,
+            "win_rate": 75.0,
+            "kos": 18,
+            "falls": 7,
+            "sds": 0,
+            "kd_ratio": 2.57,
+            "main_character": "ZELDA",
+            "character_games": 5
+          },
+          {
+            "name": "niki <3",
+            "games": 7,
+            "wins": 1,
+            "losses": 6,
+            "win_rate": 14.3,
+            "kos": 7,
+            "falls": 17,
+            "sds": 3,
+            "kd_ratio": 0.41,
+            "main_character": "KIRBY",
+            "character_games": 6
+          },
+          {
+            "name": ".niki <3",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 2,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.67,
+            "main_character": "KIRBY",
+            "character_games": 1
+          },
+          {
+            "name": "niki <3.",
+            "games": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 3,
+            "falls": 2,
+            "sds": 0,
+            "kd_ratio": 1.5,
+            "main_character": "KIRBY",
+            "character_games": 1
+          },
+          {
+            "name": "_shafaq",
+            "games": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 3,
+            "falls": 2,
+            "sds": 0,
+            "kd_ratio": 1.5,
+            "main_character": "KING DEDEDE",
+            "character_games": 1
+          },
+          {
+            "name": "*niki <3",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 2,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.67,
+            "main_character": "KIRBY",
+            "character_games": 1
+          },
+          {
+            "name": "jean",
+            "games": 1,
+            "wins": 1,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 2,
+            "falls": 2,
+            "sds": 0,
+            "kd_ratio": 1.0,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "KIRBY",
+            "times_played": 9
+          },
+          {
+            "character": "ZELDA",
+            "times_played": 5
+          },
+          {
+            "character": "KING DEDEDE",
+            "times_played": 4
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 1
+          },
+          {
+            "character": "LITTLE MAC",
+            "times_played": 1
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "shafaq",
+            "character": "ZELDA"
+          },
+          {
+            "player": "shafaq",
+            "character": "ZELDA"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "shafaq",
+            "player2": "niki <3",
+            "total_games": 6,
+            "p1_wins": 5,
+            "p2_wins": 1
+          },
+          {
+            "player1": "shafaq",
+            "player2": ".niki <3",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          },
+          {
+            "player1": "shafaq",
+            "player2": "niki <3.",
+            "total_games": 1,
+            "p1_wins": 0,
+            "p2_wins": 1
+          },
+          {
+            "player1": "_shafaq",
+            "player2": "*niki <3",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          },
+          {
+            "player1": "niki <3",
+            "player2": "jean",
+            "total_games": 1,
+            "p1_wins": 0,
+            "p2_wins": 1
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 4
+          }
+        ]
+      }
+    },
+    {
+      "date": "January 13, 2026",
+      "generated_at": "2026-01-21T05:55:01.713694",
+      "headline": "ACTION AT THE ARENA: 18 MATCHES!",
+      "report": "We saw 18 matches with 90 total KOs on January 13, 2026.",
+      "player_of_the_day": {
+        "name": "niki <3",
+        "reason": "Most active"
+      },
+      "highlights": [
+        "18 matches played"
+      ],
+      "stats_summary": {
+        "total_matches": 18,
+        "total_kos": 90,
+        "player_stats": [
+          {
+            "name": "niki <3",
+            "games": 17,
+            "wins": 12,
+            "losses": 5,
+            "win_rate": 70.6,
+            "kos": 52,
+            "falls": 31,
+            "sds": 0,
+            "kd_ratio": 1.68,
+            "main_character": "KIRBY",
+            "character_games": 15
+          },
+          {
+            "name": "shafaq",
+            "games": 8,
+            "wins": 5,
+            "losses": 3,
+            "win_rate": 62.5,
+            "kos": 21,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 1.17,
+            "main_character": "KING DEDEDE",
+            "character_games": 3
+          },
+          {
+            "name": "keneru",
+            "games": 6,
+            "wins": 0,
+            "losses": 6,
+            "win_rate": 0.0,
+            "kos": 6,
+            "falls": 18,
+            "sds": 1,
+            "kd_ratio": 0.33,
+            "main_character": "DONKEY KONG",
+            "character_games": 5
+          },
+          {
+            "name": "ya",
+            "games": 6,
+            "wins": 1,
+            "losses": 5,
+            "win_rate": 16.7,
+            "kos": 8,
+            "falls": 14,
+            "sds": 0,
+            "kd_ratio": 0.57,
+            "main_character": "JOKER",
+            "character_games": 4
+          },
+          {
+            "name": "nish",
+            "games": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": 0.0,
+            "kos": 3,
+            "falls": 6,
+            "sds": 0,
+            "kd_ratio": 0.5,
+            "main_character": "SAMUS",
+            "character_games": 2
+          },
+          {
+            "name": "unknown",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "KIRBY",
+            "times_played": 15
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 5
+          },
+          {
+            "character": "JOKER",
+            "times_played": 4
+          },
+          {
+            "character": "SAMUS",
+            "times_played": 4
+          },
+          {
+            "character": "KING DEDEDE",
+            "times_played": 3
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "niki <3",
+            "character": "KIRBY"
+          },
+          {
+            "player": "niki <3",
+            "character": "KIRBY"
+          },
+          {
+            "player": "ya",
+            "character": "JOKER"
+          },
+          {
+            "player": "niki <3",
+            "character": "KIRBY"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "shafaq",
+            "player2": "niki <3",
+            "total_games": 7,
+            "p1_wins": 4,
+            "p2_wins": 3
+          },
+          {
+            "player1": "keneru",
+            "player2": "niki <3",
+            "total_games": 2,
+            "p1_wins": 0,
+            "p2_wins": 2
+          },
+          {
+            "player1": "ya",
+            "player2": "niki <3",
+            "total_games": 2,
+            "p1_wins": 0,
+            "p2_wins": 2
+          },
+          {
+            "player1": "nish",
+            "player2": "niki <3",
+            "total_games": 2,
+            "p1_wins": 0,
+            "p2_wins": 2
+          },
+          {
+            "player1": "shafaq",
+            "player2": "unknown",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "niki <3",
+            "streak": 6
+          },
+          {
+            "player": "shafaq",
+            "streak": 3
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "date": "January 23, 2026",
+  "generated_at": "2026-01-24T16:27:20.542191",
+  "headline": "ACTION-PACKED DAY: 13 MATCHES, 73 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 13 intense matches with a combined 73 knockouts.\n\ngapam was the workhorse of the day, grinding through 12 matches with 4 victories.\n\nThe hottest player was nish who maintained an impressive 72.7% win rate.\n\nWe even saw perfection today - nish delivered a flawless 3-0 with SAMUS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "player_of_the_day": {
+    "name": "gapam",
+    "reason": "Most active player with 12 games"
+  },
+  "highlights": [
+    "13 total matches played",
+    "gapam most active with 12 games",
+    "1 perfect game(s) achieved"
+  ],
+  "stats_summary": {
+    "total_matches": 13,
+    "total_kos": 73,
+    "player_stats": [
+      {
+        "name": "gapam",
+        "games": 12,
+        "wins": 4,
+        "losses": 8,
+        "win_rate": 33.3,
+        "kos": 26,
+        "falls": 29,
+        "sds": 0,
+        "kd_ratio": 0.9,
+        "main_character": "SEPHIROTH",
+        "character_games": 7
+      },
+      {
+        "name": "nish",
+        "games": 11,
+        "wins": 8,
+        "losses": 3,
+        "win_rate": 72.7,
+        "kos": 34,
+        "falls": 16,
+        "sds": 0,
+        "kd_ratio": 2.12,
+        "main_character": "SAMUS",
+        "character_games": 11
+      },
+      {
+        "name": "lando",
+        "games": 6,
+        "wins": 0,
+        "losses": 6,
+        "win_rate": 0.0,
+        "kos": 8,
+        "falls": 15,
+        "sds": 1,
+        "kd_ratio": 0.53,
+        "main_character": "FOX",
+        "character_games": 2
+      },
+      {
+        "name": "jean",
+        "games": 3,
+        "wins": 1,
+        "losses": 2,
+        "win_rate": 33.3,
+        "kos": 5,
+        "falls": 5,
+        "sds": 0,
+        "kd_ratio": 1.0,
+        "main_character": "META KNIGHT",
+        "character_games": 1
+      }
+    ],
+    "top_characters": [
+      {
+        "character": "SAMUS",
+        "times_played": 11
+      },
+      {
+        "character": "SEPHIROTH",
+        "times_played": 7
+      },
+      {
+        "character": "BOWSER",
+        "times_played": 3
+      },
+      {
+        "character": "CAPTAIN FALCON",
+        "times_played": 2
+      },
+      {
+        "character": "FOX",
+        "times_played": 2
+      }
+    ],
+    "perfect_games": [
+      {
+        "player": "nish",
+        "character": "SAMUS"
+      }
+    ],
+    "rivalries": [
+      {
+        "player1": "nish",
+        "player2": "gapam",
+        "total_games": 4,
+        "p1_wins": 3,
+        "p2_wins": 1
+      },
+      {
+        "player1": "gapam",
+        "player2": "jean",
+        "total_games": 2,
+        "p1_wins": 1,
+        "p2_wins": 1
+      },
+      {
+        "player1": "nish",
+        "player2": "jean",
+        "total_games": 1,
+        "p1_wins": 1,
+        "p2_wins": 0
+      }
+    ],
+    "win_streaks": []
+  }
+}
