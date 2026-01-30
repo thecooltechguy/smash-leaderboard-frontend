@@ -15,9 +15,10 @@ export interface Player {
   name: string;
   display_name: string | null;
   elo: bigint;
-  is_ranked: boolean;
-  top_10_players_played: number;
+  top_ten_played: number;
+  inactive: boolean;
   country?: string | null;
+  picture?: string | null;
   main_character?: string | null;
   total_wins?: number;
   total_losses?: number;
@@ -37,11 +38,16 @@ export interface PlayerStats {
 }
 
 // Helper function to get most common character for a player
-export async function getMostCommonCharacter(playerId: bigint): Promise<string | null> {
+export async function getMostCommonCharacter(
+  playerId: bigint
+): Promise<string | null> {
   try {
     const participants = await prisma.match_participants.findMany({
       where: {
         player: playerId,
+        match: {
+          archived: false,
+        },
       },
       select: {
         smash_character: true,
@@ -54,26 +60,29 @@ export async function getMostCommonCharacter(playerId: bigint): Promise<string |
 
     // Count character usage
     const characterCounts: Record<string, number> = {};
-    participants.forEach(p => {
-      characterCounts[p.smash_character] = (characterCounts[p.smash_character] || 0) + 1;
+    participants.forEach((p) => {
+      characterCounts[p.smash_character] =
+        (characterCounts[p.smash_character] || 0) + 1;
     });
 
     // Find most common character
-    const mostCommon = Object.entries(characterCounts)
-      .sort(([,a], [,b]) => b - a)[0];
+    const mostCommon = Object.entries(characterCounts).sort(
+      ([, a], [, b]) => b - a
+    )[0];
 
     return mostCommon ? mostCommon[0] : null;
   } catch (error) {
-    console.error('Error getting main character:', error);
+    console.error("Error getting main character:", error);
     return null;
   }
 }
 
 // Helper function to get player stats
 export async function getPlayerStats(playerId: bigint): Promise<PlayerStats> {
-  // Get all 1v1 matches for this player (matches with exactly 2 human participants)
+  // Get all 1v1 matches for this player (matches with exactly 2 human participants, exclude archived)
   const oneVOneMatches = await prisma.matches.findMany({
     where: {
+      archived: false,
       match_participants: {
         some: {
           player: playerId,
@@ -107,7 +116,7 @@ export async function getPlayerStats(playerId: bigint): Promise<PlayerStats> {
       },
     },
     orderBy: {
-      match_id: 'desc',
+      match_id: "desc",
     },
   });
 
@@ -115,7 +124,10 @@ export async function getPlayerStats(playerId: bigint): Promise<PlayerStats> {
   const totalWins = playerParticipants.filter((p) => p.has_won).length;
   const totalLosses = playerParticipants.filter((p) => !p.has_won).length;
   const totalKos = playerParticipants.reduce((sum, p) => sum + p.total_kos, 0);
-  const totalFalls = playerParticipants.reduce((sum, p) => sum + p.total_falls, 0);
+  const totalFalls = playerParticipants.reduce(
+    (sum, p) => sum + p.total_falls,
+    0
+  );
   const totalSds = playerParticipants.reduce((sum, p) => sum + p.total_sds, 0);
 
   // Calculate current win streak

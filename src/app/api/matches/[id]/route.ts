@@ -8,18 +8,16 @@ export async function GET(
   try {
     const { id } = await params;
     const matchId = parseInt(id);
-    
+
     if (isNaN(matchId)) {
-      return NextResponse.json(
-        { error: "Invalid match ID" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid match ID" }, { status: 400 });
     }
 
-    // Get the specific match with participants
-    const match = await prisma.matches.findUnique({
+    // Get the specific match with participants (exclude archived)
+    const match = await prisma.matches.findFirst({
       where: {
-        id: BigInt(matchId)
+        id: BigInt(matchId),
+        archived: false,
       },
       include: {
         match_participants: {
@@ -28,7 +26,6 @@ export async function GET(
               select: {
                 name: true,
                 display_name: true,
-                is_ranked: true,
               },
             },
           },
@@ -37,10 +34,7 @@ export async function GET(
     });
 
     if (!match) {
-      return NextResponse.json(
-        { error: "Match not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "Match not found" }, { status: 404 });
     }
 
     // Transform the data to match the frontend interface
@@ -52,7 +46,6 @@ export async function GET(
         player: Number(participant.player),
         player_name: participant.players.name,
         player_display_name: participant.players.display_name,
-        player_is_ranked: participant.players.is_ranked,
         smash_character: participant.smash_character,
         is_cpu: participant.is_cpu,
         total_kos: participant.total_kos,
