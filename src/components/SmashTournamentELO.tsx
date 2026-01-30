@@ -9,6 +9,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import {
+  BarChart,
   Check,
   ChevronDown,
   Filter,
