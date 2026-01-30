@@ -1,125 +1,262 @@
 {
-  "date": "January 23, 2026",
-  "generated_at": "2026-01-24T16:27:20.542191",
-  "headline": "ACTION-PACKED DAY: 13 MATCHES, 73 KOS!",
-  "report": "What a day at the Smash Arena! We witnessed 13 intense matches with a combined 73 knockouts.\n\ngapam was the workhorse of the day, grinding through 12 matches with 4 victories.\n\nThe hottest player was nish who maintained an impressive 72.7% win rate.\n\nWe even saw perfection today - nish delivered a flawless 3-0 with SAMUS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "date": "January 29, 2026",
+  "generated_at": "2026-01-30T12:07:41.597029",
+  "headline": "ACTION-PACKED DAY: 48 MATCHES, 265 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 48 intense matches with a combined 265 knockouts.\n\nnish was the workhorse of the day, grinding through 28 matches with 16 victories.\n\nThe hottest player was jmoon who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with CAPTAIN FALCON!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
   "player_of_the_day": {
-    "name": "gapam",
-    "reason": "Most active player with 12 games"
+    "name": "nish",
+    "reason": "Most active player with 28 games"
   },
   "highlights": [
-    "13 total matches played",
-    "gapam most active with 12 games",
-    "1 perfect game(s) achieved"
+    "48 total matches played",
+    "nish most active with 28 games",
+    "7 perfect game(s) achieved"
   ],
   "stats_summary": {
-    "total_matches": 13,
-    "total_kos": 73,
+    "total_matches": 48,
+    "total_kos": 265,
     "player_stats": [
       {
-        "name": "gapam",
-        "games": 12,
-        "wins": 4,
-        "losses": 8,
-        "win_rate": 33.3,
-        "kos": 26,
-        "falls": 29,
-        "sds": 0,
-        "kd_ratio": 0.9,
-        "main_character": "SEPHIROTH",
-        "character_games": 7
+        "name": "nish",
+        "games": 28,
+        "wins": 16,
+        "losses": 12,
+        "win_rate": 57.1,
+        "kos": 54,
+        "falls": 51,
+        "sds": 5,
+        "kd_ratio": 1.06,
+        "main_character": "SAMUS",
+        "character_games": 28
       },
       {
-        "name": "nish",
-        "games": 11,
-        "wins": 8,
-        "losses": 3,
-        "win_rate": 72.7,
-        "kos": 34,
-        "falls": 16,
+        "name": "keneru",
+        "games": 20,
+        "wins": 11,
+        "losses": 9,
+        "win_rate": 55.0,
+        "kos": 46,
+        "falls": 39,
+        "sds": 5,
+        "kd_ratio": 1.18,
+        "main_character": "DONKEY KONG",
+        "character_games": 16
+      },
+      {
+        "name": "fateen",
+        "games": 19,
+        "wins": 10,
+        "losses": 9,
+        "win_rate": 52.6,
+        "kos": 51,
+        "falls": 51,
+        "sds": 4,
+        "kd_ratio": 1.0,
+        "main_character": "KING K. ROOL",
+        "character_games": 19
+      },
+      {
+        "name": "subby",
+        "games": 18,
+        "wins": 11,
+        "losses": 7,
+        "win_rate": 61.1,
+        "kos": 43,
+        "falls": 36,
+        "sds": 5,
+        "kd_ratio": 1.19,
+        "main_character": "ENDERMAN",
+        "character_games": 9
+      },
+      {
+        "name": "jmoon",
+        "games": 15,
+        "wins": 15,
+        "losses": 0,
+        "win_rate": 100.0,
+        "kos": 41,
+        "falls": 9,
         "sds": 0,
-        "kd_ratio": 2.12,
-        "main_character": "SAMUS",
-        "character_games": 11
+        "kd_ratio": 4.56,
+        "main_character": "CAPTAIN FALCON",
+        "character_games": 3
       },
       {
         "name": "lando",
+        "games": 14,
+        "wins": 0,
+        "losses": 14,
+        "win_rate": 0.0,
+        "kos": 7,
+        "falls": 38,
+        "sds": 1,
+        "kd_ratio": 0.18,
+        "main_character": "FOX",
+        "character_games": 5
+      },
+      {
+        "name": "ya",
+        "games": 10,
+        "wins": 1,
+        "losses": 9,
+        "win_rate": 10.0,
+        "kos": 18,
+        "falls": 24,
+        "sds": 0,
+        "kd_ratio": 0.75,
+        "main_character": "JOKER",
+        "character_games": 10
+      },
+      {
+        "name": "Ryanz",
         "games": 6,
         "wins": 0,
         "losses": 6,
         "win_rate": 0.0,
-        "kos": 8,
-        "falls": 15,
-        "sds": 1,
-        "kd_ratio": 0.53,
-        "main_character": "FOX",
+        "kos": 3,
+        "falls": 18,
+        "sds": 0,
+        "kd_ratio": 0.17,
+        "main_character": "KIRBY",
         "character_games": 2
       },
       {
-        "name": "jean",
-        "games": 3,
-        "wins": 1,
-        "losses": 2,
-        "win_rate": 33.3,
-        "kos": 5,
-        "falls": 5,
+        "name": "ben",
+        "games": 4,
+        "wins": 0,
+        "losses": 4,
+        "win_rate": 0.0,
+        "kos": 1,
+        "falls": 9,
         "sds": 0,
-        "kd_ratio": 1.0,
-        "main_character": "META KNIGHT",
+        "kd_ratio": 0.11,
+        "main_character": "DONKEY KONG",
+        "character_games": 4
+      },
+      {
+        "name": "lando.",
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_rate": 0.0,
+        "kos": 1,
+        "falls": 3,
+        "sds": 0,
+        "kd_ratio": 0.33,
+        "main_character": "FOX",
         "character_games": 1
       }
     ],
     "top_characters": [
       {
         "character": "SAMUS",
+        "times_played": 29
+      },
+      {
+        "character": "DONKEY KONG",
+        "times_played": 24
+      },
+      {
+        "character": "KING K. ROOL",
+        "times_played": 20
+      },
+      {
+        "character": "JOKER",
         "times_played": 11
       },
       {
-        "character": "SEPHIROTH",
-        "times_played": 7
-      },
-      {
-        "character": "BOWSER",
-        "times_played": 3
-      },
-      {
         "character": "CAPTAIN FALCON",
-        "times_played": 2
-      },
-      {
-        "character": "FOX",
-        "times_played": 2
+        "times_played": 10
       }
     ],
     "perfect_games": [
       {
-        "player": "nish",
-        "character": "SAMUS"
+        "player": "jmoon",
+        "character": "CAPTAIN FALCON"
+      },
+      {
+        "player": "jmoon",
+        "character": "LUIGI"
+      },
+      {
+        "player": "jmoon",
+        "character": "WOLF"
+      },
+      {
+        "player": "jmoon",
+        "character": "RIDLEY"
+      },
+      {
+        "player": "jmoon",
+        "character": "JOKER"
+      },
+      {
+        "player": "subby",
+        "character": "DONKEY KONG"
+      },
+      {
+        "player": "keneru",
+        "character": "DONKEY KONG"
       }
     ],
     "rivalries": [
       {
-        "player1": "nish",
-        "player2": "gapam",
-        "total_games": 4,
-        "p1_wins": 3,
-        "p2_wins": 1
+        "player1": "jmoon",
+        "player2": "lando",
+        "total_games": 14,
+        "p1_wins": 14,
+        "p2_wins": 0
       },
       {
-        "player1": "gapam",
-        "player2": "jean",
+        "player1": "nish",
+        "player2": "ya",
+        "total_games": 5,
+        "p1_wins": 5,
+        "p2_wins": 0
+      },
+      {
+        "player1": "keneru",
+        "player2": "ben",
+        "total_games": 3,
+        "p1_wins": 3,
+        "p2_wins": 0
+      },
+      {
+        "player1": "subby",
+        "player2": "fateen",
         "total_games": 2,
         "p1_wins": 1,
         "p2_wins": 1
       },
       {
-        "player1": "nish",
-        "player2": "jean",
+        "player1": "jmoon",
+        "player2": "lando.",
         "total_games": 1,
         "p1_wins": 1,
         "p2_wins": 0
       }
     ],
-    "win_streaks": []
+    "win_streaks": [
+      {
+        "player": "jmoon",
+        "streak": 15
+      },
+      {
+        "player": "nish",
+        "streak": 7
+      },
+      {
+        "player": "fateen",
+        "streak": 3
+      },
+      {
+        "player": "subby",
+        "streak": 3
+      },
+      {
+        "player": "keneru",
+        "streak": 3
+      }
+    ]
   }
 }
