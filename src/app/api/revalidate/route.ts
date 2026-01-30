@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     }
 
     for (const tag of tags) {
-      revalidateTag(tag);
+      revalidateTag(tag, "max");
     }
 
     console.log(`[Revalidate] Cache invalidated for tags: ${tags.join(", ")}`);
@@ -79,7 +79,7 @@ export async function GET(request: NextRequest) {
     }
 
     for (const tag of tags) {
-      revalidateTag(tag);
+      revalidateTag(tag, "max");
     }
 
     console.log(`[Revalidate] Cache invalidated for tags: ${tags.join(", ")}`);
