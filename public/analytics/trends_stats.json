@@ -12,15 +12,15 @@
     "biggest_momentum_player": "lag",
     "biggest_momentum_boost": 33.3,
     "biggest_momentum_detail": "55.9% after win vs 22.5% after loss",
-    "reverse_momentum_player": "ryy",
-    "reverse_momentum": -0.3,
+    "reverse_momentum_player": "strike",
+    "reverse_momentum": -5.2,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.9,
     "after_8_games_wr": 49.7,
-    "fatigue_drop": -1.8
+    "fatigue_drop": -1.9
   },
   "lopsided_matchups": [
     {
@@ -74,7 +74,7 @@
     "busiest_games": 1977,
     "quietest_day": "Tuesday",
     "quietest_games": 945,
-    "friday_vs_monday": 1.2
+    "friday_vs_monday": 1.3
   },
   "streakiness": {
     "most_streaky_player": "habeas",
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.141,
+    "correlation": -0.145,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -137,7 +137,7 @@
   },
   "game_speed": {
     "fastest_player": "lando",
-    "fastest_gap": 3.5,
+    "fastest_gap": 3.4,
     "slowest_player": "safi",
     "slowest_gap": 9.4
   }

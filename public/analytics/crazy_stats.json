@@ -138,10 +138,10 @@
     {
       "player": "keneru",
       "weekend_wr": 54.5,
-      "weekday_wr": 43.6,
-      "diff": 10.9,
+      "weekday_wr": 44.4,
+      "diff": 10.1,
       "weekend_games": 200,
-      "weekday_games": 589
+      "weekday_games": 599
     }
   ],
   "weekday_warriors": [
@@ -193,7 +193,7 @@
     },
     {
       "player": "lando",
-      "streak": 25
+      "streak": 28
     },
     {
       "player": "habeas",
@@ -205,6 +205,10 @@
     },
     {
       "player": "ya",
+      "streak": 19
+    },
+    {
+      "player": "unknown",
       "streak": 19
     },
     {
@@ -222,10 +226,6 @@
     {
       "player": "gatmo",
       "streak": 17
-    },
-    {
-      "player": "unknown",
-      "streak": 16
     }
   ],
   "comeback_kings": [
@@ -241,8 +241,8 @@
     },
     {
       "player": "strike",
-      "sd_games": 21,
-      "sd_win_rate": 61.9
+      "sd_games": 23,
+      "sd_win_rate": 60.9
     },
     {
       "player": "samin",
@@ -279,14 +279,14 @@
   },
   "cursed_characters": [
     {
-      "character": "FOX",
-      "plays": 48,
-      "win_rate": 20.8
-    },
-    {
       "character": "GRENINJA",
       "plays": 108,
       "win_rate": 21.3
+    },
+    {
+      "character": "FOX",
+      "plays": 65,
+      "win_rate": 21.5
     },
     {
       "character": "SNAKE",
@@ -300,8 +300,8 @@
     },
     {
       "character": "SONIC",
-      "plays": 25,
-      "win_rate": 28.0
+      "plays": 26,
+      "win_rate": 26.9
     }
   ],
   "blessed_characters": [
@@ -322,8 +322,8 @@
     },
     {
       "character": "KING DEDEDE",
-      "plays": 176,
-      "win_rate": 60.2
+      "plays": 177,
+      "win_rate": 60.5
     },
     {
       "character": "PIRANHA PLANT",
@@ -334,21 +334,21 @@
   "friday_night_favorites": [
     {
       "character": "ENDERMAN",
-      "plays": 85
+      "plays": 86
     },
     {
       "character": "MR. GAME & WATCH",
       "plays": 76
     },
     {
-      "character": "KING K. ROOL",
-      "plays": 60
+      "character": "SAMUS",
+      "plays": 72
     }
   ],
   "friday_night_king": {
-    "player": "keneru",
-    "games": 29,
-    "win_rate": 62.1
+    "player": "will",
+    "games": 52,
+    "win_rate": 71.2
   },
   "early_birds": [
     {
@@ -385,8 +385,8 @@
     },
     {
       "player": "subby",
-      "games": 449,
-      "win_rate": 46.1
+      "games": 463,
+      "win_rate": 45.8
     },
     {
       "player": "jmoon",
@@ -395,8 +395,8 @@
     },
     {
       "player": "nish",
-      "games": 253,
-      "win_rate": 43.5
+      "games": 262,
+      "win_rate": 43.9
     },
     {
       "player": "keneru",
@@ -484,15 +484,7 @@
   ],
   "rare_characters": [
     {
-      "character": "SHEIK",
-      "times_played": 5
-    },
-    {
       "character": "BANJO & KAZOOIE",
-      "times_played": 5
-    },
-    {
-      "character": "JIGGLYPUFF",
       "times_played": 5
     },
     {
@@ -512,15 +504,23 @@
       "times_played": 4
     },
     {
+      "character": "KEN",
+      "times_played": 4
+    },
+    {
       "character": "BAYONETTA",
       "times_played": 4
     },
     {
-      "character": "KEN",
+      "character": "RICHTER",
       "times_played": 3
     },
     {
-      "character": "RICHTER",
+      "character": "PICHU",
+      "times_played": 3
+    },
+    {
+      "character": "MII GUNNER",
       "times_played": 3
     }
   ],
@@ -577,7 +577,7 @@
   "busiest_hour": {
     "hour": 17,
     "hour_formatted": "17:00 - 18:00",
-    "games": 1018
+    "games": 1034
   },
   "quietest_hour": {
     "hour": 8,

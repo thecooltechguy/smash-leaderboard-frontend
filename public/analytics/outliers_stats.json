@@ -4,7 +4,7 @@
     "player": "habeas",
     "value": "2,252 games",
     "detail": "That's 10.1 games per day on average",
-    "runner_up": "subby (1,129)"
+    "runner_up": "subby (1,143)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
@@ -39,14 +39,14 @@
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
     "player": "lando",
-    "value": "0.41 K/D",
+    "value": "0.43 K/D",
     "detail": "Gets KO'd more than they KO"
   },
   "most_sds_total": {
     "stat": "Most Self-Destructs (Total)",
     "player": "subby",
-    "value": "99 SDs",
-    "detail": "That's 1 SD every 11.4 games"
+    "value": "101 SDs",
+    "detail": "That's 1 SD every 11.3 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -104,9 +104,9 @@
   },
   "most_cursed_char": {
     "stat": "Most Cursed Character",
-    "player": "FOX",
-    "value": "20.8% win rate",
-    "detail": "Across 48 games. Just don't pick it."
+    "player": "GRENINJA",
+    "value": "21.3% win rate",
+    "detail": "Across 108 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -176,8 +176,8 @@
   },
   "rare_char_user": {
     "stat": "Rarest Character Specialist",
-    "player": "jmoon",
-    "value": "SHEIK",
+    "player": "alvaro",
+    "value": "PAC-MAN",
     "detail": "One of the only players to use this character"
   }
 }
