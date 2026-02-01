@@ -1,6 +1,120 @@
 {
   "reports": [
     {
+      "date": "January 31, 2026",
+      "generated_at": "2026-02-01T16:08:29.713870",
+      "headline": "ACTION-PACKED DAY: 10 MATCHES, 36 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 10 intense matches with a combined 36 knockouts.\n\nwill was the workhorse of the day, grinding through 10 matches with 5 victories.\n\nThe hottest player was jmoon who maintained an impressive 80.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with INCINEROAR!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "will",
+        "reason": "Most active player with 10 games"
+      },
+      "highlights": [
+        "10 total matches played",
+        "will most active with 10 games",
+        "1 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 10,
+        "total_kos": 36,
+        "player_stats": [
+          {
+            "name": "will",
+            "games": 10,
+            "wins": 5,
+            "losses": 5,
+            "win_rate": 50.0,
+            "kos": 19,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 1.06,
+            "main_character": "DONKEY KONG",
+            "character_games": 3
+          },
+          {
+            "name": "ben",
+            "games": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": 20.0,
+            "kos": 3,
+            "falls": 9,
+            "sds": 0,
+            "kd_ratio": 0.33,
+            "main_character": "DONKEY KONG",
+            "character_games": 3
+          },
+          {
+            "name": "jmoon",
+            "games": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 80.0,
+            "kos": 14,
+            "falls": 7,
+            "sds": 0,
+            "kd_ratio": 2.0,
+            "main_character": "JOKER",
+            "character_games": 3
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "DONKEY KONG",
+            "times_played": 6
+          },
+          {
+            "character": "JOKER",
+            "times_played": 5
+          },
+          {
+            "character": "INCINEROAR",
+            "times_played": 4
+          },
+          {
+            "character": "GANONDORF",
+            "times_played": 2
+          },
+          {
+            "character": "STEVE",
+            "times_played": 2
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "jmoon",
+            "character": "INCINEROAR"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "will",
+            "player2": "ben",
+            "total_games": 5,
+            "p1_wins": 4,
+            "p2_wins": 1
+          },
+          {
+            "player1": "jmoon",
+            "player2": "will",
+            "total_games": 5,
+            "p1_wins": 4,
+            "p2_wins": 1
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "jmoon",
+            "streak": 4
+          },
+          {
+            "player": "will",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "January 30, 2026",
       "generated_at": "2026-01-31T16:08:11.509036",
       "headline": "ACTION-PACKED DAY: 57 MATCHES, 255 KOS!",

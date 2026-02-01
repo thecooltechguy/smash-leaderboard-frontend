@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 985,
-    "total_wins": 770,
+    "total_games": 990,
+    "total_wins": 774,
     "winrate_Late Night (10PM-4AM)": {
       "games": 379,
       "win_rate": 80.5
@@ -73,7 +73,7 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 333,
+      "games": 338,
       "win_rate": 77.8
     },
     "winrate_Evening (6PM-9PM)": {
@@ -102,8 +102,8 @@
         "win_rate": 74.0
       },
       "Saturday": {
-        "games": 180,
-        "win_rate": 75.6
+        "games": 185,
+        "win_rate": 75.7
       },
       "Sunday": {
         "games": 105,
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 271,
-      "win_rate": 80.4
+      "games": 274,
+      "win_rate": 80.3
     }
   },
   "weekend_warriors": [
@@ -479,7 +479,7 @@
     },
     {
       "player": "will",
-      "kills": 9
+      "kills": 10
     }
   ],
   "rare_characters": [
@@ -513,7 +513,7 @@
     },
     {
       "character": "RICHTER",
-      "times_played": 3
+      "times_played": 4
     },
     {
       "character": "PICHU",
@@ -557,9 +557,9 @@
     },
     "2026-01": {
       "player": "jmoon",
-      "games": 54,
-      "wins": 48,
-      "win_rate": 88.9
+      "games": 59,
+      "wins": 52,
+      "win_rate": 88.1
     },
     "2025-10": {
       "player": "jmoon",

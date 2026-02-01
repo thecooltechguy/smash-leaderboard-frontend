@@ -8,7 +8,7 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 16.8,
+    "avg_momentum_boost": 16.9,
     "biggest_momentum_player": "lag",
     "biggest_momentum_boost": 33.3,
     "biggest_momentum_detail": "55.9% after win vs 22.5% after loss",
@@ -20,7 +20,7 @@
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.9,
     "after_8_games_wr": 49.7,
-    "fatigue_drop": -1.9
+    "fatigue_drop": -1.8
   },
   "lopsided_matchups": [
     {
