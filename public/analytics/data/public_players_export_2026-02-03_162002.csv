@@ -52,10 +52,10 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 54,2025-06-07 00:44:04.633000,William Wang,will,1416,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/will.png
 3005,2025-08-29 21:54:32.665000,Anish Shinde,messi,951,US,True,3,https://smash-leaderboard-frontend.vercel.app/images/dps/messi.jpg
 678,2025-07-20 05:03:56.423000,Abe Ahmed,mmmmm,1200,US,True,2,https://smash-leaderboard-frontend.vercel.app/images/dps/mmmmm.png
-38,2025-06-06 23:41:48.713000,Jonathan Moon,jmoon,1764,US,False,6,https://smash-leaderboard-frontend.vercel.app/images/dps/jmoon7.jpg
 96,2025-06-11 01:38:28.959000,Ryan Pantig,RP,1200,US,True,1,https://smash-leaderboard-frontend.vercel.app/images/dps/rp.png
 4813,2025-09-20 19:43:12.476000,,n8,1200,,True,0,
 6716,2025-11-13 03:20:11.292000,,rani,1200,US,True,0,
+38,2025-06-06 23:41:48.713000,Jonathan Moon,jmoon,1764,US,False,6,https://smash-leaderboard-frontend.vercel.app/images/dps/jmoon.png
 3657,2025-09-05 22:37:11.688000,Hasan,gapam,1200,US,False,1,
 255,2025-07-05 01:08:00.419000,Fateen Rafid,fateen,1072,BD,False,4,https://smash-leaderboard-frontend.vercel.app/images/dps/fateen.jpg
 88,2025-06-11 01:04:53.673000,Sharif Shameem,samin,1169,US,True,6,https://smash-leaderboard-frontend.vercel.app/images/dps/samin.jpg
