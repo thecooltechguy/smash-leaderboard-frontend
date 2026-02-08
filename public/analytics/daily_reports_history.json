@@ -2442,6 +2442,193 @@
       }
     },
     {
+      "date": "February 07, 2026",
+      "generated_at": "2026-02-08T16:09:39.624128",
+      "headline": "ACTION-PACKED DAY: 51 MATCHES, 221 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 51 intense matches with a combined 221 knockouts.\n\nwill was the workhorse of the day, grinding through 37 matches with 16 victories.\n\nThe hottest player was keneru who maintained an impressive 60.0% win rate.\n\nWe even saw perfection today - will delivered a flawless 3-0 with DONKEY KONG!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "will",
+        "reason": "Most active player with 37 games"
+      },
+      "highlights": [
+        "51 total matches played",
+        "will most active with 37 games",
+        "6 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 51,
+        "total_kos": 221,
+        "player_stats": [
+          {
+            "name": "will",
+            "games": 37,
+            "wins": 16,
+            "losses": 21,
+            "win_rate": 43.2,
+            "kos": 79,
+            "falls": 85,
+            "sds": 0,
+            "kd_ratio": 0.93,
+            "main_character": "LITTLE MAC",
+            "character_games": 15
+          },
+          {
+            "name": "habeas",
+            "games": 37,
+            "wins": 21,
+            "losses": 16,
+            "win_rate": 56.8,
+            "kos": 86,
+            "falls": 78,
+            "sds": 1,
+            "kd_ratio": 1.1,
+            "main_character": "GANONDORF",
+            "character_games": 35
+          },
+          {
+            "name": "subby",
+            "games": 14,
+            "wins": 7,
+            "losses": 7,
+            "win_rate": 50.0,
+            "kos": 25,
+            "falls": 29,
+            "sds": 0,
+            "kd_ratio": 0.86,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 5
+          },
+          {
+            "name": "fateen",
+            "games": 8,
+            "wins": 4,
+            "losses": 4,
+            "win_rate": 50.0,
+            "kos": 18,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 1.0,
+            "main_character": "KING K. ROOL",
+            "character_games": 8
+          },
+          {
+            "name": "keneru",
+            "games": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": 60.0,
+            "kos": 11,
+            "falls": 5,
+            "sds": 0,
+            "kd_ratio": 2.2,
+            "main_character": "DONKEY KONG",
+            "character_games": 3
+          },
+          {
+            "name": "_fateen",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 2,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.67,
+            "main_character": "KING K. ROOL",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "GANONDORF",
+            "times_played": 35
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 21
+          },
+          {
+            "character": "LITTLE MAC",
+            "times_played": 17
+          },
+          {
+            "character": "KING K. ROOL",
+            "times_played": 9
+          },
+          {
+            "character": "STEVE",
+            "times_played": 6
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "will",
+            "character": "DONKEY KONG"
+          },
+          {
+            "player": "will",
+            "character": "DONKEY KONG"
+          },
+          {
+            "player": "fateen",
+            "character": "KING K. ROOL"
+          },
+          {
+            "player": "subby",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "subby",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "keneru",
+            "character": "RIDLEY"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "will",
+            "total_games": 37,
+            "p1_wins": 21,
+            "p2_wins": 16
+          },
+          {
+            "player1": "subby",
+            "player2": "fateen",
+            "total_games": 8,
+            "p1_wins": 4,
+            "p2_wins": 4
+          },
+          {
+            "player1": "subby",
+            "player2": "keneru",
+            "total_games": 5,
+            "p1_wins": 2,
+            "p2_wins": 3
+          },
+          {
+            "player1": "subby",
+            "player2": "_fateen",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "habeas",
+            "streak": 3
+          },
+          {
+            "player": "subby",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "February 06, 2026",
       "generated_at": "2026-02-07T16:08:46.046237",
       "headline": "REST DAY AT THE ARENA",

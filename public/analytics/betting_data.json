@@ -58,6 +58,20 @@
     },
     {
       "player1": "habeas",
+      "player2": "will",
+      "p1_wins": 71,
+      "p2_wins": 54,
+      "total": 125,
+      "p1_prob": 56.8,
+      "p2_prob": 43.2,
+      "p1_american": "-131",
+      "p2_american": "+131",
+      "p1_decimal": 1.76,
+      "p2_decimal": 2.31,
+      "confidence": "high"
+    },
+    {
+      "player1": "habeas",
       "player2": "own",
       "p1_wins": 69,
       "p2_wins": 31,
@@ -82,20 +96,6 @@
       "p2_american": "-255",
       "p1_decimal": 3.56,
       "p2_decimal": 1.39,
-      "confidence": "high"
-    },
-    {
-      "player1": "habeas",
-      "player2": "will",
-      "p1_wins": 50,
-      "p2_wins": 38,
-      "total": 88,
-      "p1_prob": 56.8,
-      "p2_prob": 43.2,
-      "p1_american": "-131",
-      "p2_american": "+131",
-      "p1_decimal": 1.76,
-      "p2_decimal": 2.32,
       "confidence": "high"
     },
     {
@@ -127,6 +127,20 @@
       "confidence": "high"
     },
     {
+      "player1": "fateen",
+      "player2": "subby",
+      "p1_wins": 18,
+      "p2_wins": 39,
+      "total": 57,
+      "p1_prob": 31.6,
+      "p2_prob": 68.4,
+      "p1_american": "+216",
+      "p2_american": "-216",
+      "p1_decimal": 3.17,
+      "p2_decimal": 1.46,
+      "confidence": "high"
+    },
+    {
       "player1": "habeas",
       "player2": "samin",
       "p1_wins": 37,
@@ -152,20 +166,6 @@
       "p2_american": "+400",
       "p1_decimal": 1.25,
       "p2_decimal": 5.0,
-      "confidence": "high"
-    },
-    {
-      "player1": "fateen",
-      "player2": "subby",
-      "p1_wins": 14,
-      "p2_wins": 35,
-      "total": 49,
-      "p1_prob": 28.6,
-      "p2_prob": 71.4,
-      "p1_american": "+250",
-      "p2_american": "-250",
-      "p1_decimal": 3.5,
-      "p2_decimal": 1.4,
       "confidence": "high"
     },
     {
@@ -253,6 +253,20 @@
       "confidence": "high"
     },
     {
+      "player1": "keneru",
+      "player2": "subby",
+      "p1_wins": 28,
+      "p2_wins": 9,
+      "total": 37,
+      "p1_prob": 75.7,
+      "p2_prob": 24.3,
+      "p1_american": "-311",
+      "p2_american": "+311",
+      "p1_decimal": 1.32,
+      "p2_decimal": 4.11,
+      "confidence": "high"
+    },
+    {
       "player1": "subby",
       "player2": "ya",
       "p1_wins": 36,
@@ -306,20 +320,6 @@
       "p2_american": "+3100",
       "p1_decimal": 1.03,
       "p2_decimal": 32.0,
-      "confidence": "high"
-    },
-    {
-      "player1": "keneru",
-      "player2": "subby",
-      "p1_wins": 25,
-      "p2_wins": 7,
-      "total": 32,
-      "p1_prob": 78.1,
-      "p2_prob": 21.9,
-      "p1_american": "-357",
-      "p2_american": "+357",
-      "p1_decimal": 1.28,
-      "p2_decimal": 4.57,
       "confidence": "high"
     },
     {
@@ -1322,15 +1322,15 @@
     {
       "player1": "habeas",
       "player2": "will",
-      "p1_wins": 50,
-      "p2_wins": 38,
-      "total": 88,
+      "p1_wins": 71,
+      "p2_wins": 54,
+      "total": 125,
       "p1_prob": 56.8,
       "p2_prob": 43.2,
       "p1_american": "-131",
       "p2_american": "+131",
       "p1_decimal": 1.76,
-      "p2_decimal": 2.32,
+      "p2_decimal": 2.31,
       "confidence": "high"
     },
     {
@@ -1605,9 +1605,9 @@
     },
     {
       "player": "will",
-      "h2h_wins": 128,
-      "h2h_losses": 115,
-      "h2h_rate": 52.7,
+      "h2h_wins": 144,
+      "h2h_losses": 136,
+      "h2h_rate": 51.4,
       "opponents": 11
     },
     {
@@ -1619,23 +1619,23 @@
     },
     {
       "player": "habeas",
-      "h2h_wins": 968,
-      "h2h_losses": 939,
-      "h2h_rate": 50.8,
+      "h2h_wins": 989,
+      "h2h_losses": 955,
+      "h2h_rate": 50.9,
       "opponents": 22
     },
     {
       "player": "subby",
-      "h2h_wins": 298,
-      "h2h_losses": 343,
+      "h2h_wins": 304,
+      "h2h_losses": 350,
       "h2h_rate": 46.5,
       "opponents": 16
     },
     {
       "player": "keneru",
-      "h2h_wins": 233,
-      "h2h_losses": 280,
-      "h2h_rate": 45.4,
+      "h2h_wins": 236,
+      "h2h_losses": 282,
+      "h2h_rate": 45.6,
       "opponents": 12
     },
     {
@@ -1647,9 +1647,9 @@
     },
     {
       "player": "fateen",
-      "h2h_wins": 25,
-      "h2h_losses": 42,
-      "h2h_rate": 37.3,
+      "h2h_wins": 29,
+      "h2h_losses": 46,
+      "h2h_rate": 38.7,
       "opponents": 4
     },
     {

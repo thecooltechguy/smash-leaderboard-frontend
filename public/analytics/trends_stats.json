@@ -8,7 +8,7 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 16.9,
+    "avg_momentum_boost": 16.7,
     "biggest_momentum_player": "lag",
     "biggest_momentum_boost": 33.3,
     "biggest_momentum_detail": "55.9% after win vs 22.5% after loss",
@@ -79,7 +79,7 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 63,
-    "games": 2252
+    "games": 2289
   },
   "dominant_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.145,
+    "correlation": -0.144,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

@@ -21,8 +21,8 @@
       "plays": 194
     },
     "Saturday": {
-      "character": "MR. GAME & WATCH",
-      "plays": 161
+      "character": "DONKEY KONG",
+      "plays": 169
     },
     "Sunday": {
       "character": "DONKEY KONG",
@@ -137,10 +137,10 @@
     },
     {
       "player": "keneru",
-      "weekend_wr": 54.5,
+      "weekend_wr": 54.6,
       "weekday_wr": 44.4,
-      "diff": 10.1,
-      "weekend_games": 200,
+      "diff": 10.2,
+      "weekend_games": 205,
       "weekday_games": 599
     }
   ],
@@ -317,8 +317,8 @@
     },
     {
       "character": "BOWSER",
-      "plays": 112,
-      "win_rate": 63.4
+      "plays": 116,
+      "win_rate": 62.1
     },
     {
       "character": "KING DEDEDE",
@@ -417,10 +417,10 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2252,
-    "total_wins": 1148,
-    "total_kos": 4836,
-    "total_sds": 96,
+    "total_games": 2289,
+    "total_wins": 1169,
+    "total_kos": 4922,
+    "total_sds": 97,
     "by_day": {
       "Monday": {
         "games": 178,
@@ -443,8 +443,8 @@
         "win_rate": 49.2
       },
       "Saturday": {
-        "games": 405,
-        "win_rate": 48.1
+        "games": 442,
+        "win_rate": 48.9
       },
       "Sunday": {
         "games": 223,
@@ -572,6 +572,12 @@
       "games": 7,
       "wins": 6,
       "win_rate": 85.7
+    },
+    "2026-02": {
+      "player": "keneru",
+      "games": 5,
+      "wins": 3,
+      "win_rate": 60.0
     }
   },
   "busiest_hour": {
