@@ -8,7 +8,7 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 16.7,
+    "avg_momentum_boost": 16.6,
     "biggest_momentum_player": "lag",
     "biggest_momentum_boost": 33.3,
     "biggest_momentum_detail": "55.9% after win vs 22.5% after loss",
@@ -18,9 +18,9 @@
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.9,
+    "first_3_games_wr": 48.0,
     "after_8_games_wr": 49.7,
-    "fatigue_drop": -1.8
+    "fatigue_drop": -1.7
   },
   "lopsided_matchups": [
     {
@@ -79,7 +79,7 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 63,
-    "games": 2289
+    "games": 2311
   },
   "dominant_matchups": [
     {

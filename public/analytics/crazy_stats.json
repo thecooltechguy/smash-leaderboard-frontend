@@ -26,7 +26,7 @@
     },
     "Sunday": {
       "character": "DONKEY KONG",
-      "plays": 122
+      "plays": 123
     }
   },
   "late_night_warriors": [
@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 990,
-    "total_wins": 774,
+    "total_games": 1003,
+    "total_wins": 785,
     "winrate_Late Night (10PM-4AM)": {
       "games": 379,
       "win_rate": 80.5
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 338,
-      "win_rate": 77.8
+      "games": 351,
+      "win_rate": 78.1
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 243,
@@ -106,8 +106,8 @@
         "win_rate": 75.7
       },
       "Sunday": {
-        "games": 105,
-        "win_rate": 87.6
+        "games": 118,
+        "win_rate": 87.3
       }
     },
     "best_character": {
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 274,
-      "win_rate": 80.3
+      "games": 277,
+      "win_rate": 80.5
     }
   },
   "weekend_warriors": [
@@ -307,8 +307,8 @@
   "blessed_characters": [
     {
       "character": "MARTH",
-      "plays": 27,
-      "win_rate": 81.5
+      "plays": 28,
+      "win_rate": 78.6
     },
     {
       "character": "LUIGI",
@@ -417,9 +417,9 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2289,
-    "total_wins": 1169,
-    "total_kos": 4922,
+    "total_games": 2311,
+    "total_wins": 1176,
+    "total_kos": 4966,
     "total_sds": 97,
     "by_day": {
       "Monday": {
@@ -447,8 +447,8 @@
         "win_rate": 48.9
       },
       "Sunday": {
-        "games": 223,
-        "win_rate": 53.8
+        "games": 245,
+        "win_rate": 51.8
       }
     },
     "best_day": {
@@ -463,7 +463,7 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 135
+      "kills": 137
     },
     {
       "player": "amar",
@@ -488,7 +488,7 @@
       "times_played": 5
     },
     {
-      "character": "PAC-MAN",
+      "character": "KEN",
       "times_played": 5
     },
     {
@@ -504,15 +504,15 @@
       "times_played": 4
     },
     {
-      "character": "KEN",
-      "times_played": 4
-    },
-    {
       "character": "BAYONETTA",
       "times_played": 4
     },
     {
       "character": "RICHTER",
+      "times_played": 4
+    },
+    {
+      "character": "PIT",
       "times_played": 4
     },
     {
@@ -574,16 +574,16 @@
       "win_rate": 85.7
     },
     "2026-02": {
-      "player": "keneru",
-      "games": 5,
-      "wins": 3,
-      "win_rate": 60.0
+      "player": "jmoon",
+      "games": 13,
+      "wins": 11,
+      "win_rate": 84.6
     }
   },
   "busiest_hour": {
     "hour": 17,
     "hour_formatted": "17:00 - 18:00",
-    "games": 1034
+    "games": 1054
   },
   "quietest_hour": {
     "hour": 8,

@@ -7,7 +7,6 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 "
 10064,2026-02-08 02:50:45.155000,,_fateen,1200,,False,1,
 74,2025-06-08 01:06:31.396000,Jackson Mowatt Gok,strike,1151,AU,False,5,https://smash-leaderboard-frontend.vercel.app/images/dps/jackedson.png
-21,2025-06-06 08:21:51.674000,Haseab,habeas,1445,CA,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/habeas.png
 9841,2026-01-31 01:47:35.508000,,kèneru,1200,,False,0,
 9455,2026-01-23 03:37:10.087000,,Jean,1200,,False,0,
 9373,2026-01-23 02:04:35.027000,,devmo,1200,,False,1,
@@ -37,6 +36,7 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 3758,2025-09-06 05:03:02.078000,Julien Alvarez,fckn noob,1200,US,True,1,
 3808,2025-09-06 07:33:50.109000,,ridlay,1200,US,True,1,
 2821,2025-08-26 04:44:53.685000,Raul,Raulito,1170,US,True,4,https://pub-7712ec77fabb4a6d996c607b226d98f0.r2.dev/raul.png
+21,2025-06-06 08:21:51.674000,Haseab,habeas,1440,CA,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/habeas.png
 23,2025-06-06 08:31:02.716000,Anish Thite,nish,1213,US,False,6,https://smash-leaderboard-frontend.vercel.app/images/dps/nish.png
 4827,2025-09-20 21:35:58.136000,,maximilian,1200,,True,0,
 1473,2025-08-07 01:18:08.142000,sky,sky,1200,US,True,0,
@@ -50,14 +50,14 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 39,2025-06-06 23:46:35.620000,Kareem Dasilva,keneru,1316,US,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/keneru.png
 3005,2025-08-29 21:54:32.665000,Anish Shinde,messi,959,US,True,3,https://smash-leaderboard-frontend.vercel.app/images/dps/messi.jpg
 678,2025-07-20 05:03:56.423000,Abe Ahmed,mmmmm,1069,US,True,3,https://smash-leaderboard-frontend.vercel.app/images/dps/mmmmm.png
+54,2025-06-07 00:44:04.633000,William Wang,will,1456,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/will.png
 670,2025-07-20 04:46:50.543000,waw,waw,1200,US,True,0,
 1075,2025-07-30 23:55:18.528000,Gino,gino,1200,US,True,1,
+38,2025-06-06 23:41:48.713000,Jonathan Moon,jmoon,1764,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/jmoon.png
 8661,2025-12-11 10:09:29.715000,,vora,1200,,True,0,
-54,2025-06-07 00:44:04.633000,William Wang,will,1445,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/will.png
 96,2025-06-11 01:38:28.959000,Ryan Pantig,RP,1200,US,True,1,https://smash-leaderboard-frontend.vercel.app/images/dps/rp.png
 4813,2025-09-20 19:43:12.476000,,n8,1200,,True,0,
 6716,2025-11-13 03:20:11.292000,,rani,1200,US,True,0,
-38,2025-06-06 23:41:48.713000,Jonathan Moon,jmoon,1770,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/jmoon.png
 3657,2025-09-05 22:37:11.688000,Hasan,gapam,1200,US,False,1,
 88,2025-06-11 01:04:53.673000,Sharif Shameem,samin,1180,US,True,7,https://smash-leaderboard-frontend.vercel.app/images/dps/samin.jpg
 35,2025-06-06 22:21:01.865000,Bihan Mahadewa,bihan,1200,US,True,1,https://smash-leaderboard-frontend.vercel.app/images/dps/bihan.png
