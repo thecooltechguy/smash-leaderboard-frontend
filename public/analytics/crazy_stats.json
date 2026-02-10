@@ -2,11 +2,11 @@
   "character_by_day": {
     "Monday": {
       "character": "DONKEY KONG",
-      "plays": 145
+      "plays": 164
     },
     "Tuesday": {
       "character": "DONKEY KONG",
-      "plays": 116
+      "plays": 133
     },
     "Wednesday": {
       "character": "DONKEY KONG",
@@ -32,9 +32,9 @@
   "late_night_warriors": [
     {
       "player": "jmoon",
-      "games": 379,
-      "wins": 305,
-      "win_rate": 80.5
+      "games": 382,
+      "wins": 308,
+      "win_rate": 80.6
     },
     {
       "player": "amar",
@@ -50,9 +50,9 @@
     },
     {
       "player": "keneru",
-      "games": 198,
-      "wins": 109,
-      "win_rate": 55.1
+      "games": 219,
+      "wins": 120,
+      "win_rate": 54.8
     },
     {
       "player": "will",
@@ -62,11 +62,11 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1003,
-    "total_wins": 785,
+    "total_games": 1006,
+    "total_wins": 788,
     "winrate_Late Night (10PM-4AM)": {
-      "games": 379,
-      "win_rate": 80.5
+      "games": 382,
+      "win_rate": 80.6
     },
     "winrate_Morning (5AM-11AM)": {
       "games": 30,
@@ -86,8 +86,8 @@
         "win_rate": 83.3
       },
       "Tuesday": {
-        "games": 70,
-        "win_rate": 77.1
+        "games": 73,
+        "win_rate": 78.1
       },
       "Wednesday": {
         "games": 151,
@@ -134,14 +134,6 @@
       "diff": 18.9,
       "weekend_games": 28,
       "weekday_games": 66
-    },
-    {
-      "player": "keneru",
-      "weekend_wr": 54.6,
-      "weekday_wr": 44.4,
-      "diff": 10.2,
-      "weekend_games": 205,
-      "weekday_games": 599
     }
   ],
   "weekday_warriors": [
@@ -204,11 +196,11 @@
       "streak": 23
     },
     {
-      "player": "ya",
-      "streak": 19
+      "player": "unknown",
+      "streak": 22
     },
     {
-      "player": "unknown",
+      "player": "ya",
       "streak": 19
     },
     {
@@ -241,8 +233,8 @@
     },
     {
       "player": "strike",
-      "sd_games": 23,
-      "sd_win_rate": 60.9
+      "sd_games": 27,
+      "sd_win_rate": 63.0
     },
     {
       "player": "samin",
@@ -262,7 +254,7 @@
     },
     "Tuesday": {
       "players": "habeas vs jmoon",
-      "times": 53
+      "times": 56
     },
     "Wednesday": {
       "players": "habeas vs jmoon",
@@ -278,6 +270,11 @@
     }
   },
   "cursed_characters": [
+    {
+      "character": "UNKNOWN",
+      "plays": 22,
+      "win_rate": 0.0
+    },
     {
       "character": "GRENINJA",
       "plays": 108,
@@ -297,11 +294,6 @@
       "character": "POK\u00c9MON TRAINER",
       "plays": 39,
       "win_rate": 25.6
-    },
-    {
-      "character": "SONIC",
-      "plays": 26,
-      "win_rate": 26.9
     }
   ],
   "blessed_characters": [
@@ -316,13 +308,13 @@
       "win_rate": 64.6
     },
     {
-      "character": "BOWSER",
-      "plays": 116,
-      "win_rate": 62.1
+      "character": "KING DEDEDE",
+      "plays": 181,
+      "win_rate": 60.8
     },
     {
-      "character": "KING DEDEDE",
-      "plays": 177,
+      "character": "BOWSER",
+      "plays": 119,
       "win_rate": 60.5
     },
     {
@@ -380,18 +372,18 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 726,
-      "win_rate": 44.5
+      "games": 766,
+      "win_rate": 44.3
     },
     {
       "player": "subby",
-      "games": 463,
-      "win_rate": 45.8
+      "games": 499,
+      "win_rate": 46.5
     },
     {
       "player": "jmoon",
-      "games": 335,
-      "win_rate": 80.9
+      "games": 338,
+      "win_rate": 81.1
     },
     {
       "player": "nish",
@@ -400,15 +392,15 @@
     },
     {
       "player": "keneru",
-      "games": 185,
-      "win_rate": 56.8
+      "games": 206,
+      "win_rate": 56.3
     }
   ],
   "single_game_most_kos": {
-    "player": "shafaq",
-    "kos": 9,
-    "character": "SAMUS",
-    "won": true
+    "player": "aadil",
+    "kos": 17,
+    "character": "YOSHI",
+    "won": false
   },
   "single_game_most_sds": {
     "player": "bihan",
@@ -417,18 +409,18 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2311,
-    "total_wins": 1176,
-    "total_kos": 4966,
-    "total_sds": 97,
+    "total_games": 2351,
+    "total_wins": 1192,
+    "total_kos": 5090,
+    "total_sds": 103,
     "by_day": {
       "Monday": {
-        "games": 178,
-        "win_rate": 56.7
+        "games": 199,
+        "win_rate": 55.8
       },
       "Tuesday": {
-        "games": 209,
-        "win_rate": 56.9
+        "games": 228,
+        "win_rate": 54.8
       },
       "Wednesday": {
         "games": 424,
@@ -452,8 +444,8 @@
       }
     },
     "best_day": {
-      "day": "Tuesday",
-      "win_rate": 56.9
+      "day": "Monday",
+      "win_rate": 55.8
     },
     "worst_day": {
       "day": "Thursday",
@@ -575,9 +567,9 @@
     },
     "2026-02": {
       "player": "jmoon",
-      "games": 13,
-      "wins": 11,
-      "win_rate": 84.6
+      "games": 16,
+      "wins": 14,
+      "win_rate": 87.5
     }
   },
   "busiest_hour": {

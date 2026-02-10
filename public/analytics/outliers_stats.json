@@ -2,15 +2,15 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,311 games",
-    "detail": "That's 10.3 games per day on average",
-    "runner_up": "subby (1,157)"
+    "value": "2,351 games",
+    "detail": "That's 10.5 games per day on average",
+    "runner_up": "subby (1,193)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
     "value": "78.3%",
-    "detail": "785W - 218L across 1003 games"
+    "detail": "788W - 218L across 1006 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
@@ -34,7 +34,7 @@
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
     "value": "1.61 K/D",
-    "detail": "2434 KOs, 1512 deaths"
+    "detail": "2440 KOs, 1514 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -45,8 +45,8 @@
   "most_sds_total": {
     "stat": "Most Self-Destructs (Total)",
     "player": "subby",
-    "value": "101 SDs",
-    "detail": "That's 1 SD every 11.5 games"
+    "value": "113 SDs",
+    "detail": "That's 1 SD every 10.6 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -88,7 +88,7 @@
     "stat": "Biggest Night Owl",
     "player": "habeas",
     "value": "1102 late-night games",
-    "detail": "That's 47.7% of their games after 10PM"
+    "detail": "That's 46.9% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
@@ -104,9 +104,9 @@
   },
   "most_cursed_char": {
     "stat": "Most Cursed Character",
-    "player": "GRENINJA",
-    "value": "21.3% win rate",
-    "detail": "Across 108 games. Just don't pick it."
+    "player": "UNKNOWN",
+    "value": "0.0% win rate",
+    "detail": "Across 22 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -117,7 +117,7 @@
   "biggest_rivalry": {
     "stat": "Biggest Rivalry",
     "player": "habeas vs jmoon",
-    "value": "600 matches",
+    "value": "603 matches",
     "detail": "The most frequent matchup in the league"
   },
   "best_day_performance": {
@@ -166,13 +166,13 @@
     "stat": "Most Perfect Games",
     "player": "jmoon",
     "value": "109 flawless victories",
-    "detail": "That's 10.9% of their games"
+    "detail": "That's 10.8% of their games"
   },
   "single_game_kos": {
     "stat": "Most KOs in One Match",
-    "player": "shafaq",
-    "value": "9 KOs",
-    "detail": "Playing as SAMUS"
+    "player": "aadil",
+    "value": "17 KOs",
+    "detail": "Playing as YOSHI"
   },
   "rare_char_user": {
     "stat": "Rarest Character Specialist",
