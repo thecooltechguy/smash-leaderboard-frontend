@@ -74,9 +74,9 @@
   },
   "weekend_warrior": {
     "stat": "Weekend Warrior",
-    "player": "gapam",
-    "value": "+28.1% on weekends",
-    "detail": "Weekend: 33.3% vs Weekday: 5.3%"
+    "player": "lag",
+    "value": "+18.8% on weekends",
+    "detail": "Weekend: 50.0% vs Weekday: 31.2%"
   },
   "weekday_grinder": {
     "stat": "Weekday Warrior",

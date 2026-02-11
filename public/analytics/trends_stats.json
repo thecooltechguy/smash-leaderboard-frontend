@@ -72,8 +72,8 @@
   "day_activity": {
     "busiest_day": "Thursday",
     "busiest_games": 1977,
-    "quietest_day": "Tuesday",
-    "quietest_games": 1008,
+    "quietest_day": "Sunday",
+    "quietest_games": 1010,
     "friday_vs_monday": 1.2
   },
   "streakiness": {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.139,
+    "correlation": -0.143,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

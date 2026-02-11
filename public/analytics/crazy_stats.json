@@ -6,7 +6,7 @@
     },
     "Tuesday": {
       "character": "DONKEY KONG",
-      "plays": 133
+      "plays": 136
     },
     "Wednesday": {
       "character": "DONKEY KONG",
@@ -309,13 +309,13 @@
     },
     {
       "character": "KING DEDEDE",
-      "plays": 181,
-      "win_rate": 60.8
+      "plays": 185,
+      "win_rate": 61.1
     },
     {
       "character": "BOWSER",
-      "plays": 119,
-      "win_rate": 60.5
+      "plays": 120,
+      "win_rate": 60.8
     },
     {
       "character": "PIRANHA PLANT",
@@ -573,9 +573,9 @@
     }
   },
   "busiest_hour": {
-    "hour": 17,
-    "hour_formatted": "17:00 - 18:00",
-    "games": 1054
+    "hour": 18,
+    "hour_formatted": "18:00 - 19:00",
+    "games": 1063
   },
   "quietest_hour": {
     "hour": 8,

@@ -2442,6 +2442,150 @@
       }
     },
     {
+      "date": "February 10, 2026",
+      "generated_at": "2026-02-11T16:27:04.145024",
+      "headline": "ACTION-PACKED DAY: 11 MATCHES, 58 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 11 intense matches with a combined 58 knockouts.\n\ndice was the workhorse of the day, grinding through 7 matches with 0 victories.\n\nThe hottest player was ben who maintained an impressive 75.0% win rate.\n\nWe even saw perfection today - gapam delivered a flawless 3-0 with MR. GAME & WATCH!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "dice",
+        "reason": "Most active player with 7 games"
+      },
+      "highlights": [
+        "11 total matches played",
+        "dice most active with 7 games",
+        "2 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 11,
+        "total_kos": 58,
+        "player_stats": [
+          {
+            "name": "dice",
+            "games": 7,
+            "wins": 0,
+            "losses": 7,
+            "win_rate": 0.0,
+            "kos": 11,
+            "falls": 21,
+            "sds": 0,
+            "kd_ratio": 0.52,
+            "main_character": "KIRBY",
+            "character_games": 7
+          },
+          {
+            "name": "gapam",
+            "games": 7,
+            "wins": 4,
+            "losses": 3,
+            "win_rate": 57.1,
+            "kos": 14,
+            "falls": 10,
+            "sds": 0,
+            "kd_ratio": 1.4,
+            "main_character": "SEPHIROTH",
+            "character_games": 3
+          },
+          {
+            "name": "ben",
+            "games": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 75.0,
+            "kos": 15,
+            "falls": 7,
+            "sds": 0,
+            "kd_ratio": 2.14,
+            "main_character": "DONKEY KONG",
+            "character_games": 2
+          },
+          {
+            "name": "will",
+            "games": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": 25.0,
+            "kos": 7,
+            "falls": 11,
+            "sds": 0,
+            "kd_ratio": 0.64,
+            "main_character": "KING K. ROOL",
+            "character_games": 3
+          },
+          {
+            "name": "shafaq",
+            "games": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 75.0,
+            "kos": 11,
+            "falls": 7,
+            "sds": 0,
+            "kd_ratio": 1.57,
+            "main_character": "KING DEDEDE",
+            "character_games": 4
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "KIRBY",
+            "times_played": 7
+          },
+          {
+            "character": "KING DEDEDE",
+            "times_played": 4
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 3
+          },
+          {
+            "character": "MR. GAME & WATCH",
+            "times_played": 3
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 3
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "gapam",
+            "character": "MR. GAME & WATCH"
+          },
+          {
+            "player": "shafaq",
+            "character": "KING DEDEDE"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "will",
+            "player2": "shafaq",
+            "total_games": 4,
+            "p1_wins": 1,
+            "p2_wins": 3
+          },
+          {
+            "player1": "gapam",
+            "player2": "dice",
+            "total_games": 3,
+            "p1_wins": 3,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "gapam",
+            "streak": 3
+          },
+          {
+            "player": "shafaq",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "February 09, 2026",
       "generated_at": "2026-02-10T16:28:12.720669",
       "headline": "ACTION-PACKED DAY: 46 MATCHES, 313 KOS!",

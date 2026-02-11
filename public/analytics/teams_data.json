@@ -1,7 +1,7 @@
 {
-  "total_team_matches": 866,
+  "total_team_matches": 870,
   "match_formats": {
-    "1v2": 258,
+    "1v2": 262,
     "2v2": 315,
     "2v1": 75,
     "1v3": 75,
@@ -572,6 +572,32 @@
       "total_falls": 6
     },
     {
+      "team": "gapam",
+      "members": [
+        "gapam"
+      ],
+      "size": 1,
+      "wins": 3,
+      "losses": 0,
+      "total": 3,
+      "win_rate": 100.0,
+      "total_kos": 12,
+      "total_falls": 5
+    },
+    {
+      "team": "ben",
+      "members": [
+        "ben"
+      ],
+      "size": 1,
+      "wins": 3,
+      "losses": 0,
+      "total": 3,
+      "win_rate": 100.0,
+      "total_kos": 14,
+      "total_falls": 4
+    },
+    {
       "team": "mizan",
       "members": [
         "mizan"
@@ -623,33 +649,6 @@
       "win_rate": 100.0,
       "total_kos": 10,
       "total_falls": 9
-    },
-    {
-      "team": "caleb & jmoon",
-      "members": [
-        "caleb",
-        "jmoon"
-      ],
-      "size": 2,
-      "wins": 2,
-      "losses": 0,
-      "total": 2,
-      "win_rate": 100.0,
-      "total_kos": 6,
-      "total_falls": 6
-    },
-    {
-      "team": "messi",
-      "members": [
-        "messi"
-      ],
-      "size": 1,
-      "wins": 2,
-      "losses": 0,
-      "total": 2,
-      "win_rate": 100.0,
-      "total_kos": 5,
-      "total_falls": 4
     }
   ],
   "most_active_teams": [
@@ -973,6 +972,15 @@
       "games_with_best": 7
     },
     {
+      "player": "ben",
+      "team_wins": 3,
+      "team_losses": 2,
+      "team_games": 5,
+      "team_win_rate": 60.0,
+      "best_teammate": "fateen",
+      "games_with_best": 1
+    },
+    {
       "player": "ryy",
       "team_wins": 25,
       "team_losses": 19,
@@ -1252,6 +1260,15 @@
       "games_with_best": 4
     },
     {
+      "player": "gapam",
+      "team_wins": 4,
+      "team_losses": 17,
+      "team_games": 21,
+      "team_win_rate": 19.0,
+      "best_teammate": "jean",
+      "games_with_best": 10
+    },
+    {
       "player": "jean",
       "team_wins": 5,
       "team_losses": 22,
@@ -1259,15 +1276,6 @@
       "team_win_rate": 18.5,
       "best_teammate": "nish",
       "games_with_best": 11
-    },
-    {
-      "player": "gapam",
-      "team_wins": 3,
-      "team_losses": 14,
-      "team_games": 17,
-      "team_win_rate": 17.6,
-      "best_teammate": "jean",
-      "games_with_best": 10
     },
     {
       "player": "messi",
@@ -1349,6 +1357,15 @@
       "team_win_rate": 0.0,
       "best_teammate": "fateen",
       "games_with_best": 4
+    },
+    {
+      "player": "dice",
+      "team_wins": 0,
+      "team_losses": 4,
+      "team_games": 4,
+      "team_win_rate": 0.0,
+      "best_teammate": "gapam",
+      "games_with_best": 3
     },
     {
       "player": "dhruvus",
@@ -1685,10 +1702,10 @@
     }
   ],
   "summary": {
-    "total_team_matches": 866,
+    "total_team_matches": 870,
     "true_2v2_matches": 315,
-    "total_unique_teams": 284,
+    "total_unique_teams": 287,
     "total_unique_duos": 82,
-    "total_partnerships": 241
+    "total_partnerships": 243
   }
 }
