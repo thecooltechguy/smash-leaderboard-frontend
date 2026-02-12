@@ -9,8 +9,8 @@
       "plays": 136
     },
     "Wednesday": {
-      "character": "DONKEY KONG",
-      "plays": 155
+      "character": "SAMUS",
+      "plays": 158
     },
     "Thursday": {
       "character": "ZELDA",
@@ -188,16 +188,16 @@
       "streak": 28
     },
     {
+      "player": "unknown",
+      "streak": 24
+    },
+    {
       "player": "habeas",
       "streak": 23
     },
     {
       "player": "messi",
       "streak": 23
-    },
-    {
-      "player": "unknown",
-      "streak": 22
     },
     {
       "player": "ya",
@@ -272,18 +272,18 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 22,
+      "plays": 24,
       "win_rate": 0.0
-    },
-    {
-      "character": "GRENINJA",
-      "plays": 108,
-      "win_rate": 21.3
     },
     {
       "character": "FOX",
       "plays": 65,
       "win_rate": 21.5
+    },
+    {
+      "character": "GRENINJA",
+      "plays": 109,
+      "win_rate": 22.0
     },
     {
       "character": "SNAKE",
@@ -314,8 +314,8 @@
     },
     {
       "character": "BOWSER",
-      "plays": 120,
-      "win_rate": 60.8
+      "plays": 124,
+      "win_rate": 60.5
     },
     {
       "character": "PIRANHA PLANT",
@@ -387,8 +387,8 @@
     },
     {
       "player": "nish",
-      "games": 262,
-      "win_rate": 43.9
+      "games": 263,
+      "win_rate": 43.7
     },
     {
       "player": "keneru",
@@ -575,7 +575,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1063
+    "games": 1083
   },
   "quietest_hour": {
     "hour": 8,

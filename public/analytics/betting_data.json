@@ -603,6 +603,20 @@
       "confidence": "low"
     },
     {
+      "player1": "fateen",
+      "player2": "nish",
+      "p1_wins": 5,
+      "p2_wins": 7,
+      "total": 12,
+      "p1_prob": 41.7,
+      "p2_prob": 58.3,
+      "p1_american": "+139",
+      "p2_american": "-140",
+      "p1_decimal": 2.4,
+      "p2_decimal": 1.71,
+      "confidence": "low"
+    },
+    {
       "player1": "kento",
       "player2": "shafaq",
       "p1_wins": 6,
@@ -712,6 +726,20 @@
       "p2_american": "+120",
       "p1_decimal": 1.83,
       "p2_decimal": 2.2,
+      "confidence": "low"
+    },
+    {
+      "player1": "gapam",
+      "player2": "shafaq",
+      "p1_wins": 1,
+      "p2_wins": 10,
+      "total": 11,
+      "p1_prob": 9.1,
+      "p2_prob": 90.9,
+      "p1_american": "+1000",
+      "p2_american": "-999",
+      "p1_decimal": 11.0,
+      "p2_decimal": 1.1,
       "confidence": "low"
     },
     {
@@ -894,20 +922,6 @@
       "p2_american": "+600",
       "p1_decimal": 1.17,
       "p2_decimal": 7.0,
-      "confidence": "low"
-    },
-    {
-      "player1": "fateen",
-      "player2": "nish",
-      "p1_wins": 3,
-      "p2_wins": 4,
-      "total": 7,
-      "p1_prob": 42.9,
-      "p2_prob": 57.1,
-      "p1_american": "+133",
-      "p2_american": "-133",
-      "p1_decimal": 2.33,
-      "p2_decimal": 1.75,
       "confidence": "low"
     },
     {
@@ -1289,7 +1303,7 @@
       "confidence": "low"
     }
   ],
-  "total_matchups": 92,
+  "total_matchups": 93,
   "upset_alerts": [
     {
       "player1": "habeas",
@@ -1590,6 +1604,13 @@
       "opponents": 5
     },
     {
+      "player": "shafaq",
+      "h2h_wins": 291,
+      "h2h_losses": 246,
+      "h2h_rate": 54.2,
+      "opponents": 13
+    },
+    {
       "player": "mmmmm",
       "h2h_wins": 27,
       "h2h_losses": 23,
@@ -1597,17 +1618,10 @@
       "opponents": 4
     },
     {
-      "player": "shafaq",
-      "h2h_wins": 281,
-      "h2h_losses": 245,
-      "h2h_rate": 53.4,
-      "opponents": 12
-    },
-    {
       "player": "nish",
-      "h2h_wins": 122,
-      "h2h_losses": 116,
-      "h2h_rate": 51.3,
+      "h2h_wins": 125,
+      "h2h_losses": 118,
+      "h2h_rate": 51.4,
       "opponents": 10
     },
     {
@@ -1647,9 +1661,9 @@
     },
     {
       "player": "fateen",
-      "h2h_wins": 29,
-      "h2h_losses": 46,
-      "h2h_rate": 38.7,
+      "h2h_wins": 31,
+      "h2h_losses": 49,
+      "h2h_rate": 38.8,
       "opponents": 4
     },
     {

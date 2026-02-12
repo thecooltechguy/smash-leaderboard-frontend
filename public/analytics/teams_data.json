@@ -1,7 +1,7 @@
 {
-  "total_team_matches": 870,
+  "total_team_matches": 874,
   "match_formats": {
-    "1v2": 262,
+    "1v2": 266,
     "2v2": 315,
     "2v1": 75,
     "1v3": 75,
@@ -685,12 +685,12 @@
         "nish"
       ],
       "size": 1,
-      "wins": 55,
+      "wins": 56,
       "losses": 6,
-      "total": 61,
-      "win_rate": 90.2,
-      "total_kos": 196,
-      "total_falls": 105
+      "total": 62,
+      "win_rate": 90.3,
+      "total_kos": 200,
+      "total_falls": 107
     },
     {
       "team": "subby",
@@ -875,12 +875,12 @@
         "fateen"
       ],
       "size": 1,
-      "wins": 17,
+      "wins": 20,
       "losses": 6,
-      "total": 23,
-      "win_rate": 73.9,
-      "total_kos": 66,
-      "total_falls": 38
+      "total": 26,
+      "win_rate": 76.9,
+      "total_kos": 82,
+      "total_falls": 43
     },
     {
       "team": "fateen & habeas",
@@ -1045,10 +1045,10 @@
     },
     {
       "player": "fateen",
-      "team_wins": 115,
-      "team_losses": 120,
-      "team_games": 235,
-      "team_win_rate": 48.9,
+      "team_wins": 118,
+      "team_losses": 121,
+      "team_games": 239,
+      "team_win_rate": 49.4,
       "best_teammate": "subby",
       "games_with_best": 114
     },
@@ -1090,10 +1090,10 @@
     },
     {
       "player": "nish",
-      "team_wins": 160,
-      "team_losses": 208,
-      "team_games": 368,
-      "team_win_rate": 43.5,
+      "team_wins": 161,
+      "team_losses": 210,
+      "team_games": 371,
+      "team_win_rate": 43.4,
       "best_teammate": "subby",
       "games_with_best": 68
     },
@@ -1316,9 +1316,9 @@
     {
       "player": "Ryanz",
       "team_wins": 1,
-      "team_losses": 9,
-      "team_games": 10,
-      "team_win_rate": 10.0,
+      "team_losses": 13,
+      "team_games": 14,
+      "team_win_rate": 7.1,
       "best_teammate": "ya",
       "games_with_best": 4
     },
@@ -1334,11 +1334,11 @@
     {
       "player": "unknown",
       "team_wins": 0,
-      "team_losses": 9,
-      "team_games": 9,
+      "team_losses": 10,
+      "team_games": 10,
       "team_win_rate": 0.0,
-      "best_teammate": "keneru",
-      "games_with_best": 2
+      "best_teammate": "Ryanz",
+      "games_with_best": 3
     },
     {
       "player": "donshelly",
@@ -1702,10 +1702,10 @@
     }
   ],
   "summary": {
-    "total_team_matches": 870,
+    "total_team_matches": 874,
     "true_2v2_matches": 315,
-    "total_unique_teams": 287,
+    "total_unique_teams": 289,
     "total_unique_duos": 82,
-    "total_partnerships": 243
+    "total_partnerships": 244
   }
 }
