@@ -37,28 +37,28 @@
       "win_rate": 80.7
     },
     {
+      "player": "jean",
+      "games": 11,
+      "wins": 8,
+      "win_rate": 72.7
+    },
+    {
       "player": "amar",
       "games": 12,
       "wins": 8,
       "win_rate": 66.7
     },
     {
-      "player": "8n",
-      "games": 12,
-      "wins": 7,
-      "win_rate": 58.3
-    },
-    {
       "player": "shafaq",
-      "games": 35,
-      "wins": 20,
-      "win_rate": 57.1
+      "games": 48,
+      "wins": 31,
+      "win_rate": 64.6
     },
     {
-      "player": "will",
-      "games": 11,
-      "wins": 6,
-      "win_rate": 54.5
+      "player": "8n",
+      "games": 15,
+      "wins": 9,
+      "win_rate": 60.0
     }
   ],
   "jmoon_deep_dive": {
@@ -185,7 +185,7 @@
     },
     {
       "player": "unknown",
-      "streak": 30
+      "streak": 35
     },
     {
       "player": "lando",
@@ -223,8 +223,8 @@
   "comeback_kings": [
     {
       "player": "shafaq",
-      "sd_games": 39,
-      "sd_win_rate": 69.2
+      "sd_games": 41,
+      "sd_win_rate": 70.7
     },
     {
       "player": "strike",
@@ -243,8 +243,8 @@
     },
     {
       "player": "fateen",
-      "sd_games": 42,
-      "sd_win_rate": 54.8
+      "sd_games": 43,
+      "sd_win_rate": 53.5
     }
   ],
   "top_matchup_by_day": {
@@ -272,7 +272,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 30,
+      "plays": 35,
       "win_rate": 0.0
     },
     {
@@ -299,8 +299,8 @@
   "blessed_characters": [
     {
       "character": "MARTH",
-      "plays": 28,
-      "win_rate": 78.6
+      "plays": 29,
+      "win_rate": 79.3
     },
     {
       "character": "LUIGI",
@@ -308,14 +308,14 @@
       "win_rate": 64.6
     },
     {
+      "character": "KING DEDEDE",
+      "plays": 197,
+      "win_rate": 60.9
+    },
+    {
       "character": "BOWSER",
       "plays": 124,
       "win_rate": 60.5
-    },
-    {
-      "character": "KING DEDEDE",
-      "plays": 189,
-      "win_rate": 59.8
     },
     {
       "character": "PIRANHA PLANT",
@@ -334,13 +334,13 @@
     },
     {
       "character": "SAMUS",
-      "plays": 72
+      "plays": 74
     }
   ],
   "friday_night_king": {
-    "player": "will",
-    "games": 52,
-    "win_rate": 71.2
+    "player": "shafaq",
+    "games": 21,
+    "win_rate": 81.0
   },
   "early_birds": [
     {
@@ -372,8 +372,8 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 776,
-      "win_rate": 44.2
+      "games": 782,
+      "win_rate": 44.0
     },
     {
       "player": "subby",
@@ -409,10 +409,10 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2380,
-    "total_wins": 1207,
-    "total_kos": 5162,
-    "total_sds": 104,
+    "total_games": 2392,
+    "total_wins": 1211,
+    "total_kos": 5201,
+    "total_sds": 106,
     "by_day": {
       "Monday": {
         "games": 199,
@@ -431,12 +431,12 @@
         "win_rate": 47.3
       },
       "Friday": {
-        "games": 368,
-        "win_rate": 49.2
+        "games": 378,
+        "win_rate": 48.9
       },
       "Saturday": {
-        "games": 442,
-        "win_rate": 48.9
+        "games": 444,
+        "win_rate": 48.6
       },
       "Sunday": {
         "games": 245,
@@ -500,10 +500,6 @@
       "times_played": 4
     },
     {
-      "character": "RICHTER",
-      "times_played": 4
-    },
-    {
       "character": "PIT",
       "times_played": 4
     },
@@ -513,6 +509,10 @@
     },
     {
       "character": "MII GUNNER",
+      "times_played": 3
+    },
+    {
+      "character": "ICE CLIMBERS",
       "times_played": 3
     }
   ],
