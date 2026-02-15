@@ -22,7 +22,7 @@
     },
     "Saturday": {
       "character": "DONKEY KONG",
-      "plays": 169
+      "plays": 179
     },
     "Sunday": {
       "character": "DONKEY KONG",
@@ -134,6 +134,14 @@
       "diff": 18.9,
       "weekend_games": 28,
       "weekday_games": 66
+    },
+    {
+      "player": "jean",
+      "weekend_wr": 50.0,
+      "weekday_wr": 35.1,
+      "diff": 14.9,
+      "weekend_games": 18,
+      "weekday_games": 57
     }
   ],
   "weekday_warriors": [
@@ -185,7 +193,7 @@
     },
     {
       "player": "unknown",
-      "streak": 35
+      "streak": 36
     },
     {
       "player": "lando",
@@ -272,7 +280,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 35,
+      "plays": 36,
       "win_rate": 0.0
     },
     {
@@ -286,14 +294,14 @@
       "win_rate": 22.0
     },
     {
-      "character": "SNAKE",
-      "plays": 34,
-      "win_rate": 23.5
-    },
-    {
       "character": "POK\u00c9MON TRAINER",
       "plays": 39,
       "win_rate": 25.6
+    },
+    {
+      "character": "SNAKE",
+      "plays": 35,
+      "win_rate": 25.7
     }
   ],
   "blessed_characters": [
@@ -575,7 +583,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1087
+    "games": 1113
   },
   "quietest_hour": {
     "hour": 8,

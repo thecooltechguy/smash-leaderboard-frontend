@@ -491,6 +491,20 @@
       "confidence": "medium"
     },
     {
+      "player1": "ben",
+      "player2": "jean",
+      "p1_wins": 9,
+      "p2_wins": 8,
+      "total": 17,
+      "p1_prob": 52.9,
+      "p2_prob": 47.1,
+      "p1_american": "-112",
+      "p2_american": "+112",
+      "p1_decimal": 1.89,
+      "p2_decimal": 2.12,
+      "confidence": "medium"
+    },
+    {
       "player1": "mmmmm",
       "player2": "subby",
       "p1_wins": 3,
@@ -1317,7 +1331,7 @@
       "confidence": "low"
     }
   ],
-  "total_matchups": 94,
+  "total_matchups": 95,
   "upset_alerts": [
     {
       "player1": "habeas",
@@ -1443,6 +1457,20 @@
       "p2_american": "-137",
       "p1_decimal": 2.38,
       "p2_decimal": 1.73,
+      "confidence": "medium"
+    },
+    {
+      "player1": "ben",
+      "player2": "jean",
+      "p1_wins": 9,
+      "p2_wins": 8,
+      "total": 17,
+      "p1_prob": 52.9,
+      "p2_prob": 47.1,
+      "p1_american": "-112",
+      "p2_american": "+112",
+      "p1_decimal": 1.89,
+      "p2_decimal": 2.12,
       "confidence": "medium"
     },
     {
@@ -1630,6 +1658,13 @@
       "h2h_losses": 23,
       "h2h_rate": 54.0,
       "opponents": 4
+    },
+    {
+      "player": "ben",
+      "h2h_wins": 17,
+      "h2h_losses": 15,
+      "h2h_rate": 53.1,
+      "opponents": 3
     },
     {
       "player": "nish",
