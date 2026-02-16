@@ -2442,6 +2442,190 @@
       }
     },
     {
+      "date": "February 15, 2026",
+      "generated_at": "2026-02-16T16:17:45.615103",
+      "headline": "ACTION-PACKED DAY: 39 MATCHES, 160 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 39 intense matches with a combined 160 knockouts.\n\nhabeas was the workhorse of the day, grinding through 37 matches with 24 victories.\n\nThe hottest player was jmoon who maintained an impressive 71.4% win rate.\n\nWe even saw perfection today - habeas delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "habeas",
+        "reason": "Most active player with 37 games"
+      },
+      "highlights": [
+        "39 total matches played",
+        "habeas most active with 37 games",
+        "9 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 39,
+        "total_kos": 160,
+        "player_stats": [
+          {
+            "name": "habeas",
+            "games": 37,
+            "wins": 24,
+            "losses": 13,
+            "win_rate": 64.9,
+            "kos": 88,
+            "falls": 66,
+            "sds": 2,
+            "kd_ratio": 1.33,
+            "main_character": "GANONDORF",
+            "character_games": 37
+          },
+          {
+            "name": "will",
+            "games": 32,
+            "wins": 10,
+            "losses": 22,
+            "win_rate": 31.2,
+            "kos": 54,
+            "falls": 77,
+            "sds": 0,
+            "kd_ratio": 0.7,
+            "main_character": "DONKEY KONG",
+            "character_games": 9
+          },
+          {
+            "name": "jmoon",
+            "games": 7,
+            "wins": 5,
+            "losses": 2,
+            "win_rate": 71.4,
+            "kos": 18,
+            "falls": 10,
+            "sds": 0,
+            "kd_ratio": 1.8,
+            "main_character": "GANONDORF",
+            "character_games": 5
+          },
+          {
+            "name": "unknown",
+            "games": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 2
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "GANONDORF",
+            "times_played": 42
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 9
+          },
+          {
+            "character": "JOKER",
+            "times_played": 7
+          },
+          {
+            "character": "KING K. ROOL",
+            "times_played": 5
+          },
+          {
+            "character": "STEVE",
+            "times_played": 5
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "will",
+            "character": "KING K. ROOL"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "jmoon",
+            "character": "JOKER"
+          },
+          {
+            "player": "jmoon",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "jmoon",
+            "character": "GANONDORF"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "will",
+            "total_games": 30,
+            "p1_wins": 21,
+            "p2_wins": 9
+          },
+          {
+            "player1": "habeas",
+            "player2": "jmoon",
+            "total_games": 6,
+            "p1_wins": 2,
+            "p2_wins": 4
+          },
+          {
+            "player1": "habeas",
+            "player2": "unknown",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          },
+          {
+            "player1": "will",
+            "player2": "unknown",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          },
+          {
+            "player1": "jmoon",
+            "player2": "will",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "habeas",
+            "streak": 9
+          },
+          {
+            "player": "jmoon",
+            "streak": 4
+          },
+          {
+            "player": "will",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "February 14, 2026",
       "generated_at": "2026-02-15T16:08:50.191349",
       "headline": "ACTION-PACKED DAY: 17 MATCHES, 71 KOS!",
@@ -3959,14 +4143,6 @@
       "generated_at": "2026-02-03T16:20:52.096387",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on February 02, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "February 01, 2026",
-      "generated_at": "2026-02-02T16:12:15.203784",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 01, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }

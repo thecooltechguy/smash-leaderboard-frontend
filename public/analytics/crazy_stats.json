@@ -26,7 +26,7 @@
     },
     "Sunday": {
       "character": "DONKEY KONG",
-      "plays": 123
+      "plays": 132
     }
   },
   "late_night_warriors": [
@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1013,
-    "total_wins": 794,
+    "total_games": 1020,
+    "total_wins": 799,
     "winrate_Late Night (10PM-4AM)": {
       "games": 389,
       "win_rate": 80.7
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 351,
-      "win_rate": 78.1
+      "games": 358,
+      "win_rate": 77.9
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 243,
@@ -106,8 +106,8 @@
         "win_rate": 75.7
       },
       "Sunday": {
-        "games": 118,
-        "win_rate": 87.3
+        "games": 125,
+        "win_rate": 86.4
       }
     },
     "best_character": {
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 277,
-      "win_rate": 80.5
+      "games": 278,
+      "win_rate": 80.6
     }
   },
   "weekend_warriors": [
@@ -193,7 +193,7 @@
     },
     {
       "player": "unknown",
-      "streak": 36
+      "streak": 38
     },
     {
       "player": "lando",
@@ -280,7 +280,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 36,
+      "plays": 38,
       "win_rate": 0.0
     },
     {
@@ -417,10 +417,10 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2392,
-    "total_wins": 1211,
-    "total_kos": 5201,
-    "total_sds": 106,
+    "total_games": 2429,
+    "total_wins": 1235,
+    "total_kos": 5289,
+    "total_sds": 108,
     "by_day": {
       "Monday": {
         "games": 199,
@@ -447,8 +447,8 @@
         "win_rate": 48.6
       },
       "Sunday": {
-        "games": 245,
-        "win_rate": 51.8
+        "games": 282,
+        "win_rate": 53.5
       }
     },
     "best_day": {
@@ -463,7 +463,7 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 138
+      "kills": 140
     },
     {
       "player": "amar",
@@ -575,9 +575,9 @@
     },
     "2026-02": {
       "player": "jmoon",
-      "games": 23,
-      "wins": 20,
-      "win_rate": 87.0
+      "games": 30,
+      "wins": 25,
+      "win_rate": 83.3
     }
   },
   "busiest_hour": {
