@@ -2,8 +2,8 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,429 games",
-    "detail": "That's 10.8 games per day on average",
+    "value": "2,458 games",
+    "detail": "That's 11.0 games per day on average",
     "runner_up": "subby (1,193)"
   },
   "most_dominant": {
@@ -87,8 +87,8 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1144 late-night games",
-    "detail": "That's 47.1% of their games after 10PM"
+    "value": "1173 late-night games",
+    "detail": "That's 47.7% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
@@ -106,7 +106,7 @@
     "stat": "Most Cursed Character",
     "player": "UNKNOWN",
     "value": "0.0% win rate",
-    "detail": "Across 38 games. Just don't pick it."
+    "detail": "Across 39 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",

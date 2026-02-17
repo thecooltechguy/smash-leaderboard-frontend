@@ -2,7 +2,7 @@
   "character_by_day": {
     "Monday": {
       "character": "DONKEY KONG",
-      "plays": 164
+      "plays": 173
     },
     "Tuesday": {
       "character": "DONKEY KONG",
@@ -193,7 +193,7 @@
     },
     {
       "player": "unknown",
-      "streak": 38
+      "streak": 39
     },
     {
       "player": "lando",
@@ -257,7 +257,7 @@
   ],
   "top_matchup_by_day": {
     "Monday": {
-      "players": "habeas vs shafaq",
+      "players": "habeas vs keneru",
       "times": 43
     },
     "Tuesday": {
@@ -280,7 +280,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 38,
+      "plays": 39,
       "win_rate": 0.0
     },
     {
@@ -299,9 +299,9 @@
       "win_rate": 25.6
     },
     {
-      "character": "SNAKE",
-      "plays": 35,
-      "win_rate": 25.7
+      "character": "SONIC",
+      "plays": 26,
+      "win_rate": 26.9
     }
   ],
   "blessed_characters": [
@@ -322,8 +322,8 @@
     },
     {
       "character": "BOWSER",
-      "plays": 124,
-      "win_rate": 60.5
+      "plays": 126,
+      "win_rate": 59.5
     },
     {
       "character": "PIRANHA PLANT",
@@ -417,14 +417,14 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2429,
-    "total_wins": 1235,
-    "total_kos": 5289,
+    "total_games": 2458,
+    "total_wins": 1255,
+    "total_kos": 5364,
     "total_sds": 108,
     "by_day": {
       "Monday": {
-        "games": 199,
-        "win_rate": 55.8
+        "games": 228,
+        "win_rate": 57.5
       },
       "Tuesday": {
         "games": 228,
@@ -453,7 +453,7 @@
     },
     "best_day": {
       "day": "Monday",
-      "win_rate": 55.8
+      "win_rate": 57.5
     },
     "worst_day": {
       "day": "Thursday",
@@ -583,7 +583,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1113
+    "games": 1141
   },
   "quietest_hour": {
     "hour": 8,

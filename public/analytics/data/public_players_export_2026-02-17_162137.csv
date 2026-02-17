@@ -1,10 +1,8 @@
 id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 9734,2026-01-30 04:06:04.996000,,Ryanz,1200,,False,1,
 9298,2026-01-22 17:56:47.906000,,8rn,1200,,False,1,
-21,2025-06-06 08:21:51.674000,Haseab,habeas,1540,CA,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/habeas.png
 3758,2025-09-06 05:03:02.078000,Julien Alvarez,fckn noob,1200,US,True,1,
 10270,2026-02-11 01:41:27.097000,,dice,1200,,False,0,
-2106,2025-08-14 20:28:12.107000,unknown,unknown,1057,UN,False,7,
 3808,2025-09-06 07:33:50.109000,,ridlay,1200,US,True,1,
 2821,2025-08-26 04:44:53.685000,Raul,Raulito,1171,US,True,4,https://pub-7712ec77fabb4a6d996c607b226d98f0.r2.dev/raul.png
 9326,2026-01-22 18:14:00.139000,,oh,1200,,False,1,
@@ -30,27 +28,31 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 1112,2025-07-31 03:22:32.800000,Furqan Rydhan,lag,1165,US,False,7,https://pub-ccb175376fc94e64b1b2376fadf6c341.r2.dev/lag.png
 8659,2025-12-11 05:31:17.631000,,8n,1155,,False,4,
 104,2025-06-11 23:16:25.450000,Shafaq Ahmed,shafaq,1487,US,False,8,https://smash-leaderboard-frontend.vercel.app/images/dps/shafaq.png
+21,2025-06-06 08:21:51.674000,Haseab,habeas,1486,CA,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/habeas.png
+9238,2026-01-22 04:00:29.239000,,ben,1188,,False,4,
 9609,2026-01-28 03:05:53.470000,,ryan,1200,,False,1,
 8988,2026-01-08 23:47:36.897000,,.nish,1200,,True,0,
 10228,2026-02-10 08:26:44.758000,,.keneru,1200,,False,0,
-9238,2026-01-22 04:00:29.239000,,ben,1227,,False,4,
 8811,2025-12-14 06:46:33.061000,,ghandi,1200,,True,0,
 8427,2025-12-10 03:50:38.003000,,cowboy,1200,,True,0,
 9701,2026-01-30 02:57:48.715000,,lando.,1200,,False,1,
 8727,2025-12-13 07:56:29.570000,,.subby,1200,,True,0,
 5793,2025-10-21 02:24:51.322000,,heidy,1014,FR,True,4,
 6239,2025-11-01 00:45:52.439000,,donshelly,1200,,True,0,
+2106,2025-08-14 20:28:12.107000,unknown,unknown,1054,UN,False,7,
 670,2025-07-20 04:46:50.543000,waw,waw,1200,US,True,0,
 1075,2025-07-30 23:55:18.528000,Gino,gino,1200,US,True,1,
 77,2025-06-10 01:12:52.868000,Yash Raj,ya,747,IN,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/ya.png
 8661,2025-12-11 10:09:29.715000,,vora,1200,,True,0,
+23,2025-06-06 08:31:02.716000,Anish Thite,nish,1208,US,False,6,https://smash-leaderboard-frontend.vercel.app/images/dps/nish.png
+39,2025-06-06 23:46:35.620000,Kareem Dasilva,keneru,1368,US,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/keneru.png
 96,2025-06-11 01:38:28.959000,Ryan Pantig,RP,1200,US,True,1,https://smash-leaderboard-frontend.vercel.app/images/dps/rp.png
 4813,2025-09-20 19:43:12.476000,,n8,1200,,True,0,
+54,2025-06-07 00:44:04.633000,William Wang,will,1407,US,False,8,https://smash-leaderboard-frontend.vercel.app/images/dps/will.png
 6716,2025-11-13 03:20:11.292000,,rani,1200,US,True,0,
-23,2025-06-06 08:31:02.716000,Anish Thite,nish,1216,US,False,6,https://smash-leaderboard-frontend.vercel.app/images/dps/nish.png
 88,2025-06-11 01:04:53.673000,Sharif Shameem,samin,1198,US,True,7,https://smash-leaderboard-frontend.vercel.app/images/dps/samin.jpg
 35,2025-06-06 22:21:01.865000,Bihan Mahadewa,bihan,1200,US,True,1,https://smash-leaderboard-frontend.vercel.app/images/dps/bihan.png
-2586,2025-08-23 00:44:14.138000,Safi,safi,1195,US,False,3,https://smash-leaderboard-frontend.vercel.app/images/dps/safi.jpg
+2586,2025-08-23 00:44:14.138000,Safi,safi,1228,US,False,3,https://smash-leaderboard-frontend.vercel.app/images/dps/safi.jpg
 4254,2025-09-14 05:15:35.101000,Cathleen Turner,gatmo,1169,US,True,3,
 9154,2026-01-15 03:30:27.044000,,niki <3.,1200,,True,1,
 3657,2025-09-05 22:37:11.688000,Hasan,gapam,1067,US,False,3,
@@ -58,7 +60,6 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 255,2025-07-05 01:08:00.419000,Fateen Rafid,fateen,1148,BD,False,5,https://smash-leaderboard-frontend.vercel.app/images/dps/fateen.jpg
 5176,2025-09-24 04:57:57.982000,,pickle,1200,CA,True,0,
 4827,2025-09-20 21:35:58.136000,,maximilian,1200,,True,0,
-54,2025-06-07 00:44:04.633000,William Wang,will,1375,US,False,8,https://smash-leaderboard-frontend.vercel.app/images/dps/will.png
 1473,2025-08-07 01:18:08.142000,sky,sky,1200,US,True,0,
 2660,2025-08-23 03:35:58.021000,Zuri,zuri,1200,UK,True,1,
 3005,2025-08-29 21:54:32.665000,Anish Shinde,messi,960,US,True,3,https://smash-leaderboard-frontend.vercel.app/images/dps/messi.jpg
@@ -69,7 +70,6 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 3849,2025-09-06 22:24:39.119000,Caleb,caleb,1154,US,True,3,https://smash-leaderboard-frontend.vercel.app/images/dps/caleb.jpg
 190,2025-07-01 15:26:56.697000,Kento Uchiyama,kento,1341,JP,True,5,https://smash-leaderboard-frontend.vercel.app/images/dps/kento.png
 4053,2025-09-13 01:23:56.289000,Caius,c,1200,US,True,2,
-39,2025-06-06 23:46:35.620000,Kareem Dasilva,keneru,1329,US,False,9,https://smash-leaderboard-frontend.vercel.app/images/dps/keneru.png
 717,2025-07-21 03:13:13.827000,Aqsa Choudry,duck,1200,US,True,0,
 38,2025-06-06 23:41:48.713000,Jonathan Moon,jmoon,1777,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/jmoon.png
 9155,2026-01-15 03:35:20.412000,,_shafaq,1200,,True,0,
@@ -81,8 +81,8 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture
 22,2025-06-06 08:21:51.757000,Subhash Ramesh,subby,1204,US,False,7,https://smash-leaderboard-frontend.vercel.app/images/dps/subby.png
 3456,2025-09-02 00:21:03.685000,Dhruv Sengupta,dhruvus,1200,UK,True,0,
 2517,2025-08-20 02:14:11.348000,Fela,fela,1200,NG,True,1,
-4639,2025-09-20 00:38:24.370000,Amarjot Singh,amar,1531,US,False,4,https://smash-leaderboard-frontend.vercel.app/images/dps/amar.jpg
 8686,2025-12-12 20:47:31.716000,,tcvora,1200,,True,0,
 682,2025-07-20 20:02:23.014000,Farzan Majeed,farza,1200,US,True,1,
 4831,2025-09-20 21:55:50.988000,,aha,1200,,True,0,
 93,2025-06-11 01:18:34.798000,Stavan Patel,stav,1200,US,False,1,https://smash-leaderboard-frontend.vercel.app/images/dps/stav.png
+4639,2025-09-20 00:38:24.370000,Amarjot Singh,amar,1531,US,True,4,https://smash-leaderboard-frontend.vercel.app/images/dps/amar.jpg

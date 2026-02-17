@@ -2442,6 +2442,201 @@
       }
     },
     {
+      "date": "February 16, 2026",
+      "generated_at": "2026-02-17T16:22:52.806574",
+      "headline": "ACTION-PACKED DAY: 35 MATCHES, 143 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 35 intense matches with a combined 143 knockouts.\n\nhabeas was the workhorse of the day, grinding through 29 matches with 20 victories.\n\nThe hottest player was keneru who maintained an impressive 75.0% win rate.\n\nWe even saw perfection today - will delivered a flawless 3-0 with LINK!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "habeas",
+        "reason": "Most active player with 29 games"
+      },
+      "highlights": [
+        "35 total matches played",
+        "habeas most active with 29 games",
+        "2 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 35,
+        "total_kos": 143,
+        "player_stats": [
+          {
+            "name": "habeas",
+            "games": 29,
+            "wins": 20,
+            "losses": 9,
+            "win_rate": 69.0,
+            "kos": 75,
+            "falls": 54,
+            "sds": 0,
+            "kd_ratio": 1.39,
+            "main_character": "GANONDORF",
+            "character_games": 21
+          },
+          {
+            "name": "safi",
+            "games": 18,
+            "wins": 5,
+            "losses": 13,
+            "win_rate": 27.8,
+            "kos": 31,
+            "falls": 41,
+            "sds": 0,
+            "kd_ratio": 0.76,
+            "main_character": "SNAKE",
+            "character_games": 10
+          },
+          {
+            "name": "will",
+            "games": 12,
+            "wins": 7,
+            "losses": 5,
+            "win_rate": 58.3,
+            "kos": 20,
+            "falls": 22,
+            "sds": 0,
+            "kd_ratio": 0.91,
+            "main_character": "JOKER",
+            "character_games": 4
+          },
+          {
+            "name": "ben",
+            "games": 5,
+            "wins": 0,
+            "losses": 5,
+            "win_rate": 0.0,
+            "kos": 6,
+            "falls": 14,
+            "sds": 1,
+            "kd_ratio": 0.43,
+            "main_character": "MARIO",
+            "character_games": 3
+          },
+          {
+            "name": "keneru",
+            "games": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 75.0,
+            "kos": 11,
+            "falls": 9,
+            "sds": 0,
+            "kd_ratio": 1.22,
+            "main_character": "DONKEY KONG",
+            "character_games": 4
+          },
+          {
+            "name": "nish",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "SAMUS",
+            "character_games": 1
+          },
+          {
+            "name": "unknown",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "GANONDORF",
+            "times_played": 21
+          },
+          {
+            "character": "SNAKE",
+            "times_played": 10
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 9
+          },
+          {
+            "character": "JOKER",
+            "times_played": 5
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 4
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "will",
+            "character": "LINK"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "safi",
+            "total_games": 14,
+            "p1_wins": 10,
+            "p2_wins": 4
+          },
+          {
+            "player1": "habeas",
+            "player2": "will",
+            "total_games": 8,
+            "p1_wins": 4,
+            "p2_wins": 4
+          },
+          {
+            "player1": "habeas",
+            "player2": "ben",
+            "total_games": 4,
+            "p1_wins": 4,
+            "p2_wins": 0
+          },
+          {
+            "player1": "habeas",
+            "player2": "keneru",
+            "total_games": 2,
+            "p1_wins": 1,
+            "p2_wins": 1
+          },
+          {
+            "player1": "will",
+            "player2": "safi",
+            "total_games": 2,
+            "p1_wins": 2,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "habeas",
+            "streak": 7
+          },
+          {
+            "player": "will",
+            "streak": 4
+          },
+          {
+            "player": "keneru",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "February 15, 2026",
       "generated_at": "2026-02-16T16:17:45.615103",
       "headline": "ACTION-PACKED DAY: 39 MATCHES, 160 KOS!",
@@ -4135,14 +4330,6 @@
       "generated_at": "2026-02-04T16:19:08.189985",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on February 03, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "February 02, 2026",
-      "generated_at": "2026-02-03T16:20:52.096387",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 02, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }
