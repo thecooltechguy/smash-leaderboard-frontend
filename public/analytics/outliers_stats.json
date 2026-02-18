@@ -2,8 +2,8 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,458 games",
-    "detail": "That's 11.0 games per day on average",
+    "value": "2,482 games",
+    "detail": "That's 11.1 games per day on average",
     "runner_up": "subby (1,193)"
   },
   "most_dominant": {
@@ -20,8 +20,8 @@
   },
   "worst_losing_streak": {
     "stat": "Longest Losing Streak",
-    "player": "heidy",
-    "value": "40 consecutive losses",
+    "player": "unknown",
+    "value": "42 consecutive losses",
     "detail": "Kept coming back for more. That's dedication."
   },
   "best_winning_streak": {
@@ -68,27 +68,27 @@
   },
   "biggest_one_trick": {
     "stat": "Most Loyal to One Character",
-    "player": "lag",
-    "value": "99.1% on NESS",
-    "detail": "Across 110 total games"
+    "player": "messi",
+    "value": "99.0% on GRENINJA",
+    "detail": "Across 102 total games"
   },
   "weekend_warrior": {
     "stat": "Weekend Warrior",
     "player": "gapam",
-    "value": "+25.8% on weekends",
-    "detail": "Weekend: 44.4% vs Weekday: 18.6%"
+    "value": "+24.9% on weekends",
+    "detail": "Weekend: 44.4% vs Weekday: 19.6%"
   },
   "weekday_grinder": {
     "stat": "Weekday Warrior",
-    "player": "messi",
-    "value": "+18.6% on weekdays",
-    "detail": "Weekday: 35.5% vs Weekend: 16.9%"
+    "player": "ben",
+    "value": "+22.2% on weekdays",
+    "detail": "Weekday: 61.7% vs Weekend: 39.5%"
   },
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1173 late-night games",
-    "detail": "That's 47.7% of their games after 10PM"
+    "value": "1197 late-night games",
+    "detail": "That's 48.2% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
@@ -106,7 +106,7 @@
     "stat": "Most Cursed Character",
     "player": "UNKNOWN",
     "value": "0.0% win rate",
-    "detail": "Across 39 games. Just don't pick it."
+    "detail": "Across 42 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -135,8 +135,8 @@
   "comeback_king": {
     "stat": "Comeback King",
     "player": "shafaq",
-    "value": "70.7% win rate with SDs",
-    "detail": "Still wins 70% of the time after self-destructing"
+    "value": "64.4% win rate with SDs",
+    "detail": "Still wins 64% of the time after self-destructing"
   },
   "most_improved": {
     "stat": "Most Improved Player",

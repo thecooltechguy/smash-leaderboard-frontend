@@ -6,7 +6,7 @@
     },
     "Tuesday": {
       "character": "DONKEY KONG",
-      "plays": 136
+      "plays": 165
     },
     "Wednesday": {
       "character": "SAMUS",
@@ -142,6 +142,14 @@
       "diff": 14.9,
       "weekend_games": 18,
       "weekday_games": 57
+    },
+    {
+      "player": "ryy",
+      "weekend_wr": 58.8,
+      "weekday_wr": 45.9,
+      "diff": 12.9,
+      "weekend_games": 34,
+      "weekday_games": 61
     }
   ],
   "weekday_warriors": [
@@ -188,12 +196,12 @@
   ],
   "longest_losing_streaks": [
     {
-      "player": "heidy",
-      "streak": 40
+      "player": "unknown",
+      "streak": 42
     },
     {
-      "player": "unknown",
-      "streak": 39
+      "player": "heidy",
+      "streak": 40
     },
     {
       "player": "lando",
@@ -231,8 +239,8 @@
   "comeback_kings": [
     {
       "player": "shafaq",
-      "sd_games": 41,
-      "sd_win_rate": 70.7
+      "sd_games": 45,
+      "sd_win_rate": 64.4
     },
     {
       "player": "strike",
@@ -280,7 +288,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 39,
+      "plays": 42,
       "win_rate": 0.0
     },
     {
@@ -317,18 +325,18 @@
     },
     {
       "character": "KING DEDEDE",
-      "plays": 197,
-      "win_rate": 60.9
-    },
-    {
-      "character": "BOWSER",
-      "plays": 126,
-      "win_rate": 59.5
+      "plays": 207,
+      "win_rate": 59.4
     },
     {
       "character": "PIRANHA PLANT",
       "plays": 102,
       "win_rate": 57.8
+    },
+    {
+      "character": "GANONDORF",
+      "plays": 669,
+      "win_rate": 56.7
     }
   ],
   "friday_night_favorites": [
@@ -417,18 +425,18 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2458,
-    "total_wins": 1255,
-    "total_kos": 5364,
-    "total_sds": 108,
+    "total_games": 2482,
+    "total_wins": 1270,
+    "total_kos": 5425,
+    "total_sds": 112,
     "by_day": {
       "Monday": {
         "games": 228,
         "win_rate": 57.5
       },
       "Tuesday": {
-        "games": 228,
-        "win_rate": 54.8
+        "games": 252,
+        "win_rate": 55.6
       },
       "Wednesday": {
         "games": 424,
@@ -583,7 +591,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1141
+    "games": 1187
   },
   "quietest_hour": {
     "hour": 8,

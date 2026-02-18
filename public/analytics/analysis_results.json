@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-02-17T16:21:39.159565",
+  "generated_at": "2026-02-18T16:22:55.311581",
   "overall": {
-    "total_matches": 4532,
-    "total_players": 86,
-    "active_players": 34,
+    "total_matches": 4599,
+    "total_players": 88,
+    "active_players": 37,
     "date_range_start": "2025-06-06",
-    "date_range_end": "2026-02-17",
-    "days_of_play": 255,
-    "total_kos": 21367,
-    "total_falls": 22109,
-    "total_sds": 819,
+    "date_range_end": "2026-02-18",
+    "days_of_play": 256,
+    "total_kos": 21775,
+    "total_falls": 22517,
+    "total_sds": 844,
     "unique_characters_played": 98,
-    "avg_matches_per_day": 17.8,
-    "avg_participants_per_match": 2.37
+    "avg_matches_per_day": 18.0,
+    "avg_participants_per_match": 2.38
   },
   "players": [
     {
       "id": 21,
       "name": "habeas",
-      "total_games": 2458,
-      "wins": 1255,
-      "losses": 1203,
-      "win_rate": 51.1,
-      "total_kos": 5364,
-      "total_falls": 4936,
-      "total_sds": 108,
+      "total_games": 2482,
+      "wins": 1270,
+      "losses": 1212,
+      "win_rate": 51.2,
+      "total_kos": 5425,
+      "total_falls": 4982,
+      "total_sds": 112,
       "kd_ratio": 1.09,
       "characters_played": 50,
       "favorite_character": "MR. GAME & WATCH",
-      "elo": 1486,
+      "elo": 1516,
       "country": "CA"
     },
     {
@@ -66,33 +66,33 @@
     {
       "id": 39,
       "name": "keneru",
-      "total_games": 845,
-      "wins": 400,
-      "losses": 445,
-      "win_rate": 47.3,
-      "total_kos": 1685,
-      "total_falls": 1755,
-      "total_sds": 80,
-      "kd_ratio": 0.96,
+      "total_games": 877,
+      "wins": 424,
+      "losses": 453,
+      "win_rate": 48.3,
+      "total_kos": 1746,
+      "total_falls": 1806,
+      "total_sds": 82,
+      "kd_ratio": 0.97,
       "characters_played": 20,
       "favorite_character": "DONKEY KONG",
-      "elo": 1368,
+      "elo": 1386,
       "country": "US"
     },
     {
       "id": 104,
       "name": "shafaq",
-      "total_games": 714,
-      "wins": 407,
-      "losses": 307,
-      "win_rate": 57.0,
-      "total_kos": 1637,
-      "total_falls": 1369,
-      "total_sds": 55,
-      "kd_ratio": 1.2,
+      "total_games": 745,
+      "wins": 420,
+      "losses": 325,
+      "win_rate": 56.4,
+      "total_kos": 1721,
+      "total_falls": 1443,
+      "total_sds": 59,
+      "kd_ratio": 1.19,
       "characters_played": 21,
       "favorite_character": "ZELDA",
-      "elo": 1487,
+      "elo": 1469,
       "country": "US"
     },
     {
@@ -114,17 +114,17 @@
     {
       "id": 54,
       "name": "will",
-      "total_games": 435,
-      "wins": 219,
-      "losses": 216,
-      "win_rate": 50.3,
-      "total_kos": 857,
-      "total_falls": 893,
-      "total_sds": 13,
-      "kd_ratio": 0.96,
+      "total_games": 464,
+      "wins": 230,
+      "losses": 234,
+      "win_rate": 49.6,
+      "total_kos": 913,
+      "total_falls": 962,
+      "total_sds": 16,
+      "kd_ratio": 0.95,
       "characters_played": 32,
       "favorite_character": "JOKER",
-      "elo": 1407,
+      "elo": 1326,
       "country": "US"
     },
     {
@@ -240,6 +240,22 @@
       "country": "FR"
     },
     {
+      "id": 1112,
+      "name": "lag",
+      "total_games": 115,
+      "wins": 36,
+      "losses": 79,
+      "win_rate": 31.3,
+      "total_kos": 186,
+      "total_falls": 266,
+      "total_sds": 7,
+      "kd_ratio": 0.7,
+      "characters_played": 3,
+      "favorite_character": "NESS",
+      "elo": 1136,
+      "country": "US"
+    },
+    {
       "id": 4639,
       "name": "amar",
       "total_games": 115,
@@ -253,22 +269,6 @@
       "characters_played": 4,
       "favorite_character": "ENDERMAN",
       "elo": 1531,
-      "country": "US"
-    },
-    {
-      "id": 1112,
-      "name": "lag",
-      "total_games": 110,
-      "wins": 36,
-      "losses": 74,
-      "win_rate": 32.7,
-      "total_kos": 182,
-      "total_falls": 251,
-      "total_sds": 7,
-      "kd_ratio": 0.73,
-      "characters_played": 2,
-      "favorite_character": "NESS",
-      "elo": 1165,
       "country": "US"
     },
     {
@@ -304,6 +304,22 @@
       "country": "US"
     },
     {
+      "id": 61,
+      "name": "ryy",
+      "total_games": 95,
+      "wins": 48,
+      "losses": 47,
+      "win_rate": 50.5,
+      "total_kos": 159,
+      "total_falls": 184,
+      "total_sds": 5,
+      "kd_ratio": 0.86,
+      "characters_played": 7,
+      "favorite_character": "FALCO",
+      "elo": 1263,
+      "country": "US"
+    },
+    {
       "id": 190,
       "name": "kento",
       "total_games": 94,
@@ -336,6 +352,22 @@
       "country": "US"
     },
     {
+      "id": 9238,
+      "name": "ben",
+      "total_games": 90,
+      "wins": 46,
+      "losses": 44,
+      "win_rate": 51.1,
+      "total_kos": 169,
+      "total_falls": 170,
+      "total_sds": 15,
+      "kd_ratio": 0.99,
+      "characters_played": 8,
+      "favorite_character": "DONKEY KONG",
+      "elo": 1189,
+      "country": ""
+    },
+    {
       "id": 9157,
       "name": "jean",
       "total_games": 75,
@@ -350,6 +382,22 @@
       "favorite_character": "NESS",
       "elo": 1099,
       "country": ""
+    },
+    {
+      "id": 3657,
+      "name": "gapam",
+      "total_games": 73,
+      "wins": 21,
+      "losses": 52,
+      "win_rate": 28.8,
+      "total_kos": 104,
+      "total_falls": 168,
+      "total_sds": 13,
+      "kd_ratio": 0.62,
+      "characters_played": 8,
+      "favorite_character": "SEPHIROTH",
+      "elo": 1066,
+      "country": "US"
     },
     {
       "id": 452,
@@ -368,54 +416,6 @@
       "country": "US"
     },
     {
-      "id": 61,
-      "name": "ryy",
-      "total_games": 70,
-      "wins": 39,
-      "losses": 31,
-      "win_rate": 55.7,
-      "total_kos": 121,
-      "total_falls": 138,
-      "total_sds": 2,
-      "kd_ratio": 0.88,
-      "characters_played": 7,
-      "favorite_character": "FALCO",
-      "elo": 1273,
-      "country": "US"
-    },
-    {
-      "id": 3657,
-      "name": "gapam",
-      "total_games": 70,
-      "wins": 20,
-      "losses": 50,
-      "win_rate": 28.6,
-      "total_kos": 99,
-      "total_falls": 162,
-      "total_sds": 13,
-      "kd_ratio": 0.61,
-      "characters_played": 8,
-      "favorite_character": "SEPHIROTH",
-      "elo": 1067,
-      "country": "US"
-    },
-    {
-      "id": 9238,
-      "name": "ben",
-      "total_games": 67,
-      "wins": 27,
-      "losses": 40,
-      "win_rate": 40.3,
-      "total_kos": 110,
-      "total_falls": 137,
-      "total_sds": 8,
-      "kd_ratio": 0.8,
-      "characters_played": 5,
-      "favorite_character": "DONKEY KONG",
-      "elo": 1188,
-      "country": ""
-    },
-    {
       "id": 4255,
       "name": "joguo",
       "total_games": 65,
@@ -430,6 +430,22 @@
       "favorite_character": "NESS",
       "elo": 1072,
       "country": "AU"
+    },
+    {
+      "id": 2586,
+      "name": "safi",
+      "total_games": 49,
+      "wins": 18,
+      "losses": 31,
+      "win_rate": 36.7,
+      "total_kos": 96,
+      "total_falls": 108,
+      "total_sds": 2,
+      "kd_ratio": 0.89,
+      "characters_played": 7,
+      "favorite_character": "SNAKE",
+      "elo": 1318,
+      "country": "US"
     },
     {
       "id": 3849,
@@ -464,20 +480,20 @@
       "country": "US"
     },
     {
-      "id": 2586,
-      "name": "safi",
-      "total_games": 40,
-      "wins": 12,
-      "losses": 28,
-      "win_rate": 30.0,
-      "total_kos": 72,
-      "total_falls": 92,
-      "total_sds": 2,
-      "kd_ratio": 0.78,
-      "characters_played": 7,
-      "favorite_character": "SNAKE",
-      "elo": 1228,
-      "country": "US"
+      "id": 2106,
+      "name": "unknown",
+      "total_games": 42,
+      "wins": 0,
+      "losses": 42,
+      "win_rate": 0.0,
+      "total_kos": 0,
+      "total_falls": 0,
+      "total_sds": 0,
+      "kd_ratio": 0.0,
+      "characters_played": 1,
+      "favorite_character": "UNKNOWN",
+      "elo": 1054,
+      "country": "UN"
     },
     {
       "id": 8659,
@@ -494,22 +510,6 @@
       "favorite_character": "CAPTAIN FALCON",
       "elo": 1155,
       "country": ""
-    },
-    {
-      "id": 2106,
-      "name": "unknown",
-      "total_games": 39,
-      "wins": 0,
-      "losses": 39,
-      "win_rate": 0.0,
-      "total_kos": 0,
-      "total_falls": 0,
-      "total_sds": 0,
-      "kd_ratio": 0.0,
-      "characters_played": 1,
-      "favorite_character": "UNKNOWN",
-      "elo": 1054,
-      "country": "UN"
     },
     {
       "id": 767,
@@ -606,6 +606,22 @@
       "favorite_character": "KIRBY",
       "elo": 1200,
       "country": "US"
+    },
+    {
+      "id": 10719,
+      "name": "noah",
+      "total_games": 20,
+      "wins": 3,
+      "losses": 17,
+      "win_rate": 15.0,
+      "total_kos": 15,
+      "total_falls": 49,
+      "total_sds": 2,
+      "kd_ratio": 0.31,
+      "characters_played": 3,
+      "favorite_character": "CAPTAIN FALCON",
+      "elo": 1200,
+      "country": ""
     },
     {
       "id": 6405,
@@ -1390,103 +1406,119 @@
       "favorite_character": "MARIO",
       "elo": 1200,
       "country": ""
+    },
+    {
+      "id": 10817,
+      "name": "abeas",
+      "total_games": 1,
+      "wins": 0,
+      "losses": 1,
+      "win_rate": 0.0,
+      "total_kos": 1,
+      "total_falls": 3,
+      "total_sds": 0,
+      "kd_ratio": 0.33,
+      "characters_played": 1,
+      "favorite_character": "ZELDA",
+      "elo": 1200,
+      "country": ""
     }
   ],
   "characters": [
     {
       "character": "DONKEY KONG",
-      "times_played": 1004,
-      "wins": 494,
-      "win_rate": 49.2,
-      "total_kos": 2046,
-      "total_falls": 2077,
-      "total_sds": 73,
-      "avg_kos_per_game": 2.04,
-      "avg_falls_per_game": 2.07,
+      "times_played": 1033,
+      "wins": 516,
+      "win_rate": 50.0,
+      "total_kos": 2113,
+      "total_falls": 2128,
+      "total_sds": 77,
+      "avg_kos_per_game": 2.05,
+      "avg_falls_per_game": 2.06,
       "unique_players": 19
     },
     {
       "character": "MR. GAME & WATCH",
-      "times_played": 911,
-      "wins": 424,
-      "win_rate": 46.5,
-      "total_kos": 1866,
-      "total_falls": 1845,
-      "total_sds": 24,
-      "avg_kos_per_game": 2.05,
+      "times_played": 918,
+      "wins": 426,
+      "win_rate": 46.4,
+      "total_kos": 1874,
+      "total_falls": 1861,
+      "total_sds": 26,
+      "avg_kos_per_game": 2.04,
       "avg_falls_per_game": 2.03,
       "unique_players": 9
     },
     {
       "character": "ZELDA",
-      "times_played": 825,
-      "wins": 460,
-      "win_rate": 55.8,
-      "total_kos": 1833,
-      "total_falls": 1590,
-      "total_sds": 44,
-      "avg_kos_per_game": 2.22,
-      "avg_falls_per_game": 1.93,
-      "unique_players": 4
+      "times_played": 842,
+      "wins": 469,
+      "win_rate": 55.7,
+      "total_kos": 1887,
+      "total_falls": 1633,
+      "total_sds": 46,
+      "avg_kos_per_game": 2.24,
+      "avg_falls_per_game": 1.94,
+      "unique_players": 5
     },
     {
       "character": "JOKER",
-      "times_played": 804,
-      "wins": 402,
-      "win_rate": 50.0,
-      "total_kos": 1437,
-      "total_falls": 1531,
+      "times_played": 817,
+      "wins": 408,
+      "win_rate": 49.9,
+      "total_kos": 1468,
+      "total_falls": 1563,
       "total_sds": 37,
-      "avg_kos_per_game": 1.79,
-      "avg_falls_per_game": 1.9,
+      "avg_kos_per_game": 1.8,
+      "avg_falls_per_game": 1.91,
       "unique_players": 10
     },
     {
       "character": "SAMUS",
-      "times_played": 766,
-      "wins": 368,
-      "win_rate": 48.0,
-      "total_kos": 1542,
-      "total_falls": 1571,
-      "total_sds": 93,
+      "times_played": 771,
+      "wins": 369,
+      "win_rate": 47.9,
+      "total_kos": 1553,
+      "total_falls": 1583,
+      "total_sds": 94,
       "avg_kos_per_game": 2.01,
       "avg_falls_per_game": 2.05,
       "unique_players": 10
     },
     {
       "character": "GANONDORF",
-      "times_played": 650,
-      "wins": 364,
-      "win_rate": 56.0,
-      "total_kos": 1564,
-      "total_falls": 1293,
-      "total_sds": 41,
-      "avg_kos_per_game": 2.41,
-      "avg_falls_per_game": 1.99,
+      "times_played": 669,
+      "wins": 379,
+      "win_rate": 56.7,
+      "total_kos": 1621,
+      "total_falls": 1323,
+      "total_sds": 43,
+      "avg_kos_per_game": 2.42,
+      "avg_falls_per_game": 1.98,
       "unique_players": 15
     },
     {
       "character": "CAPTAIN FALCON",
-      "times_played": 613,
-      "wins": 281,
-      "win_rate": 45.8,
-      "total_kos": 1133,
-      "total_falls": 1322,
+      "times_played": 625,
+      "wins": 284,
+      "win_rate": 45.4,
+      "total_kos": 1143,
+      "total_falls": 1352,
       "total_sds": 61,
-      "avg_kos_per_game": 1.85,
+      "avg_kos_per_game": 1.83,
       "avg_falls_per_game": 2.16,
-      "unique_players": 17
+      "unique_players": 19
     },
     {
       "character": "INCINEROAR",
-      "times_played": 449,
-      "wins": 238,
-      "win_rate": 53.0,
-      "total_kos": 976,
-      "total_falls": 878,
-      "total_sds": 17,
-      "avg_kos_per_game": 2.17,
-      "avg_falls_per_game": 1.96,
+      "times_played": 461,
+      "wins": 241,
+      "win_rate": 52.3,
+      "total_kos": 994,
+      "total_falls": 906,
+      "total_sds": 19,
+      "avg_kos_per_game": 2.16,
+      "avg_falls_per_game": 1.97,
       "unique_players": 6
     },
     {
@@ -1503,37 +1535,37 @@
     },
     {
       "character": "KING K. ROOL",
-      "times_played": 398,
-      "wins": 194,
-      "win_rate": 48.7,
-      "total_kos": 839,
-      "total_falls": 896,
-      "total_sds": 57,
-      "avg_kos_per_game": 2.11,
+      "times_played": 402,
+      "wins": 196,
+      "win_rate": 48.8,
+      "total_kos": 846,
+      "total_falls": 905,
+      "total_sds": 58,
+      "avg_kos_per_game": 2.1,
       "avg_falls_per_game": 2.25,
       "unique_players": 13
     },
     {
       "character": "CLOUD",
-      "times_played": 353,
-      "wins": 149,
-      "win_rate": 42.2,
-      "total_kos": 595,
-      "total_falls": 759,
+      "times_played": 364,
+      "wins": 153,
+      "win_rate": 42.0,
+      "total_kos": 606,
+      "total_falls": 781,
       "total_sds": 29,
-      "avg_kos_per_game": 1.69,
+      "avg_kos_per_game": 1.66,
       "avg_falls_per_game": 2.15,
       "unique_players": 17
     },
     {
       "character": "LUCINA",
-      "times_played": 244,
+      "times_played": 245,
       "wins": 126,
-      "win_rate": 51.6,
-      "total_kos": 477,
-      "total_falls": 485,
+      "win_rate": 51.4,
+      "total_kos": 479,
+      "total_falls": 488,
       "total_sds": 11,
-      "avg_kos_per_game": 1.95,
+      "avg_kos_per_game": 1.96,
       "avg_falls_per_game": 1.99,
       "unique_players": 13
     },
@@ -1551,39 +1583,51 @@
     },
     {
       "character": "KING DEDEDE",
-      "times_played": 197,
-      "wins": 120,
-      "win_rate": 60.9,
-      "total_kos": 464,
-      "total_falls": 359,
-      "total_sds": 18,
-      "avg_kos_per_game": 2.36,
-      "avg_falls_per_game": 1.82,
+      "times_played": 207,
+      "wins": 123,
+      "win_rate": 59.4,
+      "total_kos": 484,
+      "total_falls": 381,
+      "total_sds": 19,
+      "avg_kos_per_game": 2.34,
+      "avg_falls_per_game": 1.84,
       "unique_players": 11
     },
     {
       "character": "NESS",
-      "times_played": 183,
-      "wins": 72,
-      "win_rate": 39.3,
-      "total_kos": 322,
-      "total_falls": 393,
-      "total_sds": 8,
-      "avg_kos_per_game": 1.76,
-      "avg_falls_per_game": 2.15,
+      "times_played": 192,
+      "wins": 74,
+      "win_rate": 38.5,
+      "total_kos": 339,
+      "total_falls": 415,
+      "total_sds": 10,
+      "avg_kos_per_game": 1.77,
+      "avg_falls_per_game": 2.16,
       "unique_players": 13
     },
     {
       "character": "SORA",
-      "times_played": 153,
-      "wins": 66,
-      "win_rate": 43.1,
-      "total_kos": 308,
-      "total_falls": 339,
+      "times_played": 166,
+      "wins": 77,
+      "win_rate": 46.4,
+      "total_kos": 332,
+      "total_falls": 358,
       "total_sds": 22,
-      "avg_kos_per_game": 2.01,
-      "avg_falls_per_game": 2.22,
+      "avg_kos_per_game": 2.0,
+      "avg_falls_per_game": 2.16,
       "unique_players": 6
+    },
+    {
+      "character": "BOWSER",
+      "times_played": 138,
+      "wins": 78,
+      "win_rate": 56.5,
+      "total_kos": 311,
+      "total_falls": 278,
+      "total_sds": 12,
+      "avg_kos_per_game": 2.25,
+      "avg_falls_per_game": 2.01,
+      "unique_players": 14
     },
     {
       "character": "STEVE",
@@ -1599,27 +1643,15 @@
     },
     {
       "character": "MARIO",
-      "times_played": 128,
-      "wins": 52,
-      "win_rate": 40.6,
-      "total_kos": 204,
-      "total_falls": 285,
-      "total_sds": 13,
-      "avg_kos_per_game": 1.59,
-      "avg_falls_per_game": 2.23,
+      "times_played": 134,
+      "wins": 56,
+      "win_rate": 41.8,
+      "total_kos": 217,
+      "total_falls": 294,
+      "total_sds": 15,
+      "avg_kos_per_game": 1.62,
+      "avg_falls_per_game": 2.19,
       "unique_players": 11
-    },
-    {
-      "character": "BOWSER",
-      "times_played": 126,
-      "wins": 75,
-      "win_rate": 59.5,
-      "total_kos": 297,
-      "total_falls": 256,
-      "total_sds": 7,
-      "avg_kos_per_game": 2.36,
-      "avg_falls_per_game": 2.03,
-      "unique_players": 12
     },
     {
       "character": "KIRBY",
@@ -1646,6 +1678,18 @@
       "unique_players": 6
     },
     {
+      "character": "SEPHIROTH",
+      "times_played": 105,
+      "wins": 38,
+      "win_rate": 36.2,
+      "total_kos": 169,
+      "total_falls": 232,
+      "total_sds": 14,
+      "avg_kos_per_game": 1.61,
+      "avg_falls_per_game": 2.21,
+      "unique_players": 14
+    },
+    {
       "character": "PIRANHA PLANT",
       "times_played": 102,
       "wins": 59,
@@ -1656,18 +1700,6 @@
       "avg_kos_per_game": 1.92,
       "avg_falls_per_game": 1.93,
       "unique_players": 3
-    },
-    {
-      "character": "SEPHIROTH",
-      "times_played": 100,
-      "wins": 36,
-      "win_rate": 36.0,
-      "total_kos": 159,
-      "total_falls": 222,
-      "total_sds": 14,
-      "avg_kos_per_game": 1.59,
-      "avg_falls_per_game": 2.22,
-      "unique_players": 14
     },
     {
       "character": "BYLETH",
@@ -1730,6 +1762,18 @@
       "unique_players": 10
     },
     {
+      "character": "PYRA",
+      "times_played": 78,
+      "wins": 32,
+      "win_rate": 41.0,
+      "total_kos": 152,
+      "total_falls": 174,
+      "total_sds": 18,
+      "avg_kos_per_game": 1.95,
+      "avg_falls_per_game": 2.23,
+      "unique_players": 14
+    },
+    {
       "character": "WOLF",
       "times_played": 77,
       "wins": 31,
@@ -1752,18 +1796,6 @@
       "avg_kos_per_game": 1.86,
       "avg_falls_per_game": 2.54,
       "unique_players": 2
-    },
-    {
-      "character": "PYRA",
-      "times_played": 74,
-      "wins": 30,
-      "win_rate": 40.5,
-      "total_kos": 146,
-      "total_falls": 170,
-      "total_sds": 18,
-      "avg_kos_per_game": 1.97,
-      "avg_falls_per_game": 2.3,
-      "unique_players": 14
     },
     {
       "character": "IKE",
@@ -1803,15 +1835,15 @@
     },
     {
       "character": "LUCAS",
-      "times_played": 56,
+      "times_played": 57,
       "wins": 21,
-      "win_rate": 37.5,
+      "win_rate": 36.8,
       "total_kos": 103,
-      "total_falls": 121,
+      "total_falls": 124,
       "total_sds": 6,
-      "avg_kos_per_game": 1.84,
-      "avg_falls_per_game": 2.16,
-      "unique_players": 4
+      "avg_kos_per_game": 1.81,
+      "avg_falls_per_game": 2.18,
+      "unique_players": 5
     },
     {
       "character": "MYTHRA",
@@ -1826,6 +1858,18 @@
       "unique_players": 11
     },
     {
+      "character": "SNAKE",
+      "times_played": 51,
+      "wins": 19,
+      "win_rate": 37.3,
+      "total_kos": 98,
+      "total_falls": 107,
+      "total_sds": 0,
+      "avg_kos_per_game": 1.92,
+      "avg_falls_per_game": 2.1,
+      "unique_players": 8
+    },
+    {
       "character": "LUIGI",
       "times_played": 48,
       "wins": 31,
@@ -1838,16 +1882,28 @@
       "unique_players": 5
     },
     {
-      "character": "SNAKE",
+      "character": "FALCO",
+      "times_played": 47,
+      "wins": 19,
+      "win_rate": 40.4,
+      "total_kos": 65,
+      "total_falls": 93,
+      "total_sds": 2,
+      "avg_kos_per_game": 1.38,
+      "avg_falls_per_game": 1.98,
+      "unique_players": 10
+    },
+    {
+      "character": "KAZUYA",
       "times_played": 45,
-      "wins": 14,
-      "win_rate": 31.1,
-      "total_kos": 81,
-      "total_falls": 98,
-      "total_sds": 0,
-      "avg_kos_per_game": 1.8,
-      "avg_falls_per_game": 2.18,
-      "unique_players": 8
+      "wins": 17,
+      "win_rate": 37.8,
+      "total_kos": 78,
+      "total_falls": 108,
+      "total_sds": 8,
+      "avg_kos_per_game": 1.73,
+      "avg_falls_per_game": 2.4,
+      "unique_players": 10
     },
     {
       "character": "ROY",
@@ -1862,30 +1918,6 @@
       "unique_players": 7
     },
     {
-      "character": "FALCO",
-      "times_played": 44,
-      "wins": 18,
-      "win_rate": 40.9,
-      "total_kos": 60,
-      "total_falls": 88,
-      "total_sds": 2,
-      "avg_kos_per_game": 1.36,
-      "avg_falls_per_game": 2.0,
-      "unique_players": 10
-    },
-    {
-      "character": "KAZUYA",
-      "times_played": 43,
-      "wins": 16,
-      "win_rate": 37.2,
-      "total_kos": 73,
-      "total_falls": 103,
-      "total_sds": 8,
-      "avg_kos_per_game": 1.7,
-      "avg_falls_per_game": 2.4,
-      "unique_players": 8
-    },
-    {
       "character": "DARK PIT",
       "times_played": 42,
       "wins": 17,
@@ -1898,6 +1930,18 @@
       "unique_players": 8
     },
     {
+      "character": "UNKNOWN",
+      "times_played": 42,
+      "wins": 0,
+      "win_rate": 0.0,
+      "total_kos": 0,
+      "total_falls": 0,
+      "total_sds": 0,
+      "avg_kos_per_game": 0.0,
+      "avg_falls_per_game": 0.0,
+      "unique_players": 1
+    },
+    {
       "character": "POK\u00c9MON TRAINER",
       "times_played": 39,
       "wins": 10,
@@ -1908,18 +1952,6 @@
       "avg_kos_per_game": 1.54,
       "avg_falls_per_game": 2.41,
       "unique_players": 6
-    },
-    {
-      "character": "UNKNOWN",
-      "times_played": 39,
-      "wins": 0,
-      "win_rate": 0.0,
-      "total_kos": 0,
-      "total_falls": 0,
-      "total_sds": 0,
-      "avg_kos_per_game": 0.0,
-      "avg_falls_per_game": 0.0,
-      "unique_players": 1
     },
     {
       "character": "MARTH",
@@ -2114,6 +2146,18 @@
       "unique_players": 7
     },
     {
+      "character": "MYTHRA/PYRA",
+      "times_played": 8,
+      "wins": 3,
+      "win_rate": 37.5,
+      "total_kos": 12,
+      "total_falls": 18,
+      "total_sds": 3,
+      "avg_kos_per_game": 1.5,
+      "avg_falls_per_game": 2.25,
+      "unique_players": 2
+    },
+    {
       "character": "MEWTWO",
       "times_played": 7,
       "wins": 3,
@@ -2160,18 +2204,6 @@
       "avg_kos_per_game": 2.14,
       "avg_falls_per_game": 1.86,
       "unique_players": 3
-    },
-    {
-      "character": "MYTHRA/PYRA",
-      "times_played": 7,
-      "wins": 3,
-      "win_rate": 42.9,
-      "total_kos": 11,
-      "total_falls": 16,
-      "total_sds": 2,
-      "avg_kos_per_game": 1.57,
-      "avg_falls_per_game": 2.29,
-      "unique_players": 2
     },
     {
       "character": "SHEIK",
@@ -2606,10 +2638,18 @@
     {
       "player1": "habeas",
       "player2": "will",
-      "total_matches": 174,
-      "player1_wins": 101,
+      "total_matches": 179,
+      "player1_wins": 106,
       "player2_wins": 73,
-      "dominance": 58.04597701149425
+      "dominance": 59.217877094972074
+    },
+    {
+      "player1": "keneru",
+      "player2": "shafaq",
+      "total_matches": 100,
+      "player1_wins": 29,
+      "player2_wins": 71,
+      "dominance": 71.0
     },
     {
       "player1": "habeas",
@@ -2618,14 +2658,6 @@
       "player1_wins": 69,
       "player2_wins": 31,
       "dominance": 69.0
-    },
-    {
-      "player1": "keneru",
-      "player2": "shafaq",
-      "total_matches": 96,
-      "player1_wins": 27,
-      "player2_wins": 69,
-      "dominance": 71.875
     },
     {
       "player1": "nish",
@@ -2768,7 +2800,7 @@
       },
       {
         "month": "2026-02",
-        "matches": 317
+        "matches": 384
       }
     ],
     "weekday": [
@@ -2778,11 +2810,11 @@
       },
       {
         "day": "Tuesday",
-        "matches": 603
+        "matches": 625
       },
       {
         "day": "Wednesday",
-        "matches": 553
+        "matches": 598
       },
       {
         "day": "Thursday",
@@ -2804,23 +2836,23 @@
     "hourly": [
       {
         "hour": 0,
-        "matches": 377
+        "matches": 378
       },
       {
         "hour": 1,
-        "matches": 451
+        "matches": 454
       },
       {
         "hour": 2,
-        "matches": 493
+        "matches": 505
       },
       {
         "hour": 3,
-        "matches": 436
+        "matches": 452
       },
       {
         "hour": 4,
-        "matches": 347
+        "matches": 360
       },
       {
         "hour": 5,
@@ -2892,11 +2924,11 @@
       },
       {
         "hour": 22,
-        "matches": 176
+        "matches": 184
       },
       {
         "hour": 23,
-        "matches": 267
+        "matches": 281
       }
     ],
     "busiest_days": [
@@ -2917,11 +2949,11 @@
         "matches": 98
       },
       {
-        "date": "2025-09-20",
+        "date": "2025-09-06",
         "matches": 85
       },
       {
-        "date": "2025-09-06",
+        "date": "2025-09-20",
         "matches": 85
       },
       {
@@ -2937,13 +2969,13 @@
         "matches": 72
       },
       {
-        "date": "2025-08-16",
+        "date": "2025-09-14",
         "matches": 70
       }
     ]
   },
   "fun_facts": {
-    "perfect_games_count": 356,
+    "perfect_games_count": 364,
     "most_kos_single_match": {
       "player": "aadil",
       "kos": 17,
@@ -2956,11 +2988,11 @@
       },
       {
         "player": "habeas",
-        "sds": 108
+        "sds": 112
       },
       {
         "player": "keneru",
-        "sds": 80
+        "sds": 82
       },
       {
         "player": "nish",
@@ -2968,7 +3000,7 @@
       },
       {
         "player": "shafaq",
-        "sds": 55
+        "sds": 59
       }
     ],
     "most_diverse_players": [
@@ -2998,19 +3030,19 @@
         "player": "unknown",
         "character": "UNKNOWN",
         "percentage": 100.0,
-        "games": 39
-      },
-      {
-        "player": "lag",
-        "character": "NESS",
-        "percentage": 99.1,
-        "games": 110
+        "games": 42
       },
       {
         "player": "messi",
         "character": "GRENINJA",
         "percentage": 99.0,
         "games": 102
+      },
+      {
+        "player": "lag",
+        "character": "NESS",
+        "percentage": 98.3,
+        "games": 115
       },
       {
         "player": "caleb",
@@ -3085,29 +3117,29 @@
         "streak": 12
       },
       {
+        "player": "ben",
+        "streak": 12
+      },
+      {
         "player": "amar",
         "streak": 10
       },
       {
         "player": "kento",
         "streak": 9
-      },
-      {
-        "player": "fateen",
-        "streak": 9
       }
     ],
     "total_characters_used": 98,
-    "matches_won_despite_sds": 28,
+    "matches_won_despite_sds": 30,
     "countries_represented": [
       "US",
+      "UN",
       "UK",
       "TN",
       "FR",
       "JP",
       "AU",
       "CA",
-      "UN",
       "IN",
       "BD",
       "PH",
@@ -3139,46 +3171,36 @@
     },
     {
       "rank": 3,
-      "name": "shafaq",
-      "elo": 1487,
-      "games": 714,
-      "wins": 407,
-      "losses": 307,
-      "win_rate": 57.0,
-      "country": "US"
-    },
-    {
-      "rank": 4,
       "name": "habeas",
-      "elo": 1486,
-      "games": 2458,
-      "wins": 1255,
-      "losses": 1203,
-      "win_rate": 51.1,
+      "elo": 1516,
+      "games": 2482,
+      "wins": 1270,
+      "losses": 1212,
+      "win_rate": 51.2,
       "country": "CA"
     },
     {
+      "rank": 4,
+      "name": "shafaq",
+      "elo": 1469,
+      "games": 745,
+      "wins": 420,
+      "losses": 325,
+      "win_rate": 56.4,
+      "country": "US"
+    },
+    {
       "rank": 5,
-      "name": "will",
-      "elo": 1407,
-      "games": 435,
-      "wins": 219,
-      "losses": 216,
-      "win_rate": 50.3,
+      "name": "keneru",
+      "elo": 1386,
+      "games": 877,
+      "wins": 424,
+      "losses": 453,
+      "win_rate": 48.3,
       "country": "US"
     },
     {
       "rank": 6,
-      "name": "keneru",
-      "elo": 1368,
-      "games": 845,
-      "wins": 400,
-      "losses": 445,
-      "win_rate": 47.3,
-      "country": "US"
-    },
-    {
-      "rank": 7,
       "name": "kento",
       "elo": 1341,
       "games": 94,
@@ -3188,13 +3210,23 @@
       "country": "JP"
     },
     {
+      "rank": 7,
+      "name": "will",
+      "elo": 1326,
+      "games": 464,
+      "wins": 230,
+      "losses": 234,
+      "win_rate": 49.6,
+      "country": "US"
+    },
+    {
       "rank": 8,
-      "name": "ryy",
-      "elo": 1273,
-      "games": 70,
-      "wins": 39,
+      "name": "safi",
+      "elo": 1318,
+      "games": 49,
+      "wins": 18,
       "losses": 31,
-      "win_rate": 55.7,
+      "win_rate": 36.7,
       "country": "US"
     },
     {
@@ -3209,12 +3241,12 @@
     },
     {
       "rank": 10,
-      "name": "safi",
-      "elo": 1228,
-      "games": 40,
-      "wins": 12,
-      "losses": 28,
-      "win_rate": 30.0,
+      "name": "ryy",
+      "elo": 1263,
+      "games": 95,
+      "wins": 48,
+      "losses": 47,
+      "win_rate": 50.5,
       "country": "US"
     },
     {
@@ -3279,6 +3311,16 @@
     },
     {
       "rank": 17,
+      "name": "noah",
+      "elo": 1200,
+      "games": 20,
+      "wins": 3,
+      "losses": 17,
+      "win_rate": 15.0,
+      "country": ""
+    },
+    {
+      "rank": 18,
       "name": "ridlay",
       "elo": 1200,
       "games": 7,
@@ -3288,7 +3330,7 @@
       "country": "US"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "name": "eddy",
       "elo": 1200,
       "games": 5,
@@ -3298,7 +3340,7 @@
       "country": "UK"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "name": "bassem",
       "elo": 1200,
       "games": 6,
@@ -3308,7 +3350,7 @@
       "country": "TN"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "name": "asma",
       "elo": 1200,
       "games": 10,
@@ -3318,7 +3360,7 @@
       "country": "TN"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "name": "daniel l",
       "elo": 1200,
       "games": 16,
@@ -3328,7 +3370,7 @@
       "country": "US"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "name": "devmo",
       "elo": 1200,
       "games": 24,
@@ -3338,7 +3380,7 @@
       "country": ""
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "donshelly",
       "elo": 1200,
       "games": 5,
@@ -3348,7 +3390,7 @@
       "country": ""
     },
     {
-      "rank": 24,
+      "rank": 25,
       "name": "gino",
       "elo": 1200,
       "games": 14,
@@ -3358,7 +3400,7 @@
       "country": "US"
     },
     {
-      "rank": 25,
+      "rank": 26,
       "name": "vora",
       "elo": 1200,
       "games": 8,
@@ -3368,7 +3410,7 @@
       "country": ""
     },
     {
-      "rank": 26,
+      "rank": 27,
       "name": "n8",
       "elo": 1200,
       "games": 5,
@@ -3378,7 +3420,7 @@
       "country": ""
     },
     {
-      "rank": 27,
+      "rank": 28,
       "name": "sky",
       "elo": 1200,
       "games": 10,
@@ -3388,7 +3430,7 @@
       "country": "US"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "name": "aadil",
       "elo": 1200,
       "games": 37,
@@ -3398,7 +3440,7 @@
       "country": "CA"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "name": "duck",
       "elo": 1200,
       "games": 5,
@@ -3408,7 +3450,7 @@
       "country": "US"
     },
     {
-      "rank": 30,
+      "rank": 31,
       "name": "jeni",
       "elo": 1200,
       "games": 21,
@@ -3418,7 +3460,7 @@
       "country": "US"
     },
     {
-      "rank": 31,
+      "rank": 32,
       "name": "audrey",
       "elo": 1200,
       "games": 29,
@@ -3428,7 +3470,7 @@
       "country": "US"
     },
     {
-      "rank": 32,
+      "rank": 33,
       "name": "dhruvus",
       "elo": 1200,
       "games": 8,
@@ -3438,7 +3480,7 @@
       "country": "UK"
     },
     {
-      "rank": 33,
+      "rank": 34,
       "name": "fela",
       "elo": 1200,
       "games": 5,
@@ -3448,7 +3490,7 @@
       "country": "NG"
     },
     {
-      "rank": 34,
+      "rank": 35,
       "name": "farza",
       "elo": 1200,
       "games": 5,
@@ -3458,7 +3500,7 @@
       "country": "US"
     },
     {
-      "rank": 35,
+      "rank": 36,
       "name": "stav",
       "elo": 1200,
       "games": 12,
@@ -3468,7 +3510,7 @@
       "country": "US"
     },
     {
-      "rank": 36,
+      "rank": 37,
       "name": "samin",
       "elo": 1198,
       "games": 253,
@@ -3478,17 +3520,17 @@
       "country": "US"
     },
     {
-      "rank": 37,
+      "rank": 38,
       "name": "ben",
-      "elo": 1188,
-      "games": 67,
-      "wins": 27,
-      "losses": 40,
-      "win_rate": 40.3,
+      "elo": 1189,
+      "games": 90,
+      "wins": 46,
+      "losses": 44,
+      "win_rate": 51.1,
       "country": ""
     },
     {
-      "rank": 38,
+      "rank": 39,
       "name": "pat",
       "elo": 1186,
       "games": 186,
@@ -3498,7 +3540,7 @@
       "country": "PH"
     },
     {
-      "rank": 39,
+      "rank": 40,
       "name": "Raulito",
       "elo": 1171,
       "games": 43,
@@ -3508,23 +3550,13 @@
       "country": "US"
     },
     {
-      "rank": 40,
+      "rank": 41,
       "name": "gatmo",
       "elo": 1169,
       "games": 31,
       "wins": 7,
       "losses": 24,
       "win_rate": 22.6,
-      "country": "US"
-    },
-    {
-      "rank": 41,
-      "name": "lag",
-      "elo": 1165,
-      "games": 110,
-      "wins": 36,
-      "losses": 74,
-      "win_rate": 32.7,
       "country": "US"
     },
     {
@@ -3569,6 +3601,16 @@
     },
     {
       "rank": 46,
+      "name": "lag",
+      "elo": 1136,
+      "games": 115,
+      "wins": 36,
+      "losses": 79,
+      "win_rate": 31.3,
+      "country": "US"
+    },
+    {
+      "rank": 47,
       "name": "jean",
       "elo": 1099,
       "games": 75,
@@ -3578,7 +3620,7 @@
       "country": ""
     },
     {
-      "rank": 47,
+      "rank": 48,
       "name": "joguo",
       "elo": 1072,
       "games": 65,
@@ -3588,7 +3630,7 @@
       "country": "AU"
     },
     {
-      "rank": 48,
+      "rank": 49,
       "name": "mmmmm",
       "elo": 1069,
       "games": 91,
@@ -3598,27 +3640,27 @@
       "country": "US"
     },
     {
-      "rank": 49,
+      "rank": 50,
       "name": "gapam",
-      "elo": 1067,
-      "games": 70,
-      "wins": 20,
-      "losses": 50,
-      "win_rate": 28.6,
+      "elo": 1066,
+      "games": 73,
+      "wins": 21,
+      "losses": 52,
+      "win_rate": 28.8,
       "country": "US"
     },
     {
-      "rank": 50,
+      "rank": 51,
       "name": "unknown",
       "elo": 1054,
-      "games": 39,
+      "games": 42,
       "wins": 0,
-      "losses": 39,
+      "losses": 42,
       "win_rate": 0.0,
       "country": "UN"
     },
     {
-      "rank": 51,
+      "rank": 52,
       "name": "lando",
       "elo": 1037,
       "games": 106,
@@ -3628,7 +3670,7 @@
       "country": "US"
     },
     {
-      "rank": 52,
+      "rank": 53,
       "name": "heidy",
       "elo": 1014,
       "games": 137,
@@ -3638,7 +3680,7 @@
       "country": "FR"
     },
     {
-      "rank": 53,
+      "rank": 54,
       "name": "mizan",
       "elo": 968,
       "games": 72,
@@ -3648,7 +3690,7 @@
       "country": "US"
     },
     {
-      "rank": 54,
+      "rank": 55,
       "name": "messi",
       "elo": 960,
       "games": 102,
@@ -3658,7 +3700,7 @@
       "country": "US"
     },
     {
-      "rank": 55,
+      "rank": 56,
       "name": "ya",
       "elo": 747,
       "games": 373,
@@ -3769,6 +3811,13 @@
     },
     {
       "character1": "DONKEY KONG",
+      "character2": "KING DEDEDE",
+      "total_matches": 41,
+      "char1_win_rate": 24.4,
+      "char2_win_rate": 75.6
+    },
+    {
+      "character1": "DONKEY KONG",
       "character2": "DONKEY KONG",
       "total_matches": 41,
       "char1_win_rate": 100.0,
@@ -3780,13 +3829,6 @@
       "total_matches": 39,
       "char1_win_rate": 64.1,
       "char2_win_rate": 35.9
-    },
-    {
-      "character1": "DONKEY KONG",
-      "character2": "KING DEDEDE",
-      "total_matches": 38,
-      "char1_win_rate": 21.1,
-      "char2_win_rate": 78.9
     },
     {
       "character1": "CLOUD",
@@ -3868,32 +3910,32 @@
     {
       "character1": "CAPTAIN FALCON",
       "character2": "CAPTAIN FALCON",
-      "total_matches": 25,
+      "total_matches": 27,
       "char1_win_rate": 100.0,
       "char2_win_rate": 0.0
     },
     {
-      "character1": "MR. GAME & WATCH",
-      "character2": "SAMUS",
-      "total_matches": 24,
-      "char1_win_rate": 83.3,
-      "char2_win_rate": 16.7
+      "character1": "GANONDORF",
+      "character2": "INCINEROAR",
+      "total_matches": 26,
+      "char1_win_rate": 76.9,
+      "char2_win_rate": 23.1
     }
   ],
   "recent_form": [
     {
-      "player": "habeas",
+      "player": "ben",
       "last_10_wins": 9,
       "last_10_losses": 1,
       "form_trend": "stable",
       "win_rate": 90.0
     },
     {
-      "player": "shafaq",
-      "last_10_wins": 9,
-      "last_10_losses": 1,
+      "player": "habeas",
+      "last_10_wins": 8,
+      "last_10_losses": 2,
       "form_trend": "hot",
-      "win_rate": 90.0
+      "win_rate": 80.0
     },
     {
       "player": "jmoon",
@@ -3910,7 +3952,7 @@
       "win_rate": 70.0
     },
     {
-      "player": "ryy",
+      "player": "keneru",
       "last_10_wins": 7,
       "last_10_losses": 3,
       "form_trend": "stable",
@@ -3938,17 +3980,17 @@
       "win_rate": 60.0
     },
     {
-      "player": "lag",
+      "player": "safi",
       "last_10_wins": 6,
       "last_10_losses": 4,
-      "form_trend": "stable",
+      "form_trend": "hot",
       "win_rate": 60.0
     },
     {
       "player": "gapam",
       "last_10_wins": 6,
       "last_10_losses": 4,
-      "form_trend": "hot",
+      "form_trend": "stable",
       "win_rate": 60.0
     },
     {
@@ -3967,13 +4009,6 @@
     },
     {
       "player": "pat",
-      "last_10_wins": 5,
-      "last_10_losses": 5,
-      "form_trend": "stable",
-      "win_rate": 50.0
-    },
-    {
-      "player": "will",
       "last_10_wins": 5,
       "last_10_losses": 5,
       "form_trend": "stable",
@@ -4001,25 +4036,11 @@
       "win_rate": 50.0
     },
     {
-      "player": "ben",
-      "last_10_wins": 5,
-      "last_10_losses": 5,
-      "form_trend": "stable",
-      "win_rate": 50.0
-    },
-    {
       "player": "niki <3",
       "last_10_wins": 5,
       "last_10_losses": 5,
       "form_trend": "stable",
       "win_rate": 50.0
-    },
-    {
-      "player": "keneru",
-      "last_10_wins": 4,
-      "last_10_losses": 6,
-      "form_trend": "cold",
-      "win_rate": 40.0
     },
     {
       "player": "strike",
@@ -4050,10 +4071,24 @@
       "win_rate": 40.0
     },
     {
+      "player": "ryy",
+      "last_10_wins": 3,
+      "last_10_losses": 7,
+      "form_trend": "stable",
+      "win_rate": 30.0
+    },
+    {
       "player": "stav",
       "last_10_wins": 3,
       "last_10_losses": 7,
       "form_trend": "stable",
+      "win_rate": 30.0
+    },
+    {
+      "player": "shafaq",
+      "last_10_wins": 3,
+      "last_10_losses": 7,
+      "form_trend": "cold",
       "win_rate": 30.0
     },
     {
@@ -4099,10 +4134,10 @@
       "win_rate": 30.0
     },
     {
-      "player": "safi",
+      "player": "lag",
       "last_10_wins": 2,
       "last_10_losses": 8,
-      "form_trend": "stable",
+      "form_trend": "cold",
       "win_rate": 20.0
     },
     {
@@ -4127,6 +4162,13 @@
       "win_rate": 20.0
     },
     {
+      "player": "will",
+      "last_10_wins": 1,
+      "last_10_losses": 9,
+      "form_trend": "cold",
+      "win_rate": 10.0
+    },
+    {
       "player": "mizan",
       "last_10_wins": 1,
       "last_10_losses": 9,
@@ -4142,6 +4184,13 @@
     },
     {
       "player": "Ryanz",
+      "last_10_wins": 1,
+      "last_10_losses": 9,
+      "form_trend": "stable",
+      "win_rate": 10.0
+    },
+    {
+      "player": "noah",
       "last_10_wins": 1,
       "last_10_losses": 9,
       "form_trend": "stable",
@@ -4235,9 +4284,9 @@
       },
       {
         "month": "2026-02",
-        "games": 206,
-        "wins": 107,
-        "win_rate": 51.9
+        "games": 230,
+        "wins": 122,
+        "win_rate": 53.0
       }
     ],
     "subby": [
@@ -4403,9 +4452,9 @@
       },
       {
         "month": "2026-02",
-        "games": 46,
-        "wins": 25,
-        "win_rate": 54.3
+        "games": 78,
+        "wins": 49,
+        "win_rate": 62.8
       }
     ],
     "shafaq": [
@@ -4459,9 +4508,9 @@
       },
       {
         "month": "2026-02",
-        "games": 41,
-        "wins": 30,
-        "win_rate": 73.2
+        "games": 72,
+        "wins": 43,
+        "win_rate": 59.7
       }
     ],
     "nish": [
@@ -4571,9 +4620,9 @@
       },
       {
         "month": "2026-02",
-        "games": 113,
-        "wins": 46,
-        "win_rate": 40.7
+        "games": 142,
+        "wins": 57,
+        "win_rate": 40.1
       }
     ],
     "ya": [

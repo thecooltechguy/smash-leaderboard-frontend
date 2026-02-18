@@ -2442,6 +2442,272 @@
       }
     },
     {
+      "date": "February 17, 2026",
+      "generated_at": "2026-02-18T16:24:10.567316",
+      "headline": "ACTION-PACKED DAY: 67 MATCHES, 408 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 67 intense matches with a combined 408 knockouts.\n\nkeneru was the workhorse of the day, grinding through 32 matches with 24 victories.\n\nThe hottest player was ben who maintained an impressive 82.6% win rate.\n\nWe even saw perfection today - gapam delivered a flawless 3-0 with SEPHIROTH!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "keneru",
+        "reason": "Most active player with 32 games"
+      },
+      "highlights": [
+        "67 total matches played",
+        "keneru most active with 32 games",
+        "8 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 67,
+        "total_kos": 408,
+        "player_stats": [
+          {
+            "name": "keneru",
+            "games": 32,
+            "wins": 24,
+            "losses": 8,
+            "win_rate": 75.0,
+            "kos": 61,
+            "falls": 51,
+            "sds": 2,
+            "kd_ratio": 1.2,
+            "main_character": "DONKEY KONG",
+            "character_games": 19
+          },
+          {
+            "name": "shafaq",
+            "games": 31,
+            "wins": 13,
+            "losses": 18,
+            "win_rate": 41.9,
+            "kos": 84,
+            "falls": 74,
+            "sds": 4,
+            "kd_ratio": 1.14,
+            "main_character": "ZELDA",
+            "character_games": 16
+          },
+          {
+            "name": "will",
+            "games": 29,
+            "wins": 11,
+            "losses": 18,
+            "win_rate": 37.9,
+            "kos": 56,
+            "falls": 69,
+            "sds": 3,
+            "kd_ratio": 0.81,
+            "main_character": "JOKER",
+            "character_games": 13
+          },
+          {
+            "name": "ryy",
+            "games": 25,
+            "wins": 9,
+            "losses": 16,
+            "win_rate": 36.0,
+            "kos": 38,
+            "falls": 46,
+            "sds": 3,
+            "kd_ratio": 0.83,
+            "main_character": "CLOUD",
+            "character_games": 11
+          },
+          {
+            "name": "habeas",
+            "games": 24,
+            "wins": 15,
+            "losses": 9,
+            "win_rate": 62.5,
+            "kos": 61,
+            "falls": 46,
+            "sds": 4,
+            "kd_ratio": 1.33,
+            "main_character": "GANONDORF",
+            "character_games": 17
+          },
+          {
+            "name": "ben",
+            "games": 23,
+            "wins": 19,
+            "losses": 4,
+            "win_rate": 82.6,
+            "kos": 59,
+            "falls": 33,
+            "sds": 7,
+            "kd_ratio": 1.79,
+            "main_character": "DONKEY KONG",
+            "character_games": 10
+          },
+          {
+            "name": "noah",
+            "games": 20,
+            "wins": 3,
+            "losses": 17,
+            "win_rate": 15.0,
+            "kos": 15,
+            "falls": 49,
+            "sds": 2,
+            "kd_ratio": 0.31,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 10
+          },
+          {
+            "name": "safi",
+            "games": 9,
+            "wins": 6,
+            "losses": 3,
+            "win_rate": 66.7,
+            "kos": 24,
+            "falls": 16,
+            "sds": 0,
+            "kd_ratio": 1.5,
+            "main_character": "SNAKE",
+            "character_games": 6
+          },
+          {
+            "name": "lag",
+            "games": 5,
+            "wins": 0,
+            "losses": 5,
+            "win_rate": 0.0,
+            "kos": 4,
+            "falls": 15,
+            "sds": 0,
+            "kd_ratio": 0.27,
+            "main_character": "NESS",
+            "character_games": 4
+          },
+          {
+            "name": "gapam",
+            "games": 3,
+            "wins": 1,
+            "losses": 2,
+            "win_rate": 33.3,
+            "kos": 5,
+            "falls": 6,
+            "sds": 0,
+            "kd_ratio": 0.83,
+            "main_character": "SEPHIROTH",
+            "character_games": 3
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "DONKEY KONG",
+            "times_played": 29
+          },
+          {
+            "character": "GANONDORF",
+            "times_played": 19
+          },
+          {
+            "character": "ZELDA",
+            "times_played": 17
+          },
+          {
+            "character": "SORA",
+            "times_played": 13
+          },
+          {
+            "character": "JOKER",
+            "times_played": 13
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "gapam",
+            "character": "SEPHIROTH"
+          },
+          {
+            "player": "ben",
+            "character": "BOWSER"
+          },
+          {
+            "player": "ben",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "ben",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "ben",
+            "character": "MARIO"
+          },
+          {
+            "player": "keneru",
+            "character": "SORA"
+          },
+          {
+            "player": "safi",
+            "character": "SNAKE"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "ben",
+            "player2": "noah",
+            "total_games": 12,
+            "p1_wins": 10,
+            "p2_wins": 2
+          },
+          {
+            "player1": "habeas",
+            "player2": "will",
+            "total_games": 5,
+            "p1_wins": 5,
+            "p2_wins": 0
+          },
+          {
+            "player1": "keneru",
+            "player2": "shafaq",
+            "total_games": 4,
+            "p1_wins": 2,
+            "p2_wins": 2
+          },
+          {
+            "player1": "gapam",
+            "player2": "ben",
+            "total_games": 3,
+            "p1_wins": 1,
+            "p2_wins": 2
+          },
+          {
+            "player1": "habeas",
+            "player2": "safi",
+            "total_games": 3,
+            "p1_wins": 2,
+            "p2_wins": 1
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "ben",
+            "streak": 12
+          },
+          {
+            "player": "habeas",
+            "streak": 6
+          },
+          {
+            "player": "safi",
+            "streak": 6
+          },
+          {
+            "player": "keneru",
+            "streak": 5
+          },
+          {
+            "player": "ryy",
+            "streak": 5
+          }
+        ]
+      }
+    },
+    {
       "date": "February 16, 2026",
       "generated_at": "2026-02-17T16:22:52.806574",
       "headline": "ACTION-PACKED DAY: 35 MATCHES, 143 KOS!",
@@ -4322,14 +4588,6 @@
       "generated_at": "2026-02-05T16:19:20.799197",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on February 04, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "February 03, 2026",
-      "generated_at": "2026-02-04T16:19:08.189985",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 03, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }

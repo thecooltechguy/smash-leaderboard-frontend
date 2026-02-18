@@ -4,23 +4,23 @@
     "best_hour": 6,
     "best_hour_wr": 50.0,
     "worst_hour": 20,
-    "worst_hour_wr": 43.9
+    "worst_hour_wr": 44.0
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.6,
+    "avg_momentum_boost": 17.1,
     "biggest_momentum_player": "lag",
-    "biggest_momentum_boost": 33.6,
-    "biggest_momentum_detail": "55.6% after win vs 21.9% after loss",
-    "reverse_momentum_player": "ryy",
-    "reverse_momentum": -0.3,
+    "biggest_momentum_boost": 35.0,
+    "biggest_momentum_detail": "55.6% after win vs 20.5% after loss",
+    "reverse_momentum_player": "gapam",
+    "reverse_momentum": -0.8,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.5,
-    "after_8_games_wr": 49.8,
-    "fatigue_drop": -2.3
+    "first_3_games_wr": 47.4,
+    "after_8_games_wr": 50.1,
+    "fatigue_drop": -2.6
   },
   "lopsided_matchups": [
     {
@@ -57,9 +57,9 @@
   "revenge": {
     "insight": "Some players are revenge specialists",
     "best_revenge_player": "ryy",
-    "revenge_wr": 83.3,
-    "normal_wr": 45.0,
-    "revenge_boost": 38.3
+    "revenge_wr": 85.7,
+    "normal_wr": 39.1,
+    "revenge_boost": 46.6
   },
   "clutch": {
     "most_clutch_player": "Raulito",
@@ -72,14 +72,14 @@
   "day_activity": {
     "busiest_day": "Thursday",
     "busiest_games": 2061,
-    "quietest_day": "Tuesday",
-    "quietest_games": 1034,
+    "quietest_day": "Sunday",
+    "quietest_games": 1088,
     "friday_vs_monday": 1.2
   },
   "streakiness": {
     "most_streaky_player": "habeas",
-    "five_plus_streaks": 67,
-    "games": 2458
+    "five_plus_streaks": 69,
+    "games": 2482
   },
   "dominant_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.258,
+    "correlation": -0.28,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -139,6 +139,6 @@
     "fastest_player": "lando",
     "fastest_gap": 3.4,
     "slowest_player": "unknown",
-    "slowest_gap": 11.2
+    "slowest_gap": 10.6
   }
 }
