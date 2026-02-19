@@ -8,12 +8,12 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.1,
+    "avg_momentum_boost": 16.9,
     "biggest_momentum_player": "lag",
     "biggest_momentum_boost": 35.0,
     "biggest_momentum_detail": "55.6% after win vs 20.5% after loss",
     "reverse_momentum_player": "gapam",
-    "reverse_momentum": -0.8,
+    "reverse_momentum": -3.7,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.28,
+    "correlation": -0.271,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

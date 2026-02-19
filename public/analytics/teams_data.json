@@ -1,21 +1,21 @@
 {
-  "total_team_matches": 931,
+  "total_team_matches": 939,
   "match_formats": {
     "1v2": 268,
-    "2v2": 333,
+    "2v2": 335,
     "2v1": 82,
     "1v3": 80,
     "3v1": 5,
-    "3v2": 32,
-    "1v4": 33,
+    "3v2": 34,
+    "1v4": 34,
     "2v4": 4,
-    "3v3": 54,
-    "2v3": 29,
+    "3v3": 56,
+    "2v3": 30,
     "1v6": 2,
     "1v5": 8,
     "4v1": 1
   },
-  "true_2v2_count": 333,
+  "true_2v2_count": 335,
   "best_duos": [
     {
       "duo": "mmmmm & own",
@@ -65,6 +65,15 @@
     {
       "duo": "lando & shafaq",
       "player1": "lando",
+      "player2": "shafaq",
+      "wins": 2,
+      "losses": 0,
+      "total": 2,
+      "win_rate": 100.0
+    },
+    {
+      "duo": "ben & shafaq",
+      "player1": "ben",
       "player2": "shafaq",
       "wins": 2,
       "losses": 0,
@@ -187,15 +196,6 @@
       "losses": 7,
       "total": 19,
       "win_rate": 63.2
-    },
-    {
-      "duo": "habeas & strike",
-      "player1": "habeas",
-      "player2": "strike",
-      "wins": 5,
-      "losses": 3,
-      "total": 8,
-      "win_rate": 62.5
     }
   ],
   "most_active_duos": [
@@ -753,12 +753,12 @@
         "shafaq"
       ],
       "size": 1,
-      "wins": 27,
+      "wins": 28,
       "losses": 13,
-      "total": 40,
-      "win_rate": 67.5,
-      "total_kos": 163,
-      "total_falls": 79
+      "total": 41,
+      "win_rate": 68.3,
+      "total_kos": 164,
+      "total_falls": 80
     },
     {
       "team": "samin",
@@ -937,12 +937,12 @@
     },
     {
       "player": "8n",
-      "team_wins": 16,
-      "team_losses": 6,
-      "team_games": 22,
-      "team_win_rate": 72.7,
+      "team_wins": 20,
+      "team_losses": 7,
+      "team_games": 27,
+      "team_win_rate": 74.1,
       "best_teammate": "keneru",
-      "games_with_best": 5
+      "games_with_best": 8
     },
     {
       "player": "daniel l",
@@ -964,10 +964,10 @@
     },
     {
       "player": "shafaq",
-      "team_wins": 109,
-      "team_losses": 70,
-      "team_games": 179,
-      "team_win_rate": 60.9,
+      "team_wins": 115,
+      "team_losses": 72,
+      "team_games": 187,
+      "team_win_rate": 61.5,
       "best_teammate": "habeas",
       "games_with_best": 30
     },
@@ -979,6 +979,15 @@
       "team_win_rate": 60.0,
       "best_teammate": "keneru",
       "games_with_best": 7
+    },
+    {
+      "player": "ben",
+      "team_wins": 18,
+      "team_losses": 14,
+      "team_games": 32,
+      "team_win_rate": 56.2,
+      "best_teammate": "keneru",
+      "games_with_best": 8
     },
     {
       "player": "devmo",
@@ -1008,15 +1017,6 @@
       "games_with_best": 10
     },
     {
-      "player": "ben",
-      "team_wins": 13,
-      "team_losses": 12,
-      "team_games": 25,
-      "team_win_rate": 52.0,
-      "best_teammate": "keneru",
-      "games_with_best": 8
-    },
-    {
       "player": "ryy",
       "team_wins": 33,
       "team_losses": 32,
@@ -1024,15 +1024,6 @@
       "team_win_rate": 50.8,
       "best_teammate": "will",
       "games_with_best": 60
-    },
-    {
-      "player": "keneru",
-      "team_wins": 156,
-      "team_losses": 154,
-      "team_games": 310,
-      "team_win_rate": 50.3,
-      "best_teammate": "subby",
-      "games_with_best": 62
     },
     {
       "player": "samin",
@@ -1051,6 +1042,15 @@
       "team_win_rate": 50.0,
       "best_teammate": "ryy",
       "games_with_best": 60
+    },
+    {
+      "player": "keneru",
+      "team_wins": 158,
+      "team_losses": 160,
+      "team_games": 318,
+      "team_win_rate": 49.7,
+      "best_teammate": "subby",
+      "games_with_best": 62
     },
     {
       "player": "fateen",
@@ -1073,9 +1073,9 @@
     {
       "player": "strike",
       "team_wins": 60,
-      "team_losses": 66,
-      "team_games": 126,
-      "team_win_rate": 47.6,
+      "team_losses": 68,
+      "team_games": 128,
+      "team_win_rate": 46.9,
       "best_teammate": "subby",
       "games_with_best": 65
     },
@@ -1207,10 +1207,10 @@
     },
     {
       "player": "gapam",
-      "team_wins": 10,
-      "team_losses": 21,
-      "team_games": 31,
-      "team_win_rate": 32.3,
+      "team_wins": 12,
+      "team_losses": 27,
+      "team_games": 39,
+      "team_win_rate": 30.8,
       "best_teammate": "jean",
       "games_with_best": 17
     },
@@ -1343,10 +1343,10 @@
     {
       "player": "unknown",
       "team_wins": 0,
-      "team_losses": 24,
-      "team_games": 24,
+      "team_losses": 25,
+      "team_games": 25,
       "team_win_rate": 0.0,
-      "best_teammate": "Ryanz",
+      "best_teammate": "keneru",
       "games_with_best": 3
     },
     {
@@ -1387,14 +1387,6 @@
     }
   ],
   "best_partnerships": [
-    {
-      "partnership": "8n & keneru",
-      "player1": "8n",
-      "player2": "keneru",
-      "games_together": 5,
-      "wins_together": 5,
-      "win_rate": 100.0
-    },
     {
       "partnership": "jeni & shafaq",
       "player1": "jeni",
@@ -1442,6 +1434,22 @@
       "games_together": 2,
       "wins_together": 2,
       "win_rate": 100.0
+    },
+    {
+      "partnership": "8n & ben",
+      "player1": "8n",
+      "player2": "ben",
+      "games_together": 2,
+      "wins_together": 2,
+      "win_rate": 100.0
+    },
+    {
+      "partnership": "8n & keneru",
+      "player1": "8n",
+      "player2": "keneru",
+      "games_together": 8,
+      "wins_together": 7,
+      "win_rate": 87.5
     },
     {
       "partnership": "gino & keneru",
@@ -1538,14 +1546,6 @@
       "games_together": 13,
       "wins_together": 9,
       "win_rate": 69.2
-    },
-    {
-      "partnership": "jmoon & pat",
-      "player1": "jmoon",
-      "player2": "pat",
-      "games_together": 3,
-      "wins_together": 2,
-      "win_rate": 66.7
     }
   ],
   "most_frequent_partnerships": [
@@ -1711,10 +1711,10 @@
     }
   ],
   "summary": {
-    "total_team_matches": 931,
-    "true_2v2_matches": 333,
-    "total_unique_teams": 313,
-    "total_unique_duos": 87,
-    "total_partnerships": 269
+    "total_team_matches": 939,
+    "true_2v2_matches": 335,
+    "total_unique_teams": 319,
+    "total_unique_duos": 89,
+    "total_partnerships": 277
   }
 }

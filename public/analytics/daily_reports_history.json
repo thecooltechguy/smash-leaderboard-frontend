@@ -2442,6 +2442,182 @@
       }
     },
     {
+      "date": "February 18, 2026",
+      "generated_at": "2026-02-19T16:21:42.525697",
+      "headline": "ACTION-PACKED DAY: 10 MATCHES, 76 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 10 intense matches with a combined 76 knockouts.\n\nshafaq was the workhorse of the day, grinding through 10 matches with 6 victories.\n\nThe hottest player was 8n who maintained an impressive 80.0% win rate.\n\nWe even saw perfection today - shafaq delivered a flawless 3-0 with ZELDA!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "shafaq",
+        "reason": "Most active player with 10 games"
+      },
+      "highlights": [
+        "10 total matches played",
+        "shafaq most active with 10 games",
+        "1 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 10,
+        "total_kos": 76,
+        "player_stats": [
+          {
+            "name": "shafaq",
+            "games": 10,
+            "wins": 6,
+            "losses": 4,
+            "win_rate": 60.0,
+            "kos": 29,
+            "falls": 14,
+            "sds": 4,
+            "kd_ratio": 2.07,
+            "main_character": "ZELDA",
+            "character_games": 7
+          },
+          {
+            "name": "keneru",
+            "games": 10,
+            "wins": 4,
+            "losses": 6,
+            "win_rate": 40.0,
+            "kos": 15,
+            "falls": 23,
+            "sds": 0,
+            "kd_ratio": 0.65,
+            "main_character": "SORA",
+            "character_games": 6
+          },
+          {
+            "name": "gapam",
+            "games": 8,
+            "wins": 2,
+            "losses": 6,
+            "win_rate": 25.0,
+            "kos": 8,
+            "falls": 20,
+            "sds": 2,
+            "kd_ratio": 0.4,
+            "main_character": "SEPHIROTH",
+            "character_games": 6
+          },
+          {
+            "name": "ben",
+            "games": 7,
+            "wins": 5,
+            "losses": 2,
+            "win_rate": 71.4,
+            "kos": 14,
+            "falls": 10,
+            "sds": 2,
+            "kd_ratio": 1.4,
+            "main_character": "DONKEY KONG",
+            "character_games": 7
+          },
+          {
+            "name": "8n",
+            "games": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 80.0,
+            "kos": 7,
+            "falls": 12,
+            "sds": 1,
+            "kd_ratio": 0.58,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 5
+          },
+          {
+            "name": "strike",
+            "games": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": 0.0,
+            "kos": 2,
+            "falls": 4,
+            "sds": 0,
+            "kd_ratio": 0.5,
+            "main_character": "MIN MIN",
+            "character_games": 2
+          },
+          {
+            "name": "Bn",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 1,
+            "falls": 2,
+            "sds": 0,
+            "kd_ratio": 0.5,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 1
+          },
+          {
+            "name": "unknown",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "DONKEY KONG",
+            "times_played": 11
+          },
+          {
+            "character": "ZELDA",
+            "times_played": 7
+          },
+          {
+            "character": "SORA",
+            "times_played": 6
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 6
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 6
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "shafaq",
+            "character": "ZELDA"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "keneru",
+            "player2": "shafaq",
+            "total_games": 2,
+            "p1_wins": 2,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 4
+          },
+          {
+            "player": "ben",
+            "streak": 4
+          },
+          {
+            "player": "8n",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "February 17, 2026",
       "generated_at": "2026-02-18T16:24:10.567316",
       "headline": "ACTION-PACKED DAY: 67 MATCHES, 408 KOS!",
@@ -4580,14 +4756,6 @@
       "generated_at": "2026-02-06T16:17:11.123883",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on February 05, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "February 04, 2026",
-      "generated_at": "2026-02-05T16:19:20.799197",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 04, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }

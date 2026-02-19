@@ -73,15 +73,15 @@
     {
       "player1": "keneru",
       "player2": "shafaq",
-      "p1_wins": 29,
+      "p1_wins": 31,
       "p2_wins": 71,
-      "total": 100,
-      "p1_prob": 29.0,
-      "p2_prob": 71.0,
-      "p1_american": "+244",
-      "p2_american": "-244",
-      "p1_decimal": 3.45,
-      "p2_decimal": 1.41,
+      "total": 102,
+      "p1_prob": 30.4,
+      "p2_prob": 69.6,
+      "p1_american": "+229",
+      "p2_american": "-229",
+      "p1_decimal": 3.29,
+      "p2_decimal": 1.44,
       "confidence": "high"
     },
     {
@@ -1683,8 +1683,8 @@
     {
       "player": "shafaq",
       "h2h_wins": 294,
-      "h2h_losses": 251,
-      "h2h_rate": 53.9,
+      "h2h_losses": 253,
+      "h2h_rate": 53.7,
       "opponents": 13
     },
     {
@@ -1724,9 +1724,9 @@
     },
     {
       "player": "keneru",
-      "h2h_wins": 242,
+      "h2h_wins": 244,
       "h2h_losses": 289,
-      "h2h_rate": 45.6,
+      "h2h_rate": 45.8,
       "opponents": 12
     },
     {

@@ -9,8 +9,8 @@
       "plays": 165
     },
     "Wednesday": {
-      "character": "SAMUS",
-      "plays": 158
+      "character": "DONKEY KONG",
+      "plays": 167
     },
     "Thursday": {
       "character": "ZELDA",
@@ -197,7 +197,7 @@
   "longest_losing_streaks": [
     {
       "player": "unknown",
-      "streak": 42
+      "streak": 43
     },
     {
       "player": "heidy",
@@ -238,9 +238,14 @@
   ],
   "comeback_kings": [
     {
+      "player": "8n",
+      "sd_games": 5,
+      "sd_win_rate": 80.0
+    },
+    {
       "player": "shafaq",
-      "sd_games": 45,
-      "sd_win_rate": 64.4
+      "sd_games": 49,
+      "sd_win_rate": 65.3
     },
     {
       "player": "strike",
@@ -256,11 +261,6 @@
       "player": "samin",
       "sd_games": 27,
       "sd_win_rate": 59.3
-    },
-    {
-      "player": "fateen",
-      "sd_games": 43,
-      "sd_win_rate": 53.5
     }
   ],
   "top_matchup_by_day": {
@@ -288,7 +288,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 42,
+      "plays": 43,
       "win_rate": 0.0
     },
     {
@@ -325,8 +325,8 @@
     },
     {
       "character": "KING DEDEDE",
-      "plays": 207,
-      "win_rate": 59.4
+      "plays": 210,
+      "win_rate": 58.6
     },
     {
       "character": "PIRANHA PLANT",
