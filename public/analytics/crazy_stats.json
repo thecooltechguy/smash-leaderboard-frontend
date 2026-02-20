@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1020,
-    "total_wins": 799,
+    "total_games": 1022,
+    "total_wins": 801,
     "winrate_Late Night (10PM-4AM)": {
       "games": 389,
       "win_rate": 80.7
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 358,
-      "win_rate": 77.9
+      "games": 360,
+      "win_rate": 78.1
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 243,
@@ -94,8 +94,8 @@
         "win_rate": 80.8
       },
       "Thursday": {
-        "games": 207,
-        "win_rate": 75.4
+        "games": 209,
+        "win_rate": 75.6
       },
       "Friday": {
         "games": 177,
@@ -122,7 +122,7 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 278,
+      "games": 279,
       "win_rate": 80.6
     }
   },
@@ -197,7 +197,7 @@
   "longest_losing_streaks": [
     {
       "player": "unknown",
-      "streak": 43
+      "streak": 46
     },
     {
       "player": "heidy",
@@ -288,7 +288,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 43,
+      "plays": 46,
       "win_rate": 0.0
     },
     {
@@ -583,9 +583,9 @@
     },
     "2026-02": {
       "player": "jmoon",
-      "games": 30,
-      "wins": 25,
-      "win_rate": 83.3
+      "games": 32,
+      "wins": 27,
+      "win_rate": 84.4
     }
   },
   "busiest_hour": {

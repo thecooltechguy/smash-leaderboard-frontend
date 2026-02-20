@@ -1,10 +1,10 @@
 {
-  "total_team_matches": 939,
+  "total_team_matches": 944,
   "match_formats": {
     "1v2": 268,
-    "2v2": 335,
+    "2v2": 339,
     "2v1": 82,
-    "1v3": 80,
+    "1v3": 81,
     "3v1": 5,
     "3v2": 34,
     "1v4": 34,
@@ -15,7 +15,7 @@
     "1v5": 8,
     "4v1": 1
   },
-  "true_2v2_count": 335,
+  "true_2v2_count": 339,
   "best_duos": [
     {
       "duo": "mmmmm & own",
@@ -117,6 +117,15 @@
       "win_rate": 75.0
     },
     {
+      "duo": "8n & keneru",
+      "player1": "8n",
+      "player2": "keneru",
+      "wins": 3,
+      "losses": 1,
+      "total": 4,
+      "win_rate": 75.0
+    },
+    {
       "duo": "habeas & shafaq",
       "player1": "habeas",
       "player2": "shafaq",
@@ -187,15 +196,6 @@
       "losses": 1,
       "total": 3,
       "win_rate": 66.7
-    },
-    {
-      "duo": "habeas & nish",
-      "player1": "habeas",
-      "player2": "nish",
-      "wins": 12,
-      "losses": 7,
-      "total": 19,
-      "win_rate": 63.2
     }
   ],
   "most_active_duos": [
@@ -513,20 +513,6 @@
       "total_falls": 8
     },
     {
-      "team": "8n & keneru",
-      "members": [
-        "8n",
-        "keneru"
-      ],
-      "size": 2,
-      "wins": 5,
-      "losses": 0,
-      "total": 5,
-      "win_rate": 100.0,
-      "total_kos": 16,
-      "total_falls": 16
-    },
-    {
       "team": "audrey & jeni & shafaq",
       "members": [
         "audrey",
@@ -552,6 +538,19 @@
       "total": 4,
       "win_rate": 100.0,
       "total_kos": 10,
+      "total_falls": 7
+    },
+    {
+      "team": "gapam",
+      "members": [
+        "gapam"
+      ],
+      "size": 1,
+      "wins": 4,
+      "losses": 0,
+      "total": 4,
+      "win_rate": 100.0,
+      "total_kos": 16,
       "total_falls": 7
     },
     {
@@ -612,19 +611,6 @@
       "total_falls": 6
     },
     {
-      "team": "gapam",
-      "members": [
-        "gapam"
-      ],
-      "size": 1,
-      "wins": 3,
-      "losses": 0,
-      "total": 3,
-      "win_rate": 100.0,
-      "total_kos": 12,
-      "total_falls": 5
-    },
-    {
       "team": "mizan",
       "members": [
         "mizan"
@@ -649,6 +635,19 @@
       "win_rate": 100.0,
       "total_kos": 9,
       "total_falls": 2
+    },
+    {
+      "team": "stav",
+      "members": [
+        "stav"
+      ],
+      "size": 1,
+      "wins": 2,
+      "losses": 0,
+      "total": 2,
+      "win_rate": 100.0,
+      "total_kos": 3,
+      "total_falls": 1
     }
   ],
   "most_active_teams": [
@@ -937,12 +936,12 @@
     },
     {
       "player": "8n",
-      "team_wins": 20,
-      "team_losses": 7,
-      "team_games": 27,
-      "team_win_rate": 74.1,
+      "team_wins": 23,
+      "team_losses": 8,
+      "team_games": 31,
+      "team_win_rate": 74.2,
       "best_teammate": "keneru",
-      "games_with_best": 8
+      "games_with_best": 12
     },
     {
       "player": "daniel l",
@@ -981,15 +980,6 @@
       "games_with_best": 7
     },
     {
-      "player": "ben",
-      "team_wins": 18,
-      "team_losses": 14,
-      "team_games": 32,
-      "team_win_rate": 56.2,
-      "best_teammate": "keneru",
-      "games_with_best": 8
-    },
-    {
       "player": "devmo",
       "team_wins": 10,
       "team_losses": 8,
@@ -1006,6 +996,15 @@
       "team_win_rate": 54.5,
       "best_teammate": "keneru",
       "games_with_best": 5
+    },
+    {
+      "player": "ben",
+      "team_wins": 19,
+      "team_losses": 17,
+      "team_games": 36,
+      "team_win_rate": 52.8,
+      "best_teammate": "keneru",
+      "games_with_best": 8
     },
     {
       "player": "audrey",
@@ -1035,6 +1034,15 @@
       "games_with_best": 40
     },
     {
+      "player": "keneru",
+      "team_wins": 161,
+      "team_losses": 161,
+      "team_games": 322,
+      "team_win_rate": 50.0,
+      "best_teammate": "subby",
+      "games_with_best": 62
+    },
+    {
       "player": "will",
       "team_wins": 45,
       "team_losses": 45,
@@ -1042,15 +1050,6 @@
       "team_win_rate": 50.0,
       "best_teammate": "ryy",
       "games_with_best": 60
-    },
-    {
-      "player": "keneru",
-      "team_wins": 158,
-      "team_losses": 160,
-      "team_games": 318,
-      "team_win_rate": 49.7,
-      "best_teammate": "subby",
-      "games_with_best": 62
     },
     {
       "player": "fateen",
@@ -1207,10 +1206,10 @@
     },
     {
       "player": "gapam",
-      "team_wins": 12,
-      "team_losses": 27,
-      "team_games": 39,
-      "team_win_rate": 30.8,
+      "team_wins": 14,
+      "team_losses": 30,
+      "team_games": 44,
+      "team_win_rate": 31.8,
       "best_teammate": "jean",
       "games_with_best": 17
     },
@@ -1343,8 +1342,8 @@
     {
       "player": "unknown",
       "team_wins": 0,
-      "team_losses": 25,
-      "team_games": 25,
+      "team_losses": 28,
+      "team_games": 28,
       "team_win_rate": 0.0,
       "best_teammate": "keneru",
       "games_with_best": 3
@@ -1444,20 +1443,20 @@
       "win_rate": 100.0
     },
     {
-      "partnership": "8n & keneru",
-      "player1": "8n",
-      "player2": "keneru",
-      "games_together": 8,
-      "wins_together": 7,
-      "win_rate": 87.5
-    },
-    {
       "partnership": "gino & keneru",
       "player1": "gino",
       "player2": "keneru",
       "games_together": 7,
       "wins_together": 6,
       "win_rate": 85.7
+    },
+    {
+      "partnership": "8n & keneru",
+      "player1": "8n",
+      "player2": "keneru",
+      "games_together": 12,
+      "wins_together": 10,
+      "win_rate": 83.3
     },
     {
       "partnership": "mizan & shafaq",
@@ -1711,10 +1710,10 @@
     }
   ],
   "summary": {
-    "total_team_matches": 939,
-    "true_2v2_matches": 335,
-    "total_unique_teams": 319,
-    "total_unique_duos": 89,
+    "total_team_matches": 944,
+    "true_2v2_matches": 339,
+    "total_unique_teams": 320,
+    "total_unique_duos": 91,
     "total_partnerships": 277
   }
 }

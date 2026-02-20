@@ -9,8 +9,8 @@
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "78.3%",
-    "detail": "799W - 221L across 1020 games"
+    "value": "78.4%",
+    "detail": "801W - 221L across 1022 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
@@ -21,7 +21,7 @@
   "worst_losing_streak": {
     "stat": "Longest Losing Streak",
     "player": "unknown",
-    "value": "43 consecutive losses",
+    "value": "46 consecutive losses",
     "detail": "Kept coming back for more. That's dedication."
   },
   "best_winning_streak": {
@@ -34,7 +34,7 @@
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
     "value": "1.62 K/D",
-    "detail": "2481 KOs, 1535 deaths"
+    "detail": "2487 KOs, 1537 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -74,15 +74,15 @@
   },
   "weekend_warrior": {
     "stat": "Weekend Warrior",
-    "player": "gapam",
-    "value": "+24.1% on weekends",
-    "detail": "Weekend: 44.4% vs Weekday: 20.4%"
+    "player": "jean",
+    "value": "+19.8% on weekends",
+    "detail": "Weekend: 50.0% vs Weekday: 30.2%"
   },
   "weekday_grinder": {
     "stat": "Weekday Warrior",
     "player": "ben",
-    "value": "+23.4% on weekdays",
-    "detail": "Weekday: 63.0% vs Weekend: 39.5%"
+    "value": "+19.5% on weekdays",
+    "detail": "Weekday: 59.0% vs Weekend: 39.5%"
   },
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
@@ -93,8 +93,8 @@
   "late_night_specialist": {
     "stat": "Best After 10PM",
     "player": "jmoon",
-    "value": "77.9% win rate",
-    "detail": "Across 467 late-night games"
+    "value": "78.0% win rate",
+    "detail": "Across 469 late-night games"
   },
   "giant_killer": {
     "stat": "Most Wins vs jmoon",
@@ -106,7 +106,7 @@
     "stat": "Most Cursed Character",
     "player": "UNKNOWN",
     "value": "0.0% win rate",
-    "detail": "Across 43 games. Just don't pick it."
+    "detail": "Across 46 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -140,9 +140,9 @@
   },
   "most_improved": {
     "stat": "Most Improved Player",
-    "player": "pat",
-    "value": "+26.0%",
-    "detail": "First 50 games: 20.0% \u2192 Last 50: 46.0%"
+    "player": "ben",
+    "value": "+32.0%",
+    "detail": "First 50 games: 36.0% \u2192 Last 50: 68.0%"
   },
   "fallen_off": {
     "stat": "Biggest Decline",

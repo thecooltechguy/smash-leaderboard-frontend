@@ -8,12 +8,12 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 16.9,
-    "biggest_momentum_player": "lag",
-    "biggest_momentum_boost": 35.0,
-    "biggest_momentum_detail": "55.6% after win vs 20.5% after loss",
+    "avg_momentum_boost": 18.1,
+    "biggest_momentum_player": "8n",
+    "biggest_momentum_boost": 45.1,
+    "biggest_momentum_detail": "72.0% after win vs 26.9% after loss",
     "reverse_momentum_player": "gapam",
-    "reverse_momentum": -3.7,
+    "reverse_momentum": -4.2,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
@@ -71,7 +71,7 @@
   },
   "day_activity": {
     "busiest_day": "Thursday",
-    "busiest_games": 2061,
+    "busiest_games": 2093,
     "quietest_day": "Sunday",
     "quietest_games": 1088,
     "friday_vs_monday": 1.2
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.271,
+    "correlation": -0.267,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -139,6 +139,6 @@
     "fastest_player": "lando",
     "fastest_gap": 3.4,
     "slowest_player": "unknown",
-    "slowest_gap": 10.6
+    "slowest_gap": 9.5
   }
 }

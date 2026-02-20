@@ -603,6 +603,20 @@
       "confidence": "low"
     },
     {
+      "player1": "ben",
+      "player2": "gapam",
+      "p1_wins": 10,
+      "p2_wins": 4,
+      "total": 14,
+      "p1_prob": 71.4,
+      "p2_prob": 28.6,
+      "p1_american": "-250",
+      "p2_american": "+250",
+      "p1_decimal": 1.4,
+      "p2_decimal": 3.5,
+      "confidence": "low"
+    },
+    {
       "player1": "gatmo",
       "player2": "habeas",
       "p1_wins": 0,
@@ -628,20 +642,6 @@
       "p2_american": "-225",
       "p1_decimal": 3.25,
       "p2_decimal": 1.44,
-      "confidence": "low"
-    },
-    {
-      "player1": "ben",
-      "player2": "gapam",
-      "p1_wins": 9,
-      "p2_wins": 4,
-      "total": 13,
-      "p1_prob": 69.2,
-      "p2_prob": 30.8,
-      "p1_american": "-225",
-      "p2_american": "+225",
-      "p1_decimal": 1.44,
-      "p2_decimal": 3.25,
       "confidence": "low"
     },
     {
@@ -1674,6 +1674,13 @@
       "opponents": 5
     },
     {
+      "player": "ben",
+      "h2h_wins": 30,
+      "h2h_losses": 25,
+      "h2h_rate": 54.5,
+      "opponents": 5
+    },
+    {
       "player": "mmmmm",
       "h2h_wins": 27,
       "h2h_losses": 23,
@@ -1686,13 +1693,6 @@
       "h2h_losses": 253,
       "h2h_rate": 53.7,
       "opponents": 13
-    },
-    {
-      "player": "ben",
-      "h2h_wins": 29,
-      "h2h_losses": 25,
-      "h2h_rate": 53.7,
-      "opponents": 5
     },
     {
       "player": "habeas",
@@ -1781,8 +1781,8 @@
     {
       "player": "gapam",
       "h2h_wins": 5,
-      "h2h_losses": 27,
-      "h2h_rate": 15.6,
+      "h2h_losses": 28,
+      "h2h_rate": 15.2,
       "opponents": 3
     },
     {

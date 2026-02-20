@@ -2442,6 +2442,170 @@
       }
     },
     {
+      "date": "February 19, 2026",
+      "generated_at": "2026-02-20T16:15:06.016468",
+      "headline": "ACTION-PACKED DAY: 11 MATCHES, 61 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 11 intense matches with a combined 61 knockouts.\n\ngapam was the workhorse of the day, grinding through 9 matches with 5 victories.\n\nThe hottest player was keneru who maintained an impressive 75.0% win rate.\n\nWe even saw perfection today - 8n delivered a flawless 3-0 with CAPTAIN FALCON!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "gapam",
+        "reason": "Most active player with 9 games"
+      },
+      "highlights": [
+        "11 total matches played",
+        "gapam most active with 9 games",
+        "2 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 11,
+        "total_kos": 61,
+        "player_stats": [
+          {
+            "name": "gapam",
+            "games": 9,
+            "wins": 5,
+            "losses": 4,
+            "win_rate": 55.6,
+            "kos": 17,
+            "falls": 17,
+            "sds": 4,
+            "kd_ratio": 1.0,
+            "main_character": "BOWSER",
+            "character_games": 5
+          },
+          {
+            "name": "8n",
+            "games": 7,
+            "wins": 3,
+            "losses": 4,
+            "win_rate": 42.9,
+            "kos": 10,
+            "falls": 13,
+            "sds": 0,
+            "kd_ratio": 0.77,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 7
+          },
+          {
+            "name": "ben",
+            "games": 7,
+            "wins": 2,
+            "losses": 5,
+            "win_rate": 28.6,
+            "kos": 14,
+            "falls": 16,
+            "sds": 0,
+            "kd_ratio": 0.88,
+            "main_character": "DONKEY KONG",
+            "character_games": 4
+          },
+          {
+            "name": "keneru",
+            "games": 4,
+            "wins": 3,
+            "losses": 1,
+            "win_rate": 75.0,
+            "kos": 14,
+            "falls": 7,
+            "sds": 1,
+            "kd_ratio": 2.0,
+            "main_character": "SORA",
+            "character_games": 4
+          },
+          {
+            "name": "unknown",
+            "games": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 3
+          },
+          {
+            "name": "jmoon",
+            "games": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 6,
+            "falls": 2,
+            "sds": 0,
+            "kd_ratio": 3.0,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 9
+          },
+          {
+            "character": "BOWSER",
+            "times_played": 6
+          },
+          {
+            "character": "SEPHIROTH",
+            "times_played": 4
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 4
+          },
+          {
+            "character": "SORA",
+            "times_played": 4
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "8n",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "gapam",
+            "character": "BOWSER"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "gapam",
+            "player2": "8n",
+            "total_games": 3,
+            "p1_wins": 3,
+            "p2_wins": 0
+          },
+          {
+            "player1": "jmoon",
+            "player2": "ben",
+            "total_games": 2,
+            "p1_wins": 2,
+            "p2_wins": 0
+          },
+          {
+            "player1": "gapam",
+            "player2": "ben",
+            "total_games": 1,
+            "p1_wins": 0,
+            "p2_wins": 1
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "8n",
+            "streak": 3
+          },
+          {
+            "player": "keneru",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "February 18, 2026",
       "generated_at": "2026-02-19T16:21:42.525697",
       "headline": "ACTION-PACKED DAY: 10 MATCHES, 76 KOS!",
@@ -4748,14 +4912,6 @@
       "generated_at": "2026-02-07T16:08:46.046237",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on February 06, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "February 05, 2026",
-      "generated_at": "2026-02-06T16:17:11.123883",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 05, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }
