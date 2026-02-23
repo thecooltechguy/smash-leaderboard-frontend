@@ -2442,6 +2442,14 @@
       }
     },
     {
+      "date": "February 22, 2026",
+      "generated_at": "2026-02-23T16:43:05.877728",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on February 22, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "February 21, 2026",
       "generated_at": "2026-02-22T16:08:59.062802",
       "headline": "REST DAY AT THE ARENA",
@@ -4599,139 +4607,6 @@
           {
             "player": "jmoon",
             "streak": 3
-          }
-        ]
-      }
-    },
-    {
-      "date": "February 08, 2026",
-      "generated_at": "2026-02-09T16:24:41.128020",
-      "headline": "ACTION-PACKED DAY: 24 MATCHES, 108 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 24 intense matches with a combined 108 knockouts.\n\nhabeas was the workhorse of the day, grinding through 22 matches with 7 victories.\n\nThe hottest player was jmoon who maintained an impressive 84.6% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with INCINEROAR!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "habeas",
-        "reason": "Most active player with 22 games"
-      },
-      "highlights": [
-        "24 total matches played",
-        "habeas most active with 22 games",
-        "5 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 24,
-        "total_kos": 108,
-        "player_stats": [
-          {
-            "name": "habeas",
-            "games": 22,
-            "wins": 7,
-            "losses": 15,
-            "win_rate": 31.8,
-            "kos": 44,
-            "falls": 55,
-            "sds": 0,
-            "kd_ratio": 0.8,
-            "main_character": "MR. GAME & WATCH",
-            "character_games": 8
-          },
-          {
-            "name": "will",
-            "games": 13,
-            "wins": 6,
-            "losses": 7,
-            "win_rate": 46.2,
-            "kos": 28,
-            "falls": 30,
-            "sds": 1,
-            "kd_ratio": 0.93,
-            "main_character": "STEVE",
-            "character_games": 5
-          },
-          {
-            "name": "jmoon",
-            "games": 13,
-            "wins": 11,
-            "losses": 2,
-            "win_rate": 84.6,
-            "kos": 36,
-            "falls": 19,
-            "sds": 0,
-            "kd_ratio": 1.89,
-            "main_character": "GANONDORF",
-            "character_games": 8
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "GANONDORF",
-            "times_played": 16
-          },
-          {
-            "character": "MR. GAME & WATCH",
-            "times_played": 8
-          },
-          {
-            "character": "STEVE",
-            "times_played": 5
-          },
-          {
-            "character": "JOKER",
-            "times_played": 5
-          },
-          {
-            "character": "INCINEROAR",
-            "times_played": 3
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "jmoon",
-            "character": "INCINEROAR"
-          },
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "will",
-            "character": "KEN"
-          },
-          {
-            "player": "habeas",
-            "character": "KIRBY"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "habeas",
-            "player2": "will",
-            "total_games": 11,
-            "p1_wins": 5,
-            "p2_wins": 6
-          },
-          {
-            "player1": "habeas",
-            "player2": "jmoon",
-            "total_games": 11,
-            "p1_wins": 2,
-            "p2_wins": 9
-          },
-          {
-            "player1": "jmoon",
-            "player2": "will",
-            "total_games": 2,
-            "p1_wins": 2,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "jmoon",
-            "streak": 4
           }
         ]
       }
