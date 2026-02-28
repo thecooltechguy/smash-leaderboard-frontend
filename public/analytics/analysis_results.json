@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-02-27T16:13:25.045337",
+  "generated_at": "2026-02-28T16:07:11.357578",
   "overall": {
-    "total_matches": 4620,
+    "total_matches": 4626,
     "total_players": 89,
-    "active_players": 36,
+    "active_players": 30,
     "date_range_start": "2025-06-06",
-    "date_range_end": "2026-02-19",
-    "days_of_play": 258,
-    "total_kos": 21912,
-    "total_falls": 22657,
+    "date_range_end": "2026-02-28",
+    "days_of_play": 266,
+    "total_kos": 21935,
+    "total_falls": 22680,
     "total_sds": 858,
     "unique_characters_played": 98,
-    "avg_matches_per_day": 17.9,
+    "avg_matches_per_day": 17.4,
     "avg_participants_per_match": 2.38
   },
   "players": [
     {
       "id": 21,
       "name": "habeas",
-      "total_games": 2482,
-      "wins": 1270,
-      "losses": 1212,
-      "win_rate": 51.2,
-      "total_kos": 5425,
-      "total_falls": 4982,
+      "total_games": 2487,
+      "wins": 1271,
+      "losses": 1216,
+      "win_rate": 51.1,
+      "total_kos": 5433,
+      "total_falls": 4994,
       "total_sds": 112,
       "kd_ratio": 1.09,
       "characters_played": 50,
       "favorite_character": "MR. GAME & WATCH",
-      "elo": 1516,
+      "elo": 1456,
       "country": "CA"
     },
     {
@@ -82,17 +82,17 @@
     {
       "id": 104,
       "name": "shafaq",
-      "total_games": 755,
-      "wins": 426,
-      "losses": 329,
-      "win_rate": 56.4,
-      "total_kos": 1750,
-      "total_falls": 1457,
+      "total_games": 761,
+      "wins": 431,
+      "losses": 330,
+      "win_rate": 56.6,
+      "total_kos": 1765,
+      "total_falls": 1465,
       "total_sds": 63,
       "kd_ratio": 1.2,
       "characters_played": 21,
       "favorite_character": "ZELDA",
-      "elo": 1431,
+      "elo": 1502,
       "country": "US"
     },
     {
@@ -450,17 +450,17 @@
     {
       "id": 2586,
       "name": "safi",
-      "total_games": 49,
+      "total_games": 50,
       "wins": 18,
-      "losses": 31,
-      "win_rate": 36.7,
+      "losses": 32,
+      "win_rate": 36.0,
       "total_kos": 96,
-      "total_falls": 108,
+      "total_falls": 111,
       "total_sds": 2,
-      "kd_ratio": 0.89,
+      "kd_ratio": 0.86,
       "characters_played": 7,
       "favorite_character": "SNAKE",
-      "elo": 1318,
+      "elo": 1307,
       "country": "US"
     },
     {
@@ -1491,23 +1491,23 @@
     },
     {
       "character": "SAMUS",
-      "times_played": 771,
-      "wins": 369,
-      "win_rate": 47.9,
-      "total_kos": 1553,
-      "total_falls": 1583,
+      "times_played": 776,
+      "wins": 373,
+      "win_rate": 48.1,
+      "total_kos": 1565,
+      "total_falls": 1591,
       "total_sds": 94,
-      "avg_kos_per_game": 2.01,
+      "avg_kos_per_game": 2.02,
       "avg_falls_per_game": 2.05,
       "unique_players": 10
     },
     {
       "character": "GANONDORF",
-      "times_played": 669,
-      "wins": 379,
-      "win_rate": 56.7,
-      "total_kos": 1621,
-      "total_falls": 1323,
+      "times_played": 674,
+      "wins": 380,
+      "win_rate": 56.4,
+      "total_kos": 1629,
+      "total_falls": 1335,
       "total_sds": 43,
       "avg_kos_per_game": 2.42,
       "avg_falls_per_game": 1.98,
@@ -1599,14 +1599,14 @@
     },
     {
       "character": "KING DEDEDE",
-      "times_played": 210,
-      "wins": 123,
-      "win_rate": 58.6,
-      "total_kos": 491,
+      "times_played": 211,
+      "wins": 124,
+      "win_rate": 58.8,
+      "total_kos": 494,
       "total_falls": 390,
       "total_sds": 19,
       "avg_kos_per_game": 2.34,
-      "avg_falls_per_game": 1.86,
+      "avg_falls_per_game": 1.85,
       "unique_players": 11
     },
     {
@@ -1635,14 +1635,14 @@
     },
     {
       "character": "BOWSER",
-      "times_played": 145,
+      "times_played": 146,
       "wins": 81,
-      "win_rate": 55.9,
+      "win_rate": 55.5,
       "total_kos": 323,
-      "total_falls": 290,
+      "total_falls": 293,
       "total_sds": 16,
-      "avg_kos_per_game": 2.23,
-      "avg_falls_per_game": 2.0,
+      "avg_kos_per_game": 2.21,
+      "avg_falls_per_game": 2.01,
       "unique_players": 14
     },
     {
@@ -2638,10 +2638,10 @@
     {
       "player1": "habeas",
       "player2": "shafaq",
-      "total_matches": 262,
-      "player1_wins": 150,
-      "player2_wins": 112,
-      "dominance": 57.25190839694656
+      "total_matches": 267,
+      "player1_wins": 151,
+      "player2_wins": 116,
+      "dominance": 56.55430711610487
     },
     {
       "player1": "habeas",
@@ -2816,7 +2816,7 @@
       },
       {
         "month": "2026-02",
-        "matches": 405
+        "matches": 411
       }
     ],
     "weekday": [
@@ -2842,7 +2842,7 @@
       },
       {
         "day": "Saturday",
-        "matches": 933
+        "matches": 939
       },
       {
         "day": "Sunday",
@@ -2856,11 +2856,11 @@
       },
       {
         "hour": 1,
-        "matches": 464
+        "matches": 467
       },
       {
         "hour": 2,
-        "matches": 505
+        "matches": 508
       },
       {
         "hour": 3,
@@ -2965,11 +2965,11 @@
         "matches": 98
       },
       {
-        "date": "2025-09-20",
+        "date": "2025-09-06",
         "matches": 85
       },
       {
-        "date": "2025-09-06",
+        "date": "2025-09-20",
         "matches": 85
       },
       {
@@ -2985,13 +2985,13 @@
         "matches": 72
       },
       {
-        "date": "2025-08-16",
+        "date": "2025-09-14",
         "matches": 70
       }
     ]
   },
   "fun_facts": {
-    "perfect_games_count": 367,
+    "perfect_games_count": 370,
     "most_kos_single_match": {
       "player": "aadil",
       "kos": 17,
@@ -3154,8 +3154,8 @@
       "UK",
       "TN",
       "FR",
-      "JP",
       "CA",
+      "JP",
       "IN",
       "BD",
       "PH",
@@ -3187,23 +3187,23 @@
     },
     {
       "rank": 3,
-      "name": "habeas",
-      "elo": 1516,
-      "games": 2482,
-      "wins": 1270,
-      "losses": 1212,
-      "win_rate": 51.2,
-      "country": "CA"
+      "name": "shafaq",
+      "elo": 1502,
+      "games": 761,
+      "wins": 431,
+      "losses": 330,
+      "win_rate": 56.6,
+      "country": "US"
     },
     {
       "rank": 4,
-      "name": "shafaq",
-      "elo": 1431,
-      "games": 755,
-      "wins": 426,
-      "losses": 329,
-      "win_rate": 56.4,
-      "country": "US"
+      "name": "habeas",
+      "elo": 1456,
+      "games": 2487,
+      "wins": 1271,
+      "losses": 1216,
+      "win_rate": 51.1,
+      "country": "CA"
     },
     {
       "rank": 5,
@@ -3238,11 +3238,11 @@
     {
       "rank": 8,
       "name": "safi",
-      "elo": 1318,
-      "games": 49,
+      "elo": 1307,
+      "games": 50,
       "wins": 18,
-      "losses": 31,
-      "win_rate": 36.7,
+      "losses": 32,
+      "win_rate": 36.0,
       "country": "US"
     },
     {
@@ -3940,13 +3940,6 @@
   ],
   "recent_form": [
     {
-      "player": "habeas",
-      "last_10_wins": 8,
-      "last_10_losses": 2,
-      "form_trend": "hot",
-      "win_rate": 80.0
-    },
-    {
       "player": "jmoon",
       "last_10_wins": 8,
       "last_10_losses": 2,
@@ -3962,9 +3955,16 @@
     },
     {
       "player": "shafaq",
+      "last_10_wins": 7,
+      "last_10_losses": 3,
+      "form_trend": "stable",
+      "win_rate": 70.0
+    },
+    {
+      "player": "habeas",
       "last_10_wins": 6,
       "last_10_losses": 4,
-      "form_trend": "hot",
+      "form_trend": "stable",
       "win_rate": 60.0
     },
     {
@@ -4300,9 +4300,9 @@
       },
       {
         "month": "2026-02",
-        "games": 230,
-        "wins": 122,
-        "win_rate": 53.0
+        "games": 235,
+        "wins": 123,
+        "win_rate": 52.3
       }
     ],
     "subby": [
@@ -4524,9 +4524,9 @@
       },
       {
         "month": "2026-02",
-        "games": 82,
-        "wins": 49,
-        "win_rate": 59.8
+        "games": 88,
+        "wins": 54,
+        "win_rate": 61.4
       }
     ],
     "nish": [

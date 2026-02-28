@@ -31,15 +31,15 @@
     {
       "player1": "habeas",
       "player2": "shafaq",
-      "p1_wins": 150,
-      "p2_wins": 112,
-      "total": 262,
-      "p1_prob": 57.3,
-      "p2_prob": 42.7,
-      "p1_american": "-133",
-      "p2_american": "+133",
-      "p1_decimal": 1.75,
-      "p2_decimal": 2.34,
+      "p1_wins": 151,
+      "p2_wins": 116,
+      "total": 267,
+      "p1_prob": 56.6,
+      "p2_prob": 43.4,
+      "p1_american": "-130",
+      "p2_american": "+130",
+      "p1_decimal": 1.77,
+      "p2_decimal": 2.3,
       "confidence": "high"
     },
     {
@@ -1364,15 +1364,15 @@
     {
       "player1": "habeas",
       "player2": "shafaq",
-      "p1_wins": 150,
-      "p2_wins": 112,
-      "total": 262,
-      "p1_prob": 57.3,
-      "p2_prob": 42.7,
-      "p1_american": "-133",
-      "p2_american": "+133",
-      "p1_decimal": 1.75,
-      "p2_decimal": 2.34,
+      "p1_wins": 151,
+      "p2_wins": 116,
+      "total": 267,
+      "p1_prob": 56.6,
+      "p2_prob": 43.4,
+      "p1_american": "-130",
+      "p2_american": "+130",
+      "p1_decimal": 1.77,
+      "p2_decimal": 2.3,
       "confidence": "high"
     },
     {
@@ -1681,6 +1681,13 @@
       "opponents": 5
     },
     {
+      "player": "shafaq",
+      "h2h_wins": 298,
+      "h2h_losses": 254,
+      "h2h_rate": 54.0,
+      "opponents": 13
+    },
+    {
       "player": "mmmmm",
       "h2h_wins": 27,
       "h2h_losses": 23,
@@ -1688,17 +1695,10 @@
       "opponents": 4
     },
     {
-      "player": "shafaq",
-      "h2h_wins": 294,
-      "h2h_losses": 253,
-      "h2h_rate": 53.7,
-      "opponents": 13
-    },
-    {
       "player": "habeas",
-      "h2h_wins": 1064,
-      "h2h_losses": 1003,
-      "h2h_rate": 51.5,
+      "h2h_wins": 1065,
+      "h2h_losses": 1007,
+      "h2h_rate": 51.4,
       "opponents": 23
     },
     {

@@ -2442,6 +2442,120 @@
       }
     },
     {
+      "date": "February 27, 2026",
+      "generated_at": "2026-02-28T16:08:21.083161",
+      "headline": "ACTION-PACKED DAY: 6 MATCHES, 23 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 6 intense matches with a combined 23 knockouts.\n\nshafaq was the workhorse of the day, grinding through 6 matches with 5 victories.\n\nThe hottest player was shafaq who maintained an impressive 83.3% win rate.\n\nWe even saw perfection today - habeas delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "shafaq",
+        "reason": "Most active player with 6 games"
+      },
+      "highlights": [
+        "6 total matches played",
+        "shafaq most active with 6 games",
+        "3 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 6,
+        "total_kos": 23,
+        "player_stats": [
+          {
+            "name": "shafaq",
+            "games": 6,
+            "wins": 5,
+            "losses": 1,
+            "win_rate": 83.3,
+            "kos": 15,
+            "falls": 8,
+            "sds": 0,
+            "kd_ratio": 1.88,
+            "main_character": "SAMUS",
+            "character_games": 5
+          },
+          {
+            "name": "habeas",
+            "games": 5,
+            "wins": 1,
+            "losses": 4,
+            "win_rate": 20.0,
+            "kos": 8,
+            "falls": 12,
+            "sds": 0,
+            "kd_ratio": 0.67,
+            "main_character": "GANONDORF",
+            "character_games": 5
+          },
+          {
+            "name": "safi",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "BOWSER",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "SAMUS",
+            "times_played": 5
+          },
+          {
+            "character": "GANONDORF",
+            "times_played": 5
+          },
+          {
+            "character": "KING DEDEDE",
+            "times_played": 1
+          },
+          {
+            "character": "BOWSER",
+            "times_played": 1
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "shafaq",
+            "character": "KING DEDEDE"
+          },
+          {
+            "player": "shafaq",
+            "character": "SAMUS"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "shafaq",
+            "total_games": 5,
+            "p1_wins": 1,
+            "p2_wins": 4
+          },
+          {
+            "player1": "shafaq",
+            "player2": "safi",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 5
+          }
+        ]
+      }
+    },
+    {
       "date": "February 26, 2026",
       "generated_at": "2026-02-27T16:14:09.548746",
       "headline": "REST DAY AT THE ARENA",
@@ -3600,252 +3714,6 @@
           {
             "player": "jean",
             "streak": 4
-          }
-        ]
-      }
-    },
-    {
-      "date": "February 13, 2026",
-      "generated_at": "2026-02-14T16:08:58.247991",
-      "headline": "ACTION-PACKED DAY: 28 MATCHES, 186 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 28 intense matches with a combined 186 knockouts.\n\nben was the workhorse of the day, grinding through 24 matches with 8 victories.\n\nThe hottest player was jean who maintained an impressive 77.8% win rate.\n\nWe even saw perfection today - shafaq delivered a flawless 3-0 with ZELDA!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "ben",
-        "reason": "Most active player with 24 games"
-      },
-      "highlights": [
-        "28 total matches played",
-        "ben most active with 24 games",
-        "4 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 28,
-        "total_kos": 186,
-        "player_stats": [
-          {
-            "name": "ben",
-            "games": 24,
-            "wins": 8,
-            "losses": 16,
-            "win_rate": 33.3,
-            "kos": 30,
-            "falls": 51,
-            "sds": 7,
-            "kd_ratio": 0.59,
-            "main_character": "MARIO",
-            "character_games": 13
-          },
-          {
-            "name": "gapam",
-            "games": 18,
-            "wins": 9,
-            "losses": 9,
-            "win_rate": 50.0,
-            "kos": 27,
-            "falls": 33,
-            "sds": 7,
-            "kd_ratio": 0.82,
-            "main_character": "SEPHIROTH",
-            "character_games": 18
-          },
-          {
-            "name": "shafaq",
-            "games": 17,
-            "wins": 13,
-            "losses": 4,
-            "win_rate": 76.5,
-            "kos": 57,
-            "falls": 31,
-            "sds": 2,
-            "kd_ratio": 1.84,
-            "main_character": "KING DEDEDE",
-            "character_games": 8
-          },
-          {
-            "name": "habeas",
-            "games": 12,
-            "wins": 4,
-            "losses": 8,
-            "win_rate": 33.3,
-            "kos": 39,
-            "falls": 26,
-            "sds": 2,
-            "kd_ratio": 1.5,
-            "main_character": "GANONDORF",
-            "character_games": 12
-          },
-          {
-            "name": "jean",
-            "games": 9,
-            "wins": 7,
-            "losses": 2,
-            "win_rate": 77.8,
-            "kos": 4,
-            "falls": 13,
-            "sds": 4,
-            "kd_ratio": 0.31,
-            "main_character": "RICHTER",
-            "character_games": 7
-          },
-          {
-            "name": "8n",
-            "games": 6,
-            "wins": 3,
-            "losses": 3,
-            "win_rate": 50.0,
-            "kos": 13,
-            "falls": 14,
-            "sds": 0,
-            "kd_ratio": 0.93,
-            "main_character": "CAPTAIN FALCON",
-            "character_games": 3
-          },
-          {
-            "name": "unknown",
-            "games": 5,
-            "wins": 0,
-            "losses": 5,
-            "win_rate": 0.0,
-            "kos": 0,
-            "falls": 0,
-            "sds": 0,
-            "kd_ratio": 0.0,
-            "main_character": "UNKNOWN",
-            "character_games": 5
-          },
-          {
-            "name": "lag",
-            "games": 3,
-            "wins": 0,
-            "losses": 3,
-            "win_rate": 0.0,
-            "kos": 6,
-            "falls": 9,
-            "sds": 0,
-            "kd_ratio": 0.67,
-            "main_character": "NESS",
-            "character_games": 3
-          },
-          {
-            "name": "fateen",
-            "games": 3,
-            "wins": 1,
-            "losses": 2,
-            "win_rate": 33.3,
-            "kos": 9,
-            "falls": 8,
-            "sds": 1,
-            "kd_ratio": 1.12,
-            "main_character": "KING K. ROOL",
-            "character_games": 3
-          },
-          {
-            "name": "ben.",
-            "games": 1,
-            "wins": 0,
-            "losses": 1,
-            "win_rate": 0.0,
-            "kos": 1,
-            "falls": 3,
-            "sds": 0,
-            "kd_ratio": 0.33,
-            "main_character": "MARIO",
-            "character_games": 1
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "SEPHIROTH",
-            "times_played": 18
-          },
-          {
-            "character": "MARIO",
-            "times_played": 14
-          },
-          {
-            "character": "GANONDORF",
-            "times_played": 13
-          },
-          {
-            "character": "RICHTER",
-            "times_played": 10
-          },
-          {
-            "character": "DONKEY KONG",
-            "times_played": 9
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "shafaq",
-            "character": "ZELDA"
-          },
-          {
-            "player": "shafaq",
-            "character": "ZELDA"
-          },
-          {
-            "player": "shafaq",
-            "character": "KING DEDEDE"
-          },
-          {
-            "player": "gapam",
-            "character": "SEPHIROTH"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "gapam",
-            "player2": "ben",
-            "total_games": 7,
-            "p1_wins": 2,
-            "p2_wins": 5
-          },
-          {
-            "player1": "shafaq",
-            "player2": "ben",
-            "total_games": 3,
-            "p1_wins": 3,
-            "p2_wins": 0
-          },
-          {
-            "player1": "habeas",
-            "player2": "ben",
-            "total_games": 2,
-            "p1_wins": 2,
-            "p2_wins": 0
-          },
-          {
-            "player1": "habeas",
-            "player2": "shafaq",
-            "total_games": 1,
-            "p1_wins": 0,
-            "p2_wins": 1
-          },
-          {
-            "player1": "gapam",
-            "player2": "ben.",
-            "total_games": 1,
-            "p1_wins": 1,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "shafaq",
-            "streak": 6
-          },
-          {
-            "player": "gapam",
-            "streak": 3
-          },
-          {
-            "player": "8n",
-            "streak": 3
-          },
-          {
-            "player": "jean",
-            "streak": 3
           }
         ]
       }

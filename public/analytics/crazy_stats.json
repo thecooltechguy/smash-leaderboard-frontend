@@ -325,8 +325,8 @@
     },
     {
       "character": "KING DEDEDE",
-      "plays": 210,
-      "win_rate": 58.6
+      "plays": 211,
+      "win_rate": 58.8
     },
     {
       "character": "PIRANHA PLANT",
@@ -335,8 +335,8 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 669,
-      "win_rate": 56.7
+      "plays": 674,
+      "win_rate": 56.4
     }
   ],
   "friday_night_favorites": [
@@ -345,18 +345,18 @@
       "plays": 86
     },
     {
-      "character": "MR. GAME & WATCH",
-      "plays": 76
+      "character": "SAMUS",
+      "plays": 77
     },
     {
-      "character": "SAMUS",
-      "plays": 74
+      "character": "MR. GAME & WATCH",
+      "plays": 76
     }
   ],
   "friday_night_king": {
     "player": "shafaq",
-    "games": 21,
-    "win_rate": 81.0
+    "games": 24,
+    "win_rate": 83.3
   },
   "early_birds": [
     {
@@ -425,9 +425,9 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2482,
-    "total_wins": 1270,
-    "total_kos": 5425,
+    "total_games": 2487,
+    "total_wins": 1271,
+    "total_kos": 5433,
     "total_sds": 112,
     "by_day": {
       "Monday": {
@@ -447,8 +447,8 @@
         "win_rate": 47.3
       },
       "Friday": {
-        "games": 378,
-        "win_rate": 48.9
+        "games": 383,
+        "win_rate": 48.6
       },
       "Saturday": {
         "games": 444,
@@ -591,7 +591,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1187
+    "games": 1193
   },
   "quietest_hour": {
     "hour": 8,
