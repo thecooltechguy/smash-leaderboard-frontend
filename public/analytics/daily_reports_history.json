@@ -2442,6 +2442,14 @@
       }
     },
     {
+      "date": "February 28, 2026",
+      "generated_at": "2026-03-01T16:08:18.606390",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on February 28, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "February 27, 2026",
       "generated_at": "2026-02-28T16:08:21.083161",
       "headline": "ACTION-PACKED DAY: 6 MATCHES, 23 KOS!",
@@ -3592,128 +3600,6 @@
           {
             "player": "will",
             "streak": 3
-          }
-        ]
-      }
-    },
-    {
-      "date": "February 14, 2026",
-      "generated_at": "2026-02-15T16:08:50.191349",
-      "headline": "ACTION-PACKED DAY: 17 MATCHES, 71 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 17 intense matches with a combined 71 knockouts.\n\nben was the workhorse of the day, grinding through 17 matches with 10 victories.\n\nThe hottest player was ben who maintained an impressive 58.8% win rate.\n\nWe even saw perfection today - jean delivered a flawless 3-0 with DIDDY KONG!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "ben",
-        "reason": "Most active player with 17 games"
-      },
-      "highlights": [
-        "17 total matches played",
-        "ben most active with 17 games",
-        "3 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 17,
-        "total_kos": 71,
-        "player_stats": [
-          {
-            "name": "ben",
-            "games": 17,
-            "wins": 10,
-            "losses": 7,
-            "win_rate": 58.8,
-            "kos": 38,
-            "falls": 36,
-            "sds": 0,
-            "kd_ratio": 1.06,
-            "main_character": "DONKEY KONG",
-            "character_games": 9
-          },
-          {
-            "name": "jean",
-            "games": 16,
-            "wins": 7,
-            "losses": 9,
-            "win_rate": 43.8,
-            "kos": 33,
-            "falls": 33,
-            "sds": 0,
-            "kd_ratio": 1.0,
-            "main_character": "NESS",
-            "character_games": 8
-          },
-          {
-            "name": "unknown",
-            "games": 1,
-            "wins": 0,
-            "losses": 1,
-            "win_rate": 0.0,
-            "kos": 0,
-            "falls": 0,
-            "sds": 0,
-            "kd_ratio": 0.0,
-            "main_character": "UNKNOWN",
-            "character_games": 1
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "DONKEY KONG",
-            "times_played": 10
-          },
-          {
-            "character": "NESS",
-            "times_played": 8
-          },
-          {
-            "character": "MARIO",
-            "times_played": 5
-          },
-          {
-            "character": "GANONDORF",
-            "times_played": 2
-          },
-          {
-            "character": "KAZUYA",
-            "times_played": 2
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "jean",
-            "character": "DIDDY KONG"
-          },
-          {
-            "player": "jean",
-            "character": "SNAKE"
-          },
-          {
-            "player": "jean",
-            "character": "NESS"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "jean",
-            "player2": "ben",
-            "total_games": 16,
-            "p1_wins": 7,
-            "p2_wins": 9
-          },
-          {
-            "player1": "unknown",
-            "player2": "ben",
-            "total_games": 1,
-            "p1_wins": 0,
-            "p2_wins": 1
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "ben",
-            "streak": 9
-          },
-          {
-            "player": "jean",
-            "streak": 4
           }
         ]
       }
