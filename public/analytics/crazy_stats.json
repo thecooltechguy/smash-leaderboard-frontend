@@ -2,7 +2,7 @@
   "character_by_day": {
     "Monday": {
       "character": "DONKEY KONG",
-      "plays": 173
+      "plays": 178
     },
     "Tuesday": {
       "character": "DONKEY KONG",
@@ -146,10 +146,10 @@
     {
       "player": "ryy",
       "weekend_wr": 58.8,
-      "weekday_wr": 45.9,
-      "diff": 12.9,
+      "weekday_wr": 44.4,
+      "diff": 14.4,
       "weekend_games": 34,
-      "weekday_games": 61
+      "weekday_games": 63
     }
   ],
   "weekday_warriors": [
@@ -325,8 +325,8 @@
     },
     {
       "character": "KING DEDEDE",
-      "plays": 211,
-      "win_rate": 58.8
+      "plays": 218,
+      "win_rate": 58.7
     },
     {
       "character": "PIRANHA PLANT",
@@ -586,12 +586,18 @@
       "games": 32,
       "wins": 27,
       "win_rate": 84.4
+    },
+    "2026-03": {
+      "player": "keneru",
+      "games": 7,
+      "wins": 5,
+      "win_rate": 71.4
     }
   },
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1193
+    "games": 1199
   },
   "quietest_hour": {
     "hour": 8,

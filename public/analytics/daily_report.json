@@ -1,8 +1,196 @@
 {
-  "date": "March 01, 2026",
-  "generated_at": "2026-03-02T16:16:18.630228",
-  "headline": "REST DAY AT THE ARENA",
-  "report": "No matches were recorded on March 01, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-  "highlights": [],
-  "stats_summary": null
+  "date": "March 02, 2026",
+  "generated_at": "2026-03-03T16:20:04.764310",
+  "headline": "ACTION-PACKED DAY: 19 MATCHES, 76 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 19 intense matches with a combined 76 knockouts.\n\nshafaq was the workhorse of the day, grinding through 9 matches with 6 victories.\n\nThe hottest player was safi who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - shafaq delivered a flawless 3-0 with KING DEDEDE!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "player_of_the_day": {
+    "name": "shafaq",
+    "reason": "Most active player with 9 games"
+  },
+  "highlights": [
+    "19 total matches played",
+    "shafaq most active with 9 games",
+    "4 perfect game(s) achieved"
+  ],
+  "stats_summary": {
+    "total_matches": 19,
+    "total_kos": 76,
+    "player_stats": [
+      {
+        "name": "shafaq",
+        "games": 9,
+        "wins": 6,
+        "losses": 3,
+        "win_rate": 66.7,
+        "kos": 20,
+        "falls": 17,
+        "sds": 0,
+        "kd_ratio": 1.18,
+        "main_character": "KING DEDEDE",
+        "character_games": 7
+      },
+      {
+        "name": "will",
+        "games": 7,
+        "wins": 3,
+        "losses": 4,
+        "win_rate": 42.9,
+        "kos": 13,
+        "falls": 16,
+        "sds": 0,
+        "kd_ratio": 0.81,
+        "main_character": "INCINEROAR",
+        "character_games": 7
+      },
+      {
+        "name": "stav",
+        "games": 7,
+        "wins": 2,
+        "losses": 5,
+        "win_rate": 28.6,
+        "kos": 9,
+        "falls": 19,
+        "sds": 0,
+        "kd_ratio": 0.47,
+        "main_character": "KAZUYA",
+        "character_games": 5
+      },
+      {
+        "name": "keneru",
+        "games": 7,
+        "wins": 5,
+        "losses": 2,
+        "win_rate": 71.4,
+        "kos": 19,
+        "falls": 9,
+        "sds": 0,
+        "kd_ratio": 2.11,
+        "main_character": "DONKEY KONG",
+        "character_games": 5
+      },
+      {
+        "name": "safi",
+        "games": 3,
+        "wins": 3,
+        "losses": 0,
+        "win_rate": 100.0,
+        "kos": 9,
+        "falls": 6,
+        "sds": 0,
+        "kd_ratio": 1.5,
+        "main_character": "CHROM",
+        "character_games": 1
+      },
+      {
+        "name": "gapam",
+        "games": 3,
+        "wins": 0,
+        "losses": 3,
+        "win_rate": 0.0,
+        "kos": 6,
+        "falls": 9,
+        "sds": 0,
+        "kd_ratio": 0.67,
+        "main_character": "SEPHIROTH",
+        "character_games": 2
+      },
+      {
+        "name": "ryy",
+        "games": 2,
+        "wins": 0,
+        "losses": 2,
+        "win_rate": 0.0,
+        "kos": 0,
+        "falls": 6,
+        "sds": 0,
+        "kd_ratio": 0.0,
+        "main_character": "CLOUD",
+        "character_games": 1
+      }
+    ],
+    "top_characters": [
+      {
+        "character": "KING DEDEDE",
+        "times_played": 7
+      },
+      {
+        "character": "INCINEROAR",
+        "times_played": 7
+      },
+      {
+        "character": "KAZUYA",
+        "times_played": 5
+      },
+      {
+        "character": "DONKEY KONG",
+        "times_played": 5
+      },
+      {
+        "character": "SEPHIROTH",
+        "times_played": 3
+      }
+    ],
+    "perfect_games": [
+      {
+        "player": "shafaq",
+        "character": "KING DEDEDE"
+      },
+      {
+        "player": "keneru",
+        "character": "DONKEY KONG"
+      },
+      {
+        "player": "keneru",
+        "character": "DONKEY KONG"
+      },
+      {
+        "player": "keneru",
+        "character": "DONKEY KONG"
+      }
+    ],
+    "rivalries": [
+      {
+        "player1": "will",
+        "player2": "shafaq",
+        "total_games": 7,
+        "p1_wins": 3,
+        "p2_wins": 4
+      },
+      {
+        "player1": "keneru",
+        "player2": "stav",
+        "total_games": 7,
+        "p1_wins": 5,
+        "p2_wins": 2
+      },
+      {
+        "player1": "safi",
+        "player2": "gapam",
+        "total_games": 3,
+        "p1_wins": 3,
+        "p2_wins": 0
+      },
+      {
+        "player1": "ryy",
+        "player2": "shafaq",
+        "total_games": 2,
+        "p1_wins": 0,
+        "p2_wins": 2
+      }
+    ],
+    "win_streaks": [
+      {
+        "player": "keneru",
+        "streak": 5
+      },
+      {
+        "player": "shafaq",
+        "streak": 3
+      },
+      {
+        "player": "safi",
+        "streak": 3
+      }
+    ]
+  }
 }

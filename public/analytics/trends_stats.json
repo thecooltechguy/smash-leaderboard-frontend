@@ -8,12 +8,12 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 18.1,
+    "avg_momentum_boost": 18.7,
     "biggest_momentum_player": "8n",
     "biggest_momentum_boost": 45.1,
     "biggest_momentum_detail": "72.0% after win vs 26.9% after loss",
     "reverse_momentum_player": "gapam",
-    "reverse_momentum": -4.2,
+    "reverse_momentum": -2.7,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
@@ -57,9 +57,9 @@
   "revenge": {
     "insight": "Some players are revenge specialists",
     "best_revenge_player": "ryy",
-    "revenge_wr": 85.7,
-    "normal_wr": 39.1,
-    "revenge_boost": 46.6
+    "revenge_wr": 75.0,
+    "normal_wr": 37.5,
+    "revenge_boost": 37.5
   },
   "clutch": {
     "most_clutch_player": "Raulito",
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.266,
+    "correlation": -0.269,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
