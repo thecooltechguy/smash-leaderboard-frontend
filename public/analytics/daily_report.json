@@ -1,178 +1,152 @@
 {
-  "date": "March 07, 2026",
-  "generated_at": "2026-03-08T16:08:34.653039",
-  "headline": "ACTION-PACKED DAY: 15 MATCHES, 91 KOS!",
-  "report": "What a day at the Smash Arena! We witnessed 15 intense matches with a combined 91 knockouts.\n\nnish was the workhorse of the day, grinding through 9 matches with 3 victories.\n\nThe hottest player was will who maintained an impressive 100.0% win rate.\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "date": "March 08, 2026",
+  "generated_at": "2026-03-09T16:25:42.150070",
+  "headline": "ACTION-PACKED DAY: 29 MATCHES, 128 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 29 intense matches with a combined 128 knockouts.\n\nhabeas was the workhorse of the day, grinding through 29 matches with 18 victories.\n\nThe hottest player was habeas who maintained an impressive 62.1% win rate.\n\nWe even saw perfection today - habeas delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
   "player_of_the_day": {
-    "name": "nish",
-    "reason": "Most active player with 9 games"
+    "name": "habeas",
+    "reason": "Most active player with 29 games"
   },
   "highlights": [
-    "15 total matches played",
-    "nish most active with 9 games"
+    "29 total matches played",
+    "habeas most active with 29 games",
+    "6 perfect game(s) achieved"
   ],
   "stats_summary": {
-    "total_matches": 15,
-    "total_kos": 91,
+    "total_matches": 29,
+    "total_kos": 128,
     "player_stats": [
       {
-        "name": "nish",
-        "games": 9,
-        "wins": 3,
-        "losses": 6,
-        "win_rate": 33.3,
-        "kos": 20,
-        "falls": 19,
-        "sds": 0,
-        "kd_ratio": 1.05,
-        "main_character": "SAMUS",
-        "character_games": 9
-      },
-      {
         "name": "habeas",
-        "games": 7,
-        "wins": 4,
-        "losses": 3,
-        "win_rate": 57.1,
-        "kos": 24,
-        "falls": 16,
-        "sds": 2,
-        "kd_ratio": 1.5,
+        "games": 29,
+        "wins": 18,
+        "losses": 11,
+        "win_rate": 62.1,
+        "kos": 69,
+        "falls": 58,
+        "sds": 0,
+        "kd_ratio": 1.19,
         "main_character": "GANONDORF",
-        "character_games": 4
-      },
-      {
-        "name": "keneru",
-        "games": 6,
-        "wins": 0,
-        "losses": 6,
-        "win_rate": 0.0,
-        "kos": 11,
-        "falls": 15,
-        "sds": 0,
-        "kd_ratio": 0.73,
-        "main_character": "DONKEY KONG",
-        "character_games": 5
-      },
-      {
-        "name": "pickle",
-        "games": 6,
-        "wins": 1,
-        "losses": 5,
-        "win_rate": 16.7,
-        "kos": 7,
-        "falls": 17,
-        "sds": 0,
-        "kd_ratio": 0.41,
-        "main_character": "YOSHI",
-        "character_games": 3
-      },
-      {
-        "name": "fateen",
-        "games": 6,
-        "wins": 2,
-        "losses": 4,
-        "win_rate": 33.3,
-        "kos": 12,
-        "falls": 16,
-        "sds": 0,
-        "kd_ratio": 0.75,
-        "main_character": "KING K. ROOL",
-        "character_games": 6
+        "character_games": 29
       },
       {
         "name": "will",
-        "games": 4,
-        "wins": 4,
-        "losses": 0,
-        "win_rate": 100.0,
-        "kos": 9,
-        "falls": 7,
+        "games": 20,
+        "wins": 8,
+        "losses": 12,
+        "win_rate": 40.0,
+        "kos": 44,
+        "falls": 44,
         "sds": 0,
-        "kd_ratio": 1.29,
-        "main_character": "DONKEY KONG",
-        "character_games": 3
+        "kd_ratio": 1.0,
+        "main_character": "BANJO & KAZOOIE",
+        "character_games": 6
       },
       {
         "name": "ryy",
-        "games": 2,
-        "wins": 2,
-        "losses": 0,
-        "win_rate": 100.0,
-        "kos": 6,
-        "falls": 4,
+        "games": 6,
+        "wins": 3,
+        "losses": 3,
+        "win_rate": 50.0,
+        "kos": 15,
+        "falls": 12,
         "sds": 0,
-        "kd_ratio": 1.5,
-        "main_character": "LUCINA",
-        "character_games": 1
+        "kd_ratio": 1.25,
+        "main_character": "FALCO",
+        "character_games": 5
       },
       {
-        "name": "stav",
-        "games": 1,
+        "name": "unknown",
+        "games": 3,
         "wins": 0,
-        "losses": 1,
+        "losses": 3,
         "win_rate": 0.0,
-        "kos": 2,
-        "falls": 3,
+        "kos": 0,
+        "falls": 0,
         "sds": 0,
-        "kd_ratio": 0.67,
-        "main_character": "KAZUYA",
-        "character_games": 1
+        "kd_ratio": 0.0,
+        "main_character": "UNKNOWN",
+        "character_games": 3
       }
     ],
     "top_characters": [
       {
-        "character": "SAMUS",
-        "times_played": 9
-      },
-      {
-        "character": "DONKEY KONG",
-        "times_played": 8
-      },
-      {
-        "character": "KING K. ROOL",
-        "times_played": 7
-      },
-      {
         "character": "GANONDORF",
+        "times_played": 29
+      },
+      {
+        "character": "BANJO & KAZOOIE",
+        "times_played": 6
+      },
+      {
+        "character": "FALCO",
+        "times_played": 5
+      },
+      {
+        "character": "INCINEROAR",
         "times_played": 4
       },
       {
-        "character": "LUCINA",
-        "times_played": 3
+        "character": "JOKER",
+        "times_played": 4
       }
     ],
-    "perfect_games": [],
+    "perfect_games": [
+      {
+        "player": "habeas",
+        "character": "GANONDORF"
+      },
+      {
+        "player": "habeas",
+        "character": "GANONDORF"
+      },
+      {
+        "player": "will",
+        "character": "JOKER"
+      },
+      {
+        "player": "ryy",
+        "character": "FALCO"
+      },
+      {
+        "player": "will",
+        "character": "DONKEY KONG"
+      },
+      {
+        "player": "habeas",
+        "character": "GANONDORF"
+      }
+    ],
     "rivalries": [
       {
-        "player1": "keneru",
+        "player1": "habeas",
         "player2": "will",
-        "total_games": 4,
-        "p1_wins": 0,
-        "p2_wins": 4
+        "total_games": 20,
+        "p1_wins": 12,
+        "p2_wins": 8
       },
       {
         "player1": "habeas",
-        "player2": "nish",
+        "player2": "ryy",
+        "total_games": 6,
+        "p1_wins": 3,
+        "p2_wins": 3
+      },
+      {
+        "player1": "habeas",
+        "player2": "unknown",
         "total_games": 3,
         "p1_wins": 3,
         "p2_wins": 0
-      },
-      {
-        "player1": "keneru",
-        "player2": "ryy",
-        "total_games": 2,
-        "p1_wins": 0,
-        "p2_wins": 2
       }
     ],
     "win_streaks": [
       {
-        "player": "will",
-        "streak": 4
+        "player": "habeas",
+        "streak": 6
       },
       {
-        "player": "habeas",
+        "player": "will",
         "streak": 4
       }
     ]

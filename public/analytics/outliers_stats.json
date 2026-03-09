@@ -2,8 +2,8 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,512 games",
-    "detail": "That's 11.2 games per day on average",
+    "value": "2,541 games",
+    "detail": "That's 11.3 games per day on average",
     "runner_up": "subby (1,193)"
   },
   "most_dominant": {
@@ -14,14 +14,14 @@
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
-    "player": "heidy",
-    "value": "14.6%",
-    "detail": "Still showed up for 137 games. Respect."
+    "player": "unknown",
+    "value": "0.0%",
+    "detail": "Still showed up for 52 games. Respect."
   },
   "worst_losing_streak": {
     "stat": "Longest Losing Streak",
     "player": "unknown",
-    "value": "49 consecutive losses",
+    "value": "52 consecutive losses",
     "detail": "Kept coming back for more. That's dedication."
   },
   "best_winning_streak": {
@@ -38,15 +38,15 @@
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
-    "player": "lando",
-    "value": "0.43 K/D",
+    "player": "unknown",
+    "value": "0.00 K/D",
     "detail": "Gets KO'd more than they KO"
   },
   "most_sds_total": {
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
     "value": "115 SDs",
-    "detail": "That's 1 SD every 21.8 games"
+    "detail": "That's 1 SD every 22.1 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -68,9 +68,9 @@
   },
   "biggest_one_trick": {
     "stat": "Most Loyal to One Character",
-    "player": "messi",
-    "value": "99.0% on GRENINJA",
-    "detail": "Across 102 total games"
+    "player": "unknown",
+    "value": "100.0% on UNKNOWN",
+    "detail": "Across 52 total games"
   },
   "weekend_warrior": {
     "stat": "Weekend Warrior",
@@ -87,8 +87,8 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1220 late-night games",
-    "detail": "That's 48.6% of their games after 10PM"
+    "value": "1228 late-night games",
+    "detail": "That's 48.3% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
@@ -106,7 +106,7 @@
     "stat": "Most Cursed Character",
     "player": "UNKNOWN",
     "value": "0.0% win rate",
-    "detail": "Across 49 games. Just don't pick it."
+    "detail": "Across 52 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",

@@ -1,6 +1,160 @@
 {
   "reports": [
     {
+      "date": "March 08, 2026",
+      "generated_at": "2026-03-09T16:25:42.150070",
+      "headline": "ACTION-PACKED DAY: 29 MATCHES, 128 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 29 intense matches with a combined 128 knockouts.\n\nhabeas was the workhorse of the day, grinding through 29 matches with 18 victories.\n\nThe hottest player was habeas who maintained an impressive 62.1% win rate.\n\nWe even saw perfection today - habeas delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "habeas",
+        "reason": "Most active player with 29 games"
+      },
+      "highlights": [
+        "29 total matches played",
+        "habeas most active with 29 games",
+        "6 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 29,
+        "total_kos": 128,
+        "player_stats": [
+          {
+            "name": "habeas",
+            "games": 29,
+            "wins": 18,
+            "losses": 11,
+            "win_rate": 62.1,
+            "kos": 69,
+            "falls": 58,
+            "sds": 0,
+            "kd_ratio": 1.19,
+            "main_character": "GANONDORF",
+            "character_games": 29
+          },
+          {
+            "name": "will",
+            "games": 20,
+            "wins": 8,
+            "losses": 12,
+            "win_rate": 40.0,
+            "kos": 44,
+            "falls": 44,
+            "sds": 0,
+            "kd_ratio": 1.0,
+            "main_character": "BANJO & KAZOOIE",
+            "character_games": 6
+          },
+          {
+            "name": "ryy",
+            "games": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": 50.0,
+            "kos": 15,
+            "falls": 12,
+            "sds": 0,
+            "kd_ratio": 1.25,
+            "main_character": "FALCO",
+            "character_games": 5
+          },
+          {
+            "name": "unknown",
+            "games": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 3
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "GANONDORF",
+            "times_played": 29
+          },
+          {
+            "character": "BANJO & KAZOOIE",
+            "times_played": 6
+          },
+          {
+            "character": "FALCO",
+            "times_played": 5
+          },
+          {
+            "character": "INCINEROAR",
+            "times_played": 4
+          },
+          {
+            "character": "JOKER",
+            "times_played": 4
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "will",
+            "character": "JOKER"
+          },
+          {
+            "player": "ryy",
+            "character": "FALCO"
+          },
+          {
+            "player": "will",
+            "character": "DONKEY KONG"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "will",
+            "total_games": 20,
+            "p1_wins": 12,
+            "p2_wins": 8
+          },
+          {
+            "player1": "habeas",
+            "player2": "ryy",
+            "total_games": 6,
+            "p1_wins": 3,
+            "p2_wins": 3
+          },
+          {
+            "player1": "habeas",
+            "player2": "unknown",
+            "total_games": 3,
+            "p1_wins": 3,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "habeas",
+            "streak": 6
+          },
+          {
+            "player": "will",
+            "streak": 4
+          }
+        ]
+      }
+    },
+    {
       "date": "March 07, 2026",
       "generated_at": "2026-03-08T16:08:34.653039",
       "headline": "ACTION-PACKED DAY: 15 MATCHES, 91 KOS!",
@@ -3572,14 +3726,6 @@
       "generated_at": "2026-02-24T16:26:07.000776",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on February 23, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "February 22, 2026",
-      "generated_at": "2026-02-23T16:43:05.877728",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 22, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }
