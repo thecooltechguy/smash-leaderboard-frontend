@@ -20,7 +20,7 @@
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.4,
     "after_8_games_wr": 50.1,
-    "fatigue_drop": -2.8
+    "fatigue_drop": -2.7
   },
   "lopsided_matchups": [
     {
@@ -71,7 +71,7 @@
   },
   "day_activity": {
     "busiest_day": "Thursday",
-    "busiest_games": 2175,
+    "busiest_games": 2187,
     "quietest_day": "Sunday",
     "quietest_games": 1175,
     "friday_vs_monday": 1.2
@@ -139,6 +139,6 @@
     "fastest_player": "lando",
     "fastest_gap": 3.4,
     "slowest_player": "unknown",
-    "slowest_gap": 9.6
+    "slowest_gap": 9.7
   }
 }

@@ -1,6 +1,82 @@
 {
   "reports": [
     {
+      "date": "March 12, 2026",
+      "generated_at": "2026-03-13T16:14:37.573769",
+      "headline": "ACTION-PACKED DAY: 6 MATCHES, 27 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 6 intense matches with a combined 27 knockouts.\n\njmoon was the workhorse of the day, grinding through 6 matches with 4 victories.\n\nThe hottest player was jmoon who maintained an impressive 66.7% win rate.\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "jmoon",
+        "reason": "Most active player with 6 games"
+      },
+      "highlights": [
+        "6 total matches played",
+        "jmoon most active with 6 games"
+      ],
+      "stats_summary": {
+        "total_matches": 6,
+        "total_kos": 27,
+        "player_stats": [
+          {
+            "name": "jmoon",
+            "games": 6,
+            "wins": 4,
+            "losses": 2,
+            "win_rate": 66.7,
+            "kos": 16,
+            "falls": 12,
+            "sds": 0,
+            "kd_ratio": 1.33,
+            "main_character": "INCINEROAR",
+            "character_games": 4
+          },
+          {
+            "name": "shafaq",
+            "games": 6,
+            "wins": 2,
+            "losses": 4,
+            "win_rate": 33.3,
+            "kos": 11,
+            "falls": 13,
+            "sds": 0,
+            "kd_ratio": 0.85,
+            "main_character": "KING DEDEDE",
+            "character_games": 6
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "KING DEDEDE",
+            "times_played": 6
+          },
+          {
+            "character": "INCINEROAR",
+            "times_played": 4
+          },
+          {
+            "character": "PALUTENA",
+            "times_played": 2
+          }
+        ],
+        "perfect_games": [],
+        "rivalries": [
+          {
+            "player1": "jmoon",
+            "player2": "shafaq",
+            "total_games": 6,
+            "p1_wins": 4,
+            "p2_wins": 2
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "jmoon",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "March 11, 2026",
       "generated_at": "2026-03-12T16:27:09.762492",
       "headline": "ACTION-PACKED DAY: 30 MATCHES, 180 KOS!",
@@ -4059,14 +4135,6 @@
           }
         ]
       }
-    },
-    {
-      "date": "February 26, 2026",
-      "generated_at": "2026-02-27T16:14:09.548746",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on February 26, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
     }
   ]
 }

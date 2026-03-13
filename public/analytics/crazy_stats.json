@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1074,
-    "total_wins": 844,
+    "total_games": 1080,
+    "total_wins": 848,
     "winrate_Late Night (10PM-4AM)": {
       "games": 389,
       "win_rate": 80.7
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 402,
-      "win_rate": 78.1
+      "games": 408,
+      "win_rate": 77.9
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 253,
@@ -94,8 +94,8 @@
         "win_rate": 81.4
       },
       "Thursday": {
-        "games": 209,
-        "win_rate": 75.6
+        "games": 215,
+        "win_rate": 75.3
       },
       "Friday": {
         "games": 194,
@@ -197,7 +197,7 @@
   "longest_losing_streaks": [
     {
       "player": "unknown",
-      "streak": 55
+      "streak": 53
     },
     {
       "player": "heidy",
@@ -288,7 +288,7 @@
   "cursed_characters": [
     {
       "character": "UNKNOWN",
-      "plays": 55,
+      "plays": 53,
       "win_rate": 0.0
     },
     {
@@ -475,7 +475,7 @@
     },
     {
       "player": "shafaq",
-      "kills": 17
+      "kills": 19
     },
     {
       "player": "amar",
@@ -589,9 +589,9 @@
     },
     "2026-03": {
       "player": "jmoon",
-      "games": 52,
-      "wins": 43,
-      "win_rate": 82.7
+      "games": 58,
+      "wins": 47,
+      "win_rate": 81.0
     }
   },
   "busiest_hour": {

@@ -9,19 +9,19 @@
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "78.6%",
-    "detail": "844W - 230L across 1074 games"
+    "value": "78.5%",
+    "detail": "848W - 232L across 1080 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
     "player": "unknown",
     "value": "0.0%",
-    "detail": "Still showed up for 55 games. Respect."
+    "detail": "Still showed up for 53 games. Respect."
   },
   "worst_losing_streak": {
     "stat": "Longest Losing Streak",
     "player": "unknown",
-    "value": "55 consecutive losses",
+    "value": "53 consecutive losses",
     "detail": "Kept coming back for more. That's dedication."
   },
   "best_winning_streak": {
@@ -34,7 +34,7 @@
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
     "value": "1.62 K/D",
-    "detail": "2617 KOs, 1612 deaths"
+    "detail": "2633 KOs, 1624 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -70,7 +70,7 @@
     "stat": "Most Loyal to One Character",
     "player": "unknown",
     "value": "100.0% on UNKNOWN",
-    "detail": "Across 55 total games"
+    "detail": "Across 53 total games"
   },
   "weekend_warrior": {
     "stat": "Weekend Warrior",
@@ -94,7 +94,7 @@
     "stat": "Best After 10PM",
     "player": "jmoon",
     "value": "78.5% win rate",
-    "detail": "Across 507 late-night games"
+    "detail": "Across 511 late-night games"
   },
   "giant_killer": {
     "stat": "Most Wins vs jmoon",
@@ -106,7 +106,7 @@
     "stat": "Most Cursed Character",
     "player": "UNKNOWN",
     "value": "0.0% win rate",
-    "detail": "Across 55 games. Just don't pick it."
+    "detail": "Across 53 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -146,9 +146,9 @@
   },
   "fallen_off": {
     "stat": "Biggest Decline",
-    "player": "own",
-    "value": "-24.0%",
-    "detail": "First 50: 52.0% \u2192 Last 50: 28.0%"
+    "player": "shafaq",
+    "value": "-28.0%",
+    "detail": "First 50: 58.0% \u2192 Last 50: 30.0%"
   },
   "friday_king": {
     "stat": "Friday King",
@@ -166,7 +166,7 @@
     "stat": "Most Perfect Games",
     "player": "jmoon",
     "value": "119 flawless victories",
-    "detail": "That's 11.1% of their games"
+    "detail": "That's 11.0% of their games"
   },
   "single_game_kos": {
     "stat": "Most KOs in One Match",
