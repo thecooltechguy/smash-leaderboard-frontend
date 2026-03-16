@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "March 15, 2026",
+      "generated_at": "2026-03-16T16:26:52.614403",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on March 15, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "March 14, 2026",
       "generated_at": "2026-03-15T16:10:26.330879",
       "headline": "REST DAY AT THE ARENA",
@@ -3842,190 +3850,6 @@
           {
             "player": "shafaq",
             "streak": 4
-          }
-        ]
-      }
-    },
-    {
-      "date": "January 13, 2026",
-      "generated_at": "2026-01-21T05:55:01.713694",
-      "headline": "ACTION AT THE ARENA: 18 MATCHES!",
-      "report": "We saw 18 matches with 90 total KOs on January 13, 2026.",
-      "player_of_the_day": {
-        "name": "niki <3",
-        "reason": "Most active"
-      },
-      "highlights": [
-        "18 matches played"
-      ],
-      "stats_summary": {
-        "total_matches": 18,
-        "total_kos": 90,
-        "player_stats": [
-          {
-            "name": "niki <3",
-            "games": 17,
-            "wins": 12,
-            "losses": 5,
-            "win_rate": 70.6,
-            "kos": 52,
-            "falls": 31,
-            "sds": 0,
-            "kd_ratio": 1.68,
-            "main_character": "KIRBY",
-            "character_games": 15
-          },
-          {
-            "name": "shafaq",
-            "games": 8,
-            "wins": 5,
-            "losses": 3,
-            "win_rate": 62.5,
-            "kos": 21,
-            "falls": 18,
-            "sds": 0,
-            "kd_ratio": 1.17,
-            "main_character": "KING DEDEDE",
-            "character_games": 3
-          },
-          {
-            "name": "keneru",
-            "games": 6,
-            "wins": 0,
-            "losses": 6,
-            "win_rate": 0.0,
-            "kos": 6,
-            "falls": 18,
-            "sds": 1,
-            "kd_ratio": 0.33,
-            "main_character": "DONKEY KONG",
-            "character_games": 5
-          },
-          {
-            "name": "ya",
-            "games": 6,
-            "wins": 1,
-            "losses": 5,
-            "win_rate": 16.7,
-            "kos": 8,
-            "falls": 14,
-            "sds": 0,
-            "kd_ratio": 0.57,
-            "main_character": "JOKER",
-            "character_games": 4
-          },
-          {
-            "name": "nish",
-            "games": 2,
-            "wins": 0,
-            "losses": 2,
-            "win_rate": 0.0,
-            "kos": 3,
-            "falls": 6,
-            "sds": 0,
-            "kd_ratio": 0.5,
-            "main_character": "SAMUS",
-            "character_games": 2
-          },
-          {
-            "name": "unknown",
-            "games": 1,
-            "wins": 0,
-            "losses": 1,
-            "win_rate": 0.0,
-            "kos": 0,
-            "falls": 0,
-            "sds": 0,
-            "kd_ratio": 0.0,
-            "main_character": "UNKNOWN",
-            "character_games": 1
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "KIRBY",
-            "times_played": 15
-          },
-          {
-            "character": "DONKEY KONG",
-            "times_played": 5
-          },
-          {
-            "character": "JOKER",
-            "times_played": 4
-          },
-          {
-            "character": "SAMUS",
-            "times_played": 4
-          },
-          {
-            "character": "KING DEDEDE",
-            "times_played": 3
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "niki <3",
-            "character": "KIRBY"
-          },
-          {
-            "player": "niki <3",
-            "character": "KIRBY"
-          },
-          {
-            "player": "ya",
-            "character": "JOKER"
-          },
-          {
-            "player": "niki <3",
-            "character": "KIRBY"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "shafaq",
-            "player2": "niki <3",
-            "total_games": 7,
-            "p1_wins": 4,
-            "p2_wins": 3
-          },
-          {
-            "player1": "keneru",
-            "player2": "niki <3",
-            "total_games": 2,
-            "p1_wins": 0,
-            "p2_wins": 2
-          },
-          {
-            "player1": "ya",
-            "player2": "niki <3",
-            "total_games": 2,
-            "p1_wins": 0,
-            "p2_wins": 2
-          },
-          {
-            "player1": "nish",
-            "player2": "niki <3",
-            "total_games": 2,
-            "p1_wins": 0,
-            "p2_wins": 2
-          },
-          {
-            "player1": "shafaq",
-            "player2": "unknown",
-            "total_games": 1,
-            "p1_wins": 1,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "niki <3",
-            "streak": 6
-          },
-          {
-            "player": "shafaq",
-            "streak": 3
           }
         ]
       }
