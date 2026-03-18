@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "March 17, 2026",
+      "generated_at": "2026-03-18T16:26:46.424195",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on March 17, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "March 16, 2026",
       "generated_at": "2026-03-17T16:28:28.904861",
       "headline": "REST DAY AT THE ARENA",
@@ -3572,106 +3580,6 @@
           },
           {
             "player": "will",
-            "streak": 3
-          }
-        ]
-      }
-    },
-    {
-      "date": "January 15, 2026",
-      "generated_at": "2026-01-21T05:55:35.798590",
-      "headline": "ACTION AT THE ARENA: 7 MATCHES!",
-      "report": "We saw 7 matches with 27 total KOs on January 15, 2026.",
-      "player_of_the_day": {
-        "name": "lag",
-        "reason": "Most active"
-      },
-      "highlights": [
-        "7 matches played"
-      ],
-      "stats_summary": {
-        "total_matches": 7,
-        "total_kos": 27,
-        "player_stats": [
-          {
-            "name": "lag",
-            "games": 7,
-            "wins": 5,
-            "losses": 2,
-            "win_rate": 71.4,
-            "kos": 16,
-            "falls": 14,
-            "sds": 0,
-            "kd_ratio": 1.14,
-            "main_character": "NESS",
-            "character_games": 7
-          },
-          {
-            "name": "nish",
-            "games": 6,
-            "wins": 2,
-            "losses": 4,
-            "win_rate": 33.3,
-            "kos": 11,
-            "falls": 15,
-            "sds": 0,
-            "kd_ratio": 0.73,
-            "main_character": "SAMUS",
-            "character_games": 6
-          },
-          {
-            "name": "unknown",
-            "games": 1,
-            "wins": 0,
-            "losses": 1,
-            "win_rate": 0.0,
-            "kos": 0,
-            "falls": 0,
-            "sds": 0,
-            "kd_ratio": 0.0,
-            "main_character": "UNKNOWN",
-            "character_games": 1
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "NESS",
-            "times_played": 7
-          },
-          {
-            "character": "SAMUS",
-            "times_played": 6
-          },
-          {
-            "character": "UNKNOWN",
-            "times_played": 1
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "lag",
-            "character": "NESS"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "nish",
-            "player2": "lag",
-            "total_games": 6,
-            "p1_wins": 2,
-            "p2_wins": 4
-          },
-          {
-            "player1": "lag",
-            "player2": "unknown",
-            "total_games": 1,
-            "p1_wins": 1,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "lag",
             "streak": 3
           }
         ]
