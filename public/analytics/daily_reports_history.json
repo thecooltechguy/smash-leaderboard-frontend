@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "March 18, 2026",
+      "generated_at": "2026-03-19T16:22:51.799843",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on March 18, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "March 17, 2026",
       "generated_at": "2026-03-18T16:26:46.424195",
       "headline": "REST DAY AT THE ARENA",
@@ -3401,186 +3409,6 @@
           {
             "player": "jmoon",
             "streak": 11
-          }
-        ]
-      }
-    },
-    {
-      "date": "January 16, 2026",
-      "generated_at": "2026-01-21T05:55:54.553412",
-      "headline": "ACTION AT THE ARENA: 28 MATCHES!",
-      "report": "We saw 28 matches with 105 total KOs on January 16, 2026.",
-      "player_of_the_day": {
-        "name": "jmoon",
-        "reason": "Most active"
-      },
-      "highlights": [
-        "28 matches played"
-      ],
-      "stats_summary": {
-        "total_matches": 28,
-        "total_kos": 105,
-        "player_stats": [
-          {
-            "name": "jmoon",
-            "games": 21,
-            "wins": 18,
-            "losses": 3,
-            "win_rate": 85.7,
-            "kos": 53,
-            "falls": 26,
-            "sds": 2,
-            "kd_ratio": 2.04,
-            "main_character": "GANONDORF",
-            "character_games": 11
-          },
-          {
-            "name": "will",
-            "games": 13,
-            "wins": 6,
-            "losses": 7,
-            "win_rate": 46.2,
-            "kos": 25,
-            "falls": 28,
-            "sds": 0,
-            "kd_ratio": 0.89,
-            "main_character": "STEVE",
-            "character_games": 7
-          },
-          {
-            "name": "habeas",
-            "games": 12,
-            "wins": 2,
-            "losses": 10,
-            "win_rate": 16.7,
-            "kos": 14,
-            "falls": 29,
-            "sds": 0,
-            "kd_ratio": 0.48,
-            "main_character": "GANONDORF",
-            "character_games": 8
-          },
-          {
-            "name": "8n",
-            "games": 4,
-            "wins": 1,
-            "losses": 3,
-            "win_rate": 25.0,
-            "kos": 5,
-            "falls": 11,
-            "sds": 0,
-            "kd_ratio": 0.45,
-            "main_character": "CAPTAIN FALCON",
-            "character_games": 3
-          },
-          {
-            "name": "ya",
-            "games": 3,
-            "wins": 0,
-            "losses": 3,
-            "win_rate": 0.0,
-            "kos": 1,
-            "falls": 6,
-            "sds": 0,
-            "kd_ratio": 0.17,
-            "main_character": "JOKER",
-            "character_games": 3
-          },
-          {
-            "name": "niki <3",
-            "games": 3,
-            "wins": 1,
-            "losses": 2,
-            "win_rate": 33.3,
-            "kos": 7,
-            "falls": 7,
-            "sds": 0,
-            "kd_ratio": 1.0,
-            "main_character": "KIRBY",
-            "character_games": 3
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "GANONDORF",
-            "times_played": 20
-          },
-          {
-            "character": "JOKER",
-            "times_played": 11
-          },
-          {
-            "character": "STEVE",
-            "times_played": 7
-          },
-          {
-            "character": "CAPTAIN FALCON",
-            "times_played": 4
-          },
-          {
-            "character": "INCINEROAR",
-            "times_played": 4
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "jmoon",
-            "character": "INCINEROAR"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "habeas",
-            "player2": "jmoon",
-            "total_games": 10,
-            "p1_wins": 1,
-            "p2_wins": 9
-          },
-          {
-            "player1": "jmoon",
-            "player2": "will",
-            "total_games": 8,
-            "p1_wins": 6,
-            "p2_wins": 2
-          },
-          {
-            "player1": "jmoon",
-            "player2": "8n",
-            "total_games": 3,
-            "p1_wins": 3,
-            "p2_wins": 0
-          },
-          {
-            "player1": "will",
-            "player2": "niki <3",
-            "total_games": 3,
-            "p1_wins": 2,
-            "p2_wins": 1
-          },
-          {
-            "player1": "will",
-            "player2": "ya",
-            "total_games": 2,
-            "p1_wins": 2,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "jmoon",
-            "streak": 7
-          },
-          {
-            "player": "will",
-            "streak": 3
           }
         ]
       }
