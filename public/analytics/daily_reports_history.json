@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "March 21, 2026",
+      "generated_at": "2026-03-22T16:31:00.131467",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on March 21, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "March 20, 2026",
       "generated_at": "2026-03-21T16:30:08.219530",
       "headline": "REST DAY AT THE ARENA",
@@ -3329,14 +3337,6 @@
           }
         ]
       }
-    },
-    {
-      "date": "January 20, 2026",
-      "generated_at": "2026-01-21T16:52:19.516188",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on January 20, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
     }
   ]
 }
