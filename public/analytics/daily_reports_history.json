@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "March 25, 2026",
+      "generated_at": "2026-03-26T17:01:32.776231",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on March 25, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "March 24, 2026",
       "generated_at": "2026-03-25T17:01:59.159511",
       "headline": "REST DAY AT THE ARENA",
@@ -2712,128 +2720,6 @@
           {
             "player": "niki <3",
             "streak": 3
-          }
-        ]
-      }
-    },
-    {
-      "date": "January 26, 2026",
-      "generated_at": "2026-01-30T12:08:00.528873",
-      "headline": "ACTION AT THE ARENA: 21 MATCHES!",
-      "report": "We saw 21 matches with 129 total KOs on January 26, 2026.",
-      "player_of_the_day": {
-        "name": "ya",
-        "reason": "Most active"
-      },
-      "highlights": [
-        "21 matches played"
-      ],
-      "stats_summary": {
-        "total_matches": 21,
-        "total_kos": 129,
-        "player_stats": [
-          {
-            "name": "ya",
-            "games": 21,
-            "wins": 5,
-            "losses": 16,
-            "win_rate": 23.8,
-            "kos": 30,
-            "falls": 57,
-            "sds": 2,
-            "kd_ratio": 0.53,
-            "main_character": "JOKER",
-            "character_games": 20
-          },
-          {
-            "name": "nish",
-            "games": 21,
-            "wins": 16,
-            "losses": 5,
-            "win_rate": 76.2,
-            "kos": 47,
-            "falls": 38,
-            "sds": 1,
-            "kd_ratio": 1.24,
-            "main_character": "SAMUS",
-            "character_games": 21
-          },
-          {
-            "name": "subby",
-            "games": 8,
-            "wins": 2,
-            "losses": 6,
-            "win_rate": 25.0,
-            "kos": 23,
-            "falls": 22,
-            "sds": 0,
-            "kd_ratio": 1.05,
-            "main_character": "CAPTAIN FALCON",
-            "character_games": 3
-          },
-          {
-            "name": "fateen",
-            "games": 8,
-            "wins": 6,
-            "losses": 2,
-            "win_rate": 75.0,
-            "kos": 29,
-            "falls": 20,
-            "sds": 1,
-            "kd_ratio": 1.45,
-            "main_character": "KING K. ROOL",
-            "character_games": 8
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "SAMUS",
-            "times_played": 21
-          },
-          {
-            "character": "JOKER",
-            "times_played": 20
-          },
-          {
-            "character": "KING K. ROOL",
-            "times_played": 8
-          },
-          {
-            "character": "CAPTAIN FALCON",
-            "times_played": 3
-          },
-          {
-            "character": "DONKEY KONG",
-            "times_played": 3
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "nish",
-            "character": "SAMUS"
-          },
-          {
-            "player": "nish",
-            "character": "SAMUS"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "nish",
-            "player2": "ya",
-            "total_games": 13,
-            "p1_wins": 10,
-            "p2_wins": 3
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "nish",
-            "streak": 9
-          },
-          {
-            "player": "fateen",
-            "streak": 5
           }
         ]
       }
