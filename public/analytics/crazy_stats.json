@@ -26,15 +26,15 @@
     },
     "Sunday": {
       "character": "DONKEY KONG",
-      "plays": 136
+      "plays": 137
     }
   },
   "late_night_warriors": [
     {
       "player": "jmoon",
-      "games": 389,
+      "games": 390,
       "wins": 314,
-      "win_rate": 80.7
+      "win_rate": 80.5
     },
     {
       "player": "jean",
@@ -50,9 +50,9 @@
     },
     {
       "player": "shafaq",
-      "games": 48,
+      "games": 49,
       "wins": 31,
-      "win_rate": 64.6
+      "win_rate": 63.3
     },
     {
       "player": "8n",
@@ -62,11 +62,11 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1080,
+    "total_games": 1081,
     "total_wins": 848,
     "winrate_Late Night (10PM-4AM)": {
-      "games": 389,
-      "win_rate": 80.7
+      "games": 390,
+      "win_rate": 80.5
     },
     "winrate_Morning (5AM-11AM)": {
       "games": 30,
@@ -106,8 +106,8 @@
         "win_rate": 75.7
       },
       "Sunday": {
-        "games": 125,
-        "win_rate": 86.4
+        "games": 126,
+        "win_rate": 85.7
       }
     },
     "best_character": {
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 288,
-      "win_rate": 80.9
+      "games": 289,
+      "win_rate": 80.6
     }
   },
   "weekend_warriors": [
@@ -137,19 +137,19 @@
     },
     {
       "player": "ryy",
-      "weekend_wr": 59.5,
+      "weekend_wr": 58.1,
       "weekday_wr": 44.1,
-      "diff": 15.4,
-      "weekend_games": 42,
+      "diff": 14.0,
+      "weekend_games": 43,
       "weekday_games": 68
     },
     {
       "player": "jean",
       "weekend_wr": 50.0,
-      "weekday_wr": 35.1,
-      "diff": 14.9,
+      "weekday_wr": 36.4,
+      "diff": 13.6,
       "weekend_games": 18,
-      "weekday_games": 57
+      "weekday_games": 55
     }
   ],
   "weekday_warriors": [
@@ -243,14 +243,14 @@
       "sd_win_rate": 80.0
     },
     {
-      "player": "strike",
-      "sd_games": 27,
-      "sd_win_rate": 63.0
+      "player": "shafaq",
+      "sd_games": 54,
+      "sd_win_rate": 61.1
     },
     {
-      "player": "shafaq",
-      "sd_games": 53,
-      "sd_win_rate": 62.3
+      "player": "strike",
+      "sd_games": 28,
+      "sd_win_rate": 60.7
     },
     {
       "player": "samin",
@@ -388,18 +388,18 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 789,
+      "games": 790,
       "win_rate": 44.1
     },
     {
       "player": "subby",
-      "games": 499,
-      "win_rate": 46.5
+      "games": 500,
+      "win_rate": 46.4
     },
     {
       "player": "jmoon",
-      "games": 345,
-      "win_rate": 81.2
+      "games": 346,
+      "win_rate": 80.9
     },
     {
       "player": "nish",
@@ -408,8 +408,8 @@
     },
     {
       "player": "keneru",
-      "games": 211,
-      "win_rate": 55.5
+      "games": 212,
+      "win_rate": 55.2
     }
   ],
   "single_game_most_kos": {
@@ -427,16 +427,16 @@
   "habeas_deep_dive": {
     "total_games": 2541,
     "total_wins": 1297,
-    "total_kos": 5557,
-    "total_sds": 115,
+    "total_kos": 5555,
+    "total_sds": 116,
     "by_day": {
       "Monday": {
         "games": 228,
         "win_rate": 57.5
       },
       "Tuesday": {
-        "games": 252,
-        "win_rate": 55.6
+        "games": 251,
+        "win_rate": 55.8
       },
       "Wednesday": {
         "games": 424,
@@ -455,8 +455,8 @@
         "win_rate": 48.6
       },
       "Sunday": {
-        "games": 318,
-        "win_rate": 54.4
+        "games": 319,
+        "win_rate": 54.2
       }
     },
     "best_day": {
@@ -597,7 +597,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1233
+    "games": 1227
   },
   "quietest_hour": {
     "hour": 8,

@@ -4,13 +4,13 @@
     "player": "habeas",
     "value": "2,541 games",
     "detail": "That's 11.3 games per day on average",
-    "runner_up": "subby (1,193)"
+    "runner_up": "subby (1,194)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "78.5%",
-    "detail": "848W - 232L across 1080 games"
+    "value": "78.4%",
+    "detail": "848W - 233L across 1081 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
@@ -34,7 +34,7 @@
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
     "value": "1.62 K/D",
-    "detail": "2633 KOs, 1624 deaths"
+    "detail": "2633 KOs, 1627 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -45,8 +45,8 @@
   "most_sds_total": {
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
-    "value": "115 SDs",
-    "detail": "That's 1 SD every 22.1 games"
+    "value": "116 SDs",
+    "detail": "That's 1 SD every 21.9 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -75,8 +75,8 @@
   "weekend_warrior": {
     "stat": "Weekend Warrior",
     "player": "jean",
-    "value": "+19.8% on weekends",
-    "detail": "Weekend: 50.0% vs Weekday: 30.2%"
+    "value": "+18.3% on weekends",
+    "detail": "Weekend: 50.0% vs Weekday: 31.7%"
   },
   "weekday_grinder": {
     "stat": "Weekday Warrior",
@@ -87,7 +87,7 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1228 late-night games",
+    "value": "1227 late-night games",
     "detail": "That's 48.3% of their games after 10PM"
   },
   "late_night_specialist": {
@@ -134,9 +134,9 @@
   },
   "comeback_king": {
     "stat": "Comeback King",
-    "player": "strike",
-    "value": "63.0% win rate with SDs",
-    "detail": "Still wins 62% of the time after self-destructing"
+    "player": "shafaq",
+    "value": "61.1% win rate with SDs",
+    "detail": "Still wins 61% of the time after self-destructing"
   },
   "most_improved": {
     "stat": "Most Improved Player",
