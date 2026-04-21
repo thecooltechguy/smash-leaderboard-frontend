@@ -4,30 +4,30 @@
     "best_hour": 6,
     "best_hour_wr": 50.0,
     "worst_hour": 20,
-    "worst_hour_wr": 44.2
+    "worst_hour_wr": 44.3
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 18.5,
+    "avg_momentum_boost": 17.1,
     "biggest_momentum_player": "8n",
-    "biggest_momentum_boost": 45.1,
-    "biggest_momentum_detail": "72.0% after win vs 26.9% after loss",
+    "biggest_momentum_boost": 33.5,
+    "biggest_momentum_detail": "62.5% after win vs 29.0% after loss",
     "reverse_momentum_player": "ryy",
     "reverse_momentum": -1.8,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.2,
-    "after_8_games_wr": 50.1,
-    "fatigue_drop": -2.9
+    "first_3_games_wr": 47.8,
+    "after_8_games_wr": 50.0,
+    "fatigue_drop": -2.2
   },
   "lopsided_matchups": [
     {
       "char1": "ZELDA",
       "char2": "ZELDA",
       "char1_wr": 0.0,
-      "total": 60
+      "total": 61
     },
     {
       "char1": "MR. GAME & WATCH",
@@ -66,20 +66,20 @@
     "most_clutch_close_wr": 52.9,
     "most_clutch_blowout_wr": 20.0,
     "clutch_boost": 32.9,
-    "least_clutch_player": "jmoon",
-    "choke_factor": 17.2
+    "least_clutch_player": "niki <3",
+    "choke_factor": 26.8
   },
   "day_activity": {
     "busiest_day": "Thursday",
-    "busiest_games": 2187,
+    "busiest_games": 2189,
     "quietest_day": "Sunday",
     "quietest_games": 1187,
-    "friday_vs_monday": 1.2
+    "friday_vs_monday": 1.1
   },
   "streakiness": {
     "most_streaky_player": "habeas",
-    "five_plus_streaks": 72,
-    "games": 2541
+    "five_plus_streaks": 74,
+    "games": 2618
   },
   "dominant_matchups": [
     {
@@ -98,6 +98,13 @@
     },
     {
       "winner": "jmoon",
+      "loser": "lando",
+      "wins": 15,
+      "total": 15,
+      "wr": 100.0
+    },
+    {
+      "winner": "jmoon",
       "loser": "keneru",
       "wins": 38,
       "total": 40,
@@ -109,17 +116,10 @@
       "wins": 17,
       "total": 18,
       "wr": 94.4
-    },
-    {
-      "winner": "habeas",
-      "loser": "pat",
-      "wins": 14,
-      "total": 15,
-      "wr": 93.3
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.313,
+    "correlation": -0.185,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -138,7 +138,7 @@
   "game_speed": {
     "fastest_player": "lando",
     "fastest_gap": 3.4,
-    "slowest_player": "unknown",
-    "slowest_gap": 9.7
+    "slowest_player": "jeni",
+    "slowest_gap": 8.1
   }
 }

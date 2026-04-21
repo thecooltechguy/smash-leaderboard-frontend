@@ -1522,12 +1522,255 @@
       }
     },
     {
-      "date": "April 19, 2026",
-      "generated_at": "2026-04-20T16:30:03.725914",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on April 19, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
+      "date": "April 20, 2026",
+      "generated_at": "2026-04-21T16:28:48.824064",
+      "headline": "ACTION-PACKED DAY: 89 MATCHES, 377 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 89 intense matches with a combined 377 knockouts.\n\nRT was the workhorse of the day, grinding through 76 matches with 34 victories.\n\nThe hottest player was habeas who maintained an impressive 61.4% win rate.\n\nWe even saw perfection today - habeas delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "RT",
+        "reason": "Most active player with 76 games"
+      },
+      "highlights": [
+        "89 total matches played",
+        "RT most active with 76 games",
+        "14 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 89,
+        "total_kos": 377,
+        "player_stats": [
+          {
+            "name": "RT",
+            "games": 76,
+            "wins": 34,
+            "losses": 42,
+            "win_rate": 44.7,
+            "kos": 153,
+            "falls": 170,
+            "sds": 1,
+            "kd_ratio": 0.9,
+            "main_character": "LINK",
+            "character_games": 73
+          },
+          {
+            "name": "habeas",
+            "games": 70,
+            "wins": 43,
+            "losses": 27,
+            "win_rate": 61.4,
+            "kos": 167,
+            "falls": 120,
+            "sds": 1,
+            "kd_ratio": 1.39,
+            "main_character": "GANONDORF",
+            "character_games": 26
+          },
+          {
+            "name": "own",
+            "games": 10,
+            "wins": 4,
+            "losses": 6,
+            "win_rate": 40.0,
+            "kos": 18,
+            "falls": 21,
+            "sds": 1,
+            "kd_ratio": 0.86,
+            "main_character": "WOLF",
+            "character_games": 6
+          },
+          {
+            "name": "shafaq",
+            "games": 9,
+            "wins": 5,
+            "losses": 4,
+            "win_rate": 55.6,
+            "kos": 23,
+            "falls": 18,
+            "sds": 1,
+            "kd_ratio": 1.28,
+            "main_character": "ZELDA",
+            "character_games": 8
+          },
+          {
+            "name": "keneru",
+            "games": 7,
+            "wins": 3,
+            "losses": 4,
+            "win_rate": 42.9,
+            "kos": 15,
+            "falls": 17,
+            "sds": 0,
+            "kd_ratio": 0.88,
+            "main_character": "DONKEY KONG",
+            "character_games": 6
+          },
+          {
+            "name": "willsong",
+            "games": 4,
+            "wins": 0,
+            "losses": 4,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 6,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "PICHU",
+            "character_games": 2
+          },
+          {
+            "name": "boknows",
+            "games": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": 0.0,
+            "kos": 1,
+            "falls": 6,
+            "sds": 0,
+            "kd_ratio": 0.17,
+            "main_character": "YOUNG LINK",
+            "character_games": 2
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "LINK",
+            "times_played": 73
+          },
+          {
+            "character": "ZELDA",
+            "times_played": 27
+          },
+          {
+            "character": "GANONDORF",
+            "times_played": 26
+          },
+          {
+            "character": "MR. GAME & WATCH",
+            "times_played": 14
+          },
+          {
+            "character": "INCINEROAR",
+            "times_played": 8
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "ZELDA"
+          },
+          {
+            "player": "RT",
+            "character": "LINK"
+          },
+          {
+            "player": "RT",
+            "character": "LINK"
+          },
+          {
+            "player": "RT",
+            "character": "LINK"
+          },
+          {
+            "player": "own",
+            "character": "WOLF"
+          },
+          {
+            "player": "shafaq",
+            "character": "ZELDA"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          },
+          {
+            "player": "habeas",
+            "character": "MR. GAME & WATCH"
+          },
+          {
+            "player": "habeas",
+            "character": "ZELDA"
+          },
+          {
+            "player": "habeas",
+            "character": "ZELDA"
+          },
+          {
+            "player": "habeas",
+            "character": "PYRA"
+          },
+          {
+            "player": "habeas",
+            "character": "GANONDORF"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "habeas",
+            "player2": "RT",
+            "total_games": 57,
+            "p1_wins": 34,
+            "p2_wins": 23
+          },
+          {
+            "player1": "own",
+            "player2": "RT",
+            "total_games": 10,
+            "p1_wins": 4,
+            "p2_wins": 6
+          },
+          {
+            "player1": "habeas",
+            "player2": "shafaq",
+            "total_games": 7,
+            "p1_wins": 4,
+            "p2_wins": 3
+          },
+          {
+            "player1": "keneru",
+            "player2": "RT",
+            "total_games": 4,
+            "p1_wins": 2,
+            "p2_wins": 2
+          },
+          {
+            "player1": "RT",
+            "player2": "willsong",
+            "total_games": 3,
+            "p1_wins": 3,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "habeas",
+            "streak": 6
+          },
+          {
+            "player": "RT",
+            "streak": 4
+          },
+          {
+            "player": "own",
+            "streak": 4
+          },
+          {
+            "player": "keneru",
+            "streak": 3
+          },
+          {
+            "player": "shafaq",
+            "streak": 3
+          }
+        ]
+      }
     }
   ]
 }

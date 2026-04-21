@@ -2,26 +2,26 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,541 games",
-    "detail": "That's 11.3 games per day on average",
-    "runner_up": "subby (1,194)"
+    "value": "2,618 games",
+    "detail": "That's 11.7 games per day on average",
+    "runner_up": "subby (1,198)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "78.4%",
-    "detail": "848W - 233L across 1081 games"
+    "value": "78.3%",
+    "detail": "850W - 235L across 1085 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
-    "player": "unknown",
-    "value": "0.0%",
-    "detail": "Still showed up for 53 games. Respect."
+    "player": "lando",
+    "value": "14.0%",
+    "detail": "Still showed up for 107 games. Respect."
   },
   "worst_losing_streak": {
     "stat": "Longest Losing Streak",
-    "player": "unknown",
-    "value": "53 consecutive losses",
+    "player": "heidy",
+    "value": "40 consecutive losses",
     "detail": "Kept coming back for more. That's dedication."
   },
   "best_winning_streak": {
@@ -34,19 +34,19 @@
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
     "value": "1.62 K/D",
-    "detail": "2633 KOs, 1627 deaths"
+    "detail": "2636 KOs, 1628 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
-    "player": "unknown",
-    "value": "0.00 K/D",
+    "player": "lando",
+    "value": "0.44 K/D",
     "detail": "Gets KO'd more than they KO"
   },
   "most_sds_total": {
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
-    "value": "116 SDs",
-    "detail": "That's 1 SD every 21.9 games"
+    "value": "117 SDs",
+    "detail": "That's 1 SD every 22.4 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -68,45 +68,45 @@
   },
   "biggest_one_trick": {
     "stat": "Most Loyal to One Character",
-    "player": "unknown",
-    "value": "100.0% on UNKNOWN",
-    "detail": "Across 53 total games"
+    "player": "messi",
+    "value": "99.0% on GRENINJA",
+    "detail": "Across 102 total games"
   },
   "weekend_warrior": {
     "stat": "Weekend Warrior",
-    "player": "jean",
-    "value": "+18.3% on weekends",
-    "detail": "Weekend: 50.0% vs Weekday: 31.7%"
+    "player": "kento",
+    "value": "+16.2% on weekends",
+    "detail": "Weekend: 73.9% vs Weekday: 57.7%"
   },
   "weekday_grinder": {
     "stat": "Weekday Warrior",
     "player": "ben",
-    "value": "+19.5% on weekdays",
-    "detail": "Weekday: 59.0% vs Weekend: 39.5%"
+    "value": "+19.2% on weekdays",
+    "detail": "Weekday: 57.8% vs Weekend: 38.6%"
   },
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1227 late-night games",
-    "detail": "That's 48.3% of their games after 10PM"
+    "value": "1266 late-night games",
+    "detail": "That's 48.4% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
     "player": "jmoon",
     "value": "78.5% win rate",
-    "detail": "Across 511 late-night games"
+    "detail": "Across 512 late-night games"
   },
   "giant_killer": {
     "stat": "Most Wins vs jmoon",
     "player": "habeas",
-    "value": "149 victories",
+    "value": "150 victories",
     "detail": "The only real threat to the throne"
   },
   "most_cursed_char": {
     "stat": "Most Cursed Character",
-    "player": "UNKNOWN",
-    "value": "0.0% win rate",
-    "detail": "Across 53 games. Just don't pick it."
+    "player": "FOX",
+    "value": "20.0% win rate",
+    "detail": "Across 65 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -117,7 +117,7 @@
   "biggest_rivalry": {
     "stat": "Biggest Rivalry",
     "player": "habeas vs jmoon",
-    "value": "629 matches",
+    "value": "631 matches",
     "detail": "The most frequent matchup in the league"
   },
   "best_day_performance": {
@@ -134,39 +134,39 @@
   },
   "comeback_king": {
     "stat": "Comeback King",
-    "player": "shafaq",
-    "value": "61.1% win rate with SDs",
-    "detail": "Still wins 61% of the time after self-destructing"
+    "player": "strike",
+    "value": "60.7% win rate with SDs",
+    "detail": "Still wins 60% of the time after self-destructing"
   },
   "most_improved": {
     "stat": "Most Improved Player",
-    "player": "ben",
-    "value": "+32.0%",
-    "detail": "First 50 games: 36.0% \u2192 Last 50: 68.0%"
+    "player": "gapam",
+    "value": "+30.0%",
+    "detail": "First 50 games: 22.0% \u2192 Last 50: 52.0%"
   },
   "fallen_off": {
     "stat": "Biggest Decline",
     "player": "shafaq",
-    "value": "-28.0%",
-    "detail": "First 50: 58.0% \u2192 Last 50: 30.0%"
+    "value": "-24.0%",
+    "detail": "First 50: 58.0% \u2192 Last 50: 34.0%"
   },
   "friday_king": {
     "stat": "Friday King",
     "player": "jmoon",
-    "value": "72.9% win rate",
-    "detail": "Lives for Friday sessions (258 games)"
+    "value": "72.7% win rate",
+    "detail": "Lives for Friday sessions (260 games)"
   },
   "1am_warrior": {
     "stat": "The 1AM Warrior",
     "player": "habeas",
-    "value": "219 games at 1AM",
+    "value": "228 games at 1AM",
     "detail": "Why are you playing at 1AM?!"
   },
   "perfect_game_master": {
     "stat": "Most Perfect Games",
     "player": "jmoon",
-    "value": "119 flawless victories",
-    "detail": "That's 11.0% of their games"
+    "value": "120 flawless victories",
+    "detail": "That's 11.1% of their games"
   },
   "single_game_kos": {
     "stat": "Most KOs in One Match",
