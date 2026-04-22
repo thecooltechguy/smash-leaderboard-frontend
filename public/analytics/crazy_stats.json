@@ -6,7 +6,7 @@
     },
     "Tuesday": {
       "character": "DONKEY KONG",
-      "plays": 166
+      "plays": 181
     },
     "Wednesday": {
       "character": "SAMUS",
@@ -138,10 +138,10 @@
     {
       "player": "ryy",
       "weekend_wr": 58.1,
-      "weekday_wr": 44.1,
-      "diff": 14.0,
+      "weekday_wr": 41.9,
+      "diff": 16.2,
       "weekend_games": 43,
-      "weekday_games": 68
+      "weekday_games": 74
     },
     {
       "player": "jean",
@@ -239,8 +239,8 @@
   "comeback_kings": [
     {
       "player": "8n",
-      "sd_games": 5,
-      "sd_win_rate": 80.0
+      "sd_games": 6,
+      "sd_win_rate": 66.7
     },
     {
       "player": "strike",
@@ -254,8 +254,8 @@
     },
     {
       "player": "shafaq",
-      "sd_games": 55,
-      "sd_win_rate": 60.0
+      "sd_games": 59,
+      "sd_win_rate": 59.3
     },
     {
       "player": "jmoon",
@@ -298,8 +298,8 @@
     },
     {
       "character": "POK\u00c9MON TRAINER",
-      "plays": 42,
-      "win_rate": 23.8
+      "plays": 46,
+      "win_rate": 23.9
     },
     {
       "character": "SONIC",
@@ -388,8 +388,8 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 813,
-      "win_rate": 44.6
+      "games": 838,
+      "win_rate": 45.5
     },
     {
       "player": "subby",
@@ -425,18 +425,18 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2618,
-    "total_wins": 1340,
-    "total_kos": 5720,
-    "total_sds": 117,
+    "total_games": 2702,
+    "total_wins": 1394,
+    "total_kos": 5928,
+    "total_sds": 120,
     "by_day": {
       "Monday": {
         "games": 298,
         "win_rate": 58.4
       },
       "Tuesday": {
-        "games": 254,
-        "win_rate": 55.1
+        "games": 338,
+        "win_rate": 57.4
       },
       "Wednesday": {
         "games": 425,
@@ -594,16 +594,16 @@
       "win_rate": 81.4
     },
     "2026-04": {
-      "player": "habeas",
-      "games": 71,
-      "wins": 43,
-      "win_rate": 60.6
+      "player": "stav",
+      "games": 9,
+      "wins": 8,
+      "win_rate": 88.9
     }
   },
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1260
+    "games": 1278
   },
   "quietest_hour": {
     "hour": 8,

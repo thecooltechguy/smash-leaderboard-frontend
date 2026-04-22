@@ -1,19 +1,19 @@
 {
   "hourly_pattern": {
     "insight": "Win rates vary by hour",
-    "best_hour": 6,
-    "best_hour_wr": 50.0,
+    "best_hour": 15,
+    "best_hour_wr": 50.1,
     "worst_hour": 20,
-    "worst_hour_wr": 44.3
+    "worst_hour_wr": 44.4
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.1,
-    "biggest_momentum_player": "8n",
-    "biggest_momentum_boost": 33.5,
-    "biggest_momentum_detail": "62.5% after win vs 29.0% after loss",
+    "avg_momentum_boost": 17.0,
+    "biggest_momentum_player": "messi",
+    "biggest_momentum_boost": 32.4,
+    "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
     "reverse_momentum_player": "ryy",
-    "reverse_momentum": -1.8,
+    "reverse_momentum": -0.1,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
@@ -78,8 +78,8 @@
   },
   "streakiness": {
     "most_streaky_player": "habeas",
-    "five_plus_streaks": 74,
-    "games": 2618
+    "five_plus_streaks": 79,
+    "games": 2702
   },
   "dominant_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.185,
+    "correlation": -0.177,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
