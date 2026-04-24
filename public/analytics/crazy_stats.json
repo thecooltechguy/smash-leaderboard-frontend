@@ -9,12 +9,12 @@
       "plays": 181
     },
     "Wednesday": {
-      "character": "SAMUS",
-      "plays": 184
+      "character": "DONKEY KONG",
+      "plays": 201
     },
     "Thursday": {
       "character": "ZELDA",
-      "plays": 204
+      "plays": 210
     },
     "Friday": {
       "character": "MR. GAME & WATCH",
@@ -56,9 +56,9 @@
     },
     {
       "player": "keneru",
-      "games": 230,
-      "wins": 125,
-      "win_rate": 54.3
+      "games": 238,
+      "wins": 132,
+      "win_rate": 55.5
     }
   ],
   "jmoon_deep_dive": {
@@ -298,8 +298,8 @@
     },
     {
       "character": "POK\u00c9MON TRAINER",
-      "plays": 46,
-      "win_rate": 23.9
+      "plays": 49,
+      "win_rate": 22.4
     },
     {
       "character": "SONIC",
@@ -308,8 +308,8 @@
     },
     {
       "character": "MYTHRA",
-      "plays": 55,
-      "win_rate": 29.1
+      "plays": 57,
+      "win_rate": 28.1
     }
   ],
   "blessed_characters": [
@@ -335,8 +335,8 @@
     },
     {
       "character": "BOWSER",
-      "plays": 163,
-      "win_rate": 57.7
+      "plays": 168,
+      "win_rate": 57.1
     }
   ],
   "friday_night_favorites": [
@@ -361,8 +361,8 @@
   "early_birds": [
     {
       "player": "habeas",
-      "games": 52,
-      "win_rate": 40.4
+      "games": 54,
+      "win_rate": 38.9
     },
     {
       "player": "shafaq",
@@ -388,12 +388,12 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 838,
-      "win_rate": 45.5
+      "games": 849,
+      "win_rate": 45.2
     },
     {
       "player": "subby",
-      "games": 504,
+      "games": 507,
       "win_rate": 46.2
     },
     {
@@ -403,13 +403,13 @@
     },
     {
       "player": "nish",
-      "games": 279,
-      "win_rate": 43.0
+      "games": 282,
+      "win_rate": 43.3
     },
     {
       "player": "keneru",
-      "games": 217,
-      "win_rate": 55.8
+      "games": 225,
+      "win_rate": 56.9
     }
   ],
   "single_game_most_kos": {
@@ -425,10 +425,10 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2702,
-    "total_wins": 1394,
-    "total_kos": 5928,
-    "total_sds": 120,
+    "total_games": 2758,
+    "total_wins": 1421,
+    "total_kos": 6054,
+    "total_sds": 126,
     "by_day": {
       "Monday": {
         "games": 298,
@@ -439,12 +439,12 @@
         "win_rate": 57.4
       },
       "Wednesday": {
-        "games": 425,
-        "win_rate": 52.5
+        "games": 440,
+        "win_rate": 51.6
       },
       "Thursday": {
-        "games": 476,
-        "win_rate": 47.1
+        "games": 517,
+        "win_rate": 47.8
       },
       "Friday": {
         "games": 401,
@@ -464,8 +464,8 @@
       "win_rate": 58.4
     },
     "worst_day": {
-      "day": "Thursday",
-      "win_rate": 47.1
+      "day": "Friday",
+      "win_rate": 47.4
     }
   },
   "jmoon_killers": [
@@ -594,16 +594,16 @@
       "win_rate": 81.4
     },
     "2026-04": {
-      "player": "stav",
-      "games": 9,
-      "wins": 8,
-      "win_rate": 88.9
+      "player": "keneru",
+      "games": 39,
+      "wins": 24,
+      "win_rate": 61.5
     }
   },
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1278
+    "games": 1324
   },
   "quietest_hour": {
     "hour": 8,
