@@ -18,7 +18,7 @@
     },
     "Friday": {
       "character": "MR. GAME & WATCH",
-      "plays": 194
+      "plays": 215
     },
     "Saturday": {
       "character": "DONKEY KONG",
@@ -287,6 +287,11 @@
   },
   "cursed_characters": [
     {
+      "character": "ZERO SUIT SAMUS",
+      "plays": 29,
+      "win_rate": 17.2
+    },
+    {
       "character": "FOX",
       "plays": 65,
       "win_rate": 20.0
@@ -297,19 +302,14 @@
       "win_rate": 21.3
     },
     {
-      "character": "POK\u00c9MON TRAINER",
-      "plays": 49,
-      "win_rate": 22.4
-    },
-    {
       "character": "SONIC",
       "plays": 26,
       "win_rate": 26.9
     },
     {
-      "character": "MYTHRA",
-      "plays": 57,
-      "win_rate": 28.1
+      "character": "POK\u00c9MON TRAINER",
+      "plays": 55,
+      "win_rate": 27.3
     }
   ],
   "blessed_characters": [
@@ -334,9 +334,9 @@
       "win_rate": 57.8
     },
     {
-      "character": "BOWSER",
-      "plays": 168,
-      "win_rate": 57.1
+      "character": "GANONDORF",
+      "plays": 911,
+      "win_rate": 56.8
     }
   ],
   "friday_night_favorites": [
@@ -345,12 +345,12 @@
       "plays": 86
     },
     {
-      "character": "SAMUS",
-      "plays": 77
+      "character": "MR. GAME & WATCH",
+      "plays": 85
     },
     {
-      "character": "MR. GAME & WATCH",
-      "plays": 76
+      "character": "DONKEY KONG",
+      "plays": 85
     }
   ],
   "friday_night_king": {
@@ -388,8 +388,8 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 849,
-      "win_rate": 45.2
+      "games": 889,
+      "win_rate": 46.5
     },
     {
       "player": "subby",
@@ -425,9 +425,9 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2758,
-    "total_wins": 1421,
-    "total_kos": 6054,
+    "total_games": 2837,
+    "total_wins": 1478,
+    "total_kos": 6275,
     "total_sds": 126,
     "by_day": {
       "Monday": {
@@ -447,12 +447,12 @@
         "win_rate": 47.8
       },
       "Friday": {
-        "games": 401,
-        "win_rate": 47.4
+        "games": 459,
+        "win_rate": 50.5
       },
       "Saturday": {
-        "games": 444,
-        "win_rate": 48.6
+        "games": 465,
+        "win_rate": 49.7
       },
       "Sunday": {
         "games": 320,
@@ -464,8 +464,8 @@
       "win_rate": 58.4
     },
     "worst_day": {
-      "day": "Friday",
-      "win_rate": 47.4
+      "day": "Thursday",
+      "win_rate": 47.8
     }
   },
   "jmoon_killers": [
@@ -594,10 +594,10 @@
       "win_rate": 81.4
     },
     "2026-04": {
-      "player": "keneru",
-      "games": 39,
-      "wins": 24,
-      "win_rate": 61.5
+      "player": "habeas",
+      "games": 290,
+      "wins": 181,
+      "win_rate": 62.4
     }
   },
   "busiest_hour": {

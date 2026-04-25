@@ -4,7 +4,7 @@
     "best_hour": 15,
     "best_hour_wr": 50.1,
     "worst_hour": 20,
-    "worst_hour_wr": 44.6
+    "worst_hour_wr": 44.9
   },
   "momentum": {
     "insight": "Winning affects next game performance",
@@ -19,8 +19,8 @@
   "fatigue": {
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.7,
-    "after_8_games_wr": 50.1,
-    "fatigue_drop": -2.4
+    "after_8_games_wr": 50.2,
+    "fatigue_drop": -2.5
   },
   "lopsided_matchups": [
     {
@@ -74,12 +74,12 @@
     "busiest_games": 2387,
     "quietest_day": "Sunday",
     "quietest_games": 1187,
-    "friday_vs_monday": 1.1
+    "friday_vs_monday": 1.2
   },
   "streakiness": {
     "most_streaky_player": "habeas",
-    "five_plus_streaks": 80,
-    "games": 2758
+    "five_plus_streaks": 85,
+    "games": 2837
   },
   "dominant_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.139,
+    "correlation": -0.148,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -138,7 +138,7 @@
   "game_speed": {
     "fastest_player": "lando",
     "fastest_gap": 3.4,
-    "slowest_player": "jeni",
-    "slowest_gap": 8.1
+    "slowest_player": "syweed",
+    "slowest_gap": 8.2
   }
 }

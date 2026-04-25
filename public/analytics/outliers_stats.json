@@ -2,8 +2,8 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,758 games",
-    "detail": "That's 12.3 games per day on average",
+    "value": "2,837 games",
+    "detail": "That's 12.7 games per day on average",
     "runner_up": "subby (1,215)"
   },
   "most_dominant": {
@@ -46,7 +46,7 @@
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
     "value": "126 SDs",
-    "detail": "That's 1 SD every 21.9 games"
+    "detail": "That's 1 SD every 22.5 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -87,8 +87,8 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1330 late-night games",
-    "detail": "That's 48.2% of their games after 10PM"
+    "value": "1360 late-night games",
+    "detail": "That's 47.9% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
@@ -104,9 +104,9 @@
   },
   "most_cursed_char": {
     "stat": "Most Cursed Character",
-    "player": "FOX",
-    "value": "20.0% win rate",
-    "detail": "Across 65 games. Just don't pick it."
+    "player": "ZERO SUIT SAMUS",
+    "value": "17.2% win rate",
+    "detail": "Across 29 games. Just don't pick it."
   },
   "most_blessed_char": {
     "stat": "Most Blessed Character",
@@ -146,9 +146,9 @@
   },
   "fallen_off": {
     "stat": "Biggest Decline",
-    "player": "own",
-    "value": "-22.0%",
-    "detail": "First 50: 52.0% \u2192 Last 50: 30.0%"
+    "player": "lando",
+    "value": "-18.0%",
+    "detail": "First 50: 22.0% \u2192 Last 50: 4.0%"
   },
   "friday_king": {
     "stat": "Friday King",
@@ -159,7 +159,7 @@
   "1am_warrior": {
     "stat": "The 1AM Warrior",
     "player": "habeas",
-    "value": "237 games at 1AM",
+    "value": "242 games at 1AM",
     "detail": "Why are you playing at 1AM?!"
   },
   "perfect_game_master": {
