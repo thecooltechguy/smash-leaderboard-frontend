@@ -22,7 +22,7 @@
     },
     "Saturday": {
       "character": "DONKEY KONG",
-      "plays": 188
+      "plays": 194
     },
     "Sunday": {
       "character": "DONKEY KONG",
@@ -293,8 +293,8 @@
     },
     {
       "character": "FOX",
-      "plays": 65,
-      "win_rate": 20.0
+      "plays": 66,
+      "win_rate": 19.7
     },
     {
       "character": "GRENINJA",
@@ -335,7 +335,7 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 911,
+      "plays": 912,
       "win_rate": 56.8
     }
   ],
@@ -425,10 +425,10 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2837,
-    "total_wins": 1478,
-    "total_kos": 6275,
-    "total_sds": 126,
+    "total_games": 2842,
+    "total_wins": 1480,
+    "total_kos": 6291,
+    "total_sds": 127,
     "by_day": {
       "Monday": {
         "games": 298,
@@ -451,8 +451,8 @@
         "win_rate": 50.5
       },
       "Saturday": {
-        "games": 465,
-        "win_rate": 49.7
+        "games": 470,
+        "win_rate": 49.6
       },
       "Sunday": {
         "games": 320,
@@ -595,9 +595,9 @@
     },
     "2026-04": {
       "player": "habeas",
-      "games": 290,
-      "wins": 181,
-      "win_rate": 62.4
+      "games": 295,
+      "wins": 183,
+      "win_rate": 62.0
     }
   },
   "busiest_hour": {

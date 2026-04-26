@@ -1247,6 +1247,20 @@
       "confidence": "low"
     },
     {
+      "player1": "lag",
+      "player2": "own",
+      "p1_wins": 2,
+      "p2_wins": 5,
+      "total": 7,
+      "p1_prob": 28.6,
+      "p2_prob": 71.4,
+      "p1_american": "+250",
+      "p2_american": "-250",
+      "p1_decimal": 3.5,
+      "p2_decimal": 1.4,
+      "confidence": "low"
+    },
+    {
       "player1": "fateen",
       "player2": "ya",
       "p1_wins": 6,
@@ -1541,7 +1555,7 @@
       "confidence": "low"
     }
   ],
-  "total_matchups": 110,
+  "total_matchups": 111,
   "upset_alerts": [
     {
       "player1": "habeas",
@@ -1997,10 +2011,10 @@
     },
     {
       "player": "own",
-      "h2h_wins": 97,
-      "h2h_losses": 177,
-      "h2h_rate": 35.4,
-      "opponents": 8
+      "h2h_wins": 102,
+      "h2h_losses": 179,
+      "h2h_rate": 36.3,
+      "opponents": 9
     },
     {
       "player": "safi",
@@ -2018,10 +2032,10 @@
     },
     {
       "player": "lag",
-      "h2h_wins": 16,
-      "h2h_losses": 51,
-      "h2h_rate": 23.9,
-      "opponents": 5
+      "h2h_wins": 18,
+      "h2h_losses": 56,
+      "h2h_rate": 24.3,
+      "opponents": 6
     },
     {
       "player": "gapam",

@@ -79,7 +79,7 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 85,
-    "games": 2837
+    "games": 2842
   },
   "dominant_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.148,
+    "correlation": -0.147,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -137,7 +137,7 @@
   },
   "game_speed": {
     "fastest_player": "lando",
-    "fastest_gap": 3.4,
+    "fastest_gap": 3.6,
     "slowest_player": "syweed",
     "slowest_gap": 8.2
   }
