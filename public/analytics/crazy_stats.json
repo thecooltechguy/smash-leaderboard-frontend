@@ -26,7 +26,7 @@
     },
     "Sunday": {
       "character": "DONKEY KONG",
-      "plays": 138
+      "plays": 160
     }
   },
   "late_night_warriors": [
@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1085,
-    "total_wins": 850,
+    "total_games": 1098,
+    "total_wins": 862,
     "winrate_Late Night (10PM-4AM)": {
       "games": 393,
       "win_rate": 80.2
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 409,
-      "win_rate": 78.0
+      "games": 422,
+      "win_rate": 78.4
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 253,
@@ -106,8 +106,8 @@
         "win_rate": 75.3
       },
       "Sunday": {
-        "games": 126,
-        "win_rate": 85.7
+        "games": 139,
+        "win_rate": 86.3
       }
     },
     "best_character": {
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 290,
-      "win_rate": 80.3
+      "games": 294,
+      "win_rate": 80.6
     }
   },
   "weekend_warriors": [
@@ -170,6 +170,14 @@
       "weekday_games": 50
     },
     {
+      "player": "stav",
+      "weekend_wr": 25.9,
+      "weekday_wr": 50.9,
+      "diff": 25.0,
+      "weekend_games": 27,
+      "weekday_games": 53
+    },
+    {
       "player": "heidy",
       "weekend_wr": 0.0,
       "weekday_wr": 17.9,
@@ -184,14 +192,6 @@
       "diff": 16.7,
       "weekend_games": 22,
       "weekday_games": 43
-    },
-    {
-      "player": "mmmmm",
-      "weekend_wr": 32.3,
-      "weekday_wr": 43.3,
-      "diff": 11.1,
-      "weekend_games": 31,
-      "weekday_games": 60
     }
   ],
   "longest_losing_streaks": [
@@ -302,14 +302,14 @@
       "win_rate": 21.3
     },
     {
+      "character": "POK\u00c9MON TRAINER",
+      "plays": 60,
+      "win_rate": 26.7
+    },
+    {
       "character": "SONIC",
       "plays": 26,
       "win_rate": 26.9
-    },
-    {
-      "character": "POK\u00c9MON TRAINER",
-      "plays": 55,
-      "win_rate": 27.3
     }
   ],
   "blessed_characters": [
@@ -329,14 +329,14 @@
       "win_rate": 64.6
     },
     {
+      "character": "GANONDORF",
+      "plays": 949,
+      "win_rate": 58.1
+    },
+    {
       "character": "PIRANHA PLANT",
       "plays": 102,
       "win_rate": 57.8
-    },
-    {
-      "character": "GANONDORF",
-      "plays": 912,
-      "win_rate": 56.8
     }
   ],
   "friday_night_favorites": [
@@ -425,9 +425,9 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2842,
-    "total_wins": 1480,
-    "total_kos": 6291,
+    "total_games": 2893,
+    "total_wins": 1518,
+    "total_kos": 6418,
     "total_sds": 127,
     "by_day": {
       "Monday": {
@@ -455,8 +455,8 @@
         "win_rate": 49.6
       },
       "Sunday": {
-        "games": 320,
-        "win_rate": 54.1
+        "games": 371,
+        "win_rate": 56.9
       }
     },
     "best_day": {
@@ -471,7 +471,7 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 145
+      "kills": 146
     },
     {
       "player": "shafaq",
@@ -594,10 +594,10 @@
       "win_rate": 81.4
     },
     "2026-04": {
-      "player": "habeas",
-      "games": 295,
-      "wins": 183,
-      "win_rate": 62.0
+      "player": "jmoon",
+      "games": 14,
+      "wins": 12,
+      "win_rate": 85.7
     }
   },
   "busiest_hour": {

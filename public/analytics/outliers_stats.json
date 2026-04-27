@@ -2,15 +2,15 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,842 games",
-    "detail": "That's 12.7 games per day on average",
-    "runner_up": "subby (1,221)"
+    "value": "2,893 games",
+    "detail": "That's 12.9 games per day on average",
+    "runner_up": "subby (1,259)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "78.3%",
-    "detail": "850W - 235L across 1085 games"
+    "value": "78.5%",
+    "detail": "862W - 236L across 1098 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
@@ -33,8 +33,8 @@
   "best_kd": {
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
-    "value": "1.62 K/D",
-    "detail": "2636 KOs, 1628 deaths"
+    "value": "1.63 K/D",
+    "detail": "2671 KOs, 1643 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -46,7 +46,7 @@
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
     "value": "127 SDs",
-    "detail": "That's 1 SD every 22.4 games"
+    "detail": "That's 1 SD every 22.8 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -80,15 +80,15 @@
   },
   "weekday_grinder": {
     "stat": "Weekday Warrior",
-    "player": "ben",
-    "value": "+19.2% on weekdays",
-    "detail": "Weekday: 57.8% vs Weekend: 38.6%"
+    "player": "stav",
+    "value": "+20.6% on weekdays",
+    "detail": "Weekday: 45.6% vs Weekend: 25.0%"
   },
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1360 late-night games",
-    "detail": "That's 47.9% of their games after 10PM"
+    "value": "1381 late-night games",
+    "detail": "That's 47.7% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
@@ -99,7 +99,7 @@
   "giant_killer": {
     "stat": "Most Wins vs jmoon",
     "player": "habeas",
-    "value": "150 victories",
+    "value": "151 victories",
     "detail": "The only real threat to the throne"
   },
   "most_cursed_char": {
@@ -117,7 +117,7 @@
   "biggest_rivalry": {
     "stat": "Biggest Rivalry",
     "player": "habeas vs jmoon",
-    "value": "631 matches",
+    "value": "643 matches",
     "detail": "The most frequent matchup in the league"
   },
   "best_day_performance": {
@@ -165,8 +165,8 @@
   "perfect_game_master": {
     "stat": "Most Perfect Games",
     "player": "jmoon",
-    "value": "120 flawless victories",
-    "detail": "That's 11.1% of their games"
+    "value": "124 flawless victories",
+    "detail": "That's 11.3% of their games"
   },
   "single_game_kos": {
     "stat": "Most KOs in One Match",
