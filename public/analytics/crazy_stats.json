@@ -2,7 +2,7 @@
   "character_by_day": {
     "Monday": {
       "character": "DONKEY KONG",
-      "plays": 184
+      "plays": 216
     },
     "Tuesday": {
       "character": "DONKEY KONG",
@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1098,
-    "total_wins": 862,
+    "total_games": 1121,
+    "total_wins": 882,
     "winrate_Late Night (10PM-4AM)": {
       "games": 393,
       "win_rate": 80.2
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 422,
-      "win_rate": 78.4
+      "games": 445,
+      "win_rate": 78.9
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 253,
@@ -82,8 +82,8 @@
     },
     "by_day": {
       "Monday": {
-        "games": 110,
-        "win_rate": 81.8
+        "games": 133,
+        "win_rate": 82.7
       },
       "Tuesday": {
         "games": 90,
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 294,
-      "win_rate": 80.6
+      "games": 301,
+      "win_rate": 81.1
     }
   },
   "weekend_warriors": [
@@ -172,10 +172,10 @@
     {
       "player": "stav",
       "weekend_wr": 25.9,
-      "weekday_wr": 50.9,
-      "diff": 25.0,
+      "weekday_wr": 44.6,
+      "diff": 18.7,
       "weekend_games": 27,
-      "weekday_games": 53
+      "weekday_games": 74
     },
     {
       "player": "heidy",
@@ -216,11 +216,11 @@
       "streak": 19
     },
     {
-      "player": "pat",
+      "player": "mizan",
       "streak": 18
     },
     {
-      "player": "mizan",
+      "player": "pat",
       "streak": 18
     },
     {
@@ -238,9 +238,9 @@
   ],
   "comeback_kings": [
     {
-      "player": "8n",
-      "sd_games": 6,
-      "sd_win_rate": 66.7
+      "player": "samin",
+      "sd_games": 28,
+      "sd_win_rate": 60.7
     },
     {
       "player": "strike",
@@ -248,25 +248,25 @@
       "sd_win_rate": 60.7
     },
     {
-      "player": "samin",
-      "sd_games": 28,
-      "sd_win_rate": 60.7
-    },
-    {
       "player": "shafaq",
-      "sd_games": 59,
-      "sd_win_rate": 59.3
+      "sd_games": 60,
+      "sd_win_rate": 58.3
     },
     {
       "player": "jmoon",
       "sd_games": 33,
       "sd_win_rate": 57.6
+    },
+    {
+      "player": "8n",
+      "sd_games": 7,
+      "sd_win_rate": 57.1
     }
   ],
   "top_matchup_by_day": {
     "Monday": {
       "players": "habeas vs RT",
-      "times": 57
+      "times": 61
     },
     "Tuesday": {
       "players": "habeas vs jmoon",
@@ -319,19 +319,19 @@
       "win_rate": 79.3
     },
     {
+      "character": "LUIGI",
+      "plays": 49,
+      "win_rate": 65.3
+    },
+    {
       "character": "ISABELLE",
       "plays": 20,
       "win_rate": 65.0
     },
     {
-      "character": "LUIGI",
-      "plays": 48,
-      "win_rate": 64.6
-    },
-    {
       "character": "GANONDORF",
-      "plays": 949,
-      "win_rate": 58.1
+      "plays": 974,
+      "win_rate": 58.5
     },
     {
       "character": "PIRANHA PLANT",
@@ -345,11 +345,11 @@
       "plays": 86
     },
     {
-      "character": "MR. GAME & WATCH",
+      "character": "DONKEY KONG",
       "plays": 85
     },
     {
-      "character": "DONKEY KONG",
+      "character": "MR. GAME & WATCH",
       "plays": 85
     }
   ],
@@ -419,20 +419,20 @@
     "won": false
   },
   "single_game_most_sds": {
-    "player": "bihan",
+    "player": "shafaq",
     "sds": 3,
-    "character": "SHEIK",
+    "character": "ZELDA",
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 2893,
-    "total_wins": 1518,
-    "total_kos": 6418,
-    "total_sds": 127,
+    "total_games": 2931,
+    "total_wins": 1542,
+    "total_kos": 6507,
+    "total_sds": 130,
     "by_day": {
       "Monday": {
-        "games": 298,
-        "win_rate": 58.4
+        "games": 336,
+        "win_rate": 58.9
       },
       "Tuesday": {
         "games": 338,
@@ -461,7 +461,7 @@
     },
     "best_day": {
       "day": "Monday",
-      "win_rate": 58.4
+      "win_rate": 58.9
     },
     "worst_day": {
       "day": "Thursday",
@@ -471,11 +471,11 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 146
+      "kills": 148
     },
     {
       "player": "shafaq",
-      "kills": 19
+      "kills": 18
     },
     {
       "player": "amar",
@@ -492,11 +492,11 @@
   ],
   "rare_characters": [
     {
-      "character": "KEN",
+      "character": "PICHU",
       "times_played": 5
     },
     {
-      "character": "PICHU",
+      "character": "KEN",
       "times_played": 5
     },
     {
@@ -504,11 +504,11 @@
       "times_played": 4
     },
     {
-      "character": "DUCK HUNT",
+      "character": "VILLAGER",
       "times_played": 4
     },
     {
-      "character": "VILLAGER",
+      "character": "DUCK HUNT",
       "times_played": 4
     },
     {
@@ -545,17 +545,23 @@
       "wins": 60,
       "win_rate": 85.7
     },
+    "2025-09": {
+      "player": "n8",
+      "games": 5,
+      "wins": 4,
+      "win_rate": 80.0
+    },
     "2025-08": {
       "player": "jmoon",
       "games": 130,
       "wins": 106,
       "win_rate": 81.5
     },
-    "2025-09": {
-      "player": "n8",
-      "games": 5,
-      "wins": 4,
-      "win_rate": 80.0
+    "2026-02": {
+      "player": "jmoon",
+      "games": 34,
+      "wins": 28,
+      "win_rate": 82.4
     },
     "2025-11": {
       "player": "jmoon",
@@ -575,35 +581,29 @@
       "wins": 151,
       "win_rate": 71.2
     },
+    "2026-04": {
+      "player": "jmoon",
+      "games": 37,
+      "wins": 32,
+      "win_rate": 86.5
+    },
     "2025-12": {
       "player": "amar",
       "games": 7,
       "wins": 6,
       "win_rate": 85.7
     },
-    "2026-02": {
-      "player": "jmoon",
-      "games": 34,
-      "wins": 28,
-      "win_rate": 82.4
-    },
     "2026-03": {
       "player": "jmoon",
       "games": 59,
       "wins": 48,
       "win_rate": 81.4
-    },
-    "2026-04": {
-      "player": "jmoon",
-      "games": 14,
-      "wins": 12,
-      "win_rate": 85.7
     }
   },
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1324
+    "games": 1330
   },
   "quietest_hour": {
     "hour": 8,

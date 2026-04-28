@@ -4,11 +4,11 @@
     "best_hour": 15,
     "best_hour_wr": 50.1,
     "worst_hour": 20,
-    "worst_hour_wr": 44.9
+    "worst_hour_wr": 45.0
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.5,
+    "avg_momentum_boost": 16.9,
     "biggest_momentum_player": "messi",
     "biggest_momentum_boost": 32.4,
     "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
@@ -18,9 +18,9 @@
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.6,
-    "after_8_games_wr": 50.4,
-    "fatigue_drop": -2.9
+    "first_3_games_wr": 47.7,
+    "after_8_games_wr": 50.5,
+    "fatigue_drop": -2.8
   },
   "lopsided_matchups": [
     {
@@ -74,12 +74,12 @@
     "busiest_games": 2387,
     "quietest_day": "Sunday",
     "quietest_games": 1359,
-    "friday_vs_monday": 1.2
+    "friday_vs_monday": 1.1
   },
   "streakiness": {
     "most_streaky_player": "habeas",
-    "five_plus_streaks": 87,
-    "games": 2893
+    "five_plus_streaks": 89,
+    "games": 2931
   },
   "dominant_matchups": [
     {
@@ -92,15 +92,15 @@
     {
       "winner": "jmoon",
       "loser": "heidy",
-      "wins": 20,
-      "total": 20,
+      "wins": 21,
+      "total": 21,
       "wr": 100.0
     },
     {
       "winner": "habeas",
       "loser": "lag",
-      "wins": 19,
-      "total": 19,
+      "wins": 18,
+      "total": 18,
       "wr": 100.0
     },
     {
@@ -119,14 +119,14 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.162,
+    "correlation": -0.165,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
-    "needs_warmup_player": "stav",
-    "first_wr": 23.5,
-    "warmed_up_wr": 47.6,
-    "warmup_boost": 24.1,
+    "needs_warmup_player": "pat",
+    "first_wr": 22.2,
+    "warmed_up_wr": 42.0,
+    "warmup_boost": 19.8,
     "cold_starter_player": "heidy",
     "cold_start_advantage": 30.3
   },
