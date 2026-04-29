@@ -8,19 +8,19 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 16.9,
+    "avg_momentum_boost": 17.3,
     "biggest_momentum_player": "messi",
     "biggest_momentum_boost": 32.4,
     "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
-    "reverse_momentum_player": "ryy",
-    "reverse_momentum": -0.1,
+    "reverse_momentum_player": "strike",
+    "reverse_momentum": 1.8,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.7,
+    "first_3_games_wr": 47.6,
     "after_8_games_wr": 50.5,
-    "fatigue_drop": -2.8
+    "fatigue_drop": -2.9
   },
   "lopsided_matchups": [
     {
@@ -79,14 +79,14 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 89,
-    "games": 2931
+    "games": 2959
   },
   "dominant_matchups": [
     {
       "winner": "subby",
       "loser": "ya",
-      "wins": 22,
-      "total": 22,
+      "wins": 21,
+      "total": 21,
       "wr": 100.0
     },
     {
@@ -105,21 +105,21 @@
     },
     {
       "winner": "jmoon",
-      "loser": "lando",
-      "wins": 15,
-      "total": 15,
-      "wr": 100.0
-    },
-    {
-      "winner": "jmoon",
       "loser": "keneru",
       "wins": 38,
       "total": 40,
       "wr": 95.0
+    },
+    {
+      "winner": "habeas",
+      "loser": "ya",
+      "wins": 18,
+      "total": 19,
+      "wr": 94.7
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.165,
+    "correlation": -0.156,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

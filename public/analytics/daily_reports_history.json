@@ -1522,200 +1522,188 @@
       }
     },
     {
-      "date": "April 27, 2026",
-      "generated_at": "2026-04-28T16:39:52.144247",
-      "headline": "ACTION-PACKED DAY: 74 MATCHES, 365 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 74 intense matches with a combined 365 knockouts.\n\nhabeas was the workhorse of the day, grinding through 38 matches with 24 victories.\n\nThe hottest player was jmoon who maintained an impressive 87.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with JOKER!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "date": "April 28, 2026",
+      "generated_at": "2026-04-29T16:37:12.595524",
+      "headline": "ACTION-PACKED DAY: 46 MATCHES, 324 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 46 intense matches with a combined 324 knockouts.\n\njmoon was the workhorse of the day, grinding through 35 matches with 22 victories.\n\nThe hottest player was safi who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - will delivered a flawless 3-0 with INCINEROAR!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
       "player_of_the_day": {
-        "name": "habeas",
-        "reason": "Most active player with 38 games"
+        "name": "jmoon",
+        "reason": "Most active player with 35 games"
       },
       "highlights": [
-        "74 total matches played",
-        "habeas most active with 38 games",
-        "13 perfect game(s) achieved"
+        "46 total matches played",
+        "jmoon most active with 35 games",
+        "5 perfect game(s) achieved"
       ],
       "stats_summary": {
-        "total_matches": 74,
-        "total_kos": 365,
+        "total_matches": 46,
+        "total_kos": 324,
         "player_stats": [
           {
-            "name": "habeas",
-            "games": 38,
-            "wins": 24,
-            "losses": 14,
-            "win_rate": 63.2,
-            "kos": 89,
-            "falls": 68,
-            "sds": 3,
-            "kd_ratio": 1.31,
-            "main_character": "GANONDORF",
-            "character_games": 20
-          },
-          {
-            "name": "keneru",
-            "games": 29,
-            "wins": 13,
-            "losses": 16,
-            "win_rate": 44.8,
-            "kos": 57,
-            "falls": 59,
-            "sds": 2,
-            "kd_ratio": 0.97,
-            "main_character": "DONKEY KONG",
-            "character_games": 19
-          },
-          {
-            "name": "RT",
-            "games": 24,
-            "wins": 7,
-            "losses": 17,
-            "win_rate": 29.2,
-            "kos": 37,
-            "falls": 57,
-            "sds": 6,
-            "kd_ratio": 0.65,
-            "main_character": "LINK",
+            "name": "jmoon",
+            "games": 35,
+            "wins": 22,
+            "losses": 13,
+            "win_rate": 62.9,
+            "kos": 97,
+            "falls": 66,
+            "sds": 4,
+            "kd_ratio": 1.47,
+            "main_character": "JOKER",
             "character_games": 24
           },
           {
-            "name": "jmoon",
-            "games": 23,
-            "wins": 20,
-            "losses": 3,
-            "win_rate": 87.0,
-            "kos": 61,
-            "falls": 30,
-            "sds": 0,
-            "kd_ratio": 2.03,
-            "main_character": "JOKER",
-            "character_games": 7
+            "name": "RT",
+            "games": 32,
+            "wins": 15,
+            "losses": 17,
+            "win_rate": 46.9,
+            "kos": 50,
+            "falls": 72,
+            "sds": 7,
+            "kd_ratio": 0.69,
+            "main_character": "LINK",
+            "character_games": 32
           },
           {
-            "name": "stav",
-            "games": 21,
-            "wins": 6,
-            "losses": 15,
-            "win_rate": 28.6,
-            "kos": 34,
-            "falls": 55,
-            "sds": 2,
-            "kd_ratio": 0.62,
-            "main_character": "KAZUYA",
-            "character_games": 20
-          },
-          {
-            "name": "8n",
-            "games": 13,
-            "wins": 7,
-            "losses": 6,
-            "win_rate": 53.8,
-            "kos": 26,
-            "falls": 32,
-            "sds": 1,
-            "kd_ratio": 0.81,
-            "main_character": "CAPTAIN FALCON",
-            "character_games": 13
-          },
-          {
-            "name": "safi",
-            "games": 11,
-            "wins": 3,
-            "losses": 8,
-            "win_rate": 27.3,
-            "kos": 19,
-            "falls": 31,
-            "sds": 2,
-            "kd_ratio": 0.61,
-            "main_character": "SNAKE",
-            "character_games": 4
+            "name": "habeas",
+            "games": 28,
+            "wins": 12,
+            "losses": 16,
+            "win_rate": 42.9,
+            "kos": 65,
+            "falls": 60,
+            "sds": 9,
+            "kd_ratio": 1.08,
+            "main_character": "ZELDA",
+            "character_games": 18
           },
           {
             "name": "lag",
-            "games": 8,
-            "wins": 4,
-            "losses": 4,
-            "win_rate": 50.0,
-            "kos": 15,
-            "falls": 19,
-            "sds": 0,
-            "kd_ratio": 0.79,
-            "main_character": "NESS",
-            "character_games": 7
+            "games": 22,
+            "wins": 12,
+            "losses": 10,
+            "win_rate": 54.5,
+            "kos": 27,
+            "falls": 48,
+            "sds": 5,
+            "kd_ratio": 0.56,
+            "main_character": "LUCAS",
+            "character_games": 18
           },
           {
-            "name": "shafaq",
-            "games": 6,
+            "name": "unknown",
+            "games": 15,
+            "wins": 0,
+            "losses": 15,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 15
+          },
+          {
+            "name": "ryy",
+            "games": 8,
             "wins": 3,
-            "losses": 3,
-            "win_rate": 50.0,
-            "kos": 19,
-            "falls": 14,
-            "sds": 1,
-            "kd_ratio": 1.36,
-            "main_character": "KING DEDEDE",
+            "losses": 5,
+            "win_rate": 37.5,
+            "kos": 17,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 0.94,
+            "main_character": "FALCO",
             "character_games": 4
           },
           {
-            "name": "mmmmm",
-            "games": 4,
+            "name": "will",
+            "games": 7,
             "wins": 1,
-            "losses": 3,
-            "win_rate": 25.0,
-            "kos": 8,
+            "losses": 6,
+            "win_rate": 14.3,
+            "kos": 13,
+            "falls": 17,
+            "sds": 2,
+            "kd_ratio": 0.76,
+            "main_character": "JOKER",
+            "character_games": 4
+          },
+          {
+            "name": "8n",
+            "games": 7,
+            "wins": 1,
+            "losses": 6,
+            "win_rate": 14.3,
+            "kos": 11,
+            "falls": 15,
+            "sds": 1,
+            "kd_ratio": 0.73,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 7
+          },
+          {
+            "name": "mmmmm",
+            "games": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 80.0,
+            "kos": 10,
+            "falls": 8,
+            "sds": 1,
+            "kd_ratio": 1.25,
+            "main_character": "HERO",
+            "character_games": 3
+          },
+          {
+            "name": "safi",
+            "games": 5,
+            "wins": 5,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 17,
             "falls": 10,
-            "sds": 0,
-            "kd_ratio": 0.8,
-            "main_character": "DARK PIT",
+            "sds": 1,
+            "kd_ratio": 1.7,
+            "main_character": "BOWSER",
             "character_games": 4
           }
         ],
         "top_characters": [
           {
-            "character": "DONKEY KONG",
+            "character": "LINK",
             "times_played": 32
           },
           {
-            "character": "GANONDORF",
-            "times_played": 25
+            "character": "JOKER",
+            "times_played": 29
           },
           {
-            "character": "LINK",
-            "times_played": 24
+            "character": "LUCAS",
+            "times_played": 19
           },
           {
-            "character": "KAZUYA",
-            "times_played": 20
+            "character": "ZELDA",
+            "times_played": 18
           },
           {
-            "character": "CAPTAIN FALCON",
-            "times_played": 17
+            "character": "UNKNOWN",
+            "times_played": 15
           }
         ],
         "perfect_games": [
           {
-            "player": "jmoon",
-            "character": "JOKER"
+            "player": "will",
+            "character": "INCINEROAR"
+          },
+          {
+            "player": "ryy",
+            "character": "NESS"
           },
           {
             "player": "jmoon",
             "character": "JOKER"
-          },
-          {
-            "player": "jmoon",
-            "character": "CAPTAIN FALCON"
-          },
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "habeas",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "habeas",
-            "character": "GANONDORF"
           },
           {
             "player": "RT",
@@ -1724,85 +1712,65 @@
           {
             "player": "jmoon",
             "character": "JOKER"
-          },
-          {
-            "player": "jmoon",
-            "character": "CAPTAIN FALCON"
-          },
-          {
-            "player": "keneru",
-            "character": "SORA"
-          },
-          {
-            "player": "keneru",
-            "character": "DONKEY KONG"
-          },
-          {
-            "player": "habeas",
-            "character": "ZELDA"
-          },
-          {
-            "player": "keneru",
-            "character": "DONKEY KONG"
           }
         ],
         "rivalries": [
           {
-            "player1": "jmoon",
-            "player2": "RT",
-            "total_games": 13,
-            "p1_wins": 11,
-            "p2_wins": 2
-          },
-          {
-            "player1": "habeas",
-            "player2": "keneru",
-            "total_games": 10,
-            "p1_wins": 8,
-            "p2_wins": 2
+            "player1": "mmmmm",
+            "player2": "8n",
+            "total_games": 5,
+            "p1_wins": 4,
+            "p2_wins": 1
           },
           {
             "player1": "habeas",
             "player2": "jmoon",
-            "total_games": 6,
+            "total_games": 3,
             "p1_wins": 1,
-            "p2_wins": 5
-          },
-          {
-            "player1": "keneru",
-            "player2": "stav",
-            "total_games": 6,
-            "p1_wins": 4,
             "p2_wins": 2
           },
           {
-            "player1": "stav",
+            "player1": "lag",
             "player2": "8n",
-            "total_games": 4,
-            "p1_wins": 0,
-            "p2_wins": 4
+            "total_games": 2,
+            "p1_wins": 2,
+            "p2_wins": 0
+          },
+          {
+            "player1": "jmoon",
+            "player2": "own",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          },
+          {
+            "player1": "jmoon",
+            "player2": "RT",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
           }
         ],
         "win_streaks": [
           {
+            "player": "safi",
+            "streak": 5
+          },
+          {
             "player": "jmoon",
-            "streak": 11
-          },
-          {
-            "player": "habeas",
-            "streak": 8
-          },
-          {
-            "player": "8n",
             "streak": 4
           },
           {
-            "player": "keneru",
-            "streak": 3
+            "player": "RT",
+            "streak": 4
           },
           {
-            "player": "RT",
-            "streak": 3
+            "player": "lag",
+            "streak": 4
+          },
+          {
+            "player": "mmmmm",
+            "streak": 4
           }
         ]
       }
