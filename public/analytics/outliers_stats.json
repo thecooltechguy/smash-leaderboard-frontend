@@ -2,15 +2,15 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "2,959 games",
-    "detail": "That's 13.2 games per day on average",
-    "runner_up": "subby (1,259)"
+    "value": "3,043 games",
+    "detail": "That's 13.6 games per day on average",
+    "runner_up": "subby (1,260)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "78.2%",
-    "detail": "904W - 252L across 1156 games"
+    "value": "77.9%",
+    "detail": "906W - 257L across 1163 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
@@ -34,7 +34,7 @@
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
     "value": "1.63 K/D",
-    "detail": "2829 KOs, 1739 deaths"
+    "detail": "2847 KOs, 1749 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -45,7 +45,7 @@
   "most_sds_total": {
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
-    "value": "139 SDs",
+    "value": "143 SDs",
     "detail": "That's 1 SD every 21.3 games"
   },
   "most_sd_prone": {
@@ -87,19 +87,19 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1441 late-night games",
-    "detail": "That's 48.7% of their games after 10PM"
+    "value": "1492 late-night games",
+    "detail": "That's 49.0% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
     "player": "jmoon",
-    "value": "77.9% win rate",
-    "detail": "Across 570 late-night games"
+    "value": "77.3% win rate",
+    "detail": "Across 577 late-night games"
   },
   "giant_killer": {
     "stat": "Most Wins vs jmoon",
     "player": "habeas",
-    "value": "162 victories",
+    "value": "169 victories",
     "detail": "The only real threat to the throne"
   },
   "most_cursed_char": {
@@ -134,21 +134,21 @@
   },
   "comeback_king": {
     "stat": "Comeback King",
-    "player": "jmoon",
-    "value": "62.2% win rate with SDs",
-    "detail": "Still wins 62% of the time after self-destructing"
+    "player": "samin",
+    "value": "60.7% win rate with SDs",
+    "detail": "Still wins 60% of the time after self-destructing"
   },
   "most_improved": {
     "stat": "Most Improved Player",
-    "player": "ben",
-    "value": "+30.0%",
-    "detail": "First 50 games: 34.0% \u2192 Last 50: 64.0%"
+    "player": "gapam",
+    "value": "+32.0%",
+    "detail": "First 50 games: 22.0% \u2192 Last 50: 54.0%"
   },
   "fallen_off": {
     "stat": "Biggest Decline",
     "player": "jmoon",
-    "value": "-20.0%",
-    "detail": "First 50: 88.0% \u2192 Last 50: 68.0%"
+    "value": "-26.0%",
+    "detail": "First 50: 88.0% \u2192 Last 50: 62.0%"
   },
   "friday_king": {
     "stat": "Friday King",
@@ -159,14 +159,14 @@
   "1am_warrior": {
     "stat": "The 1AM Warrior",
     "player": "habeas",
-    "value": "260 games at 1AM",
+    "value": "268 games at 1AM",
     "detail": "Why are you playing at 1AM?!"
   },
   "perfect_game_master": {
     "stat": "Most Perfect Games",
-    "player": "jmoon",
+    "player": "habeas",
     "value": "132 flawless victories",
-    "detail": "That's 11.4% of their games"
+    "detail": "That's 4.3% of their games"
   },
   "single_game_kos": {
     "stat": "Most KOs in One Match",
