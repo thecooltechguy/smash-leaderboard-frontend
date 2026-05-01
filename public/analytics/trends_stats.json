@@ -4,11 +4,11 @@
     "best_hour": 15,
     "best_hour_wr": 50.1,
     "worst_hour": 20,
-    "worst_hour_wr": 45.1
+    "worst_hour_wr": 45.2
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.0,
+    "avg_momentum_boost": 17.2,
     "biggest_momentum_player": "messi",
     "biggest_momentum_boost": 32.4,
     "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
@@ -71,7 +71,7 @@
   },
   "day_activity": {
     "busiest_day": "Thursday",
-    "busiest_games": 2407,
+    "busiest_games": 2615,
     "quietest_day": "Sunday",
     "quietest_games": 1359,
     "friday_vs_monday": 1.1
@@ -79,7 +79,7 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 95,
-    "games": 3043
+    "games": 3073
   },
   "dominant_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.154,
+    "correlation": -0.156,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
