@@ -88,14 +88,14 @@
       "player1": "RT",
       "player2": "habeas",
       "p1_wins": 53,
-      "p2_wins": 100,
-      "total": 153,
-      "p1_prob": 34.6,
-      "p2_prob": 65.4,
-      "p1_american": "+188",
-      "p2_american": "-188",
-      "p1_decimal": 2.89,
-      "p2_decimal": 1.53,
+      "p2_wins": 101,
+      "total": 154,
+      "p1_prob": 34.4,
+      "p2_prob": 65.6,
+      "p1_american": "+190",
+      "p2_american": "-190",
+      "p1_decimal": 2.91,
+      "p2_decimal": 1.52,
       "confidence": "high"
     },
     {
@@ -351,6 +351,20 @@
       "confidence": "high"
     },
     {
+      "player1": "RT",
+      "player2": "jmoon",
+      "p1_wins": 7,
+      "p2_wins": 26,
+      "total": 33,
+      "p1_prob": 21.2,
+      "p2_prob": 78.8,
+      "p1_american": "+371",
+      "p2_american": "-371",
+      "p1_decimal": 4.71,
+      "p2_decimal": 1.27,
+      "confidence": "high"
+    },
+    {
       "player1": "habeas",
       "player2": "ya",
       "p1_wins": 31,
@@ -362,20 +376,6 @@
       "p2_american": "+3100",
       "p1_decimal": 1.03,
       "p2_decimal": 32.0,
-      "confidence": "high"
-    },
-    {
-      "player1": "RT",
-      "player2": "jmoon",
-      "p1_wins": 6,
-      "p2_wins": 26,
-      "total": 32,
-      "p1_prob": 18.8,
-      "p2_prob": 81.2,
-      "p1_american": "+433",
-      "p2_american": "-433",
-      "p1_decimal": 5.33,
-      "p2_decimal": 1.23,
       "confidence": "high"
     },
     {
@@ -477,6 +477,20 @@
       "confidence": "medium"
     },
     {
+      "player1": "jmoon",
+      "player2": "own",
+      "p1_wins": 20,
+      "p2_wins": 3,
+      "total": 23,
+      "p1_prob": 87.0,
+      "p2_prob": 13.0,
+      "p1_american": "-666",
+      "p2_american": "+666",
+      "p1_decimal": 1.15,
+      "p2_decimal": 7.67,
+      "confidence": "medium"
+    },
+    {
       "player1": "aadil",
       "player2": "subby",
       "p1_wins": 6,
@@ -544,20 +558,6 @@
       "p2_american": "+125",
       "p1_decimal": 1.8,
       "p2_decimal": 2.25,
-      "confidence": "medium"
-    },
-    {
-      "player1": "jmoon",
-      "player2": "own",
-      "p1_wins": 15,
-      "p2_wins": 3,
-      "total": 18,
-      "p1_prob": 83.3,
-      "p2_prob": 16.7,
-      "p1_american": "-500",
-      "p2_american": "+500",
-      "p1_decimal": 1.2,
-      "p2_decimal": 6.0,
       "confidence": "medium"
     },
     {
@@ -1387,6 +1387,20 @@
       "confidence": "low"
     },
     {
+      "player1": "RT",
+      "player2": "stav",
+      "p1_wins": 5,
+      "p2_wins": 1,
+      "total": 6,
+      "p1_prob": 83.3,
+      "p2_prob": 16.7,
+      "p1_american": "-500",
+      "p2_american": "+500",
+      "p1_decimal": 1.2,
+      "p2_decimal": 6.0,
+      "confidence": "low"
+    },
+    {
       "player1": "audrey",
       "player2": "jeni",
       "p1_wins": 2,
@@ -1580,20 +1594,6 @@
       "p2_american": "-400",
       "p1_decimal": 5.0,
       "p2_decimal": 1.25,
-      "confidence": "low"
-    },
-    {
-      "player1": "RT",
-      "player2": "stav",
-      "p1_wins": 4,
-      "p2_wins": 1,
-      "total": 5,
-      "p1_prob": 80.0,
-      "p2_prob": 20.0,
-      "p1_american": "-400",
-      "p2_american": "+400",
-      "p1_decimal": 1.25,
-      "p2_decimal": 5.0,
       "confidence": "low"
     },
     {
@@ -1966,25 +1966,25 @@
       "confidence": "high"
     },
     {
-      "player1": "nish",
-      "player2": "ya",
-      "p1_wins": 77,
-      "p2_wins": 13,
-      "total": 90,
-      "p1_prob": 85.6,
-      "p2_prob": 14.4,
-      "p1_american": "-592",
-      "p2_american": "+592",
-      "p1_decimal": 1.17,
-      "p2_decimal": 6.92,
-      "confidence": "high"
+      "player1": "jmoon",
+      "player2": "own",
+      "p1_wins": 20,
+      "p2_wins": 3,
+      "total": 23,
+      "p1_prob": 87.0,
+      "p2_prob": 13.0,
+      "p1_american": "-666",
+      "p2_american": "+666",
+      "p1_decimal": 1.15,
+      "p2_decimal": 7.67,
+      "confidence": "medium"
     }
   ],
   "power_rankings": [
     {
       "player": "jmoon",
-      "h2h_wins": 836,
-      "h2h_losses": 183,
+      "h2h_wins": 841,
+      "h2h_losses": 184,
       "h2h_rate": 82.0,
       "opponents": 14
     },
@@ -2004,7 +2004,7 @@
     },
     {
       "player": "habeas",
-      "h2h_wins": 1356,
+      "h2h_wins": 1357,
       "h2h_losses": 1159,
       "h2h_rate": 53.9,
       "opponents": 25
@@ -2060,9 +2060,9 @@
     },
     {
       "player": "RT",
-      "h2h_wins": 106,
-      "h2h_losses": 154,
-      "h2h_rate": 40.8,
+      "h2h_wins": 108,
+      "h2h_losses": 155,
+      "h2h_rate": 41.1,
       "opponents": 8
     },
     {
@@ -2082,8 +2082,8 @@
     {
       "player": "own",
       "h2h_wins": 106,
-      "h2h_losses": 205,
-      "h2h_rate": 34.1,
+      "h2h_losses": 210,
+      "h2h_rate": 33.5,
       "opponents": 9
     },
     {
@@ -2103,8 +2103,8 @@
     {
       "player": "stav",
       "h2h_wins": 8,
-      "h2h_losses": 24,
-      "h2h_rate": 25.0,
+      "h2h_losses": 25,
+      "h2h_rate": 24.2,
       "opponents": 4
     },
     {

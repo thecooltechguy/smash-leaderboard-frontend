@@ -8,7 +8,7 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.2,
+    "avg_momentum_boost": 17.5,
     "biggest_momentum_player": "messi",
     "biggest_momentum_boost": 32.4,
     "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
@@ -79,21 +79,21 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 95,
-    "games": 3073
+    "games": 3075
   },
   "dominant_matchups": [
     {
       "winner": "subby",
       "loser": "ya",
-      "wins": 21,
-      "total": 21,
+      "wins": 20,
+      "total": 20,
       "wr": 100.0
     },
     {
       "winner": "jmoon",
       "loser": "heidy",
-      "wins": 19,
-      "total": 19,
+      "wins": 20,
+      "total": 20,
       "wr": 100.0
     },
     {
@@ -113,20 +113,20 @@
     {
       "winner": "jmoon",
       "loser": "keneru",
-      "wins": 36,
-      "total": 38,
-      "wr": 94.7
+      "wins": 37,
+      "total": 39,
+      "wr": 94.9
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.156,
+    "correlation": -0.157,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
-    "needs_warmup_player": "pat",
-    "first_wr": 22.2,
-    "warmed_up_wr": 42.0,
-    "warmup_boost": 19.8,
+    "needs_warmup_player": "stav",
+    "first_wr": 22.7,
+    "warmed_up_wr": 43.4,
+    "warmup_boost": 20.6,
     "cold_starter_player": "heidy",
     "cold_start_advantage": 30.3
   },

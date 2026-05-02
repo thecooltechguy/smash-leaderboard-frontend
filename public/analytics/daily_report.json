@@ -1,8 +1,168 @@
 {
-  "date": "March 31, 2026",
-  "generated_at": "2026-04-01T16:24:25.486476",
-  "headline": "REST DAY AT THE ARENA",
-  "report": "No matches were recorded on March 31, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-  "highlights": [],
-  "stats_summary": null
+  "date": "May 01, 2026",
+  "generated_at": "2026-05-02T16:19:51.853950",
+  "headline": "ACTION-PACKED DAY: 7 MATCHES, 27 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 7 intense matches with a combined 27 knockouts.\n\nown was the workhorse of the day, grinding through 5 matches with 0 victories.\n\nThe hottest player was jmoon who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "player_of_the_day": {
+    "name": "own",
+    "reason": "Most active player with 5 games"
+  },
+  "highlights": [
+    "7 total matches played",
+    "own most active with 5 games",
+    "4 perfect game(s) achieved"
+  ],
+  "stats_summary": {
+    "total_matches": 7,
+    "total_kos": 27,
+    "player_stats": [
+      {
+        "name": "own",
+        "games": 5,
+        "wins": 0,
+        "losses": 5,
+        "win_rate": 0.0,
+        "kos": 3,
+        "falls": 9,
+        "sds": 0,
+        "kd_ratio": 0.33,
+        "main_character": "PYRA",
+        "character_games": 2
+      },
+      {
+        "name": "jmoon",
+        "games": 5,
+        "wins": 5,
+        "losses": 0,
+        "win_rate": 100.0,
+        "kos": 15,
+        "falls": 1,
+        "sds": 0,
+        "kd_ratio": 15.0,
+        "main_character": "CAPTAIN FALCON",
+        "character_games": 4
+      },
+      {
+        "name": "willsong",
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_rate": 0.0,
+        "kos": 2,
+        "falls": 3,
+        "sds": 0,
+        "kd_ratio": 0.67,
+        "main_character": "MIN MIN",
+        "character_games": 1
+      },
+      {
+        "name": "ryx",
+        "games": 1,
+        "wins": 1,
+        "losses": 0,
+        "win_rate": 100.0,
+        "kos": 3,
+        "falls": 2,
+        "sds": 0,
+        "kd_ratio": 1.5,
+        "main_character": "ENDERMAN",
+        "character_games": 1
+      },
+      {
+        "name": "RT",
+        "games": 1,
+        "wins": 1,
+        "losses": 0,
+        "win_rate": 100.0,
+        "kos": 3,
+        "falls": 1,
+        "sds": 0,
+        "kd_ratio": 3.0,
+        "main_character": "LINK",
+        "character_games": 1
+      },
+      {
+        "name": "stav",
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_rate": 0.0,
+        "kos": 1,
+        "falls": 3,
+        "sds": 0,
+        "kd_ratio": 0.33,
+        "main_character": "KAZUYA",
+        "character_games": 1
+      }
+    ],
+    "top_characters": [
+      {
+        "character": "CAPTAIN FALCON",
+        "times_played": 5
+      },
+      {
+        "character": "PYRA",
+        "times_played": 2
+      },
+      {
+        "character": "MYTHRA",
+        "times_played": 2
+      },
+      {
+        "character": "GANONDORF",
+        "times_played": 1
+      },
+      {
+        "character": "MIN MIN",
+        "times_played": 1
+      }
+    ],
+    "perfect_games": [
+      {
+        "player": "jmoon",
+        "character": "GANONDORF"
+      },
+      {
+        "player": "jmoon",
+        "character": "CAPTAIN FALCON"
+      },
+      {
+        "player": "jmoon",
+        "character": "CAPTAIN FALCON"
+      },
+      {
+        "player": "jmoon",
+        "character": "CAPTAIN FALCON"
+      }
+    ],
+    "rivalries": [
+      {
+        "player1": "jmoon",
+        "player2": "own",
+        "total_games": 5,
+        "p1_wins": 5,
+        "p2_wins": 0
+      },
+      {
+        "player1": "stav",
+        "player2": "RT",
+        "total_games": 1,
+        "p1_wins": 0,
+        "p2_wins": 1
+      },
+      {
+        "player1": "willsong",
+        "player2": "ryx",
+        "total_games": 1,
+        "p1_wins": 0,
+        "p2_wins": 1
+      }
+    ],
+    "win_streaks": [
+      {
+        "player": "jmoon",
+        "streak": 5
+      }
+    ]
+  }
 }

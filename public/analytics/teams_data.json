@@ -2,9 +2,9 @@
   "total_team_matches": 1137,
   "match_formats": {
     "1v2": 285,
-    "2v2": 461,
+    "2v2": 462,
     "2v1": 93,
-    "1v3": 84,
+    "1v3": 83,
     "3v1": 5,
     "3v2": 41,
     "1v4": 38,
@@ -18,7 +18,7 @@
     "3v4": 2,
     "4v4": 2
   },
-  "true_2v2_count": 461,
+  "true_2v2_count": 462,
   "best_duos": [
     {
       "duo": "habeas & lag",
@@ -212,6 +212,15 @@
       "win_rate": 60.0
     },
     {
+      "duo": "RT & habeas",
+      "player1": "RT",
+      "player2": "habeas",
+      "wins": 17,
+      "losses": 23,
+      "total": 40,
+      "win_rate": 42.5
+    },
+    {
       "duo": "ryy & will",
       "player1": "ryy",
       "player2": "will",
@@ -221,22 +230,13 @@
       "win_rate": 55.3
     },
     {
-      "duo": "RT & habeas",
-      "player1": "RT",
-      "player2": "habeas",
-      "wins": 17,
-      "losses": 20,
-      "total": 37,
-      "win_rate": 45.9
-    },
-    {
       "duo": "jmoon & own",
       "player1": "jmoon",
       "player2": "own",
-      "wins": 19,
-      "losses": 14,
-      "total": 33,
-      "win_rate": 57.6
+      "wins": 20,
+      "losses": 15,
+      "total": 35,
+      "win_rate": 57.1
     },
     {
       "duo": "keneru & nish",
@@ -750,6 +750,20 @@
       "total_falls": 93
     },
     {
+      "team": "RT & habeas",
+      "members": [
+        "RT",
+        "habeas"
+      ],
+      "size": 2,
+      "wins": 17,
+      "losses": 28,
+      "total": 45,
+      "win_rate": 37.8,
+      "total_kos": 173,
+      "total_falls": 204
+    },
+    {
       "team": "ryy & will",
       "members": [
         "ryy",
@@ -762,20 +776,6 @@
       "win_rate": 53.5,
       "total_kos": 175,
       "total_falls": 186
-    },
-    {
-      "team": "RT & habeas",
-      "members": [
-        "RT",
-        "habeas"
-      ],
-      "size": 2,
-      "wins": 17,
-      "losses": 25,
-      "total": 42,
-      "win_rate": 40.5,
-      "total_kos": 164,
-      "total_falls": 195
     },
     {
       "team": "keneru & subby",
@@ -838,12 +838,12 @@
         "jmoon"
       ],
       "size": 1,
-      "wins": 29,
+      "wins": 28,
       "losses": 8,
-      "total": 37,
-      "win_rate": 78.4,
-      "total_kos": 138,
-      "total_falls": 56
+      "total": 36,
+      "win_rate": 77.8,
+      "total_kos": 134,
+      "total_falls": 55
     },
     {
       "team": "own & subby",
@@ -860,6 +860,20 @@
       "total_falls": 170
     },
     {
+      "team": "jmoon & own",
+      "members": [
+        "jmoon",
+        "own"
+      ],
+      "size": 2,
+      "wins": 20,
+      "losses": 15,
+      "total": 35,
+      "win_rate": 57.1,
+      "total_kos": 149,
+      "total_falls": 134
+    },
+    {
       "team": "keneru",
       "members": [
         "keneru"
@@ -871,20 +885,6 @@
       "win_rate": 57.6,
       "total_kos": 98,
       "total_falls": 68
-    },
-    {
-      "team": "jmoon & own",
-      "members": [
-        "jmoon",
-        "own"
-      ],
-      "size": 2,
-      "wins": 19,
-      "losses": 14,
-      "total": 33,
-      "win_rate": 57.6,
-      "total_kos": 148,
-      "total_falls": 131
     },
     {
       "team": "habeas & nish",
@@ -1050,11 +1050,11 @@
     {
       "player": "jmoon",
       "team_wins": 94,
-      "team_losses": 93,
-      "team_games": 187,
-      "team_win_rate": 50.3,
+      "team_losses": 94,
+      "team_games": 188,
+      "team_win_rate": 50.0,
       "best_teammate": "own",
-      "games_with_best": 37
+      "games_with_best": 39
     },
     {
       "player": "willsong",
@@ -1086,9 +1086,9 @@
     {
       "player": "habeas",
       "team_wins": 246,
-      "team_losses": 281,
-      "team_games": 527,
-      "team_win_rate": 46.7,
+      "team_losses": 283,
+      "team_games": 529,
+      "team_win_rate": 46.5,
       "best_teammate": "subby",
       "games_with_best": 54
     },
@@ -1109,15 +1109,6 @@
       "team_win_rate": 45.7,
       "best_teammate": "will",
       "games_with_best": 76
-    },
-    {
-      "player": "RT",
-      "team_wins": 53,
-      "team_losses": 65,
-      "team_games": 118,
-      "team_win_rate": 44.9,
-      "best_teammate": "habeas",
-      "games_with_best": 50
     },
     {
       "player": "will",
@@ -1145,6 +1136,15 @@
       "team_win_rate": 44.3,
       "best_teammate": "keneru",
       "games_with_best": 20
+    },
+    {
+      "player": "RT",
+      "team_wins": 53,
+      "team_losses": 67,
+      "team_games": 120,
+      "team_win_rate": 44.2,
+      "best_teammate": "habeas",
+      "games_with_best": 53
     },
     {
       "player": "nish",
@@ -1175,10 +1175,10 @@
     },
     {
       "player": "own",
-      "team_wins": 92,
+      "team_wins": 93,
       "team_losses": 126,
-      "team_games": 218,
-      "team_win_rate": 42.2,
+      "team_games": 219,
+      "team_win_rate": 42.5,
       "best_teammate": "subby",
       "games_with_best": 53
     },
@@ -1397,15 +1397,6 @@
       "team_win_rate": 0.0,
       "best_teammate": "asma",
       "games_with_best": 5
-    },
-    {
-      "player": "unknown",
-      "team_wins": 0,
-      "team_losses": 5,
-      "team_games": 5,
-      "team_win_rate": 0.0,
-      "best_teammate": "own",
-      "games_with_best": 2
     },
     {
       "player": "tcvora",
@@ -1671,6 +1662,14 @@
       "win_rate": 26.4
     },
     {
+      "partnership": "RT & habeas",
+      "player1": "RT",
+      "player2": "habeas",
+      "games_together": 53,
+      "wins_together": 22,
+      "win_rate": 41.5
+    },
+    {
       "partnership": "pat & subby",
       "player1": "pat",
       "player2": "subby",
@@ -1685,14 +1684,6 @@
       "games_together": 51,
       "wins_together": 25,
       "win_rate": 49.0
-    },
-    {
-      "partnership": "RT & habeas",
-      "player1": "RT",
-      "player2": "habeas",
-      "games_together": 50,
-      "wins_together": 22,
-      "win_rate": 44.0
     },
     {
       "partnership": "habeas & own",
@@ -1727,20 +1718,20 @@
       "win_rate": 22.5
     },
     {
+      "partnership": "jmoon & own",
+      "player1": "jmoon",
+      "player2": "own",
+      "games_together": 39,
+      "wins_together": 21,
+      "win_rate": 53.8
+    },
+    {
       "partnership": "fateen & nish",
       "player1": "fateen",
       "player2": "nish",
       "games_together": 37,
       "wins_together": 11,
       "win_rate": 29.7
-    },
-    {
-      "partnership": "jmoon & own",
-      "player1": "jmoon",
-      "player2": "own",
-      "games_together": 37,
-      "wins_together": 20,
-      "win_rate": 54.1
     },
     {
       "partnership": "habeas & strike",
@@ -1761,9 +1752,9 @@
   ],
   "summary": {
     "total_team_matches": 1137,
-    "true_2v2_matches": 461,
-    "total_unique_teams": 365,
-    "total_unique_duos": 108,
-    "total_partnerships": 310
+    "true_2v2_matches": 462,
+    "total_unique_teams": 361,
+    "total_unique_duos": 105,
+    "total_partnerships": 306
   }
 }
