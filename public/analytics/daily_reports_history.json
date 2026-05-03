@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "May 02, 2026",
+      "generated_at": "2026-05-03T16:19:34.303390",
+      "headline": "REST DAY AT THE ARENA",
+      "report": "No matches were recorded on May 02, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
+      "highlights": [],
+      "stats_summary": null
+    },
+    {
       "date": "May 01, 2026",
       "generated_at": "2026-05-02T16:19:51.853950",
       "headline": "ACTION-PACKED DAY: 7 MATCHES, 27 KOS!",
@@ -1528,163 +1536,6 @@
           {
             "player": "shafaq",
             "streak": 6
-          }
-        ]
-      }
-    },
-    {
-      "date": "March 03, 2026",
-      "generated_at": "2026-03-04T16:15:51.732396",
-      "headline": "ACTION-PACKED DAY: 19 MATCHES, 81 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 19 intense matches with a combined 81 knockouts.\n\njmoon was the workhorse of the day, grinding through 14 matches with 14 victories.\n\nThe hottest player was jmoon who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "jmoon",
-        "reason": "Most active player with 14 games"
-      },
-      "highlights": [
-        "19 total matches played",
-        "jmoon most active with 14 games",
-        "1 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 19,
-        "total_kos": 81,
-        "player_stats": [
-          {
-            "name": "jmoon",
-            "games": 14,
-            "wins": 14,
-            "losses": 0,
-            "win_rate": 100.0,
-            "kos": 36,
-            "falls": 20,
-            "sds": 0,
-            "kd_ratio": 1.8,
-            "main_character": "JOKER",
-            "character_games": 6
-          },
-          {
-            "name": "safi",
-            "games": 10,
-            "wins": 0,
-            "losses": 10,
-            "win_rate": 0.0,
-            "kos": 17,
-            "falls": 30,
-            "sds": 0,
-            "kd_ratio": 0.57,
-            "main_character": "SNAKE",
-            "character_games": 6
-          },
-          {
-            "name": "shafaq",
-            "games": 8,
-            "wins": 1,
-            "losses": 7,
-            "win_rate": 12.5,
-            "kos": 12,
-            "falls": 15,
-            "sds": 0,
-            "kd_ratio": 0.8,
-            "main_character": "ZELDA",
-            "character_games": 4
-          },
-          {
-            "name": "ryy",
-            "games": 3,
-            "wins": 2,
-            "losses": 1,
-            "win_rate": 66.7,
-            "kos": 8,
-            "falls": 6,
-            "sds": 0,
-            "kd_ratio": 1.33,
-            "main_character": "NESS",
-            "character_games": 2
-          },
-          {
-            "name": "will",
-            "games": 3,
-            "wins": 2,
-            "losses": 1,
-            "win_rate": 66.7,
-            "kos": 8,
-            "falls": 7,
-            "sds": 0,
-            "kd_ratio": 1.14,
-            "main_character": "INCINEROAR",
-            "character_games": 3
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "JOKER",
-            "times_played": 6
-          },
-          {
-            "character": "SNAKE",
-            "times_played": 6
-          },
-          {
-            "character": "ZELDA",
-            "times_played": 4
-          },
-          {
-            "character": "INCINEROAR",
-            "times_played": 4
-          },
-          {
-            "character": "SEPHIROTH",
-            "times_played": 4
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "jmoon",
-            "player2": "safi",
-            "total_games": 10,
-            "p1_wins": 10,
-            "p2_wins": 0
-          },
-          {
-            "player1": "jmoon",
-            "player2": "shafaq",
-            "total_games": 4,
-            "p1_wins": 4,
-            "p2_wins": 0
-          },
-          {
-            "player1": "ryy",
-            "player2": "shafaq",
-            "total_games": 2,
-            "p1_wins": 2,
-            "p2_wins": 0
-          },
-          {
-            "player1": "will",
-            "player2": "shafaq",
-            "total_games": 2,
-            "p1_wins": 1,
-            "p2_wins": 1
-          },
-          {
-            "player1": "will",
-            "player2": "ryy",
-            "total_games": 1,
-            "p1_wins": 1,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "jmoon",
-            "streak": 14
           }
         ]
       }
