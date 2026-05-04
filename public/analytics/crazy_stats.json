@@ -37,13 +37,13 @@
       "win_rate": 80.2
     },
     {
-      "player": "amar",
+      "player": "jean",
       "games": 12,
       "wins": 8,
       "win_rate": 66.7
     },
     {
-      "player": "jean",
+      "player": "amar",
       "games": 12,
       "wins": 8,
       "win_rate": 66.7
@@ -170,20 +170,20 @@
       "weekday_games": 50
     },
     {
+      "player": "stav",
+      "weekend_wr": 22.6,
+      "weekday_wr": 43.6,
+      "diff": 21.0,
+      "weekend_games": 31,
+      "weekday_games": 78
+    },
+    {
       "player": "heidy",
       "weekend_wr": 0.0,
       "weekday_wr": 17.9,
       "diff": 17.9,
       "weekend_games": 25,
       "weekday_games": 112
-    },
-    {
-      "player": "stav",
-      "weekend_wr": 25.9,
-      "weekday_wr": 43.6,
-      "diff": 17.7,
-      "weekend_games": 27,
-      "weekday_games": 78
     },
     {
       "player": "joguo",
@@ -425,10 +425,10 @@
     "won": false
   },
   "habeas_deep_dive": {
-    "total_games": 3075,
-    "total_wins": 1631,
-    "total_kos": 6839,
-    "total_sds": 146,
+    "total_games": 3080,
+    "total_wins": 1634,
+    "total_kos": 6848,
+    "total_sds": 147,
     "by_day": {
       "Monday": {
         "games": 336,
@@ -455,7 +455,7 @@
         "win_rate": 49.6
       },
       "Sunday": {
-        "games": 371,
+        "games": 376,
         "win_rate": 56.9
       }
     },
@@ -471,11 +471,11 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 155
+      "kills": 153
     },
     {
       "player": "RT",
-      "kills": 29
+      "kills": 30
     },
     {
       "player": "shafaq",
@@ -500,7 +500,15 @@
       "times_played": 5
     },
     {
+      "character": "PIT",
+      "times_played": 4
+    },
+    {
       "character": "VILLAGER",
+      "times_played": 4
+    },
+    {
+      "character": "BAYONETTA",
       "times_played": 4
     },
     {
@@ -509,14 +517,6 @@
     },
     {
       "character": "DUCK HUNT",
-      "times_played": 4
-    },
-    {
-      "character": "PIT",
-      "times_played": 4
-    },
-    {
-      "character": "BAYONETTA",
       "times_played": 4
     },
     {
@@ -545,23 +545,11 @@
       "wins": 101,
       "win_rate": 69.2
     },
-    "2025-11": {
-      "player": "jmoon",
-      "games": 304,
-      "wins": 231,
-      "win_rate": 76.0
-    },
     "2025-09": {
       "player": "n8",
       "games": 5,
       "wins": 4,
       "win_rate": 80.0
-    },
-    "2025-10": {
-      "player": "jmoon",
-      "games": 212,
-      "wins": 151,
-      "win_rate": 71.2
     },
     "2025-08": {
       "player": "jmoon",
@@ -569,23 +557,11 @@
       "wins": 106,
       "win_rate": 81.5
     },
-    "2026-01": {
+    "2025-11": {
       "player": "jmoon",
-      "games": 59,
-      "wins": 52,
-      "win_rate": 88.1
-    },
-    "2026-02": {
-      "player": "jmoon",
-      "games": 34,
-      "wins": 28,
-      "win_rate": 82.4
-    },
-    "2025-12": {
-      "player": "amar",
-      "games": 7,
-      "wins": 6,
-      "win_rate": 85.7
+      "games": 304,
+      "wins": 231,
+      "win_rate": 76.0
     },
     "2025-07": {
       "player": "jmoon",
@@ -593,11 +569,35 @@
       "wins": 60,
       "win_rate": 85.7
     },
+    "2026-01": {
+      "player": "jmoon",
+      "games": 59,
+      "wins": 52,
+      "win_rate": 88.1
+    },
     "2026-03": {
       "player": "jmoon",
       "games": 59,
       "wins": 48,
       "win_rate": 81.4
+    },
+    "2026-02": {
+      "player": "jmoon",
+      "games": 34,
+      "wins": 28,
+      "win_rate": 82.4
+    },
+    "2025-10": {
+      "player": "jmoon",
+      "games": 212,
+      "wins": 151,
+      "win_rate": 71.2
+    },
+    "2025-12": {
+      "player": "amar",
+      "games": 7,
+      "wins": 6,
+      "win_rate": 85.7
     },
     "2025-06": {
       "player": "jmoon",

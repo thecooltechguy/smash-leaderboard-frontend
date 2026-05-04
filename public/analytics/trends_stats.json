@@ -8,10 +8,10 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.5,
-    "biggest_momentum_player": "messi",
-    "biggest_momentum_boost": 32.4,
-    "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
+    "avg_momentum_boost": 17.4,
+    "biggest_momentum_player": "lag",
+    "biggest_momentum_boost": 33.0,
+    "biggest_momentum_detail": "56.3% after win vs 23.3% after loss",
     "reverse_momentum_player": "strike",
     "reverse_momentum": 1.8,
     "reverse_detail": "Actually plays BETTER after losing"
@@ -20,7 +20,7 @@
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.5,
     "after_8_games_wr": 50.5,
-    "fatigue_drop": -3.0
+    "fatigue_drop": -2.9
   },
   "lopsided_matchups": [
     {
@@ -73,20 +73,20 @@
     "busiest_day": "Thursday",
     "busiest_games": 2615,
     "quietest_day": "Sunday",
-    "quietest_games": 1359,
+    "quietest_games": 1377,
     "friday_vs_monday": 1.1
   },
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 95,
-    "games": 3075
+    "games": 3080
   },
   "dominant_matchups": [
     {
       "winner": "subby",
       "loser": "ya",
-      "wins": 20,
-      "total": 20,
+      "wins": 21,
+      "total": 21,
       "wr": 100.0
     },
     {
@@ -99,16 +99,9 @@
     {
       "winner": "jmoon",
       "loser": "lando",
-      "wins": 15,
-      "total": 15,
+      "wins": 16,
+      "total": 16,
       "wr": 100.0
-    },
-    {
-      "winner": "habeas",
-      "loser": "lag",
-      "wins": 19,
-      "total": 20,
-      "wr": 95.0
     },
     {
       "winner": "jmoon",
@@ -116,17 +109,24 @@
       "wins": 37,
       "total": 39,
       "wr": 94.9
+    },
+    {
+      "winner": "habeas",
+      "loser": "ya",
+      "wins": 15,
+      "total": 16,
+      "wr": 93.8
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.157,
+    "correlation": -0.158,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
     "needs_warmup_player": "stav",
-    "first_wr": 22.7,
-    "warmed_up_wr": 43.4,
-    "warmup_boost": 20.6,
+    "first_wr": 21.7,
+    "warmed_up_wr": 41.9,
+    "warmup_boost": 20.1,
     "cold_starter_player": "heidy",
     "cold_start_advantage": 30.3
   },

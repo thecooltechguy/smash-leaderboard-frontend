@@ -1,8 +1,122 @@
 {
-  "date": "May 02, 2026",
-  "generated_at": "2026-05-03T16:19:34.303390",
-  "headline": "REST DAY AT THE ARENA",
-  "report": "No matches were recorded on May 02, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-  "highlights": [],
-  "stats_summary": null
+  "date": "May 03, 2026",
+  "generated_at": "2026-05-04T16:38:19.494045",
+  "headline": "ACTION-PACKED DAY: 9 MATCHES, 33 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 9 intense matches with a combined 33 knockouts.\n\nlag was the workhorse of the day, grinding through 9 matches with 6 victories.\n\nThe hottest player was lag who maintained an impressive 66.7% win rate.\n\nWe even saw perfection today - lag delivered a flawless 3-0 with NESS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "player_of_the_day": {
+    "name": "lag",
+    "reason": "Most active player with 9 games"
+  },
+  "highlights": [
+    "9 total matches played",
+    "lag most active with 9 games",
+    "5 perfect game(s) achieved"
+  ],
+  "stats_summary": {
+    "total_matches": 9,
+    "total_kos": 33,
+    "player_stats": [
+      {
+        "name": "lag",
+        "games": 9,
+        "wins": 6,
+        "losses": 3,
+        "win_rate": 66.7,
+        "kos": 21,
+        "falls": 10,
+        "sds": 0,
+        "kd_ratio": 2.1,
+        "main_character": "NESS",
+        "character_games": 9
+      },
+      {
+        "name": "habeas",
+        "games": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 60.0,
+        "kos": 9,
+        "falls": 9,
+        "sds": 1,
+        "kd_ratio": 1.0,
+        "main_character": "ZELDA",
+        "character_games": 3
+      },
+      {
+        "name": "stav",
+        "games": 4,
+        "wins": 0,
+        "losses": 4,
+        "win_rate": 0.0,
+        "kos": 3,
+        "falls": 12,
+        "sds": 0,
+        "kd_ratio": 0.25,
+        "main_character": "KAZUYA",
+        "character_games": 4
+      }
+    ],
+    "top_characters": [
+      {
+        "character": "NESS",
+        "times_played": 9
+      },
+      {
+        "character": "KAZUYA",
+        "times_played": 6
+      },
+      {
+        "character": "ZELDA",
+        "times_played": 3
+      }
+    ],
+    "perfect_games": [
+      {
+        "player": "lag",
+        "character": "NESS"
+      },
+      {
+        "player": "lag",
+        "character": "NESS"
+      },
+      {
+        "player": "lag",
+        "character": "NESS"
+      },
+      {
+        "player": "lag",
+        "character": "NESS"
+      },
+      {
+        "player": "lag",
+        "character": "NESS"
+      }
+    ],
+    "rivalries": [
+      {
+        "player1": "habeas",
+        "player2": "lag",
+        "total_games": 5,
+        "p1_wins": 3,
+        "p2_wins": 2
+      },
+      {
+        "player1": "stav",
+        "player2": "lag",
+        "total_games": 4,
+        "p1_wins": 0,
+        "p2_wins": 4
+      }
+    ],
+    "win_streaks": [
+      {
+        "player": "lag",
+        "streak": 6
+      },
+      {
+        "player": "habeas",
+        "streak": 3
+      }
+    ]
+  }
 }

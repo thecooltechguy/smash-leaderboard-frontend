@@ -199,15 +199,15 @@
     {
       "player1": "habeas",
       "player2": "lag",
-      "p1_wins": 44,
-      "p2_wins": 2,
-      "total": 46,
-      "p1_prob": 95.7,
-      "p2_prob": 4.3,
-      "p1_american": "-2200",
-      "p2_american": "+2200",
-      "p1_decimal": 1.05,
-      "p2_decimal": 23.0,
+      "p1_wins": 47,
+      "p2_wins": 4,
+      "total": 51,
+      "p1_prob": 92.2,
+      "p2_prob": 7.8,
+      "p1_american": "-1174",
+      "p2_american": "+1175",
+      "p1_decimal": 1.09,
+      "p2_decimal": 12.75,
       "confidence": "high"
     },
     {
@@ -1317,6 +1317,20 @@
       "confidence": "low"
     },
     {
+      "player1": "lag",
+      "player2": "stav",
+      "p1_wins": 6,
+      "p2_wins": 1,
+      "total": 7,
+      "p1_prob": 85.7,
+      "p2_prob": 14.3,
+      "p1_american": "-599",
+      "p2_american": "+600",
+      "p1_decimal": 1.17,
+      "p2_decimal": 7.0,
+      "confidence": "low"
+    },
+    {
       "player1": "stav",
       "player2": "subby",
       "p1_wins": 2,
@@ -1625,7 +1639,7 @@
       "confidence": "low"
     }
   ],
-  "total_matchups": 116,
+  "total_matchups": 117,
   "upset_alerts": [
     {
       "player1": "habeas",
@@ -1896,20 +1910,6 @@
       "confidence": "high"
     },
     {
-      "player1": "habeas",
-      "player2": "lag",
-      "p1_wins": 44,
-      "p2_wins": 2,
-      "total": 46,
-      "p1_prob": 95.7,
-      "p2_prob": 4.3,
-      "p1_american": "-2200",
-      "p2_american": "+2200",
-      "p1_decimal": 1.05,
-      "p2_decimal": 23.0,
-      "confidence": "high"
-    },
-    {
       "player1": "keneru",
       "player2": "ya",
       "p1_wins": 36,
@@ -1936,6 +1936,20 @@
       "p1_decimal": 1.08,
       "p2_decimal": 13.0,
       "confidence": "medium"
+    },
+    {
+      "player1": "habeas",
+      "player2": "lag",
+      "p1_wins": 47,
+      "p2_wins": 4,
+      "total": 51,
+      "p1_prob": 92.2,
+      "p2_prob": 7.8,
+      "p1_american": "-1174",
+      "p2_american": "+1175",
+      "p1_decimal": 1.09,
+      "p2_decimal": 12.75,
+      "confidence": "high"
     },
     {
       "player1": "keneru",
@@ -2004,8 +2018,8 @@
     },
     {
       "player": "habeas",
-      "h2h_wins": 1357,
-      "h2h_losses": 1159,
+      "h2h_wins": 1360,
+      "h2h_losses": 1161,
       "h2h_rate": 53.9,
       "opponents": 25
     },
@@ -2094,6 +2108,13 @@
       "opponents": 5
     },
     {
+      "player": "lag",
+      "h2h_wins": 36,
+      "h2h_losses": 92,
+      "h2h_rate": 28.1,
+      "opponents": 9
+    },
+    {
       "player": "pat",
       "h2h_wins": 18,
       "h2h_losses": 47,
@@ -2102,17 +2123,10 @@
     },
     {
       "player": "stav",
-      "h2h_wins": 8,
-      "h2h_losses": 25,
-      "h2h_rate": 24.2,
-      "opponents": 4
-    },
-    {
-      "player": "lag",
-      "h2h_wins": 28,
-      "h2h_losses": 88,
-      "h2h_rate": 24.1,
-      "opponents": 8
+      "h2h_wins": 9,
+      "h2h_losses": 31,
+      "h2h_rate": 22.5,
+      "opponents": 5
     },
     {
       "player": "8n",
