@@ -1079,6 +1079,20 @@
       "confidence": "low"
     },
     {
+      "player1": "RT",
+      "player2": "lag",
+      "p1_wins": 8,
+      "p2_wins": 1,
+      "total": 9,
+      "p1_prob": 88.9,
+      "p2_prob": 11.1,
+      "p1_american": "-799",
+      "p2_american": "+800",
+      "p1_decimal": 1.12,
+      "p2_decimal": 9.0,
+      "confidence": "low"
+    },
+    {
       "player1": "lag",
       "player2": "subby",
       "p1_wins": 3,
@@ -1639,7 +1653,7 @@
       "confidence": "low"
     }
   ],
-  "total_matchups": 117,
+  "total_matchups": 118,
   "upset_alerts": [
     {
       "player1": "habeas",
@@ -2066,18 +2080,18 @@
       "opponents": 16
     },
     {
+      "player": "RT",
+      "h2h_wins": 116,
+      "h2h_losses": 156,
+      "h2h_rate": 42.6,
+      "opponents": 9
+    },
+    {
       "player": "joguo",
       "h2h_wins": 14,
       "h2h_losses": 19,
       "h2h_rate": 42.4,
       "opponents": 3
-    },
-    {
-      "player": "RT",
-      "h2h_wins": 108,
-      "h2h_losses": 155,
-      "h2h_rate": 41.1,
-      "opponents": 8
     },
     {
       "player": "fateen",
@@ -2108,18 +2122,18 @@
       "opponents": 5
     },
     {
-      "player": "lag",
-      "h2h_wins": 36,
-      "h2h_losses": 92,
-      "h2h_rate": 28.1,
-      "opponents": 9
-    },
-    {
       "player": "pat",
       "h2h_wins": 18,
       "h2h_losses": 47,
       "h2h_rate": 27.7,
       "opponents": 4
+    },
+    {
+      "player": "lag",
+      "h2h_wins": 37,
+      "h2h_losses": 100,
+      "h2h_rate": 27.0,
+      "opponents": 10
     },
     {
       "player": "stav",

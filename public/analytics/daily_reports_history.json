@@ -1,6 +1,94 @@
 {
   "reports": [
     {
+      "date": "May 04, 2026",
+      "generated_at": "2026-05-05T16:37:56.725988",
+      "headline": "ACTION-PACKED DAY: 7 MATCHES, 35 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 7 intense matches with a combined 35 knockouts.\n\nRT was the workhorse of the day, grinding through 7 matches with 5 victories.\n\nThe hottest player was RT who maintained an impressive 71.4% win rate.\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "RT",
+        "reason": "Most active player with 7 games"
+      },
+      "highlights": [
+        "7 total matches played",
+        "RT most active with 7 games"
+      ],
+      "stats_summary": {
+        "total_matches": 7,
+        "total_kos": 35,
+        "player_stats": [
+          {
+            "name": "RT",
+            "games": 7,
+            "wins": 5,
+            "losses": 2,
+            "win_rate": 71.4,
+            "kos": 19,
+            "falls": 14,
+            "sds": 0,
+            "kd_ratio": 1.36,
+            "main_character": "HERO",
+            "character_games": 4
+          },
+          {
+            "name": "lag",
+            "games": 7,
+            "wins": 2,
+            "losses": 5,
+            "win_rate": 28.6,
+            "kos": 15,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 0.83,
+            "main_character": "NESS",
+            "character_games": 7
+          },
+          {
+            "name": "audrey",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 1,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.33,
+            "main_character": "CLOUD",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "NESS",
+            "times_played": 7
+          },
+          {
+            "character": "HERO",
+            "times_played": 4
+          },
+          {
+            "character": "LINK",
+            "times_played": 3
+          },
+          {
+            "character": "CLOUD",
+            "times_played": 1
+          }
+        ],
+        "perfect_games": [],
+        "rivalries": [
+          {
+            "player1": "lag",
+            "player2": "RT",
+            "total_games": 6,
+            "p1_wins": 1,
+            "p2_wins": 5
+          }
+        ],
+        "win_streaks": []
+      }
+    },
+    {
       "date": "May 03, 2026",
       "generated_at": "2026-05-04T16:38:19.494045",
       "headline": "ACTION-PACKED DAY: 9 MATCHES, 33 KOS!",
@@ -1329,205 +1417,6 @@
           {
             "player": "jmoon",
             "streak": 5
-          }
-        ]
-      }
-    },
-    {
-      "date": "March 05, 2026",
-      "generated_at": "2026-03-06T16:14:59.641258",
-      "headline": "ACTION-PACKED DAY: 30 MATCHES, 155 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 30 intense matches with a combined 155 knockouts.\n\nkeneru was the workhorse of the day, grinding through 29 matches with 16 victories.\n\nThe hottest player was gapam who maintained an impressive 83.3% win rate.\n\nWe even saw perfection today - shafaq delivered a flawless 3-0 with ZELDA!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "keneru",
-        "reason": "Most active player with 29 games"
-      },
-      "highlights": [
-        "30 total matches played",
-        "keneru most active with 29 games",
-        "7 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 30,
-        "total_kos": 155,
-        "player_stats": [
-          {
-            "name": "keneru",
-            "games": 29,
-            "wins": 16,
-            "losses": 13,
-            "win_rate": 55.2,
-            "kos": 58,
-            "falls": 60,
-            "sds": 2,
-            "kd_ratio": 0.97,
-            "main_character": "DONKEY KONG",
-            "character_games": 27
-          },
-          {
-            "name": "shafaq",
-            "games": 19,
-            "wins": 7,
-            "losses": 12,
-            "win_rate": 36.8,
-            "kos": 43,
-            "falls": 37,
-            "sds": 1,
-            "kd_ratio": 1.16,
-            "main_character": "ZELDA",
-            "character_games": 9
-          },
-          {
-            "name": "gapam",
-            "games": 12,
-            "wins": 10,
-            "losses": 2,
-            "win_rate": 83.3,
-            "kos": 22,
-            "falls": 21,
-            "sds": 2,
-            "kd_ratio": 1.05,
-            "main_character": "BOWSER",
-            "character_games": 10
-          },
-          {
-            "name": "safi",
-            "games": 10,
-            "wins": 7,
-            "losses": 3,
-            "win_rate": 70.0,
-            "kos": 25,
-            "falls": 16,
-            "sds": 0,
-            "kd_ratio": 1.56,
-            "main_character": "SNAKE",
-            "character_games": 6
-          },
-          {
-            "name": "pickle",
-            "games": 8,
-            "wins": 1,
-            "losses": 7,
-            "win_rate": 12.5,
-            "kos": 7,
-            "falls": 21,
-            "sds": 2,
-            "kd_ratio": 0.33,
-            "main_character": "KIRBY",
-            "character_games": 8
-          },
-          {
-            "name": "unknown",
-            "games": 2,
-            "wins": 0,
-            "losses": 2,
-            "win_rate": 0.0,
-            "kos": 0,
-            "falls": 0,
-            "sds": 0,
-            "kd_ratio": 0.0,
-            "main_character": "UNKNOWN",
-            "character_games": 2
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "DONKEY KONG",
-            "times_played": 27
-          },
-          {
-            "character": "BOWSER",
-            "times_played": 11
-          },
-          {
-            "character": "ZELDA",
-            "times_played": 9
-          },
-          {
-            "character": "KING DEDEDE",
-            "times_played": 8
-          },
-          {
-            "character": "KIRBY",
-            "times_played": 8
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "shafaq",
-            "character": "ZELDA"
-          },
-          {
-            "player": "shafaq",
-            "character": "ZELDA"
-          },
-          {
-            "player": "keneru",
-            "character": "DONKEY KONG"
-          },
-          {
-            "player": "keneru",
-            "character": "DONKEY KONG"
-          },
-          {
-            "player": "safi",
-            "character": "SNAKE"
-          },
-          {
-            "player": "safi",
-            "character": "SEPHIROTH"
-          },
-          {
-            "player": "safi",
-            "character": "BOWSER"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "keneru",
-            "player2": "safi",
-            "total_games": 10,
-            "p1_wins": 3,
-            "p2_wins": 7
-          },
-          {
-            "player1": "keneru",
-            "player2": "shafaq",
-            "total_games": 6,
-            "p1_wins": 2,
-            "p2_wins": 4
-          },
-          {
-            "player1": "shafaq",
-            "player2": "unknown",
-            "total_games": 1,
-            "p1_wins": 1,
-            "p2_wins": 0
-          },
-          {
-            "player1": "keneru",
-            "player2": "unknown",
-            "total_games": 1,
-            "p1_wins": 1,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "keneru",
-            "streak": 6
-          },
-          {
-            "player": "gapam",
-            "streak": 6
-          },
-          {
-            "player": "shafaq",
-            "streak": 4
-          },
-          {
-            "player": "safi",
-            "streak": 3
           }
         ]
       }

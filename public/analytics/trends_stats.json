@@ -8,10 +8,10 @@
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.4,
-    "biggest_momentum_player": "lag",
-    "biggest_momentum_boost": 33.0,
-    "biggest_momentum_detail": "56.3% after win vs 23.3% after loss",
+    "avg_momentum_boost": 17.3,
+    "biggest_momentum_player": "messi",
+    "biggest_momentum_boost": 32.4,
+    "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
     "reverse_momentum_player": "strike",
     "reverse_momentum": 1.8,
     "reverse_detail": "Actually plays BETTER after losing"
@@ -20,7 +20,7 @@
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.5,
     "after_8_games_wr": 50.5,
-    "fatigue_drop": -2.9
+    "fatigue_drop": -3.0
   },
   "lopsided_matchups": [
     {
@@ -64,8 +64,8 @@
   "clutch": {
     "most_clutch_player": "audrey",
     "most_clutch_close_wr": 70.0,
-    "most_clutch_blowout_wr": 21.1,
-    "clutch_boost": 48.9,
+    "most_clutch_blowout_wr": 20.0,
+    "clutch_boost": 50.0,
     "least_clutch_player": "niki <3",
     "choke_factor": 26.8
   },
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.158,
+    "correlation": -0.157,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

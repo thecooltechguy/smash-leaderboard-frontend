@@ -1,122 +1,88 @@
 {
-  "date": "May 03, 2026",
-  "generated_at": "2026-05-04T16:38:19.494045",
-  "headline": "ACTION-PACKED DAY: 9 MATCHES, 33 KOS!",
-  "report": "What a day at the Smash Arena! We witnessed 9 intense matches with a combined 33 knockouts.\n\nlag was the workhorse of the day, grinding through 9 matches with 6 victories.\n\nThe hottest player was lag who maintained an impressive 66.7% win rate.\n\nWe even saw perfection today - lag delivered a flawless 3-0 with NESS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "date": "May 04, 2026",
+  "generated_at": "2026-05-05T16:37:56.725988",
+  "headline": "ACTION-PACKED DAY: 7 MATCHES, 35 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 7 intense matches with a combined 35 knockouts.\n\nRT was the workhorse of the day, grinding through 7 matches with 5 victories.\n\nThe hottest player was RT who maintained an impressive 71.4% win rate.\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
   "player_of_the_day": {
-    "name": "lag",
-    "reason": "Most active player with 9 games"
+    "name": "RT",
+    "reason": "Most active player with 7 games"
   },
   "highlights": [
-    "9 total matches played",
-    "lag most active with 9 games",
-    "5 perfect game(s) achieved"
+    "7 total matches played",
+    "RT most active with 7 games"
   ],
   "stats_summary": {
-    "total_matches": 9,
-    "total_kos": 33,
+    "total_matches": 7,
+    "total_kos": 35,
     "player_stats": [
       {
-        "name": "lag",
-        "games": 9,
-        "wins": 6,
-        "losses": 3,
-        "win_rate": 66.7,
-        "kos": 21,
-        "falls": 10,
-        "sds": 0,
-        "kd_ratio": 2.1,
-        "main_character": "NESS",
-        "character_games": 9
-      },
-      {
-        "name": "habeas",
-        "games": 5,
-        "wins": 3,
+        "name": "RT",
+        "games": 7,
+        "wins": 5,
         "losses": 2,
-        "win_rate": 60.0,
-        "kos": 9,
-        "falls": 9,
-        "sds": 1,
-        "kd_ratio": 1.0,
-        "main_character": "ZELDA",
-        "character_games": 3
+        "win_rate": 71.4,
+        "kos": 19,
+        "falls": 14,
+        "sds": 0,
+        "kd_ratio": 1.36,
+        "main_character": "HERO",
+        "character_games": 4
       },
       {
-        "name": "stav",
-        "games": 4,
-        "wins": 0,
-        "losses": 4,
-        "win_rate": 0.0,
-        "kos": 3,
-        "falls": 12,
+        "name": "lag",
+        "games": 7,
+        "wins": 2,
+        "losses": 5,
+        "win_rate": 28.6,
+        "kos": 15,
+        "falls": 18,
         "sds": 0,
-        "kd_ratio": 0.25,
-        "main_character": "KAZUYA",
-        "character_games": 4
+        "kd_ratio": 0.83,
+        "main_character": "NESS",
+        "character_games": 7
+      },
+      {
+        "name": "audrey",
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_rate": 0.0,
+        "kos": 1,
+        "falls": 3,
+        "sds": 0,
+        "kd_ratio": 0.33,
+        "main_character": "CLOUD",
+        "character_games": 1
       }
     ],
     "top_characters": [
       {
         "character": "NESS",
-        "times_played": 9
+        "times_played": 7
       },
       {
-        "character": "KAZUYA",
-        "times_played": 6
+        "character": "HERO",
+        "times_played": 4
       },
       {
-        "character": "ZELDA",
+        "character": "LINK",
         "times_played": 3
+      },
+      {
+        "character": "CLOUD",
+        "times_played": 1
       }
     ],
-    "perfect_games": [
-      {
-        "player": "lag",
-        "character": "NESS"
-      },
-      {
-        "player": "lag",
-        "character": "NESS"
-      },
-      {
-        "player": "lag",
-        "character": "NESS"
-      },
-      {
-        "player": "lag",
-        "character": "NESS"
-      },
-      {
-        "player": "lag",
-        "character": "NESS"
-      }
-    ],
+    "perfect_games": [],
     "rivalries": [
       {
-        "player1": "habeas",
-        "player2": "lag",
-        "total_games": 5,
-        "p1_wins": 3,
-        "p2_wins": 2
-      },
-      {
-        "player1": "stav",
-        "player2": "lag",
-        "total_games": 4,
-        "p1_wins": 0,
-        "p2_wins": 4
+        "player1": "lag",
+        "player2": "RT",
+        "total_games": 6,
+        "p1_wins": 1,
+        "p2_wins": 5
       }
     ],
-    "win_streaks": [
-      {
-        "player": "lag",
-        "streak": 6
-      },
-      {
-        "player": "habeas",
-        "streak": 3
-      }
-    ]
+    "win_streaks": []
   }
 }

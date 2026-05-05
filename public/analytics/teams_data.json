@@ -1,7 +1,7 @@
 {
-  "total_team_matches": 1137,
+  "total_team_matches": 1138,
   "match_formats": {
-    "1v2": 285,
+    "1v2": 286,
     "2v2": 462,
     "2v1": 93,
     "1v3": 83,
@@ -457,12 +457,12 @@
         "lag"
       ],
       "size": 1,
-      "wins": 6,
+      "wins": 7,
       "losses": 0,
-      "total": 6,
+      "total": 7,
       "win_rate": 100.0,
-      "total_kos": 21,
-      "total_falls": 11
+      "total_kos": 25,
+      "total_falls": 13
     },
     {
       "team": "ya",
@@ -1076,10 +1076,10 @@
     },
     {
       "player": "lag",
-      "team_wins": 29,
+      "team_wins": 30,
       "team_losses": 33,
-      "team_games": 62,
-      "team_win_rate": 46.8,
+      "team_games": 63,
+      "team_win_rate": 47.6,
       "best_teammate": "jmoon",
       "games_with_best": 19
     },
@@ -1120,15 +1120,6 @@
       "games_with_best": 76
     },
     {
-      "player": "audrey",
-      "team_wins": 12,
-      "team_losses": 15,
-      "team_games": 27,
-      "team_win_rate": 44.4,
-      "best_teammate": "jeni",
-      "games_with_best": 10
-    },
-    {
       "player": "gapam",
       "team_wins": 27,
       "team_losses": 34,
@@ -1140,9 +1131,9 @@
     {
       "player": "RT",
       "team_wins": 53,
-      "team_losses": 67,
-      "team_games": 120,
-      "team_win_rate": 44.2,
+      "team_losses": 68,
+      "team_games": 121,
+      "team_win_rate": 43.8,
       "best_teammate": "habeas",
       "games_with_best": 53
     },
@@ -1154,6 +1145,15 @@
       "team_win_rate": 42.9,
       "best_teammate": "subby",
       "games_with_best": 77
+    },
+    {
+      "player": "audrey",
+      "team_wins": 12,
+      "team_losses": 16,
+      "team_games": 28,
+      "team_win_rate": 42.9,
+      "best_teammate": "jeni",
+      "games_with_best": 10
     },
     {
       "player": "jeni",
@@ -1751,9 +1751,9 @@
     }
   ],
   "summary": {
-    "total_team_matches": 1137,
+    "total_team_matches": 1138,
     "true_2v2_matches": 462,
-    "total_unique_teams": 361,
+    "total_unique_teams": 362,
     "total_unique_duos": 105,
     "total_partnerships": 306
   }
