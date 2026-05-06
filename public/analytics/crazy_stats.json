@@ -6,7 +6,7 @@
     },
     "Tuesday": {
       "character": "DONKEY KONG",
-      "plays": 182
+      "plays": 194
     },
     "Wednesday": {
       "character": "DONKEY KONG",
@@ -111,7 +111,7 @@
       }
     },
     "best_character": {
-      "character": "IKE",
+      "character": "KING K. ROOL",
       "games": 6,
       "win_rate": 100.0
     },
@@ -345,11 +345,11 @@
       "plays": 87
     },
     {
-      "character": "MR. GAME & WATCH",
+      "character": "DONKEY KONG",
       "plays": 85
     },
     {
-      "character": "DONKEY KONG",
+      "character": "MR. GAME & WATCH",
       "plays": 85
     }
   ],
@@ -419,15 +419,15 @@
     "won": false
   },
   "single_game_most_sds": {
-    "player": "subby",
+    "player": "samin",
     "sds": 3,
-    "character": "MR. GAME & WATCH",
-    "won": false
+    "character": "IKE",
+    "won": true
   },
   "habeas_deep_dive": {
-    "total_games": 3080,
-    "total_wins": 1634,
-    "total_kos": 6848,
+    "total_games": 3088,
+    "total_wins": 1640,
+    "total_kos": 6868,
     "total_sds": 147,
     "by_day": {
       "Monday": {
@@ -435,8 +435,8 @@
         "win_rate": 58.9
       },
       "Tuesday": {
-        "games": 370,
-        "win_rate": 56.8
+        "games": 378,
+        "win_rate": 57.1
       },
       "Wednesday": {
         "games": 510,
@@ -471,15 +471,15 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 153
+      "kills": 152
     },
     {
       "player": "RT",
-      "kills": 30
+      "kills": 28
     },
     {
       "player": "shafaq",
-      "kills": 20
+      "kills": 21
     },
     {
       "player": "amar",
@@ -500,19 +500,7 @@
       "times_played": 5
     },
     {
-      "character": "PIT",
-      "times_played": 4
-    },
-    {
       "character": "VILLAGER",
-      "times_played": 4
-    },
-    {
-      "character": "BAYONETTA",
-      "times_played": 4
-    },
-    {
-      "character": "WII FIT TRAINER",
       "times_played": 4
     },
     {
@@ -520,11 +508,23 @@
       "times_played": 4
     },
     {
-      "character": "ICE CLIMBERS",
-      "times_played": 3
+      "character": "BAYONETTA",
+      "times_played": 4
+    },
+    {
+      "character": "PIT",
+      "times_played": 4
+    },
+    {
+      "character": "WII FIT TRAINER",
+      "times_played": 4
     },
     {
       "character": "MII GUNNER",
+      "times_played": 3
+    },
+    {
+      "character": "ICE CLIMBERS",
       "times_played": 3
     },
     {
@@ -545,17 +545,17 @@
       "wins": 101,
       "win_rate": 69.2
     },
-    "2025-09": {
-      "player": "n8",
-      "games": 5,
-      "wins": 4,
-      "win_rate": 80.0
-    },
     "2025-08": {
       "player": "jmoon",
       "games": 130,
       "wins": 106,
       "win_rate": 81.5
+    },
+    "2025-09": {
+      "player": "n8",
+      "games": 5,
+      "wins": 4,
+      "win_rate": 80.0
     },
     "2025-11": {
       "player": "jmoon",
@@ -563,17 +563,11 @@
       "wins": 231,
       "win_rate": 76.0
     },
-    "2025-07": {
+    "2026-02": {
       "player": "jmoon",
-      "games": 70,
-      "wins": 60,
-      "win_rate": 85.7
-    },
-    "2026-01": {
-      "player": "jmoon",
-      "games": 59,
-      "wins": 52,
-      "win_rate": 88.1
+      "games": 34,
+      "wins": 28,
+      "win_rate": 82.4
     },
     "2026-03": {
       "player": "jmoon",
@@ -581,22 +575,28 @@
       "wins": 48,
       "win_rate": 81.4
     },
-    "2026-02": {
-      "player": "jmoon",
-      "games": 34,
-      "wins": 28,
-      "win_rate": 82.4
-    },
     "2025-10": {
       "player": "jmoon",
       "games": 212,
       "wins": 151,
       "win_rate": 71.2
     },
+    "2026-01": {
+      "player": "jmoon",
+      "games": 59,
+      "wins": 52,
+      "win_rate": 88.1
+    },
     "2025-12": {
       "player": "amar",
       "games": 7,
       "wins": 6,
+      "win_rate": 85.7
+    },
+    "2025-07": {
+      "player": "jmoon",
+      "games": 70,
+      "wins": 60,
       "win_rate": 85.7
     },
     "2025-06": {
@@ -609,7 +609,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1491
+    "games": 1493
   },
   "quietest_hour": {
     "hour": 8,

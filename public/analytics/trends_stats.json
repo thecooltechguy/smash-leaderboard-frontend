@@ -4,11 +4,11 @@
     "best_hour": 15,
     "best_hour_wr": 50.1,
     "worst_hour": 20,
-    "worst_hour_wr": 45.2
+    "worst_hour_wr": 45.3
   },
   "momentum": {
     "insight": "Winning affects next game performance",
-    "avg_momentum_boost": 17.3,
+    "avg_momentum_boost": 17.5,
     "biggest_momentum_player": "messi",
     "biggest_momentum_boost": 32.4,
     "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
@@ -19,8 +19,8 @@
   "fatigue": {
     "insight": "Performance changes during long sessions",
     "first_3_games_wr": 47.5,
-    "after_8_games_wr": 50.5,
-    "fatigue_drop": -3.0
+    "after_8_games_wr": 50.4,
+    "fatigue_drop": -2.9
   },
   "lopsided_matchups": [
     {
@@ -71,7 +71,7 @@
   },
   "day_activity": {
     "busiest_day": "Thursday",
-    "busiest_games": 2615,
+    "busiest_games": 2613,
     "quietest_day": "Sunday",
     "quietest_games": 1377,
     "friday_vs_monday": 1.1
@@ -79,47 +79,47 @@
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 95,
-    "games": 3080
+    "games": 3088
   },
   "dominant_matchups": [
     {
       "winner": "subby",
       "loser": "ya",
-      "wins": 21,
-      "total": 21,
+      "wins": 18,
+      "total": 18,
       "wr": 100.0
     },
     {
       "winner": "jmoon",
       "loser": "heidy",
-      "wins": 20,
-      "total": 20,
+      "wins": 15,
+      "total": 15,
       "wr": 100.0
     },
     {
       "winner": "jmoon",
       "loser": "lando",
-      "wins": 16,
-      "total": 16,
+      "wins": 15,
+      "total": 15,
       "wr": 100.0
-    },
-    {
-      "winner": "jmoon",
-      "loser": "keneru",
-      "wins": 37,
-      "total": 39,
-      "wr": 94.9
     },
     {
       "winner": "habeas",
       "loser": "ya",
+      "wins": 19,
+      "total": 20,
+      "wr": 95.0
+    },
+    {
+      "winner": "habeas",
+      "loser": "pat",
       "wins": 15,
       "total": 16,
       "wr": 93.8
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.157,
+    "correlation": -0.17,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

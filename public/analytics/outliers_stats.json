@@ -2,7 +2,7 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "3,080 games",
+    "value": "3,088 games",
     "detail": "That's 13.8 games per day on average",
     "runner_up": "subby (1,260)"
   },
@@ -87,8 +87,8 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1524 late-night games",
-    "detail": "That's 49.5% of their games after 10PM"
+    "value": "1526 late-night games",
+    "detail": "That's 49.4% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
