@@ -11,9 +11,7 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture,bann
 12179,2026-04-25 03:58:28.434000,Syed Saquib,syweed,1109,US,False,4,https://smash-leaderboard-production.up.railway.app/images/dps/syweed.png,False,False
 190,2025-07-01 15:26:56.697000,Kento Uchiyama,kento,1341,JP,True,5,https://smash-leaderboard-production.up.railway.app/images/dps/kento.png,False,False
 61,2025-06-07 01:01:53.240000,Ryan Bailey,ryy,1334,US,False,7,https://smash-leaderboard-production.up.railway.app/images/dps/ryy.png,False,False
-2106,2025-08-14 20:28:12.107000,unknown,unknown,1200,UN,False,0,,False,False
 9373,2026-01-23 02:04:35.027000,,devmo,1200,,True,1,,False,False
-21,2025-06-06 08:21:51.674000,Haseab,habeas,1517,CA,False,9,https://smash-leaderboard-production.up.railway.app/images/dps/habeas.png,False,False
 10719,2026-02-17 22:41:19.681000,,noah,1200,,True,0,,False,False
 8427,2025-12-10 03:50:38.003000,,cowboy,1200,,True,0,,False,False
 6405,2025-11-04 07:58:52.066000,,daniel l,1200,US,True,0,,False,False
@@ -28,9 +26,10 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture,bann
 8659,2025-12-11 05:31:17.631000,,8n,1096,US,False,4,https://smash-leaderboard-production.up.railway.app/images/dps/8n.png,False,False
 3007,2025-08-29 23:59:27.908000,Landon,lando,1026,US,False,6,https://smash-leaderboard-production.up.railway.app/images/dps/lando.png,False,False
 9455,2026-01-23 03:37:10.087000,,Jean,1200,,True,0,,False,False
-11444,2026-04-21 01:02:16.448000,River Tamoor Baig,RT,1262,GB,False,8,https://smash-leaderboard-production.up.railway.app/images/dps/river.png,False,False
 3849,2025-09-06 22:24:39.119000,Caleb,caleb,1200,US,True,2,https://smash-leaderboard-production.up.railway.app/images/dps/caleb.png,False,False
+2106,2025-08-14 20:28:12.107000,unknown,unknown,1200,UN,True,0,,False,False
 8811,2025-12-14 06:46:33.061000,,ghandi,1200,,True,0,,False,False
+21,2025-06-06 08:21:51.674000,Haseab,habeas,1526,CA,False,9,https://smash-leaderboard-production.up.railway.app/images/dps/habeas.png,False,False
 9157,2026-01-15 05:14:18.330000,,jean,1200,,True,2,,False,False
 452,2025-07-16 02:52:05.910000,Mizan Val,mizan,969,US,True,3,https://smash-leaderboard-production.up.railway.app/images/dps/mizan.jpg,False,False
 6239,2025-11-01 00:45:52.439000,,donshelly,1200,,True,0,,False,False
@@ -41,6 +40,7 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture,bann
 6237,2025-11-01 00:45:52.101000,,eddy,1200,GB,True,0,,False,False
 9100,2026-01-14 00:32:19.706000,,niki <3,1229,JP,True,3,https://smash-leaderboard-production.up.railway.app/images/dps/niki.png,True,False
 3005,2025-08-29 21:54:32.665000,Anish Shinde,messi,974,US,True,4,https://smash-leaderboard-production.up.railway.app/images/dps/messi.jpg,False,False
+11444,2026-04-21 01:02:16.448000,River Tamoor Baig,RT,1253,GB,False,8,https://smash-leaderboard-production.up.railway.app/images/dps/river.png,False,False
 4813,2025-09-20 19:43:12.476000,,n8,1200,,True,0,,False,False
 35,2025-06-06 22:21:01.865000,Bihan Mahadewa,bihan,1200,US,True,1,https://smash-leaderboard-production.up.railway.app/images/dps/bihan.png,False,False
 767,2025-07-27 06:36:11.280000,Aadil Ali,aadil,1200,CA,True,1,,False,False

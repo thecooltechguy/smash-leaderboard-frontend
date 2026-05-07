@@ -10,7 +10,7 @@
     },
     "Wednesday": {
       "character": "DONKEY KONG",
-      "plays": 223
+      "plays": 224
     },
     "Thursday": {
       "character": "DONKEY KONG",
@@ -330,7 +330,7 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 1005,
+      "plays": 1007,
       "win_rate": 58.5
     },
     {
@@ -425,9 +425,9 @@
     "won": true
   },
   "habeas_deep_dive": {
-    "total_games": 3088,
-    "total_wins": 1640,
-    "total_kos": 6868,
+    "total_games": 3095,
+    "total_wins": 1646,
+    "total_kos": 6888,
     "total_sds": 147,
     "by_day": {
       "Monday": {
@@ -439,8 +439,8 @@
         "win_rate": 57.1
       },
       "Wednesday": {
-        "games": 510,
-        "win_rate": 55.3
+        "games": 517,
+        "win_rate": 55.7
       },
       "Thursday": {
         "games": 559,

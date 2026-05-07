@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-06T16:35:15.660831",
+  "generated_at": "2026-05-07T16:37:06.040032",
   "overall": {
-    "total_matches": 5625,
+    "total_matches": 5632,
     "total_players": 80,
-    "active_players": 27,
+    "active_players": 26,
     "date_range_start": "2025-06-06",
     "date_range_end": "2026-05-06",
-    "days_of_play": 333,
-    "total_kos": 26984,
-    "total_falls": 27669,
+    "days_of_play": 334,
+    "total_kos": 27016,
+    "total_falls": 27702,
     "total_sds": 1053,
     "unique_characters_played": 97,
     "avg_matches_per_day": 16.9,
@@ -18,17 +18,17 @@
     {
       "id": 21,
       "name": "habeas",
-      "total_games": 3088,
-      "wins": 1640,
-      "losses": 1448,
-      "win_rate": 53.1,
-      "total_kos": 6868,
-      "total_falls": 6104,
+      "total_games": 3095,
+      "wins": 1646,
+      "losses": 1449,
+      "win_rate": 53.2,
+      "total_kos": 6888,
+      "total_falls": 6117,
       "total_sds": 147,
       "kd_ratio": 1.13,
       "characters_played": 51,
       "favorite_character": "MR. GAME & WATCH",
-      "elo": 1517,
+      "elo": 1526,
       "country": "CA"
     },
     {
@@ -146,17 +146,17 @@
     {
       "id": 11444,
       "name": "RT",
-      "total_games": 420,
-      "wins": 180,
-      "losses": 240,
-      "win_rate": 42.9,
-      "total_kos": 822,
-      "total_falls": 930,
+      "total_games": 427,
+      "wins": 181,
+      "losses": 246,
+      "win_rate": 42.4,
+      "total_kos": 834,
+      "total_falls": 950,
       "total_sds": 35,
       "kd_ratio": 0.88,
       "characters_played": 5,
       "favorite_character": "LINK",
-      "elo": 1262,
+      "elo": 1253,
       "country": "GB"
     },
     {
@@ -1267,11 +1267,11 @@
   "characters": [
     {
       "character": "DONKEY KONG",
-      "times_played": 1318,
-      "wins": 664,
+      "times_played": 1319,
+      "wins": 665,
       "win_rate": 50.4,
-      "total_kos": 2727,
-      "total_falls": 2692,
+      "total_kos": 2730,
+      "total_falls": 2694,
       "total_sds": 90,
       "avg_kos_per_game": 2.07,
       "avg_falls_per_game": 2.04,
@@ -1279,11 +1279,11 @@
     },
     {
       "character": "ZELDA",
-      "times_played": 1022,
-      "wins": 574,
+      "times_played": 1023,
+      "wins": 575,
       "win_rate": 56.2,
-      "total_kos": 2292,
-      "total_falls": 1948,
+      "total_kos": 2295,
+      "total_falls": 1950,
       "total_sds": 66,
       "avg_kos_per_game": 2.24,
       "avg_falls_per_game": 1.91,
@@ -1291,25 +1291,25 @@
     },
     {
       "character": "GANONDORF",
-      "times_played": 1005,
-      "wins": 588,
+      "times_played": 1007,
+      "wins": 589,
       "win_rate": 58.5,
-      "total_kos": 2417,
-      "total_falls": 1917,
+      "total_kos": 2422,
+      "total_falls": 1921,
       "total_sds": 59,
-      "avg_kos_per_game": 2.4,
+      "avg_kos_per_game": 2.41,
       "avg_falls_per_game": 1.91,
       "unique_players": 16
     },
     {
       "character": "MR. GAME & WATCH",
-      "times_played": 987,
-      "wins": 467,
-      "win_rate": 47.3,
-      "total_kos": 2038,
-      "total_falls": 1992,
+      "times_played": 988,
+      "wins": 468,
+      "win_rate": 47.4,
+      "total_kos": 2041,
+      "total_falls": 1993,
       "total_sds": 32,
-      "avg_kos_per_game": 2.06,
+      "avg_kos_per_game": 2.07,
       "avg_falls_per_game": 2.02,
       "unique_players": 9
     },
@@ -1351,11 +1351,11 @@
     },
     {
       "character": "INCINEROAR",
-      "times_played": 541,
-      "wins": 290,
-      "win_rate": 53.6,
-      "total_kos": 1186,
-      "total_falls": 1058,
+      "times_played": 542,
+      "wins": 291,
+      "win_rate": 53.7,
+      "total_kos": 1189,
+      "total_falls": 1060,
       "total_sds": 22,
       "avg_kos_per_game": 2.19,
       "avg_falls_per_game": 1.96,
@@ -1506,6 +1506,18 @@
       "unique_players": 15
     },
     {
+      "character": "KAZUYA",
+      "times_played": 139,
+      "wins": 54,
+      "win_rate": 38.8,
+      "total_kos": 229,
+      "total_falls": 330,
+      "total_sds": 20,
+      "avg_kos_per_game": 1.65,
+      "avg_falls_per_game": 2.37,
+      "unique_players": 10
+    },
+    {
       "character": "MARIO",
       "times_played": 139,
       "wins": 57,
@@ -1516,18 +1528,6 @@
       "avg_kos_per_game": 1.6,
       "avg_falls_per_game": 2.17,
       "unique_players": 11
-    },
-    {
-      "character": "KAZUYA",
-      "times_played": 138,
-      "wins": 53,
-      "win_rate": 38.4,
-      "total_kos": 226,
-      "total_falls": 328,
-      "total_sds": 20,
-      "avg_kos_per_game": 1.64,
-      "avg_falls_per_game": 2.38,
-      "unique_players": 10
     },
     {
       "character": "KIRBY",
@@ -1543,14 +1543,14 @@
     },
     {
       "character": "HERO",
-      "times_played": 116,
-      "wins": 56,
-      "win_rate": 48.3,
-      "total_kos": 261,
-      "total_falls": 251,
+      "times_played": 123,
+      "wins": 57,
+      "win_rate": 46.3,
+      "total_kos": 273,
+      "total_falls": 271,
       "total_sds": 12,
-      "avg_kos_per_game": 2.25,
-      "avg_falls_per_game": 2.16,
+      "avg_kos_per_game": 2.22,
+      "avg_falls_per_game": 2.2,
       "unique_players": 10
     },
     {
@@ -2482,10 +2482,10 @@
     {
       "player1": "habeas",
       "player2": "RT",
-      "total_matches": 154,
-      "player1_wins": 101,
-      "player2_wins": 53,
-      "dominance": 65.5844155844156
+      "total_matches": 161,
+      "player1_wins": 107,
+      "player2_wins": 54,
+      "dominance": 66.45962732919256
     },
     {
       "player1": "keneru",
@@ -2640,7 +2640,7 @@
       },
       {
         "month": "2026-05",
-        "matches": 117
+        "matches": 124
       }
     ],
     "weekday": [
@@ -2654,7 +2654,7 @@
       },
       {
         "day": "Wednesday",
-        "matches": 783
+        "matches": 790
       },
       {
         "day": "Thursday",
@@ -2768,7 +2768,7 @@
       },
       {
         "hour": 23,
-        "matches": 350
+        "matches": 357
       }
     ],
     "busiest_days": [
@@ -2885,12 +2885,6 @@
         "games": 688
       },
       {
-        "player": "RT",
-        "character": "LINK",
-        "percentage": 93.8,
-        "games": 420
-      },
-      {
         "player": "fateen",
         "character": "KING K. ROOL",
         "percentage": 93.8,
@@ -2907,6 +2901,12 @@
         "character": "KAZUYA",
         "percentage": 92.7,
         "games": 109
+      },
+      {
+        "player": "RT",
+        "character": "LINK",
+        "percentage": 92.3,
+        "games": 427
       },
       {
         "player": "pat",
@@ -2977,9 +2977,9 @@
       "US",
       "BD",
       "JP",
+      "AU",
       "UN",
       "CA",
-      "AU",
       "GB",
       "IN",
       "NG",
@@ -3002,11 +3002,11 @@
     {
       "rank": 2,
       "name": "habeas",
-      "elo": 1517,
-      "games": 3088,
-      "wins": 1640,
-      "losses": 1448,
-      "win_rate": 53.1,
+      "elo": 1526,
+      "games": 3095,
+      "wins": 1646,
+      "losses": 1449,
+      "win_rate": 53.2,
       "country": "CA"
     },
     {
@@ -3081,16 +3081,6 @@
     },
     {
       "rank": 10,
-      "name": "RT",
-      "elo": 1262,
-      "games": 420,
-      "wins": 180,
-      "losses": 240,
-      "win_rate": 42.9,
-      "country": "GB"
-    },
-    {
-      "rank": 11,
       "name": "own",
       "elo": 1258,
       "games": 566,
@@ -3098,6 +3088,16 @@
       "losses": 353,
       "win_rate": 37.6,
       "country": "FR"
+    },
+    {
+      "rank": 11,
+      "name": "RT",
+      "elo": 1253,
+      "games": 427,
+      "wins": 181,
+      "losses": 246,
+      "win_rate": 42.4,
+      "country": "GB"
     },
     {
       "rank": 12,
@@ -3801,18 +3801,18 @@
       "win_rate": 90.0
     },
     {
-      "player": "shafaq",
+      "player": "habeas",
       "last_10_wins": 9,
       "last_10_losses": 1,
       "form_trend": "hot",
       "win_rate": 90.0
     },
     {
-      "player": "habeas",
-      "last_10_wins": 8,
-      "last_10_losses": 2,
+      "player": "shafaq",
+      "last_10_wins": 9,
+      "last_10_losses": 1,
       "form_trend": "hot",
-      "win_rate": 80.0
+      "win_rate": 90.0
     },
     {
       "player": "gapam",
@@ -4200,9 +4200,9 @@
       },
       {
         "month": "2026-05",
-        "games": 45,
-        "wins": 20,
-        "win_rate": 44.4
+        "games": 52,
+        "wins": 26,
+        "win_rate": 50.0
       }
     ],
     "subby": [
@@ -4666,9 +4666,9 @@
       },
       {
         "month": "2026-05",
-        "games": 75,
-        "wins": 27,
-        "win_rate": 36.0
+        "games": 82,
+        "wins": 28,
+        "win_rate": 34.1
       }
     ],
     "ya": [

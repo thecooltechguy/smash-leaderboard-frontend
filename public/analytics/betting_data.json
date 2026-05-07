@@ -87,15 +87,15 @@
     {
       "player1": "RT",
       "player2": "habeas",
-      "p1_wins": 53,
-      "p2_wins": 101,
-      "total": 154,
-      "p1_prob": 34.4,
-      "p2_prob": 65.6,
-      "p1_american": "+190",
-      "p2_american": "-190",
-      "p1_decimal": 2.91,
-      "p2_decimal": 1.52,
+      "p1_wins": 54,
+      "p2_wins": 107,
+      "total": 161,
+      "p1_prob": 33.5,
+      "p2_prob": 66.5,
+      "p1_american": "+198",
+      "p2_american": "-198",
+      "p1_decimal": 2.98,
+      "p2_decimal": 1.5,
       "confidence": "high"
     },
     {
@@ -2060,9 +2060,9 @@
     },
     {
       "player": "habeas",
-      "h2h_wins": 1366,
-      "h2h_losses": 1163,
-      "h2h_rate": 54.0,
+      "h2h_wins": 1372,
+      "h2h_losses": 1164,
+      "h2h_rate": 54.1,
       "opponents": 25
     },
     {
@@ -2116,9 +2116,9 @@
     },
     {
       "player": "RT",
-      "h2h_wins": 119,
-      "h2h_losses": 169,
-      "h2h_rate": 41.3,
+      "h2h_wins": 120,
+      "h2h_losses": 175,
+      "h2h_rate": 40.7,
       "opponents": 9
     },
     {
