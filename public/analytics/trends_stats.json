@@ -4,7 +4,7 @@
     "best_hour": 15,
     "best_hour_wr": 50.1,
     "worst_hour": 20,
-    "worst_hour_wr": 45.3
+    "worst_hour_wr": 45.1
   },
   "momentum": {
     "insight": "Winning affects next game performance",
@@ -71,7 +71,7 @@
   },
   "day_activity": {
     "busiest_day": "Thursday",
-    "busiest_games": 2613,
+    "busiest_games": 2662,
     "quietest_day": "Sunday",
     "quietest_games": 1377,
     "friday_vs_monday": 1.1
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.172,
+    "correlation": -0.177,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -137,7 +137,7 @@
   },
   "game_speed": {
     "fastest_player": "lando",
-    "fastest_gap": 3.6,
+    "fastest_gap": 3.8,
     "slowest_player": "syweed",
     "slowest_gap": 8.2
   }

@@ -1,6 +1,192 @@
 {
   "reports": [
     {
+      "date": "May 07, 2026",
+      "generated_at": "2026-05-08T16:35:19.359254",
+      "headline": "ACTION-PACKED DAY: 19 MATCHES, 113 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 19 intense matches with a combined 113 knockouts.\n\nown was the workhorse of the day, grinding through 12 matches with 7 victories.\n\nThe hottest player was shafaq who maintained an impressive 60.0% win rate.\n\nWe even saw perfection today - own delivered a flawless 3-0 with WARIO!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "own",
+        "reason": "Most active player with 12 games"
+      },
+      "highlights": [
+        "19 total matches played",
+        "own most active with 12 games",
+        "2 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 19,
+        "total_kos": 113,
+        "player_stats": [
+          {
+            "name": "own",
+            "games": 12,
+            "wins": 7,
+            "losses": 5,
+            "win_rate": 58.3,
+            "kos": 36,
+            "falls": 23,
+            "sds": 1,
+            "kd_ratio": 1.57,
+            "main_character": "WOLF",
+            "character_games": 3
+          },
+          {
+            "name": "lando",
+            "games": 9,
+            "wins": 1,
+            "losses": 8,
+            "win_rate": 11.1,
+            "kos": 6,
+            "falls": 25,
+            "sds": 0,
+            "kd_ratio": 0.24,
+            "main_character": "FOX",
+            "character_games": 5
+          },
+          {
+            "name": "keneru",
+            "games": 6,
+            "wins": 1,
+            "losses": 5,
+            "win_rate": 16.7,
+            "kos": 10,
+            "falls": 15,
+            "sds": 0,
+            "kd_ratio": 0.67,
+            "main_character": "DONKEY KONG",
+            "character_games": 3
+          },
+          {
+            "name": "nish",
+            "games": 6,
+            "wins": 3,
+            "losses": 3,
+            "win_rate": 50.0,
+            "kos": 15,
+            "falls": 11,
+            "sds": 1,
+            "kd_ratio": 1.36,
+            "main_character": "SAMUS",
+            "character_games": 6
+          },
+          {
+            "name": "safi",
+            "games": 5,
+            "wins": 2,
+            "losses": 3,
+            "win_rate": 40.0,
+            "kos": 12,
+            "falls": 12,
+            "sds": 0,
+            "kd_ratio": 1.0,
+            "main_character": "SEPHIROTH",
+            "character_games": 3
+          },
+          {
+            "name": "shafaq",
+            "games": 5,
+            "wins": 3,
+            "losses": 2,
+            "win_rate": 60.0,
+            "kos": 17,
+            "falls": 11,
+            "sds": 0,
+            "kd_ratio": 1.55,
+            "main_character": "MARIO",
+            "character_games": 2
+          },
+          {
+            "name": "subby",
+            "games": 5,
+            "wins": 2,
+            "losses": 3,
+            "win_rate": 40.0,
+            "kos": 17,
+            "falls": 11,
+            "sds": 0,
+            "kd_ratio": 1.55,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 3
+          },
+          {
+            "name": "unknown",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "SAMUS",
+            "times_played": 9
+          },
+          {
+            "character": "FOX",
+            "times_played": 5
+          },
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 4
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 4
+          },
+          {
+            "character": "WOLF",
+            "times_played": 3
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "own",
+            "character": "WARIO"
+          },
+          {
+            "player": "own",
+            "character": "POK\u00c9MON TRAINER"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "safi",
+            "player2": "own",
+            "total_games": 4,
+            "p1_wins": 1,
+            "p2_wins": 3
+          },
+          {
+            "player1": "lando",
+            "player2": "own",
+            "total_games": 3,
+            "p1_wins": 0,
+            "p2_wins": 3
+          },
+          {
+            "player1": "safi",
+            "player2": "lando",
+            "total_games": 1,
+            "p1_wins": 1,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "own",
+            "streak": 4
+          }
+        ]
+      }
+    },
+    {
       "date": "May 06, 2026",
       "generated_at": "2026-05-07T16:38:14.344684",
       "headline": "ACTION-PACKED DAY: 7 MATCHES, 32 KOS!",
@@ -1242,160 +1428,6 @@
           }
         ],
         "win_streaks": []
-      }
-    },
-    {
-      "date": "March 08, 2026",
-      "generated_at": "2026-03-09T16:25:42.150070",
-      "headline": "ACTION-PACKED DAY: 29 MATCHES, 128 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 29 intense matches with a combined 128 knockouts.\n\nhabeas was the workhorse of the day, grinding through 29 matches with 18 victories.\n\nThe hottest player was habeas who maintained an impressive 62.1% win rate.\n\nWe even saw perfection today - habeas delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "habeas",
-        "reason": "Most active player with 29 games"
-      },
-      "highlights": [
-        "29 total matches played",
-        "habeas most active with 29 games",
-        "6 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 29,
-        "total_kos": 128,
-        "player_stats": [
-          {
-            "name": "habeas",
-            "games": 29,
-            "wins": 18,
-            "losses": 11,
-            "win_rate": 62.1,
-            "kos": 69,
-            "falls": 58,
-            "sds": 0,
-            "kd_ratio": 1.19,
-            "main_character": "GANONDORF",
-            "character_games": 29
-          },
-          {
-            "name": "will",
-            "games": 20,
-            "wins": 8,
-            "losses": 12,
-            "win_rate": 40.0,
-            "kos": 44,
-            "falls": 44,
-            "sds": 0,
-            "kd_ratio": 1.0,
-            "main_character": "BANJO & KAZOOIE",
-            "character_games": 6
-          },
-          {
-            "name": "ryy",
-            "games": 6,
-            "wins": 3,
-            "losses": 3,
-            "win_rate": 50.0,
-            "kos": 15,
-            "falls": 12,
-            "sds": 0,
-            "kd_ratio": 1.25,
-            "main_character": "FALCO",
-            "character_games": 5
-          },
-          {
-            "name": "unknown",
-            "games": 3,
-            "wins": 0,
-            "losses": 3,
-            "win_rate": 0.0,
-            "kos": 0,
-            "falls": 0,
-            "sds": 0,
-            "kd_ratio": 0.0,
-            "main_character": "UNKNOWN",
-            "character_games": 3
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "GANONDORF",
-            "times_played": 29
-          },
-          {
-            "character": "BANJO & KAZOOIE",
-            "times_played": 6
-          },
-          {
-            "character": "FALCO",
-            "times_played": 5
-          },
-          {
-            "character": "INCINEROAR",
-            "times_played": 4
-          },
-          {
-            "character": "JOKER",
-            "times_played": 4
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "habeas",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "habeas",
-            "character": "GANONDORF"
-          },
-          {
-            "player": "will",
-            "character": "JOKER"
-          },
-          {
-            "player": "ryy",
-            "character": "FALCO"
-          },
-          {
-            "player": "will",
-            "character": "DONKEY KONG"
-          },
-          {
-            "player": "habeas",
-            "character": "GANONDORF"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "habeas",
-            "player2": "will",
-            "total_games": 20,
-            "p1_wins": 12,
-            "p2_wins": 8
-          },
-          {
-            "player1": "habeas",
-            "player2": "ryy",
-            "total_games": 6,
-            "p1_wins": 3,
-            "p2_wins": 3
-          },
-          {
-            "player1": "habeas",
-            "player2": "unknown",
-            "total_games": 3,
-            "p1_wins": 3,
-            "p2_wins": 0
-          }
-        ],
-        "win_streaks": [
-          {
-            "player": "habeas",
-            "streak": 6
-          },
-          {
-            "player": "will",
-            "streak": 4
-          }
-        ]
       }
     }
   ]

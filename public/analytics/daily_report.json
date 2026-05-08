@@ -1,83 +1,185 @@
 {
-  "date": "May 06, 2026",
-  "generated_at": "2026-05-07T16:38:14.344684",
-  "headline": "ACTION-PACKED DAY: 7 MATCHES, 32 KOS!",
-  "report": "What a day at the Smash Arena! We witnessed 7 intense matches with a combined 32 knockouts.\n\nhabeas was the workhorse of the day, grinding through 7 matches with 6 victories.\n\nThe hottest player was habeas who maintained an impressive 85.7% win rate.\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "date": "May 07, 2026",
+  "generated_at": "2026-05-08T16:35:19.359254",
+  "headline": "ACTION-PACKED DAY: 19 MATCHES, 113 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 19 intense matches with a combined 113 knockouts.\n\nown was the workhorse of the day, grinding through 12 matches with 7 victories.\n\nThe hottest player was shafaq who maintained an impressive 60.0% win rate.\n\nWe even saw perfection today - own delivered a flawless 3-0 with WARIO!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
   "player_of_the_day": {
-    "name": "habeas",
-    "reason": "Most active player with 7 games"
+    "name": "own",
+    "reason": "Most active player with 12 games"
   },
   "highlights": [
-    "7 total matches played",
-    "habeas most active with 7 games"
+    "19 total matches played",
+    "own most active with 12 games",
+    "2 perfect game(s) achieved"
   ],
   "stats_summary": {
-    "total_matches": 7,
-    "total_kos": 32,
+    "total_matches": 19,
+    "total_kos": 113,
     "player_stats": [
       {
-        "name": "habeas",
-        "games": 7,
-        "wins": 6,
-        "losses": 1,
-        "win_rate": 85.7,
-        "kos": 20,
-        "falls": 13,
+        "name": "own",
+        "games": 12,
+        "wins": 7,
+        "losses": 5,
+        "win_rate": 58.3,
+        "kos": 36,
+        "falls": 23,
+        "sds": 1,
+        "kd_ratio": 1.57,
+        "main_character": "WOLF",
+        "character_games": 3
+      },
+      {
+        "name": "lando",
+        "games": 9,
+        "wins": 1,
+        "losses": 8,
+        "win_rate": 11.1,
+        "kos": 6,
+        "falls": 25,
         "sds": 0,
-        "kd_ratio": 1.54,
-        "main_character": "GANONDORF",
+        "kd_ratio": 0.24,
+        "main_character": "FOX",
+        "character_games": 5
+      },
+      {
+        "name": "keneru",
+        "games": 6,
+        "wins": 1,
+        "losses": 5,
+        "win_rate": 16.7,
+        "kos": 10,
+        "falls": 15,
+        "sds": 0,
+        "kd_ratio": 0.67,
+        "main_character": "DONKEY KONG",
+        "character_games": 3
+      },
+      {
+        "name": "nish",
+        "games": 6,
+        "wins": 3,
+        "losses": 3,
+        "win_rate": 50.0,
+        "kos": 15,
+        "falls": 11,
+        "sds": 1,
+        "kd_ratio": 1.36,
+        "main_character": "SAMUS",
+        "character_games": 6
+      },
+      {
+        "name": "safi",
+        "games": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_rate": 40.0,
+        "kos": 12,
+        "falls": 12,
+        "sds": 0,
+        "kd_ratio": 1.0,
+        "main_character": "SEPHIROTH",
+        "character_games": 3
+      },
+      {
+        "name": "shafaq",
+        "games": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_rate": 60.0,
+        "kos": 17,
+        "falls": 11,
+        "sds": 0,
+        "kd_ratio": 1.55,
+        "main_character": "MARIO",
         "character_games": 2
       },
       {
-        "name": "RT",
-        "games": 7,
-        "wins": 1,
-        "losses": 6,
-        "win_rate": 14.3,
-        "kos": 12,
-        "falls": 20,
+        "name": "subby",
+        "games": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_rate": 40.0,
+        "kos": 17,
+        "falls": 11,
         "sds": 0,
-        "kd_ratio": 0.6,
-        "main_character": "HERO",
-        "character_games": 7
+        "kd_ratio": 1.55,
+        "main_character": "CAPTAIN FALCON",
+        "character_games": 3
+      },
+      {
+        "name": "unknown",
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_rate": 0.0,
+        "kos": 0,
+        "falls": 0,
+        "sds": 0,
+        "kd_ratio": 0.0,
+        "main_character": "UNKNOWN",
+        "character_games": 1
       }
     ],
     "top_characters": [
       {
-        "character": "HERO",
-        "times_played": 7
+        "character": "SAMUS",
+        "times_played": 9
       },
       {
-        "character": "GANONDORF",
-        "times_played": 2
+        "character": "FOX",
+        "times_played": 5
       },
       {
-        "character": "KAZUYA",
-        "times_played": 1
-      },
-      {
-        "character": "ZELDA",
-        "times_played": 1
+        "character": "CAPTAIN FALCON",
+        "times_played": 4
       },
       {
         "character": "DONKEY KONG",
-        "times_played": 1
+        "times_played": 4
+      },
+      {
+        "character": "WOLF",
+        "times_played": 3
       }
     ],
-    "perfect_games": [],
+    "perfect_games": [
+      {
+        "player": "own",
+        "character": "WARIO"
+      },
+      {
+        "player": "own",
+        "character": "POK\u00c9MON TRAINER"
+      }
+    ],
     "rivalries": [
       {
-        "player1": "habeas",
-        "player2": "RT",
-        "total_games": 7,
-        "p1_wins": 6,
-        "p2_wins": 1
+        "player1": "safi",
+        "player2": "own",
+        "total_games": 4,
+        "p1_wins": 1,
+        "p2_wins": 3
+      },
+      {
+        "player1": "lando",
+        "player2": "own",
+        "total_games": 3,
+        "p1_wins": 0,
+        "p2_wins": 3
+      },
+      {
+        "player1": "safi",
+        "player2": "lando",
+        "total_games": 1,
+        "p1_wins": 1,
+        "p2_wins": 0
       }
     ],
     "win_streaks": [
       {
-        "player": "habeas",
-        "streak": 3
+        "player": "own",
+        "streak": 4
       }
     ]
   }

@@ -4,7 +4,7 @@
     "player": "habeas",
     "value": "3,095 games",
     "detail": "That's 13.8 games per day on average",
-    "runner_up": "subby (1,260)"
+    "runner_up": "subby (1,265)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
@@ -15,8 +15,8 @@
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
     "player": "lando",
-    "value": "13.4%",
-    "detail": "Still showed up for 112 games. Respect."
+    "value": "13.2%",
+    "detail": "Still showed up for 121 games. Respect."
   },
   "worst_losing_streak": {
     "stat": "Longest Losing Streak",
@@ -39,7 +39,7 @@
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
     "player": "lando",
-    "value": "0.44 K/D",
+    "value": "0.42 K/D",
     "detail": "Gets KO'd more than they KO"
   },
   "most_sds_total": {

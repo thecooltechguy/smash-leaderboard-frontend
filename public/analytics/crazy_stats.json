@@ -14,7 +14,7 @@
     },
     "Thursday": {
       "character": "DONKEY KONG",
-      "plays": 229
+      "plays": 233
     },
     "Friday": {
       "character": "MR. GAME & WATCH",
@@ -201,7 +201,7 @@
     },
     {
       "player": "lando",
-      "streak": 29
+      "streak": 31
     },
     {
       "player": "habeas",
@@ -293,8 +293,8 @@
     },
     {
       "character": "FOX",
-      "plays": 67,
-      "win_rate": 20.9
+      "plays": 72,
+      "win_rate": 19.4
     },
     {
       "character": "GRENINJA",
@@ -330,7 +330,7 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 1007,
+      "plays": 1008,
       "win_rate": 58.5
     },
     {
@@ -609,7 +609,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1493
+    "games": 1499
   },
   "quietest_hour": {
     "hour": 8,

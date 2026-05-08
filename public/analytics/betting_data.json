@@ -1065,6 +1065,20 @@
       "confidence": "low"
     },
     {
+      "player1": "lando",
+      "player2": "own",
+      "p1_wins": 2,
+      "p2_wins": 7,
+      "total": 9,
+      "p1_prob": 22.2,
+      "p2_prob": 77.8,
+      "p1_american": "+350",
+      "p2_american": "-350",
+      "p1_decimal": 4.5,
+      "p2_decimal": 1.29,
+      "confidence": "low"
+    },
+    {
       "player1": "jmoon",
       "player2": "lag",
       "p1_wins": 9,
@@ -1384,20 +1398,6 @@
       "p2_american": "-999",
       "p1_decimal": 99.0,
       "p2_decimal": 1.0,
-      "confidence": "low"
-    },
-    {
-      "player1": "lando",
-      "player2": "own",
-      "p1_wins": 2,
-      "p2_wins": 4,
-      "total": 6,
-      "p1_prob": 33.3,
-      "p2_prob": 66.7,
-      "p1_american": "+200",
-      "p2_american": "-199",
-      "p1_decimal": 3.0,
-      "p2_decimal": 1.5,
       "confidence": "low"
     },
     {
@@ -2144,9 +2144,9 @@
     },
     {
       "player": "own",
-      "h2h_wins": 106,
+      "h2h_wins": 109,
       "h2h_losses": 210,
-      "h2h_rate": 33.5,
+      "h2h_rate": 34.2,
       "opponents": 9
     },
     {
@@ -2208,8 +2208,8 @@
     {
       "player": "lando",
       "h2h_wins": 5,
-      "h2h_losses": 60,
-      "h2h_rate": 7.7,
+      "h2h_losses": 63,
+      "h2h_rate": 7.4,
       "opponents": 4
     }
   ]
