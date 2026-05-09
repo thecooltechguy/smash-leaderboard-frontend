@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-08T16:33:53.684505",
+  "generated_at": "2026-05-09T16:20:42.194187",
   "overall": {
-    "total_matches": 5651,
+    "total_matches": 5659,
     "total_players": 80,
     "active_players": 27,
     "date_range_start": "2025-06-06",
-    "date_range_end": "2026-05-08",
-    "days_of_play": 335,
-    "total_kos": 27129,
-    "total_falls": 27810,
+    "date_range_end": "2026-05-09",
+    "days_of_play": 336,
+    "total_kos": 27163,
+    "total_falls": 27845,
     "total_sds": 1055,
     "unique_characters_played": 99,
-    "avg_matches_per_day": 16.9,
+    "avg_matches_per_day": 16.8,
     "avg_participants_per_match": 2.39
   },
   "players": [
@@ -82,17 +82,17 @@
     {
       "id": 104,
       "name": "shafaq",
-      "total_games": 930,
-      "wins": 507,
-      "losses": 423,
+      "total_games": 938,
+      "wins": 511,
+      "losses": 427,
       "win_rate": 54.5,
-      "total_kos": 2134,
-      "total_falls": 1782,
+      "total_kos": 2152,
+      "total_falls": 1799,
       "total_sds": 78,
       "kd_ratio": 1.2,
       "characters_played": 21,
       "favorite_character": "ZELDA",
-      "elo": 1464,
+      "elo": 1421,
       "country": "US"
     },
     {
@@ -114,17 +114,17 @@
     {
       "id": 4484,
       "name": "own",
-      "total_games": 578,
-      "wins": 220,
-      "losses": 358,
-      "win_rate": 38.1,
-      "total_kos": 998,
-      "total_falls": 1231,
+      "total_games": 586,
+      "wins": 224,
+      "losses": 362,
+      "win_rate": 38.2,
+      "total_kos": 1014,
+      "total_falls": 1249,
       "total_sds": 46,
       "kd_ratio": 0.81,
       "characters_played": 36,
       "favorite_character": "WOLF",
-      "elo": 1325,
+      "elo": 1368,
       "country": "FR"
     },
     {
@@ -1343,11 +1343,11 @@
     },
     {
       "character": "SAMUS",
-      "times_played": 859,
-      "wins": 406,
-      "win_rate": 47.3,
-      "total_kos": 1702,
-      "total_falls": 1747,
+      "times_played": 862,
+      "wins": 407,
+      "win_rate": 47.2,
+      "total_kos": 1707,
+      "total_falls": 1753,
       "total_sds": 101,
       "avg_kos_per_game": 1.98,
       "avg_falls_per_game": 2.03,
@@ -1427,14 +1427,14 @@
     },
     {
       "character": "KING DEDEDE",
-      "times_played": 290,
-      "wins": 158,
-      "win_rate": 54.5,
-      "total_kos": 686,
-      "total_falls": 551,
+      "times_played": 295,
+      "wins": 161,
+      "win_rate": 54.6,
+      "total_kos": 699,
+      "total_falls": 562,
       "total_sds": 33,
       "avg_kos_per_game": 2.37,
-      "avg_falls_per_game": 1.9,
+      "avg_falls_per_game": 1.91,
       "unique_players": 13
     },
     {
@@ -1571,14 +1571,14 @@
     },
     {
       "character": "WOLF",
-      "times_played": 119,
-      "wins": 50,
-      "win_rate": 42.0,
-      "total_kos": 233,
-      "total_falls": 258,
+      "times_played": 121,
+      "wins": 52,
+      "win_rate": 43.0,
+      "total_kos": 239,
+      "total_falls": 260,
       "total_sds": 5,
-      "avg_kos_per_game": 1.96,
-      "avg_falls_per_game": 2.17,
+      "avg_kos_per_game": 1.98,
+      "avg_falls_per_game": 2.15,
       "unique_players": 11
     },
     {
@@ -1714,6 +1714,18 @@
       "unique_players": 2
     },
     {
+      "character": "POK\u00c9MON TRAINER",
+      "times_played": 72,
+      "wins": 21,
+      "win_rate": 29.2,
+      "total_kos": 118,
+      "total_falls": 178,
+      "total_sds": 0,
+      "avg_kos_per_game": 1.64,
+      "avg_falls_per_game": 2.47,
+      "unique_players": 6
+    },
+    {
       "character": "FOX",
       "times_played": 72,
       "wins": 14,
@@ -1724,18 +1736,6 @@
       "avg_kos_per_game": 1.29,
       "avg_falls_per_game": 2.58,
       "unique_players": 10
-    },
-    {
-      "character": "POK\u00c9MON TRAINER",
-      "times_played": 68,
-      "wins": 20,
-      "win_rate": 29.4,
-      "total_kos": 113,
-      "total_falls": 167,
-      "total_sds": 0,
-      "avg_kos_per_game": 1.66,
-      "avg_falls_per_game": 2.46,
-      "unique_players": 6
     },
     {
       "character": "MYTHRA",
@@ -1990,6 +1990,18 @@
       "unique_players": 6
     },
     {
+      "character": "POKEMON TRAINER",
+      "times_played": 11,
+      "wins": 6,
+      "win_rate": 54.5,
+      "total_kos": 16,
+      "total_falls": 15,
+      "total_sds": 0,
+      "avg_kos_per_game": 1.45,
+      "avg_falls_per_game": 1.36,
+      "unique_players": 1
+    },
+    {
       "character": "META KNIGHT",
       "times_played": 11,
       "wins": 3,
@@ -2012,18 +2024,6 @@
       "avg_kos_per_game": 1.8,
       "avg_falls_per_game": 2.2,
       "unique_players": 4
-    },
-    {
-      "character": "POKEMON TRAINER",
-      "times_played": 9,
-      "wins": 5,
-      "win_rate": 55.6,
-      "total_kos": 11,
-      "total_falls": 10,
-      "total_sds": 0,
-      "avg_kos_per_game": 1.22,
-      "avg_falls_per_game": 1.11,
-      "unique_players": 1
     },
     {
       "character": "MYTHRA/PYRA",
@@ -2680,7 +2680,7 @@
       },
       {
         "month": "2026-05",
-        "matches": 143
+        "matches": 151
       }
     ],
     "weekday": [
@@ -2706,7 +2706,7 @@
       },
       {
         "day": "Saturday",
-        "matches": 1052
+        "matches": 1060
       },
       {
         "day": "Sunday",
@@ -2720,11 +2720,11 @@
       },
       {
         "hour": 1,
-        "matches": 584
+        "matches": 585
       },
       {
         "hour": 2,
-        "matches": 611
+        "matches": 618
       },
       {
         "hour": 3,
@@ -2845,17 +2845,17 @@
         "matches": 90
       },
       {
-        "date": "2025-09-20",
+        "date": "2025-09-06",
         "matches": 85
       },
       {
-        "date": "2025-09-06",
+        "date": "2025-09-20",
         "matches": 85
       }
     ]
   },
   "fun_facts": {
-    "perfect_games_count": 519,
+    "perfect_games_count": 521,
     "most_kos_single_match": {
       "player": "aadil",
       "kos": 17,
@@ -3062,15 +3062,25 @@
     {
       "rank": 4,
       "name": "shafaq",
-      "elo": 1464,
-      "games": 930,
-      "wins": 507,
-      "losses": 423,
+      "elo": 1421,
+      "games": 938,
+      "wins": 511,
+      "losses": 427,
       "win_rate": 54.5,
       "country": "US"
     },
     {
       "rank": 5,
+      "name": "own",
+      "elo": 1368,
+      "games": 586,
+      "wins": 224,
+      "losses": 362,
+      "win_rate": 38.2,
+      "country": "FR"
+    },
+    {
+      "rank": 6,
       "name": "kento",
       "elo": 1341,
       "games": 94,
@@ -3080,7 +3090,7 @@
       "country": "JP"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "name": "safi",
       "elo": 1341,
       "games": 164,
@@ -3090,7 +3100,7 @@
       "country": "US"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "name": "will",
       "elo": 1338,
       "games": 531,
@@ -3100,7 +3110,7 @@
       "country": "US"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "ryy",
       "elo": 1334,
       "games": 126,
@@ -3108,16 +3118,6 @@
       "losses": 67,
       "win_rate": 46.8,
       "country": "US"
-    },
-    {
-      "rank": 9,
-      "name": "own",
-      "elo": 1325,
-      "games": 578,
-      "wins": 220,
-      "losses": 358,
-      "win_rate": 38.1,
-      "country": "FR"
     },
     {
       "rank": 10,
@@ -3856,10 +3856,10 @@
     },
     {
       "player": "shafaq",
-      "last_10_wins": 7,
-      "last_10_losses": 3,
+      "last_10_wins": 6,
+      "last_10_losses": 4,
       "form_trend": "stable",
-      "win_rate": 70.0
+      "win_rate": 60.0
     },
     {
       "player": "subby",
@@ -3890,13 +3890,6 @@
       "win_rate": 60.0
     },
     {
-      "player": "own",
-      "last_10_wins": 5,
-      "last_10_losses": 5,
-      "form_trend": "hot",
-      "win_rate": 50.0
-    },
-    {
       "player": "pat",
       "last_10_wins": 5,
       "last_10_losses": 5,
@@ -3923,6 +3916,13 @@
       "last_10_losses": 5,
       "form_trend": "stable",
       "win_rate": 50.0
+    },
+    {
+      "player": "own",
+      "last_10_wins": 4,
+      "last_10_losses": 6,
+      "form_trend": "cold",
+      "win_rate": 40.0
     },
     {
       "player": "nish",
@@ -4530,9 +4530,9 @@
       },
       {
         "month": "2026-05",
-        "games": 11,
-        "wins": 8,
-        "win_rate": 72.7
+        "games": 19,
+        "wins": 12,
+        "win_rate": 63.2
       }
     ],
     "nish": [
@@ -4636,9 +4636,9 @@
       },
       {
         "month": "2026-05",
-        "games": 49,
-        "wins": 23,
-        "win_rate": 46.9
+        "games": 57,
+        "wins": 27,
+        "win_rate": 47.4
       }
     ],
     "will": [

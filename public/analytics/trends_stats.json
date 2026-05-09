@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.177,
+    "correlation": -0.178,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {

@@ -355,8 +355,8 @@
   ],
   "friday_night_king": {
     "player": "shafaq",
-    "games": 25,
-    "win_rate": 80.0
+    "games": 32,
+    "win_rate": 75.0
   },
   "early_birds": [
     {
@@ -609,7 +609,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1499
+    "games": 1513
   },
   "quietest_hour": {
     "hour": 8,

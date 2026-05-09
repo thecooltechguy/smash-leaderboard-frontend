@@ -1,6 +1,100 @@
 {
   "reports": [
     {
+      "date": "May 08, 2026",
+      "generated_at": "2026-05-09T16:22:06.244454",
+      "headline": "ACTION-PACKED DAY: 8 MATCHES, 34 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 8 intense matches with a combined 34 knockouts.\n\nshafaq was the workhorse of the day, grinding through 8 matches with 4 victories.\n\nThe hottest player was shafaq who maintained an impressive 50.0% win rate.\n\nWe even saw perfection today - shafaq delivered a flawless 3-0 with SAMUS!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "shafaq",
+        "reason": "Most active player with 8 games"
+      },
+      "highlights": [
+        "8 total matches played",
+        "shafaq most active with 8 games",
+        "2 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 8,
+        "total_kos": 34,
+        "player_stats": [
+          {
+            "name": "shafaq",
+            "games": 8,
+            "wins": 4,
+            "losses": 4,
+            "win_rate": 50.0,
+            "kos": 18,
+            "falls": 17,
+            "sds": 0,
+            "kd_ratio": 1.06,
+            "main_character": "KING DEDEDE",
+            "character_games": 5
+          },
+          {
+            "name": "own",
+            "games": 8,
+            "wins": 4,
+            "losses": 4,
+            "win_rate": 50.0,
+            "kos": 16,
+            "falls": 18,
+            "sds": 0,
+            "kd_ratio": 0.89,
+            "main_character": "POK\u00c9MON TRAINER",
+            "character_games": 4
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "KING DEDEDE",
+            "times_played": 5
+          },
+          {
+            "character": "POK\u00c9MON TRAINER",
+            "times_played": 4
+          },
+          {
+            "character": "SAMUS",
+            "times_played": 3
+          },
+          {
+            "character": "POKEMON TRAINER",
+            "times_played": 2
+          },
+          {
+            "character": "WOLF",
+            "times_played": 2
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "shafaq",
+            "character": "SAMUS"
+          },
+          {
+            "player": "own",
+            "character": "WOLF"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "shafaq",
+            "player2": "own",
+            "total_games": 8,
+            "p1_wins": 4,
+            "p2_wins": 4
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "May 07, 2026",
       "generated_at": "2026-05-08T16:35:19.359254",
       "headline": "ACTION-PACKED DAY: 19 MATCHES, 113 KOS!",
@@ -1348,83 +1442,6 @@
             "total_games": 1,
             "p1_wins": 1,
             "p2_wins": 0
-          }
-        ],
-        "win_streaks": []
-      }
-    },
-    {
-      "date": "March 09, 2026",
-      "generated_at": "2026-03-10T16:25:36.015841",
-      "headline": "ACTION-PACKED DAY: 8 MATCHES, 28 KOS!",
-      "report": "What a day at the Smash Arena! We witnessed 8 intense matches with a combined 28 knockouts.\n\nshafaq was the workhorse of the day, grinding through 8 matches with 3 victories.\n\nThe hottest player was jmoon who maintained an impressive 62.5% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with GANONDORF!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
-      "player_of_the_day": {
-        "name": "shafaq",
-        "reason": "Most active player with 8 games"
-      },
-      "highlights": [
-        "8 total matches played",
-        "shafaq most active with 8 games",
-        "1 perfect game(s) achieved"
-      ],
-      "stats_summary": {
-        "total_matches": 8,
-        "total_kos": 28,
-        "player_stats": [
-          {
-            "name": "shafaq",
-            "games": 8,
-            "wins": 3,
-            "losses": 5,
-            "win_rate": 37.5,
-            "kos": 11,
-            "falls": 19,
-            "sds": 0,
-            "kd_ratio": 0.58,
-            "main_character": "KING DEDEDE",
-            "character_games": 4
-          },
-          {
-            "name": "jmoon",
-            "games": 8,
-            "wins": 5,
-            "losses": 3,
-            "win_rate": 62.5,
-            "kos": 17,
-            "falls": 11,
-            "sds": 1,
-            "kd_ratio": 1.55,
-            "main_character": "GANONDORF",
-            "character_games": 8
-          }
-        ],
-        "top_characters": [
-          {
-            "character": "GANONDORF",
-            "times_played": 8
-          },
-          {
-            "character": "KING DEDEDE",
-            "times_played": 4
-          },
-          {
-            "character": "ZELDA",
-            "times_played": 4
-          }
-        ],
-        "perfect_games": [
-          {
-            "player": "jmoon",
-            "character": "GANONDORF"
-          }
-        ],
-        "rivalries": [
-          {
-            "player1": "jmoon",
-            "player2": "shafaq",
-            "total_games": 8,
-            "p1_wins": 5,
-            "p2_wins": 3
           }
         ],
         "win_streaks": []

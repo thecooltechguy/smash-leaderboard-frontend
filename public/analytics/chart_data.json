@@ -58,16 +58,16 @@
     },
     {
       "name": "shafaq",
-      "games": 930,
-      "wins": 507,
-      "losses": 423,
+      "games": 938,
+      "wins": 511,
+      "losses": 427,
       "winRate": 54.5,
-      "kos": 2134,
-      "falls": 1782,
+      "kos": 2152,
+      "falls": 1799,
       "sds": 78,
       "kd": 1.2,
-      "sdRate": 0.084,
-      "momentum": 13.2,
+      "sdRate": 0.083,
+      "momentum": 12.9,
       "charsPlayed": 21
     },
     {
@@ -86,16 +86,16 @@
     },
     {
       "name": "own",
-      "games": 578,
-      "wins": 220,
-      "losses": 358,
-      "winRate": 38.1,
-      "kos": 998,
-      "falls": 1231,
+      "games": 586,
+      "wins": 224,
+      "losses": 362,
+      "winRate": 38.2,
+      "kos": 1014,
+      "falls": 1249,
       "sds": 46,
       "kd": 0.81,
-      "sdRate": 0.08,
-      "momentum": 7.4,
+      "sdRate": 0.078,
+      "momentum": 7.0,
       "charsPlayed": 36
     },
     {
@@ -911,16 +911,16 @@
       },
       {
         "name": "shafaq",
-        "games": 930,
-        "wins": 507,
-        "losses": 423,
+        "games": 938,
+        "wins": 511,
+        "losses": 427,
         "winRate": 54.5,
-        "kos": 2134,
-        "falls": 1782,
+        "kos": 2152,
+        "falls": 1799,
         "sds": 78,
         "kd": 1.2,
-        "sdRate": 0.084,
-        "momentum": 13.2,
+        "sdRate": 0.083,
+        "momentum": 12.9,
         "charsPlayed": 21
       },
       {
@@ -939,16 +939,16 @@
       },
       {
         "name": "own",
-        "games": 578,
-        "wins": 220,
-        "losses": 358,
-        "winRate": 38.1,
-        "kos": 998,
-        "falls": 1231,
+        "games": 586,
+        "wins": 224,
+        "losses": 362,
+        "winRate": 38.2,
+        "kos": 1014,
+        "falls": 1249,
         "sds": 46,
         "kd": 0.81,
-        "sdRate": 0.08,
-        "momentum": 7.4,
+        "sdRate": 0.078,
+        "momentum": 7.0,
         "charsPlayed": 36
       },
       {
@@ -1726,8 +1726,8 @@
       539,
       810,
       1175,
-      1457,
-      1499,
+      1459,
+      1513,
       1311,
       1187,
       1202,
@@ -1752,7 +1752,7 @@
       48.6,
       50.1,
       48.3,
-      48.2,
+      48.3,
       49.3,
       46.7,
       45.1,
@@ -1777,7 +1777,7 @@
       1727,
       2292,
       2662,
-      1849,
+      1865,
       1871,
       1377
     ]
@@ -1809,7 +1809,7 @@
       1034,
       429,
       1894,
-      170
+      186
     ]
   },
   "allCharacters": [
@@ -1850,9 +1850,9 @@
     },
     {
       "name": "SAMUS",
-      "plays": 859,
-      "wins": 406,
-      "winRate": 47.3,
+      "plays": 862,
+      "wins": 407,
+      "winRate": 47.2,
       "uniquePlayers": 13
     },
     {
@@ -1899,9 +1899,9 @@
     },
     {
       "name": "KING DEDEDE",
-      "plays": 290,
-      "wins": 158,
-      "winRate": 54.5,
+      "plays": 295,
+      "wins": 161,
+      "winRate": 54.6,
       "uniquePlayers": 13
     },
     {
@@ -1983,9 +1983,9 @@
     },
     {
       "name": "WOLF",
-      "plays": 119,
-      "wins": 50,
-      "winRate": 42.0,
+      "plays": 121,
+      "wins": 52,
+      "winRate": 43.0,
       "uniquePlayers": 11
     },
     {
@@ -2066,18 +2066,18 @@
       "uniquePlayers": 2
     },
     {
+      "name": "POK\u00c9MON TRAINER",
+      "plays": 72,
+      "wins": 21,
+      "winRate": 29.2,
+      "uniquePlayers": 6
+    },
+    {
       "name": "FOX",
       "plays": 72,
       "wins": 14,
       "winRate": 19.4,
       "uniquePlayers": 10
-    },
-    {
-      "name": "POK\u00c9MON TRAINER",
-      "plays": 68,
-      "wins": 20,
-      "winRate": 29.4,
-      "uniquePlayers": 6
     },
     {
       "name": "MYTHRA",
@@ -2227,6 +2227,13 @@
       "uniquePlayers": 6
     },
     {
+      "name": "POKEMON TRAINER",
+      "plays": 11,
+      "wins": 6,
+      "winRate": 54.5,
+      "uniquePlayers": 1
+    },
+    {
       "name": "META KNIGHT",
       "plays": 11,
       "wins": 3,
@@ -2239,13 +2246,6 @@
       "wins": 2,
       "winRate": 20.0,
       "uniquePlayers": 4
-    },
-    {
-      "name": "POKEMON TRAINER",
-      "plays": 9,
-      "wins": 5,
-      "winRate": 55.6,
-      "uniquePlayers": 1
     },
     {
       "name": "MYTHRA/PYRA",
@@ -2354,14 +2354,14 @@
       1008,
       988,
       917,
-      859,
+      862,
       751,
       542,
       477,
       443,
       423,
       372,
-      290,
+      295,
       281,
       269,
       249,
@@ -2376,14 +2376,14 @@
       58.5,
       47.4,
       49.9,
-      47.3,
+      47.2,
       45.8,
       53.7,
       43.0,
       51.5,
       48.2,
       41.4,
-      54.5,
+      54.6,
       54.1,
       37.2,
       43.4,
@@ -2420,8 +2420,8 @@
       "will",
       "jmoon",
       "syweed",
-      "shafaq",
       "audrey",
+      "shafaq",
       "mizan",
       "gapam",
       "samin",
@@ -2460,11 +2460,11 @@
       13.9,
       13.4,
       13.2,
-      13.2,
+      12.9,
       11.5,
       10.1,
       7.6,
-      7.4,
+      7.0,
       6.5,
       3.6,
       2.5,
@@ -2591,9 +2591,9 @@
       1265,
       1235,
       1065,
-      930,
+      938,
       694,
-      578,
+      586,
       531,
       427,
       376,
@@ -2853,9 +2853,9 @@
           "total": 7
         },
         {
-          "wr": 100.0,
-          "wins": 2,
-          "total": 2
+          "wr": 60.0,
+          "wins": 6,
+          "total": 10
         },
         {
           "wr": 73.3,
@@ -2943,9 +2943,9 @@
           "total": 2
         },
         {
-          "wr": 0.0,
-          "wins": 0,
-          "total": 2
+          "wr": 40.0,
+          "wins": 4,
+          "total": 10
         },
         {
           "wr": 75.0,
@@ -3274,8 +3274,8 @@
         98,
         87,
         225,
-        212,
-        219,
+        214,
+        233,
         202,
         163,
         130,
@@ -3351,9 +3351,9 @@
       "10+"
     ],
     "data": [
-      1220,
-      589,
-      283,
+      1223,
+      590,
+      284,
       161,
       96,
       75,
@@ -3427,9 +3427,9 @@
       0.093,
       0.089,
       0.085,
-      0.084,
+      0.083,
       0.082,
-      0.08,
+      0.078,
       0.074,
       0.059,
       0.056,
@@ -3712,9 +3712,9 @@
       {
         "id": "own",
         "label": "own",
-        "games": 578,
-        "winRate": 38.1,
-        "size": 29.266666666666666,
+        "games": 586,
+        "winRate": 38.2,
+        "size": 29.533333333333335,
         "partnerships": [
           {
             "partner": "habeas",
@@ -3752,13 +3752,13 @@
             "winRate": 3.8
           },
           {
-            "partner": "keneru",
-            "games": 39,
-            "winRate": 0.0
+            "partner": "shafaq",
+            "games": 44,
+            "winRate": 9.1
           },
           {
-            "partner": "shafaq",
-            "games": 36,
+            "partner": "keneru",
+            "games": 39,
             "winRate": 0.0
           },
           {
@@ -6814,9 +6814,9 @@
       {
         "id": "shafaq",
         "label": "shafaq",
-        "games": 930,
+        "games": 938,
         "winRate": 54.5,
-        "size": 41.0,
+        "size": 41.266666666666666,
         "partnerships": [
           {
             "partner": "habeas",
@@ -6854,6 +6854,11 @@
             "winRate": 31.2
           },
           {
+            "partner": "own",
+            "games": 44,
+            "winRate": 13.6
+          },
+          {
             "partner": "jean",
             "games": 39,
             "winRate": 10.3
@@ -6867,11 +6872,6 @@
             "partner": "ryy",
             "games": 38,
             "winRate": 13.2
-          },
-          {
-            "partner": "own",
-            "games": 36,
-            "winRate": 5.6
           },
           {
             "partner": "ben",
@@ -8053,8 +8053,8 @@
       {
         "from": "shafaq",
         "to": "own",
-        "value": 36,
-        "title": "36 games together"
+        "value": 44,
+        "title": "44 games together"
       },
       {
         "from": "nish",

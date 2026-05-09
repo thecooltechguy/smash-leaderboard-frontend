@@ -25,9 +25,9 @@ id,created_at,name,display_name,elo,country,inactive,top_ten_played,picture,bann
 3849,2025-09-06 22:24:39.119000,Caleb,caleb,1200,US,True,2,https://smash-leaderboard-production.up.railway.app/images/dps/caleb.png,False,False
 2586,2025-08-23 00:44:14.138000,Safi Qadir,safi,1341,US,False,8,https://smash-leaderboard-production.up.railway.app/images/dps/safi.jpg,False,False
 3007,2025-08-29 23:59:27.908000,Landon,lando,1004,US,False,6,https://smash-leaderboard-production.up.railway.app/images/dps/lando.png,False,False
-104,2025-06-11 23:16:25.450000,Shafaq Ahmed,shafaq,1464,US,False,9,https://smash-leaderboard-production.up.railway.app/images/dps/shafaq.png,False,False
+104,2025-06-11 23:16:25.450000,Shafaq Ahmed,shafaq,1421,US,False,9,https://smash-leaderboard-production.up.railway.app/images/dps/shafaq.png,False,False
 8811,2025-12-14 06:46:33.061000,,ghandi,1200,,True,0,,False,False
-4484,2025-09-19 00:31:36.846000,Owen,own,1325,FR,False,8,https://smash-leaderboard-production.up.railway.app/images/dps/own.jpg,False,False
+4484,2025-09-19 00:31:36.846000,Owen,own,1368,FR,False,8,https://smash-leaderboard-production.up.railway.app/images/dps/own.jpg,False,False
 21,2025-06-06 08:21:51.674000,Haseab,habeas,1526,CA,False,9,https://smash-leaderboard-production.up.railway.app/images/dps/habeas.png,False,False
 2106,2025-08-14 20:28:12.107000,unknown,unknown,1200,UN,False,0,,False,False
 9157,2026-01-15 05:14:18.330000,,jean,1200,,True,2,,False,False

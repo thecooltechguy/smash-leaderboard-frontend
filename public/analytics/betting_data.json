@@ -981,6 +981,20 @@
       "confidence": "low"
     },
     {
+      "player1": "own",
+      "player2": "shafaq",
+      "p1_wins": 4,
+      "p2_wins": 6,
+      "total": 10,
+      "p1_prob": 40.0,
+      "p2_prob": 60.0,
+      "p1_american": "+149",
+      "p2_american": "-149",
+      "p1_decimal": 2.5,
+      "p2_decimal": 1.67,
+      "confidence": "low"
+    },
+    {
       "player1": "jmoon",
       "player2": "subby",
       "p1_wins": 9,
@@ -1667,7 +1681,7 @@
       "confidence": "low"
     }
   ],
-  "total_matchups": 119,
+  "total_matchups": 120,
   "upset_alerts": [
     {
       "player1": "habeas",
@@ -2074,10 +2088,10 @@
     },
     {
       "player": "shafaq",
-      "h2h_wins": 350,
-      "h2h_losses": 311,
-      "h2h_rate": 53.0,
-      "opponents": 16
+      "h2h_wins": 356,
+      "h2h_losses": 315,
+      "h2h_rate": 53.1,
+      "opponents": 17
     },
     {
       "player": "nish",
@@ -2144,10 +2158,10 @@
     },
     {
       "player": "own",
-      "h2h_wins": 109,
-      "h2h_losses": 210,
-      "h2h_rate": 34.2,
-      "opponents": 9
+      "h2h_wins": 113,
+      "h2h_losses": 216,
+      "h2h_rate": 34.3,
+      "opponents": 10
     },
     {
       "player": "pat",
