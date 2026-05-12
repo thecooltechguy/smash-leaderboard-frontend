@@ -2,15 +2,15 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "3,095 games",
-    "detail": "That's 13.8 games per day on average",
+    "value": "3,155 games",
+    "detail": "That's 14.1 games per day on average",
     "runner_up": "subby (1,265)"
   },
   "most_dominant": {
     "stat": "Highest Win Rate (50+ games)",
     "player": "jmoon",
-    "value": "77.4%",
-    "detail": "956W - 279L across 1235 games"
+    "value": "77.3%",
+    "detail": "973W - 285L across 1258 games"
   },
   "biggest_underdog": {
     "stat": "Lowest Win Rate (50+ games)",
@@ -33,8 +33,8 @@
   "best_kd": {
     "stat": "Best KO/Death Ratio",
     "player": "jmoon",
-    "value": "1.61 K/D",
-    "detail": "3023 KOs, 1872 deaths"
+    "value": "1.62 K/D",
+    "detail": "3087 KOs, 1908 deaths"
   },
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
@@ -46,7 +46,7 @@
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
     "value": "147 SDs",
-    "detail": "That's 1 SD every 21.1 games"
+    "detail": "That's 1 SD every 21.5 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -87,19 +87,19 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1533 late-night games",
-    "detail": "That's 49.5% of their games after 10PM"
+    "value": "1585 late-night games",
+    "detail": "That's 50.2% of their games after 10PM"
   },
   "late_night_specialist": {
     "stat": "Best After 10PM",
     "player": "jmoon",
-    "value": "76.4% win rate",
-    "detail": "Across 649 late-night games"
+    "value": "76.3% win rate",
+    "detail": "Across 672 late-night games"
   },
   "giant_killer": {
     "stat": "Most Wins vs jmoon",
     "player": "habeas",
-    "value": "176 victories",
+    "value": "182 victories",
     "detail": "The only real threat to the throne"
   },
   "most_cursed_char": {
@@ -117,14 +117,14 @@
   "biggest_rivalry": {
     "stat": "Biggest Rivalry",
     "player": "habeas vs jmoon",
-    "value": "663 matches",
+    "value": "681 matches",
     "detail": "The most frequent matchup in the league"
   },
   "best_day_performance": {
     "stat": "Best Monday Player",
     "player": "jmoon",
-    "value": "85.8% win rate",
-    "detail": "On Mondays across 155 games"
+    "value": "84.8% win rate",
+    "detail": "On Mondays across 164 games"
   },
   "worst_day_performance": {
     "stat": "Worst Monday Player",
@@ -159,14 +159,14 @@
   "1am_warrior": {
     "stat": "The 1AM Warrior",
     "player": "habeas",
-    "value": "268 games at 1AM",
+    "value": "275 games at 1AM",
     "detail": "Why are you playing at 1AM?!"
   },
   "perfect_game_master": {
     "stat": "Most Perfect Games",
     "player": "jmoon",
-    "value": "142 flawless victories",
-    "detail": "That's 11.5% of their games"
+    "value": "143 flawless victories",
+    "detail": "That's 11.4% of their games"
   },
   "single_game_kos": {
     "stat": "Most KOs in One Match",

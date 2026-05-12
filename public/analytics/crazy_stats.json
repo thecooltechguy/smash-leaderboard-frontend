@@ -2,7 +2,7 @@
   "character_by_day": {
     "Monday": {
       "character": "DONKEY KONG",
-      "plays": 217
+      "plays": 222
     },
     "Tuesday": {
       "character": "DONKEY KONG",
@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1235,
-    "total_wins": 956,
+    "total_games": 1258,
+    "total_wins": 973,
     "winrate_Late Night (10PM-4AM)": {
       "games": 393,
       "win_rate": 80.2
@@ -73,17 +73,17 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 504,
-      "win_rate": 77.0
+      "games": 518,
+      "win_rate": 76.8
     },
     "winrate_Evening (6PM-9PM)": {
-      "games": 308,
+      "games": 317,
       "win_rate": 74.4
     },
     "by_day": {
       "Monday": {
-        "games": 133,
-        "win_rate": 82.7
+        "games": 156,
+        "win_rate": 81.4
       },
       "Tuesday": {
         "games": 127,
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 342,
-      "win_rate": 77.2
+      "games": 354,
+      "win_rate": 77.1
     }
   },
   "weekend_warriors": [
@@ -302,14 +302,14 @@
       "win_rate": 21.3
     },
     {
-      "character": "PYRA/MYTHRA",
-      "plays": 23,
+      "character": "MYTHRA",
+      "plays": 69,
       "win_rate": 26.1
     },
     {
-      "character": "MYTHRA",
-      "plays": 68,
-      "win_rate": 26.5
+      "character": "PYRA/MYTHRA",
+      "plays": 23,
+      "win_rate": 26.1
     }
   ],
   "blessed_characters": [
@@ -330,8 +330,8 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 1008,
-      "win_rate": 58.5
+      "plays": 1017,
+      "win_rate": 58.7
     },
     {
       "character": "PIRANHA PLANT",
@@ -388,8 +388,8 @@
   "night_owls": [
     {
       "player": "habeas",
-      "games": 911,
-      "win_rate": 47.2
+      "games": 919,
+      "win_rate": 47.4
     },
     {
       "player": "subby",
@@ -425,14 +425,14 @@
     "won": true
   },
   "habeas_deep_dive": {
-    "total_games": 3095,
-    "total_wins": 1646,
-    "total_kos": 6888,
+    "total_games": 3155,
+    "total_wins": 1682,
+    "total_kos": 7031,
     "total_sds": 147,
     "by_day": {
       "Monday": {
-        "games": 336,
-        "win_rate": 58.9
+        "games": 396,
+        "win_rate": 59.1
       },
       "Tuesday": {
         "games": 378,
@@ -461,7 +461,7 @@
     },
     "best_day": {
       "day": "Monday",
-      "win_rate": 58.9
+      "win_rate": 59.1
     },
     "worst_day": {
       "day": "Thursday",
@@ -471,7 +471,7 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 152
+      "kills": 158
     },
     {
       "player": "RT",
@@ -535,9 +535,9 @@
   "monthly_champions": {
     "2026-05": {
       "player": "jmoon",
-      "games": 5,
-      "wins": 5,
-      "win_rate": 100.0
+      "games": 28,
+      "wins": 22,
+      "win_rate": 78.6
     },
     "2026-04": {
       "player": "jmoon",
@@ -609,7 +609,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1513
+    "games": 1537
   },
   "quietest_hour": {
     "hour": 8,
