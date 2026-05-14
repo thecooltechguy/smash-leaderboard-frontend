@@ -10,7 +10,7 @@
     },
     "Wednesday": {
       "character": "DONKEY KONG",
-      "plays": 224
+      "plays": 226
     },
     "Thursday": {
       "character": "DONKEY KONG",
@@ -62,8 +62,8 @@
     }
   ],
   "jmoon_deep_dive": {
-    "total_games": 1277,
-    "total_wins": 989,
+    "total_games": 1292,
+    "total_wins": 1000,
     "winrate_Late Night (10PM-4AM)": {
       "games": 393,
       "win_rate": 80.2
@@ -73,8 +73,8 @@
       "win_rate": 80.0
     },
     "winrate_Afternoon (12PM-5PM)": {
-      "games": 537,
-      "win_rate": 77.1
+      "games": 552,
+      "win_rate": 77.0
     },
     "winrate_Evening (6PM-9PM)": {
       "games": 317,
@@ -90,8 +90,8 @@
         "win_rate": 76.0
       },
       "Wednesday": {
-        "games": 166,
-        "win_rate": 80.1
+        "games": 181,
+        "win_rate": 79.6
       },
       "Thursday": {
         "games": 284,
@@ -122,8 +122,8 @@
     },
     "most_played_character": {
       "character": "JOKER",
-      "games": 354,
-      "win_rate": 77.1
+      "games": 356,
+      "win_rate": 77.2
     }
   },
   "weekend_warriors": [
@@ -138,10 +138,10 @@
     {
       "player": "ryy",
       "weekend_wr": 58.1,
-      "weekday_wr": 41.0,
-      "diff": 17.2,
+      "weekday_wr": 40.5,
+      "diff": 17.7,
       "weekend_games": 43,
-      "weekday_games": 83
+      "weekday_games": 84
     },
     {
       "player": "jean",
@@ -258,9 +258,9 @@
       "sd_win_rate": 60.0
     },
     {
-      "player": "shafaq",
-      "sd_games": 63,
-      "sd_win_rate": 57.1
+      "player": "jmoon",
+      "sd_games": 47,
+      "sd_win_rate": 57.4
     }
   ],
   "top_matchup_by_day": {
@@ -274,7 +274,7 @@
     },
     "Wednesday": {
       "players": "habeas vs jmoon",
-      "times": 108
+      "times": 110
     },
     "Thursday": {
       "players": "habeas vs jmoon",
@@ -293,8 +293,8 @@
     },
     {
       "character": "FOX",
-      "plays": 72,
-      "win_rate": 19.4
+      "plays": 79,
+      "win_rate": 20.3
     },
     {
       "character": "GRENINJA",
@@ -303,13 +303,13 @@
     },
     {
       "character": "MYTHRA",
-      "plays": 69,
-      "win_rate": 26.1
+      "plays": 71,
+      "win_rate": 25.4
     },
     {
-      "character": "PYRA/MYTHRA",
-      "plays": 23,
-      "win_rate": 26.1
+      "character": "SONIC",
+      "plays": 26,
+      "win_rate": 26.9
     }
   ],
   "blessed_characters": [
@@ -330,8 +330,8 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 1021,
-      "win_rate": 58.8
+      "plays": 1041,
+      "win_rate": 58.6
     },
     {
       "character": "PIRANHA PLANT",
@@ -425,10 +425,10 @@
     "won": true
   },
   "habeas_deep_dive": {
-    "total_games": 3190,
-    "total_wins": 1704,
-    "total_kos": 7113,
-    "total_sds": 147,
+    "total_games": 3231,
+    "total_wins": 1726,
+    "total_kos": 7206,
+    "total_sds": 155,
     "by_day": {
       "Monday": {
         "games": 397,
@@ -439,8 +439,8 @@
         "win_rate": 57.8
       },
       "Wednesday": {
-        "games": 517,
-        "win_rate": 55.7
+        "games": 558,
+        "win_rate": 55.6
       },
       "Thursday": {
         "games": 559,
@@ -471,7 +471,7 @@
   "jmoon_killers": [
     {
       "player": "habeas",
-      "kills": 161
+      "kills": 164
     },
     {
       "player": "RT",
@@ -504,6 +504,10 @@
       "times_played": 4
     },
     {
+      "character": "UNKNOWN",
+      "times_played": 4
+    },
+    {
       "character": "BAYONETTA",
       "times_played": 4
     },
@@ -526,10 +530,6 @@
     {
       "character": "ICE CLIMBERS",
       "times_played": 3
-    },
-    {
-      "character": "MEGA MAN",
-      "times_played": 3
     }
   ],
   "monthly_champions": {
@@ -547,9 +547,9 @@
     },
     "2026-05": {
       "player": "jmoon",
-      "games": 47,
-      "wins": 38,
-      "win_rate": 80.9
+      "games": 62,
+      "wins": 49,
+      "win_rate": 79.0
     },
     "2026-04": {
       "player": "jmoon",
@@ -609,7 +609,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1555
+    "games": 1577
   },
   "quietest_hour": {
     "hour": 8,
