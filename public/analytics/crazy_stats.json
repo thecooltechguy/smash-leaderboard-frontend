@@ -14,7 +14,7 @@
     },
     "Thursday": {
       "character": "DONKEY KONG",
-      "plays": 233
+      "plays": 236
     },
     "Friday": {
       "character": "MR. GAME & WATCH",
@@ -307,9 +307,9 @@
       "win_rate": 25.4
     },
     {
-      "character": "SONIC",
-      "plays": 26,
-      "win_rate": 26.9
+      "character": "PYRA/MYTHRA",
+      "plays": 27,
+      "win_rate": 25.9
     }
   ],
   "blessed_characters": [
@@ -330,8 +330,8 @@
     },
     {
       "character": "GANONDORF",
-      "plays": 1041,
-      "win_rate": 58.6
+      "plays": 1042,
+      "win_rate": 58.5
     },
     {
       "character": "PIRANHA PLANT",
@@ -425,7 +425,7 @@
     "won": true
   },
   "habeas_deep_dive": {
-    "total_games": 3231,
+    "total_games": 3232,
     "total_wins": 1726,
     "total_kos": 7206,
     "total_sds": 155,
@@ -443,8 +443,8 @@
         "win_rate": 55.6
       },
       "Thursday": {
-        "games": 559,
-        "win_rate": 47.4
+        "games": 560,
+        "win_rate": 47.3
       },
       "Friday": {
         "games": 459,
@@ -465,7 +465,7 @@
     },
     "worst_day": {
       "day": "Thursday",
-      "win_rate": 47.4
+      "win_rate": 47.3
     }
   },
   "jmoon_killers": [
@@ -496,16 +496,12 @@
       "times_played": 5
     },
     {
-      "character": "KEN",
+      "character": "VILLAGER",
       "times_played": 5
     },
     {
-      "character": "VILLAGER",
-      "times_played": 4
-    },
-    {
-      "character": "UNKNOWN",
-      "times_played": 4
+      "character": "KEN",
+      "times_played": 5
     },
     {
       "character": "BAYONETTA",
@@ -529,6 +525,10 @@
     },
     {
       "character": "ICE CLIMBERS",
+      "times_played": 3
+    },
+    {
+      "character": "MEGA MAN",
       "times_played": 3
     }
   ],
@@ -609,7 +609,7 @@
   "busiest_hour": {
     "hour": 18,
     "hour_formatted": "18:00 - 19:00",
-    "games": 1577
+    "games": 1583
   },
   "quietest_hour": {
     "hour": 8,

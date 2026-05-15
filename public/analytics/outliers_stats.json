@@ -2,7 +2,7 @@
   "biggest_grinder": {
     "stat": "Most Games Played",
     "player": "habeas",
-    "value": "3,231 games",
+    "value": "3,232 games",
     "detail": "That's 14.4 games per day on average",
     "runner_up": "jmoon (1,292)"
   },
@@ -46,7 +46,7 @@
     "stat": "Most Self-Destructs (Total)",
     "player": "habeas",
     "value": "155 SDs",
-    "detail": "That's 1 SD every 20.8 games"
+    "detail": "That's 1 SD every 20.9 games"
   },
   "most_sd_prone": {
     "stat": "Most SD-Prone Player",
@@ -87,7 +87,7 @@
   "biggest_night_owl": {
     "stat": "Biggest Night Owl",
     "player": "habeas",
-    "value": "1654 late-night games",
+    "value": "1655 late-night games",
     "detail": "That's 51.2% of their games after 10PM"
   },
   "late_night_specialist": {
@@ -147,8 +147,8 @@
   "fallen_off": {
     "stat": "Biggest Decline",
     "player": "keneru",
-    "value": "-22.0%",
-    "detail": "First 50: 54.0% \u2192 Last 50: 32.0%"
+    "value": "-24.0%",
+    "detail": "First 50: 54.0% \u2192 Last 50: 30.0%"
   },
   "friday_king": {
     "stat": "Friday King",
@@ -159,7 +159,7 @@
   "1am_warrior": {
     "stat": "The 1AM Warrior",
     "player": "habeas",
-    "value": "292 games at 1AM",
+    "value": "293 games at 1AM",
     "detail": "Why are you playing at 1AM?!"
   },
   "perfect_game_master": {
@@ -176,8 +176,8 @@
   },
   "rare_char_user": {
     "stat": "Rarest Character Specialist",
-    "player": "unknown",
-    "value": "UNKNOWN",
+    "player": "jmoon",
+    "value": "PICHU",
     "detail": "One of the only players to use this character"
   }
 }

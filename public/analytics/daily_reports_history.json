@@ -1,6 +1,142 @@
 {
   "reports": [
     {
+      "date": "May 14, 2026",
+      "generated_at": "2026-05-15T16:39:35.169755",
+      "headline": "ACTION-PACKED DAY: 5 MATCHES, 27 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 5 intense matches with a combined 27 knockouts.\n\nshafaq was the workhorse of the day, grinding through 5 matches with 4 victories.\n\nThe hottest player was shafaq who maintained an impressive 80.0% win rate.\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "shafaq",
+        "reason": "Most active player with 5 games"
+      },
+      "highlights": [
+        "5 total matches played",
+        "shafaq most active with 5 games"
+      ],
+      "stats_summary": {
+        "total_matches": 5,
+        "total_kos": 27,
+        "player_stats": [
+          {
+            "name": "shafaq",
+            "games": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 80.0,
+            "kos": 17,
+            "falls": 9,
+            "sds": 0,
+            "kd_ratio": 1.89,
+            "main_character": "KING DEDEDE",
+            "character_games": 4
+          },
+          {
+            "name": "keneru",
+            "games": 3,
+            "wins": 0,
+            "losses": 3,
+            "win_rate": 0.0,
+            "kos": 5,
+            "falls": 9,
+            "sds": 0,
+            "kd_ratio": 0.56,
+            "main_character": "DONKEY KONG",
+            "character_games": 3
+          },
+          {
+            "name": "lag",
+            "games": 2,
+            "wins": 2,
+            "losses": 0,
+            "win_rate": 100.0,
+            "kos": 5,
+            "falls": 2,
+            "sds": 0,
+            "kd_ratio": 2.5,
+            "main_character": "LUCAS",
+            "character_games": 1
+          },
+          {
+            "name": "unknown",
+            "games": 2,
+            "wins": 0,
+            "losses": 2,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 2
+          },
+          {
+            "name": "own",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "PYRA/MYTHRA",
+            "character_games": 1
+          },
+          {
+            "name": "habeas",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "LITTLE MAC",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "KING DEDEDE",
+            "times_played": 4
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 3
+          },
+          {
+            "character": "UNKNOWN",
+            "times_played": 2
+          },
+          {
+            "character": "PYRA/MYTHRA",
+            "times_played": 1
+          },
+          {
+            "character": "LITTLE MAC",
+            "times_played": 1
+          }
+        ],
+        "perfect_games": [],
+        "rivalries": [
+          {
+            "player1": "keneru",
+            "player2": "shafaq",
+            "total_games": 3,
+            "p1_wins": 0,
+            "p2_wins": 3
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "shafaq",
+            "streak": 4
+          }
+        ]
+      }
+    },
+    {
       "date": "May 13, 2026",
       "generated_at": "2026-05-14T16:44:24.293839",
       "headline": "ACTION-PACKED DAY: 50 MATCHES, 322 KOS!",
@@ -1748,14 +1884,6 @@
       "generated_at": "2026-03-17T16:28:28.904861",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on March 16, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "March 15, 2026",
-      "generated_at": "2026-03-16T16:26:52.614403",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on March 15, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }
