@@ -9,18 +9,18 @@
   "momentum": {
     "insight": "Winning affects next game performance",
     "avg_momentum_boost": 17.5,
-    "biggest_momentum_player": "messi",
-    "biggest_momentum_boost": 32.4,
-    "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
+    "biggest_momentum_player": "lag",
+    "biggest_momentum_boost": 32.9,
+    "biggest_momentum_detail": "56.2% after win vs 23.4% after loss",
     "reverse_momentum_player": "ryy",
     "reverse_momentum": 1.2,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.5,
+    "first_3_games_wr": 47.4,
     "after_8_games_wr": 50.5,
-    "fatigue_drop": -3.0
+    "fatigue_drop": -3.1
   },
   "lopsided_matchups": [
     {
@@ -63,9 +63,9 @@
   },
   "clutch": {
     "most_clutch_player": "audrey",
-    "most_clutch_close_wr": 70.0,
-    "most_clutch_blowout_wr": 20.0,
-    "clutch_boost": 50.0,
+    "most_clutch_close_wr": 72.7,
+    "most_clutch_blowout_wr": 18.2,
+    "clutch_boost": 54.5,
     "least_clutch_player": "niki <3",
     "choke_factor": 26.8
   },
@@ -74,12 +74,12 @@
     "busiest_games": 2676,
     "quietest_day": "Sunday",
     "quietest_games": 1377,
-    "friday_vs_monday": 1.0
+    "friday_vs_monday": 1.1
   },
   "streakiness": {
     "most_streaky_player": "habeas",
     "five_plus_streaks": 103,
-    "games": 3232
+    "games": 3237
   },
   "dominant_matchups": [
     {
@@ -119,14 +119,14 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.189,
+    "correlation": -0.187,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
     "needs_warmup_player": "stav",
-    "first_wr": 21.7,
+    "first_wr": 20.8,
     "warmed_up_wr": 41.9,
-    "warmup_boost": 20.1,
+    "warmup_boost": 21.0,
     "cold_starter_player": "heidy",
     "cold_start_advantage": 30.3
   },

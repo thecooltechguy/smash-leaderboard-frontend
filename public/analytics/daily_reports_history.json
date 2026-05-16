@@ -1,6 +1,284 @@
 {
   "reports": [
     {
+      "date": "May 15, 2026",
+      "generated_at": "2026-05-16T16:23:16.971188",
+      "headline": "ACTION-PACKED DAY: 49 MATCHES, 266 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 49 intense matches with a combined 266 knockouts.\n\njmoon was the workhorse of the day, grinding through 37 matches with 31 victories.\n\nThe hottest player was lag who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with JOKER!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "jmoon",
+        "reason": "Most active player with 37 games"
+      },
+      "highlights": [
+        "49 total matches played",
+        "jmoon most active with 37 games",
+        "11 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 49,
+        "total_kos": 266,
+        "player_stats": [
+          {
+            "name": "jmoon",
+            "games": 37,
+            "wins": 31,
+            "losses": 6,
+            "win_rate": 83.8,
+            "kos": 113,
+            "falls": 62,
+            "sds": 3,
+            "kd_ratio": 1.82,
+            "main_character": "CAPTAIN FALCON",
+            "character_games": 26
+          },
+          {
+            "name": "own",
+            "games": 33,
+            "wins": 7,
+            "losses": 26,
+            "win_rate": 21.2,
+            "kos": 42,
+            "falls": 89,
+            "sds": 1,
+            "kd_ratio": 0.47,
+            "main_character": "MYTHRA",
+            "character_games": 11
+          },
+          {
+            "name": "willsong",
+            "games": 14,
+            "wins": 6,
+            "losses": 8,
+            "win_rate": 42.9,
+            "kos": 18,
+            "falls": 28,
+            "sds": 2,
+            "kd_ratio": 0.64,
+            "main_character": "MIN MIN",
+            "character_games": 14
+          },
+          {
+            "name": "RT",
+            "games": 13,
+            "wins": 4,
+            "losses": 9,
+            "win_rate": 30.8,
+            "kos": 24,
+            "falls": 30,
+            "sds": 2,
+            "kd_ratio": 0.8,
+            "main_character": "HERO",
+            "character_games": 10
+          },
+          {
+            "name": "keneru",
+            "games": 9,
+            "wins": 1,
+            "losses": 8,
+            "win_rate": 11.1,
+            "kos": 12,
+            "falls": 24,
+            "sds": 0,
+            "kd_ratio": 0.5,
+            "main_character": "SORA",
+            "character_games": 5
+          },
+          {
+            "name": "unknown",
+            "games": 5,
+            "wins": 0,
+            "losses": 5,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 5
+          },
+          {
+            "name": "shafaq",
+            "games": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 80.0,
+            "kos": 16,
+            "falls": 7,
+            "sds": 1,
+            "kd_ratio": 2.29,
+            "main_character": "ZELDA",
+            "character_games": 4
+          },
+          {
+            "name": "habeas",
+            "games": 5,
+            "wins": 4,
+            "losses": 1,
+            "win_rate": 80.0,
+            "kos": 14,
+            "falls": 7,
+            "sds": 0,
+            "kd_ratio": 2.0,
+            "main_character": "KAZUYA",
+            "character_games": 3
+          },
+          {
+            "name": "audrey",
+            "games": 4,
+            "wins": 2,
+            "losses": 2,
+            "win_rate": 50.0,
+            "kos": 4,
+            "falls": 9,
+            "sds": 0,
+            "kd_ratio": 0.44,
+            "main_character": "CLOUD",
+            "character_games": 4
+          },
+          {
+            "name": "lando",
+            "games": 4,
+            "wins": 1,
+            "losses": 3,
+            "win_rate": 25.0,
+            "kos": 6,
+            "falls": 11,
+            "sds": 0,
+            "kd_ratio": 0.55,
+            "main_character": "KAZUYA",
+            "character_games": 4
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "CAPTAIN FALCON",
+            "times_played": 26
+          },
+          {
+            "character": "MIN MIN",
+            "times_played": 14
+          },
+          {
+            "character": "MYTHRA",
+            "times_played": 11
+          },
+          {
+            "character": "HERO",
+            "times_played": 10
+          },
+          {
+            "character": "PYRA",
+            "times_played": 9
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "jmoon",
+            "character": "JOKER"
+          },
+          {
+            "player": "jmoon",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "jmoon",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "jmoon",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "jmoon",
+            "character": "CAPTAIN FALCON"
+          },
+          {
+            "player": "jmoon",
+            "character": "LUCINA"
+          },
+          {
+            "player": "willsong",
+            "character": "MIN MIN"
+          },
+          {
+            "player": "shafaq",
+            "character": "ZELDA"
+          },
+          {
+            "player": "habeas",
+            "character": "KAZUYA"
+          },
+          {
+            "player": "willsong",
+            "character": "MIN MIN"
+          },
+          {
+            "player": "lag",
+            "character": "NESS"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "jmoon",
+            "player2": "own",
+            "total_games": 18,
+            "p1_wins": 16,
+            "p2_wins": 2
+          },
+          {
+            "player1": "jmoon",
+            "player2": "keneru",
+            "total_games": 5,
+            "p1_wins": 5,
+            "p2_wins": 0
+          },
+          {
+            "player1": "lag",
+            "player2": "willsong",
+            "total_games": 4,
+            "p1_wins": 4,
+            "p2_wins": 0
+          },
+          {
+            "player1": "habeas",
+            "player2": "lando",
+            "total_games": 3,
+            "p1_wins": 2,
+            "p2_wins": 1
+          },
+          {
+            "player1": "habeas",
+            "player2": "own",
+            "total_games": 2,
+            "p1_wins": 2,
+            "p2_wins": 0
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "jmoon",
+            "streak": 9
+          },
+          {
+            "player": "willsong",
+            "streak": 4
+          },
+          {
+            "player": "lag",
+            "streak": 4
+          },
+          {
+            "player": "shafaq",
+            "streak": 3
+          },
+          {
+            "player": "habeas",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "May 14, 2026",
       "generated_at": "2026-05-15T16:39:35.169755",
       "headline": "ACTION-PACKED DAY: 5 MATCHES, 27 KOS!",
@@ -1876,14 +2154,6 @@
       "generated_at": "2026-03-18T16:26:46.424195",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on March 17, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "March 16, 2026",
-      "generated_at": "2026-03-17T16:28:28.904861",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on March 16, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }
