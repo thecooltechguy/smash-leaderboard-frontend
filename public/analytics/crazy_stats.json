@@ -22,7 +22,7 @@
     },
     "Saturday": {
       "character": "DONKEY KONG",
-      "plays": 194
+      "plays": 205
     },
     "Sunday": {
       "character": "DONKEY KONG",
@@ -136,20 +136,20 @@
       "weekday_games": 66
     },
     {
-      "player": "ryy",
-      "weekend_wr": 58.1,
-      "weekday_wr": 40.5,
-      "diff": 17.7,
-      "weekend_games": 43,
-      "weekday_games": 84
-    },
-    {
       "player": "jean",
       "weekend_wr": 47.4,
       "weekday_wr": 35.7,
       "diff": 11.7,
       "weekend_games": 19,
       "weekday_games": 56
+    },
+    {
+      "player": "ryy",
+      "weekend_wr": 50.8,
+      "weekday_wr": 40.5,
+      "diff": 10.3,
+      "weekend_games": 65,
+      "weekday_games": 84
     }
   ],
   "weekday_warriors": [
@@ -216,6 +216,10 @@
       "streak": 19
     },
     {
+      "player": "unknown",
+      "streak": 19
+    },
+    {
       "player": "mizan",
       "streak": 18
     },
@@ -230,10 +234,6 @@
     {
       "player": "gatmo",
       "streak": 17
-    },
-    {
-      "player": "own",
-      "streak": 15
     }
   ],
   "comeback_kings": [
@@ -293,8 +293,8 @@
     },
     {
       "character": "FOX",
-      "plays": 79,
-      "win_rate": 20.3
+      "plays": 84,
+      "win_rate": 19.0
     },
     {
       "character": "GRENINJA",
@@ -308,8 +308,8 @@
     },
     {
       "character": "SONIC",
-      "plays": 27,
-      "win_rate": 25.9
+      "plays": 28,
+      "win_rate": 25.0
     }
   ],
   "blessed_characters": [
@@ -325,12 +325,12 @@
     },
     {
       "character": "ISABELLE",
-      "plays": 22,
-      "win_rate": 63.6
+      "plays": 24,
+      "win_rate": 62.5
     },
     {
       "character": "GANONDORF",
-      "plays": 1044,
+      "plays": 1045,
       "win_rate": 58.6
     },
     {
@@ -496,14 +496,6 @@
       "times_played": 5
     },
     {
-      "character": "VILLAGER",
-      "times_played": 5
-    },
-    {
-      "character": "WII FIT TRAINER",
-      "times_played": 5
-    },
-    {
       "character": "KEN",
       "times_played": 5
     },
@@ -529,6 +521,14 @@
     },
     {
       "character": "MII GUNNER",
+      "times_played": 3
+    },
+    {
+      "character": "MORTON",
+      "times_played": 3
+    },
+    {
+      "character": "TERRY",
       "times_played": 3
     }
   ],
@@ -607,9 +607,9 @@
     }
   },
   "busiest_hour": {
-    "hour": 18,
-    "hour_formatted": "18:00 - 19:00",
-    "games": 1587
+    "hour": 17,
+    "hour_formatted": "17:00 - 18:00",
+    "games": 1636
   },
   "quietest_hour": {
     "hour": 8,

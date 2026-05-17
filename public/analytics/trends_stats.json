@@ -9,18 +9,18 @@
   "momentum": {
     "insight": "Winning affects next game performance",
     "avg_momentum_boost": 17.5,
-    "biggest_momentum_player": "lag",
-    "biggest_momentum_boost": 32.9,
-    "biggest_momentum_detail": "56.2% after win vs 23.4% after loss",
+    "biggest_momentum_player": "messi",
+    "biggest_momentum_boost": 32.4,
+    "biggest_momentum_detail": "47.8% after win vs 15.4% after loss",
     "reverse_momentum_player": "ryy",
-    "reverse_momentum": 1.2,
+    "reverse_momentum": -0.9,
     "reverse_detail": "Actually plays BETTER after losing"
   },
   "fatigue": {
     "insight": "Performance changes during long sessions",
-    "first_3_games_wr": 47.4,
-    "after_8_games_wr": 50.5,
-    "fatigue_drop": -3.1
+    "first_3_games_wr": 47.3,
+    "after_8_games_wr": 50.3,
+    "fatigue_drop": -3.0
   },
   "lopsided_matchups": [
     {
@@ -119,7 +119,7 @@
     }
   ],
   "loyalty_correlation": {
-    "correlation": -0.187,
+    "correlation": -0.185,
     "insight": "Negative = diverse players win more"
   },
   "warmup": {
@@ -137,7 +137,7 @@
   },
   "game_speed": {
     "fastest_player": "lando",
-    "fastest_gap": 4.0,
+    "fastest_gap": 4.1,
     "slowest_player": "syweed",
     "slowest_gap": 8.2
   }

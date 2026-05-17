@@ -1,276 +1,197 @@
 {
-  "date": "May 15, 2026",
-  "generated_at": "2026-05-16T16:23:16.971188",
-  "headline": "ACTION-PACKED DAY: 49 MATCHES, 266 KOS!",
-  "report": "What a day at the Smash Arena! We witnessed 49 intense matches with a combined 266 knockouts.\n\njmoon was the workhorse of the day, grinding through 37 matches with 31 victories.\n\nThe hottest player was lag who maintained an impressive 100.0% win rate.\n\nWe even saw perfection today - jmoon delivered a flawless 3-0 with JOKER!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+  "date": "May 16, 2026",
+  "generated_at": "2026-05-17T16:24:42.837973",
+  "headline": "ACTION-PACKED DAY: 46 MATCHES, 383 KOS!",
+  "report": "What a day at the Smash Arena! We witnessed 46 intense matches with a combined 383 knockouts.\n\nwill was the workhorse of the day, grinding through 41 matches with 20 victories.\n\nThe hottest player was will who maintained an impressive 48.8% win rate.\n\nWe even saw perfection today - subby delivered a flawless 3-0 with ENDERMAN!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
   "player_of_the_day": {
-    "name": "jmoon",
-    "reason": "Most active player with 37 games"
+    "name": "will",
+    "reason": "Most active player with 41 games"
   },
   "highlights": [
-    "49 total matches played",
-    "jmoon most active with 37 games",
-    "11 perfect game(s) achieved"
+    "46 total matches played",
+    "will most active with 41 games",
+    "4 perfect game(s) achieved"
   ],
   "stats_summary": {
-    "total_matches": 49,
-    "total_kos": 266,
+    "total_matches": 46,
+    "total_kos": 383,
     "player_stats": [
       {
-        "name": "jmoon",
-        "games": 37,
-        "wins": 31,
-        "losses": 6,
-        "win_rate": 83.8,
-        "kos": 113,
-        "falls": 62,
-        "sds": 3,
-        "kd_ratio": 1.82,
-        "main_character": "CAPTAIN FALCON",
-        "character_games": 26
-      },
-      {
-        "name": "own",
-        "games": 33,
-        "wins": 7,
-        "losses": 26,
-        "win_rate": 21.2,
-        "kos": 42,
-        "falls": 89,
+        "name": "will",
+        "games": 41,
+        "wins": 20,
+        "losses": 21,
+        "win_rate": 48.8,
+        "kos": 123,
+        "falls": 88,
         "sds": 1,
-        "kd_ratio": 0.47,
-        "main_character": "MYTHRA",
-        "character_games": 11
-      },
-      {
-        "name": "willsong",
-        "games": 14,
-        "wins": 6,
-        "losses": 8,
-        "win_rate": 42.9,
-        "kos": 18,
-        "falls": 28,
-        "sds": 2,
-        "kd_ratio": 0.64,
-        "main_character": "MIN MIN",
-        "character_games": 14
-      },
-      {
-        "name": "RT",
-        "games": 13,
-        "wins": 4,
-        "losses": 9,
-        "win_rate": 30.8,
-        "kos": 24,
-        "falls": 30,
-        "sds": 2,
-        "kd_ratio": 0.8,
-        "main_character": "HERO",
+        "kd_ratio": 1.4,
+        "main_character": "MARIO",
         "character_games": 10
       },
       {
-        "name": "keneru",
-        "games": 9,
-        "wins": 1,
-        "losses": 8,
-        "win_rate": 11.1,
-        "kos": 12,
-        "falls": 24,
+        "name": "own",
+        "games": 32,
+        "wins": 5,
+        "losses": 27,
+        "win_rate": 15.6,
+        "kos": 55,
+        "falls": 83,
+        "sds": 1,
+        "kd_ratio": 0.66,
+        "main_character": "KING K. ROOL",
+        "character_games": 9
+      },
+      {
+        "name": "subby",
+        "games": 27,
+        "wins": 5,
+        "losses": 22,
+        "win_rate": 18.5,
+        "kos": 71,
+        "falls": 52,
+        "sds": 5,
+        "kd_ratio": 1.37,
+        "main_character": "ENDERMAN",
+        "character_games": 13
+      },
+      {
+        "name": "lag",
+        "games": 25,
+        "wins": 6,
+        "losses": 19,
+        "win_rate": 24.0,
+        "kos": 61,
+        "falls": 65,
         "sds": 0,
-        "kd_ratio": 0.5,
-        "main_character": "SORA",
-        "character_games": 5
+        "kd_ratio": 0.94,
+        "main_character": "NESS",
+        "character_games": 19
+      },
+      {
+        "name": "ryy",
+        "games": 22,
+        "wins": 8,
+        "losses": 14,
+        "win_rate": 36.4,
+        "kos": 51,
+        "falls": 47,
+        "sds": 1,
+        "kd_ratio": 1.09,
+        "main_character": "FALCO",
+        "character_games": 9
+      },
+      {
+        "name": "lando",
+        "games": 12,
+        "wins": 4,
+        "losses": 8,
+        "win_rate": 33.3,
+        "kos": 18,
+        "falls": 28,
+        "sds": 0,
+        "kd_ratio": 0.64,
+        "main_character": "KAZUYA",
+        "character_games": 7
       },
       {
         "name": "unknown",
-        "games": 5,
+        "games": 8,
         "wins": 0,
-        "losses": 5,
+        "losses": 8,
         "win_rate": 0.0,
         "kos": 0,
         "falls": 0,
         "sds": 0,
         "kd_ratio": 0.0,
         "main_character": "UNKNOWN",
-        "character_games": 5
+        "character_games": 8
       },
       {
-        "name": "shafaq",
-        "games": 5,
-        "wins": 4,
+        "name": "wili",
+        "games": 1,
+        "wins": 0,
         "losses": 1,
-        "win_rate": 80.0,
-        "kos": 16,
-        "falls": 7,
-        "sds": 1,
-        "kd_ratio": 2.29,
-        "main_character": "ZELDA",
-        "character_games": 4
-      },
-      {
-        "name": "habeas",
-        "games": 5,
-        "wins": 4,
-        "losses": 1,
-        "win_rate": 80.0,
-        "kos": 14,
-        "falls": 7,
-        "sds": 0,
-        "kd_ratio": 2.0,
-        "main_character": "KAZUYA",
-        "character_games": 3
-      },
-      {
-        "name": "audrey",
-        "games": 4,
-        "wins": 2,
-        "losses": 2,
-        "win_rate": 50.0,
+        "win_rate": 0.0,
         "kos": 4,
-        "falls": 9,
+        "falls": 3,
         "sds": 0,
-        "kd_ratio": 0.44,
-        "main_character": "CLOUD",
-        "character_games": 4
-      },
-      {
-        "name": "lando",
-        "games": 4,
-        "wins": 1,
-        "losses": 3,
-        "win_rate": 25.0,
-        "kos": 6,
-        "falls": 11,
-        "sds": 0,
-        "kd_ratio": 0.55,
-        "main_character": "KAZUYA",
-        "character_games": 4
+        "kd_ratio": 1.33,
+        "main_character": "JOKER",
+        "character_games": 1
       }
     ],
     "top_characters": [
       {
-        "character": "CAPTAIN FALCON",
-        "times_played": 26
+        "character": "NESS",
+        "times_played": 19
       },
       {
-        "character": "MIN MIN",
-        "times_played": 14
+        "character": "ENDERMAN",
+        "times_played": 13
       },
       {
-        "character": "MYTHRA",
+        "character": "DONKEY KONG",
         "times_played": 11
       },
       {
-        "character": "HERO",
+        "character": "KING K. ROOL",
         "times_played": 10
       },
       {
-        "character": "PYRA",
-        "times_played": 9
+        "character": "MARIO",
+        "times_played": 10
       }
     ],
     "perfect_games": [
       {
-        "player": "jmoon",
-        "character": "JOKER"
+        "player": "subby",
+        "character": "ENDERMAN"
       },
       {
-        "player": "jmoon",
-        "character": "CAPTAIN FALCON"
-      },
-      {
-        "player": "jmoon",
-        "character": "CAPTAIN FALCON"
-      },
-      {
-        "player": "jmoon",
-        "character": "CAPTAIN FALCON"
-      },
-      {
-        "player": "jmoon",
-        "character": "CAPTAIN FALCON"
-      },
-      {
-        "player": "jmoon",
-        "character": "LUCINA"
-      },
-      {
-        "player": "willsong",
-        "character": "MIN MIN"
-      },
-      {
-        "player": "shafaq",
-        "character": "ZELDA"
-      },
-      {
-        "player": "habeas",
-        "character": "KAZUYA"
-      },
-      {
-        "player": "willsong",
-        "character": "MIN MIN"
+        "player": "will",
+        "character": "MARIO"
       },
       {
         "player": "lag",
         "character": "NESS"
+      },
+      {
+        "player": "will",
+        "character": "KING DEDEDE"
       }
     ],
     "rivalries": [
       {
-        "player1": "jmoon",
+        "player1": "will",
+        "player2": "lag",
+        "total_games": 11,
+        "p1_wins": 8,
+        "p2_wins": 3
+      },
+      {
+        "player1": "will",
         "player2": "own",
-        "total_games": 18,
-        "p1_wins": 16,
-        "p2_wins": 2
-      },
-      {
-        "player1": "jmoon",
-        "player2": "keneru",
-        "total_games": 5,
-        "p1_wins": 5,
-        "p2_wins": 0
-      },
-      {
-        "player1": "lag",
-        "player2": "willsong",
-        "total_games": 4,
-        "p1_wins": 4,
-        "p2_wins": 0
-      },
-      {
-        "player1": "habeas",
-        "player2": "lando",
-        "total_games": 3,
-        "p1_wins": 2,
+        "total_games": 8,
+        "p1_wins": 7,
         "p2_wins": 1
-      },
-      {
-        "player1": "habeas",
-        "player2": "own",
-        "total_games": 2,
-        "p1_wins": 2,
-        "p2_wins": 0
       }
     ],
     "win_streaks": [
       {
-        "player": "jmoon",
-        "streak": 9
+        "player": "will",
+        "streak": 5
       },
       {
-        "player": "willsong",
+        "player": "lando",
         "streak": 4
       },
       {
-        "player": "lag",
-        "streak": 4
-      },
-      {
-        "player": "shafaq",
+        "player": "ryy",
         "streak": 3
       },
       {
-        "player": "habeas",
+        "player": "subby",
         "streak": 3
       }
     ]

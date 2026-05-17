@@ -39,7 +39,7 @@
   "worst_kd": {
     "stat": "Worst KO/Death Ratio",
     "player": "lando",
-    "value": "0.41 K/D",
+    "value": "0.43 K/D",
     "detail": "Gets KO'd more than they KO"
   },
   "most_sds_total": {
@@ -146,9 +146,9 @@
   },
   "fallen_off": {
     "stat": "Biggest Decline",
-    "player": "keneru",
-    "value": "-28.0%",
-    "detail": "First 50: 54.0% \u2192 Last 50: 26.0%"
+    "player": "own",
+    "value": "-32.0%",
+    "detail": "First 50: 52.0% \u2192 Last 50: 20.0%"
   },
   "friday_king": {
     "stat": "Friday King",

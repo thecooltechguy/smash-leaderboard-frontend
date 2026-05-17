@@ -1,6 +1,205 @@
 {
   "reports": [
     {
+      "date": "May 16, 2026",
+      "generated_at": "2026-05-17T16:24:42.837973",
+      "headline": "ACTION-PACKED DAY: 46 MATCHES, 383 KOS!",
+      "report": "What a day at the Smash Arena! We witnessed 46 intense matches with a combined 383 knockouts.\n\nwill was the workhorse of the day, grinding through 41 matches with 20 victories.\n\nThe hottest player was will who maintained an impressive 48.8% win rate.\n\nWe even saw perfection today - subby delivered a flawless 3-0 with ENDERMAN!\n\nThe arena awaits more battles tomorrow. Who will rise to the top?",
+      "player_of_the_day": {
+        "name": "will",
+        "reason": "Most active player with 41 games"
+      },
+      "highlights": [
+        "46 total matches played",
+        "will most active with 41 games",
+        "4 perfect game(s) achieved"
+      ],
+      "stats_summary": {
+        "total_matches": 46,
+        "total_kos": 383,
+        "player_stats": [
+          {
+            "name": "will",
+            "games": 41,
+            "wins": 20,
+            "losses": 21,
+            "win_rate": 48.8,
+            "kos": 123,
+            "falls": 88,
+            "sds": 1,
+            "kd_ratio": 1.4,
+            "main_character": "MARIO",
+            "character_games": 10
+          },
+          {
+            "name": "own",
+            "games": 32,
+            "wins": 5,
+            "losses": 27,
+            "win_rate": 15.6,
+            "kos": 55,
+            "falls": 83,
+            "sds": 1,
+            "kd_ratio": 0.66,
+            "main_character": "KING K. ROOL",
+            "character_games": 9
+          },
+          {
+            "name": "subby",
+            "games": 27,
+            "wins": 5,
+            "losses": 22,
+            "win_rate": 18.5,
+            "kos": 71,
+            "falls": 52,
+            "sds": 5,
+            "kd_ratio": 1.37,
+            "main_character": "ENDERMAN",
+            "character_games": 13
+          },
+          {
+            "name": "lag",
+            "games": 25,
+            "wins": 6,
+            "losses": 19,
+            "win_rate": 24.0,
+            "kos": 61,
+            "falls": 65,
+            "sds": 0,
+            "kd_ratio": 0.94,
+            "main_character": "NESS",
+            "character_games": 19
+          },
+          {
+            "name": "ryy",
+            "games": 22,
+            "wins": 8,
+            "losses": 14,
+            "win_rate": 36.4,
+            "kos": 51,
+            "falls": 47,
+            "sds": 1,
+            "kd_ratio": 1.09,
+            "main_character": "FALCO",
+            "character_games": 9
+          },
+          {
+            "name": "lando",
+            "games": 12,
+            "wins": 4,
+            "losses": 8,
+            "win_rate": 33.3,
+            "kos": 18,
+            "falls": 28,
+            "sds": 0,
+            "kd_ratio": 0.64,
+            "main_character": "KAZUYA",
+            "character_games": 7
+          },
+          {
+            "name": "unknown",
+            "games": 8,
+            "wins": 0,
+            "losses": 8,
+            "win_rate": 0.0,
+            "kos": 0,
+            "falls": 0,
+            "sds": 0,
+            "kd_ratio": 0.0,
+            "main_character": "UNKNOWN",
+            "character_games": 8
+          },
+          {
+            "name": "wili",
+            "games": 1,
+            "wins": 0,
+            "losses": 1,
+            "win_rate": 0.0,
+            "kos": 4,
+            "falls": 3,
+            "sds": 0,
+            "kd_ratio": 1.33,
+            "main_character": "JOKER",
+            "character_games": 1
+          }
+        ],
+        "top_characters": [
+          {
+            "character": "NESS",
+            "times_played": 19
+          },
+          {
+            "character": "ENDERMAN",
+            "times_played": 13
+          },
+          {
+            "character": "DONKEY KONG",
+            "times_played": 11
+          },
+          {
+            "character": "KING K. ROOL",
+            "times_played": 10
+          },
+          {
+            "character": "MARIO",
+            "times_played": 10
+          }
+        ],
+        "perfect_games": [
+          {
+            "player": "subby",
+            "character": "ENDERMAN"
+          },
+          {
+            "player": "will",
+            "character": "MARIO"
+          },
+          {
+            "player": "lag",
+            "character": "NESS"
+          },
+          {
+            "player": "will",
+            "character": "KING DEDEDE"
+          }
+        ],
+        "rivalries": [
+          {
+            "player1": "will",
+            "player2": "lag",
+            "total_games": 11,
+            "p1_wins": 8,
+            "p2_wins": 3
+          },
+          {
+            "player1": "will",
+            "player2": "own",
+            "total_games": 8,
+            "p1_wins": 7,
+            "p2_wins": 1
+          }
+        ],
+        "win_streaks": [
+          {
+            "player": "will",
+            "streak": 5
+          },
+          {
+            "player": "lando",
+            "streak": 4
+          },
+          {
+            "player": "ryy",
+            "streak": 3
+          },
+          {
+            "player": "subby",
+            "streak": 3
+          }
+        ]
+      }
+    },
+    {
       "date": "May 15, 2026",
       "generated_at": "2026-05-16T16:23:16.971188",
       "headline": "ACTION-PACKED DAY: 49 MATCHES, 266 KOS!",
@@ -2146,14 +2345,6 @@
       "generated_at": "2026-03-19T16:22:51.799843",
       "headline": "REST DAY AT THE ARENA",
       "report": "No matches were recorded on March 18, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
-      "highlights": [],
-      "stats_summary": null
-    },
-    {
-      "date": "March 17, 2026",
-      "generated_at": "2026-03-18T16:26:46.424195",
-      "headline": "REST DAY AT THE ARENA",
-      "report": "No matches were recorded on March 17, 2026. The arena was quiet as competitors took a well-deserved break. Will we see explosive action tomorrow? Stay tuned!",
       "highlights": [],
       "stats_summary": null
     }
