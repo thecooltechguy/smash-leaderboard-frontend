@@ -26,7 +26,7 @@
     },
     "Sunday": {
       "character": "DONKEY KONG",
-      "plays": 160
+      "plays": 162
     }
   },
   "late_night_warriors": [
@@ -142,14 +142,6 @@
       "diff": 11.7,
       "weekend_games": 19,
       "weekday_games": 56
-    },
-    {
-      "player": "ryy",
-      "weekend_wr": 50.8,
-      "weekday_wr": 40.5,
-      "diff": 10.3,
-      "weekend_games": 65,
-      "weekday_games": 84
     }
   ],
   "weekday_warriors": [
@@ -303,8 +295,8 @@
     },
     {
       "character": "MYTHRA",
-      "plays": 82,
-      "win_rate": 23.2
+      "plays": 83,
+      "win_rate": 22.9
     },
     {
       "character": "SONIC",
@@ -425,9 +417,9 @@
     "won": true
   },
   "habeas_deep_dive": {
-    "total_games": 3237,
-    "total_wins": 1730,
-    "total_kos": 7220,
+    "total_games": 3238,
+    "total_wins": 1731,
+    "total_kos": 7223,
     "total_sds": 155,
     "by_day": {
       "Monday": {
@@ -455,8 +447,8 @@
         "win_rate": 49.6
       },
       "Sunday": {
-        "games": 376,
-        "win_rate": 56.9
+        "games": 377,
+        "win_rate": 57.0
       }
     },
     "best_day": {
